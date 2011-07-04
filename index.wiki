@@ -1,9 +1,0 @@
-* First *
-** Nice **
-*** Next **
-[[google][http://www.google.com]]
-
-== Header a ==
-
-* bullet1 *
-** bullet2 *
