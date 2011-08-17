@@ -37,4 +37,5 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 [[alternate-style.png]]
 还不错哦。
 
+
 * 生活点滴
