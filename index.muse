@@ -15,4 +15,26 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 原来，这就是一个对动态申请对象的指针的计数器，当计数器到0时， 共享的数据对象所申请的空间就被释放了。
 
 那么，<code>QExplicitlySharedDataPointer</code>与<code>_QSharedDataPointer</code>有什么不同呢？在对某个共享数据指针进行写操作的时候，这个写操作应该作用到所有指针上，还是那个进行了操作的指针呢？对QExplicitlySharedDataPointer对象的写操作，将作用到所有的指针上。而QSharedDataPointer在计数器多余1的情况下，将自动生成一个副本。如果QExplicitlySharedDataPointer在某次操作时也想达到这个效果，可以在写操作前调用<code>detach()</code>方法。
+
+** CSS
+*** 在html中引用css
+如：
+<example>
+<link rel="stylesheet" type="text/css" href="sheet.css" title="default">
+</example>
+其中<code>rel</code>是relationship的缩写，指的是链接与html文档本身的关系，<code>“stylesheet”</code>说明这是一个stylesheet。<code>type</code>指的是stylesheet的类型。作为一个菜鸟，我只知道css。现在使用的可能有别的风格类型，当然以后可能也会产生和流行新的风格类型。<code>href</code>指的是具体链接的文件，我们这里用的是相对路径。
+对于<code>title</code>属性，可能并不常用。我们可以为html页面增加不同的stylesheet，让用户选择页面的风格。比如：
+<example>
+<link rel="stylesheet" type="text/css"
+   href="sheet1.css" title="Default" />
+<link rel = "alternate stylesheet" type="text/css"
+   href="bigtext.css" title="Big Text" />
+<link rel = "alternate stylesheet" type="text/css"
+   href="tinytext.css" title="Tiny Text" />
+</example>
+注意到，除了默认的风格，其余两个风格的类型应写为<code>"alternate stylesheet"</code>。
+我们来看看在浏览器中的效果。
+[[alternate-style.png]]
+还不错哦。
+
 * 生活点滴

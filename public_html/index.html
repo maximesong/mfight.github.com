@@ -40,10 +40,20 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec6">CSS</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec7">在html中引用css</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec6">生活点滴</a>
+<a href="#sec8">生活点滴</a>
 </dt>
 </dl>
 </div>
@@ -74,15 +84,42 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 
 
 
+<h3><a name="sec6" id="sec6"></a>CSS</h3>
 
-<h2><a name="sec6" id="sec6"></a>生活点滴</h2>
+<h4><a name="sec7" id="sec7"></a>在html中引用css</h4>
+
+<p class="first">如：</p>
+
+<pre class="example">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;sheet.css&quot; title=&quot;default&quot;&gt;
+</pre>
+其中<code>rel</code>是relationship的缩写，指的是链接与html文档本身的关系，<code>“stylesheet”</code>说明这是一个stylesheet。<code>type</code>指的是stylesheet的类型。作为一个菜鸟，我只知道css。现在使用的可能有别的风格类型，当然以后可能也会产生和流行新的风格类型。<code>href</code>指的是具体链接的文件，我们这里用的是相对路径。
+对于<code>title</code>属性，可能并不常用。我们可以为html页面增加不同的stylesheet，让用户选择页面的风格。比如：
+
+<pre class="example">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
+   href=&quot;sheet1.css&quot; title=&quot;Default&quot; /&gt;
+&lt;link rel = &quot;alternate stylesheet&quot; type=&quot;text/css&quot;
+   href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;
+&lt;link rel = &quot;alternate stylesheet&quot; type=&quot;text/css&quot;
+   href=&quot;tinytext.css&quot; title=&quot;Tiny Text&quot; /&gt;
+</pre>
+注意到，除了默认的风格，其余两个风格的类型应写为<code>&quot;alternate stylesheet&quot;</code>。
+我们来看看在浏览器中的效果。
+<img src="alternate-style.png" alt="" />
+还不错哦。
+
+
+
+
+<h2><a name="sec8" id="sec8"></a>生活点滴</h2>
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: August 16, 2011  
+    Last Updated: August 17, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
@@ -90,6 +127,17 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 <noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
 </div>
 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25182468-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </body>
 </html>
 
