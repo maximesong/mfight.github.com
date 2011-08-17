@@ -7,7 +7,7 @@
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
     <h1>主页</h1>
@@ -38,22 +38,25 @@
 <dt class="contents">
 <a href="#sec5">QExplicitlySharedDataPointer</a>
 </dt>
+<dt class="contents">
+<a href="#sec6">Qt Marcos</a>
+</dt>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec6">CSS</a>
+<a href="#sec7">CSS</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec7">在html中引用css</a>
+<a href="#sec8">在html中引用css</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec8">生活点滴</a>
+<a href="#sec9">生活点滴</a>
 </dt>
 </dl>
 </div>
@@ -83,10 +86,18 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 <p>那么，<code>QExplicitlySharedDataPointer</code>与<code>_QSharedDataPointer</code>有什么不同呢？在对某个共享数据指针进行写操作的时候，这个写操作应该作用到所有指针上，还是那个进行了操作的指针呢？对QExplicitlySharedDataPointer对象的写操作，将作用到所有的指针上。而QSharedDataPointer在计数器多余1的情况下，将自动生成一个副本。如果QExplicitlySharedDataPointer在某次操作时也想达到这个效果，可以在写操作前调用<code>detach()</code>方法。</p>
 
 
+<h4><a name="sec6" id="sec6"></a>Qt Marcos</h4>
 
-<h3><a name="sec6" id="sec6"></a>CSS</h3>
+<dl>
+<dt><strong>Q_UNUSED</strong></dt><dd>
+在定义有关Model的函数rowCount()时用到过，作用是让编译器对于没有使用的变量不要产生警告。</dd>
+</dl>
 
-<h4><a name="sec7" id="sec7"></a>在html中引用css</h4>
+
+
+<h3><a name="sec7" id="sec7"></a>CSS</h3>
+
+<h4><a name="sec8" id="sec8"></a>在html中引用css</h4>
 
 <p class="first">如：</p>
 
@@ -114,7 +125,7 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 
 
 
-<h2><a name="sec8" id="sec8"></a>生活点滴</h2>
+<h2><a name="sec9" id="sec9"></a>生活点滴</h2>
 
 
 <!-- Emacs Muse Footer -->
@@ -129,17 +140,6 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 <noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
 </div>
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-25182468-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>
 
