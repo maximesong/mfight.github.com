@@ -1,5 +1,7 @@
+单词记不住怎么办呢。以前高中的时候，老师都让我们准备一个错题集。后来想想，对啊，要是错过的题目都能不再犯错，那该有多厉害。好吧，现在我也来搞一个单词本，凡是看到的不认识的单词就记下来。当然要我一次就记住显然是不可能的。也就希望若是第二次看到还不认得，可以加深一下印象。
+
 quotient ::	
-1.the amount or degree of a quality, feeling etc in a person, thing or situation.
+1. the amount or degree of a quality, feeling etc in a person, thing or situation.
 2. the number which is obtained when one number is divided by another.
 
 idiomatic ::
