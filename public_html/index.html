@@ -53,10 +53,20 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec9">git</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec10">更新已经删除的文件</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec9">生活点滴</a>
+<a href="#sec11">生活点滴</a>
 </dt>
 </dl>
 </div>
@@ -123,16 +133,28 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 
 
 
+<h3><a name="sec9" id="sec9"></a>git</h3>
+
+<h4><a name="sec10" id="sec10"></a>更新已经删除的文件</h4>
+
+<p class="first">一般来说，用git rm就能把文件从目录中删除，同时从git的object tree中删除。但是，如果之前已经通过窗口或是别的方法，删除了文件，还需要用git rm来把文件一个个删除吗？完全不用，可以用这条命令。</p>
+
+<pre class="example">
+git add -u
+</pre>
+这条命令的作用是更新已经在object tree里的内容，而不会加入新的文件。同时那些被删除的文件也会从object tree中删除，是不是很好用呢？
 
 
-<h2><a name="sec9" id="sec9"></a>生活点滴</h2>
+
+
+<h2><a name="sec11" id="sec11"></a>生活点滴</h2>
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: August 17, 2011  
+    Last Updated: August 18, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
