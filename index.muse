@@ -63,3 +63,9 @@ Q_UNUSED ::
 
 * 关于
 由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我[[wenhao.sng@gmail.com]]， 也可以加我qq：570660586。
+
+* 友情链接
+[[http://www.emacswiki.org/][EmacsWiki]] 学习Emacs很好的wiki网站
+[[http://emacser.com/][Emacs中文网]] 有很多很有用的内容。
+[[http://ihome.ust.hk/~shiwu/wiki/index.html][十五的“危机]] 我的wiki风格就是从十五的wiki上照搬过来的。
+[[blog.sunshy.info][海洋的博客]] 一位学长的博客，也是刚刚起步，但内容相当专业哦。
