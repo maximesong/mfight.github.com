@@ -69,7 +69,7 @@ Q_UNUSED ::
 
 [[http://emacser.com/][Emacs中文网]] 有很多很有用的内容。
 
-。
-[[http://ihome.ust.hk/~shiwu/wiki/index.html][十五的“危机]] 我的wiki风格就是从十五的wiki上照搬过来的
+
+[[http://ihome.ust.hk/~shiwu/wiki/index.html][十五的“危机]] 我的wiki风格就是从十五的wiki上照搬过来的。
 
 [[http://blog.sunshy.info/][海洋的博客]] 一位学长的博客，也是刚刚起步，但内容相当专业哦。
