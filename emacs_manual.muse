@@ -1,0 +1,56 @@
+#title Emacs基础使用
+<contents>
+
+* 基础知识
+** 窗口布局
+Frame ::
+整个程序所在的终端或窗口，称为frame。
+
+一个frame从上到下的布局分别为
+ - 菜单栏 （menu bar）
+ - 工具栏 （tool bar
+ - 窗口（window）
+   输入文本的窗口
+ - 回声区 （echo area）
+   输入和显示命令的窗口
+
+Point ::
+point可以被看作是两个字符中间的那个位置。它在游标下的字符前，游标前的字符后。比如：
+<example>
+There are some words in this line.
+</example>
+如果游标在<code>words</code>上，那么point就在<code>o</code>和<code>i</code>之间。
+
+Echo Area ::
+echo的中文意思是回声。echo area这个名字很有意思， 因为这块区域即刻显示你输入的命令。
+
+echo area也会显示一些消息，比如说是错误信息。如果是单个字符的命令，那么不会在echo area中显示。如果是多字符的组合命令，并且你在输入一部分后停留了1秒钟，那么它会显示你已经输入的那部分命令，来给予你提示。echo area中的内容储存在*Messages* Buffer中，方便日后查看。echo area还被用做minibuffer。有一些命令需要你输入参数，比如说打开文件时候需要输入文件名，那么就会用到minibuffer。你会在echo area中输入mini buffer的内容。
+
+Mode Line::
+模式栏在window的底部，它的作用是显示当前buffer中的情况。它的位置在echo area的正上方，图形化界面里通常会有凸起的3D效果,
+模式栏中的文字格式为
+<example>
+-cs:ch-fr buf      pos  line  (major minor)-----------
+</example>
+下面是当前我的模式栏中的内容:
+
+[[modeline.png]]
+
+<code>cs</code>代表的是buffer的字符集。如果是<code>‘-’</code>， 则代表除了换行符变换，没有特别的字符集处理。如果是<code>‘=’</code>代表没有转换， 如果是<code>'1'</code>代表<code>ISO Latin-1</code>。如果在终端下，则稍许会有不同，我们就不在这里讨论了。
+
+在<code>cs</code>后的字符通常是一个冒号<code>'：'</code>，代表的是普通的换行方式。在一些情况下，可能它显示别的内容，代表不一般的换行方式,他们并不是<code>newline</code>字符。
+MS-DOS换行方式 ::
+carriage-return + linefeed, <code>cs</code>显示为<code>‘/’</code>或<code>'(Dos)'</code>。
+Macintosh换行方式 ::
+carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>。
+
+* 快捷键
+** 退出
+*** C-x C-c
+作用 ::
+退出Emacs。
+*** C-z
+作用 ::
+图形化界面内，最小化程序。
+终端下，挂起emacs。
+

@@ -1,4 +1,4 @@
-#title 主页
+#title EmacsFans的wiki主页
 
 <contents>
 
@@ -13,8 +13,8 @@
 
 * 学习笔记
 
-** Emacs Muse
-*** 配置
+** Emacs
+[[emacs_manual.html][基本使用]]
 
 ** Qt
 *** QExplicitlySharedDataPointer

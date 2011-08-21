@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Emacs基础使用</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>Emacs基础使用</h1>
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">基础知识</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">窗口布局</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec3">快捷键</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">退出</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec5">C-x C-c</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">C-z</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>基础知识</h2>
+
+<h3><a name="sec2" id="sec2"></a>窗口布局</h3>
+
+<dl>
+<dt><strong>Frame</strong></dt><dd>
+整个程序所在的终端或窗口，称为frame。</dd>
+</dl>
+
+<p>一个frame从上到下的布局分别为</p>
+
+<ul>
+<li>菜单栏 （menu bar）</li>
+<li>工具栏 （tool bar</li>
+<li>窗口（window）
+输入文本的窗口</li>
+<li>回声区 （echo area）
+输入和显示命令的窗口</li>
+</ul>
+
+<dl>
+<dt><strong>Point</strong></dt><dd>
+point可以被看作是两个字符中间的那个位置。它在游标下的字符前，游标前的字符后。比如：</dd>
+</dl>
+
+<pre class="example">
+There are some words in this line.
+</pre>
+如果游标在<code>words</code>上，那么point就在<code>o</code>和<code>i</code>之间。
+
+<dl>
+<dt><strong>Echo Area</strong></dt><dd>
+echo的中文意思是回声。echo area这个名字很有意思， 因为这块区域即刻显示你输入的命令。</dd>
+</dl>
+
+<p>echo area也会显示一些消息，比如说是错误信息。如果是单个字符的命令，那么不会在echo area中显示。如果是多字符的组合命令，并且你在输入一部分后停留了1秒钟，那么它会显示你已经输入的那部分命令，来给予你提示。echo area中的内容储存在*Messages* Buffer中，方便日后查看。echo area还被用做minibuffer。有一些命令需要你输入参数，比如说打开文件时候需要输入文件名，那么就会用到minibuffer。你会在echo area中输入mini buffer的内容。</p>
+
+<dl>
+<dd>Mode Line::
+模式栏在window的底部，它的作用是显示当前buffer中的情况。它的位置在echo area的正上方，图形化界面里通常会有凸起的3D效果,
+模式栏中的文字格式为</dd>
+</dl>
+
+<pre class="example">
+-cs:ch-fr buf      pos  line  (major minor)-----------
+</pre>
+下面是当前我的模式栏中的内容:
+
+<p class="image"><img src="modeline.png" alt="" /></p>
+
+<p><code>cs</code>代表的是buffer的字符集。如果是<code>‘-’</code>， 则代表除了换行符变换，没有特别的字符集处理。如果是<code>‘=’</code>代表没有转换， 如果是<code>'1'</code>代表<code>ISO Latin-1</code>。如果在终端下，则稍许会有不同，我们就不在这里讨论了。</p>
+
+<p>在<code>cs</code>后的字符通常是一个冒号<code>'：'</code>，代表的是普通的换行方式。在一些情况下，可能它显示别的内容，代表不一般的换行方式,他们并不是<code>newline</code>字符。</p>
+
+<dl>
+<dt><strong>MS-DOS换行方式</strong></dt><dd>
+carriage-return + linefeed, <code>cs</code>显示为<code>‘/’</code>或<code>'(Dos)'</code>。</dd>
+<dt><strong>Macintosh换行方式</strong></dt><dd>
+carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>。</dd>
+</dl>
+
+
+
+<h2><a name="sec3" id="sec3"></a>快捷键</h2>
+
+<h3><a name="sec4" id="sec4"></a>退出</h3>
+
+<h4><a name="sec5" id="sec5"></a>C-x C-c</h4>
+
+<dl>
+<dt><strong>作用</strong></dt><dd>
+退出Emacs。</dd>
+</dl>
+
+
+<h4><a name="sec6" id="sec6"></a>C-z</h4>
+
+<dl>
+<dt><strong>作用</strong></dt><dd>
+图形化界面内，最小化程序。
+终端下，挂起emacs。</dd>
+</dl>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: August 21, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+
