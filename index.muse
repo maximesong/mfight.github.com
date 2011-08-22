@@ -16,6 +16,7 @@
 ** Emacs
 [[emacs_manual.html][基本使用]]
 
+[[emacs_lisp.html][Emacs Lisp]]
 ** Qt
 *** QExplicitlySharedDataPointer
 在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：
