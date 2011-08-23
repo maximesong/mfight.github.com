@@ -110,6 +110,22 @@ carriage-return + linefeed, <code>cs</code>显示为<code>‘/’</code>或<code
 carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>。</dd>
 </dl>
 
+<p>对于mode line里接下去的一个元素<code>ch</code>， 如果是<code>'--'</code>,则表示buffer中的内容和磁盘上的内容是一致的。如果内容有过修改，则会显示<code>'**&quot;</code>。对于只读的buffer，会显示<code>'%*'</code>,如果buffer被修改过了。反之为<code>'%%'</code>。</p>
+
+<p><code>ch</code>后通常是一个<code>'-'</code>。如果当前buffer在一个远程的机器上的话，那么将会显示<code>'@'</code>。</p>
+
+<p><code>fr</code>表示的是选择的frame名称，只会在终端上显示。</p>
+
+<p><code>buf</code>表示的是窗口中buffer的名称，通常也是你编辑的文件名。</p>
+
+<p><code>pos</code>表示的是在当前buffer中的位置。如果在buffer的顶部，会显示<code>'Top'</code>。 如果在buffer的底部， 则会显示<code>'Bot'</code>。如果在buffer很小，全部显示在窗口中，那么<code>pos</code>就会显示<code>'All'</code>。 <code>'nn%'</code>表示的是窗口上面的buffer的百分比。</p>
+
+<p><code>line</code>是由<code>'L'</code>和point在buffer中的行数组合而成的。</p>
+
+<p><code>major</code>是窗口的主要模式，比如Text Mode, C Mode, Lisp Mode等等。</p>
+
+<p><code>minor</code>是一串窗口的次要模式，比如说有关补全的模式autocomplete， yasnippet等。</p>
+
 
 
 <h2><a name="sec3" id="sec3"></a>快捷键</h2>
@@ -139,7 +155,7 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: August 21, 2011  
+    Last Updated: August 23, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
