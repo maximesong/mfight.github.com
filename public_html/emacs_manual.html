@@ -23,23 +23,39 @@
 <dt class="contents">
 <a href="#sec2">窗口布局</a>
 </dt>
+<dt class="contents">
+<a href="#sec3">用户输入</a>
+</dt>
+<dt class="contents">
+<a href="#sec4">启动Emacs</a>
+</dt>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec3">快捷键</a>
+<a href="#sec5">配置</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec4">退出</a>
+<a href="#sec6">启动文件</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec7">快捷键</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec5">C-x C-c</a>
+<a href="#sec8">退出</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec9">C-x C-c</a>
 </dt>
 <dt class="contents">
-<a href="#sec6">C-z</a>
+<a href="#sec10">C-z</a>
 </dt>
 </dl>
 </dd>
@@ -127,12 +143,71 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 <p><code>minor</code>是一串窗口的次要模式，比如说有关补全的模式autocomplete， yasnippet等。</p>
 
 
+<h3><a name="sec3" id="sec3"></a>用户输入</h3>
 
-<h2><a name="sec3" id="sec3"></a>快捷键</h2>
+<p class="first">Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
+键盘输入大致分以下三个大类：</p>
 
-<h3><a name="sec4" id="sec4"></a>退出</h3>
+<p>1. 图形符号，比如'a', 'B'， ' = ',还包括一些非英语键盘上的字符。</p>
 
-<h4><a name="sec5" id="sec5"></a>C-x C-c</h4>
+<p>2. 控制字符，比如‘RET', 'DEL', 'ESC', 'F1', 'Home', 'Left'。</p>
+
+<p>3. Modifier Keys, 常用的有‘Control(Ctrl)', 'Meta(Alt)'。</p>
+
+<p>Modifier Keys的输入其实就是我们熟悉的组合键。比如<code>C-a</code>代表的是按住‘Control’,再按字母‘a’；<code>M-c</code>代表按住‘Meta(Alt)’, 再按‘c’。在一些终端上，'Meta'的使用会遇到问题。需要按‘Meta’的地方可以先按‘Esc’,放开后再按相应的字母。比如<code>M-c</code>可以先按‘Esc’,放开，再按‘c’。</p>
+
+
+<h3><a name="sec4" id="sec4"></a>启动Emacs</h3>
+
+<p class="first">在终端上，只要输入<code>emacs</code>,就能启动Emacs。
+为了终端不被占用，在shell上也可以输入emacs&amp;</p>
+
+
+
+<h2><a name="sec5" id="sec5"></a>配置</h2>
+
+<h3><a name="sec6" id="sec6"></a>启动文件</h3>
+
+<p class="first">变量<code>inhibit-startup-screen</code>和<code>initial-buffer-choice</code>共同决定了Emacs启动后显示的buffer。</p>
+
+<p>默认这两个变量都是nil，Emacs显示开机欢迎界面。如果你希望不要显示开机画面，那么可以把<code>inhibit-startup-screen</code>设置成non-nil，比如：</p>
+
+<pre class="example">
+(setq inhibit-startup-screen t)
+</pre>
+
+<p>如果你在命令行里指定了文件名，将会显示这些文件。如果没有，将会显示<code>'*strach*'</code>buffer。</p>
+
+<p>如果你需要开机后buffer固定显示某目录或是某文件（即使命令行参数中指定了一个或多个文件，它们将只被打开，而不会显示在buffer中），那么可以对<code>initial-buffer-choice</code>进行赋值。比如：</p>
+
+<pre class="example">
+;; this will show the directory &quot;~/Projects/&quot; at startup
+(setq initial-buffer-choice &quot;~/Projects/&quot;)
+</pre>
+
+<pre class="example">
+;; this will show the directory &quot;~/Projects/myfile.txt&quot; at startup
+(setq initial-buffer-choice &quot;~/Projects/myfile.txt&quot;)
+</pre>
+
+<pre class="example">
+;; this will show the '*stratch*' buffer at startup
+(setq initial-buffer-choice t)
+</pre>
+
+<p><code>*strach</code>的内容可以通过变量initial-strach-message进行设置，比如：</p>
+
+<pre class="example">
+(setq initial-scratch-message &quot;;; Emacs makes a computer slow.\n&quot;)
+</pre>
+
+
+
+<h2><a name="sec7" id="sec7"></a>快捷键</h2>
+
+<h3><a name="sec8" id="sec8"></a>退出</h3>
+
+<h4><a name="sec9" id="sec9"></a>C-x C-c</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -140,7 +215,7 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 </dl>
 
 
-<h4><a name="sec6" id="sec6"></a>C-z</h4>
+<h4><a name="sec10" id="sec10"></a>C-z</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -155,7 +230,7 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: August 23, 2011  
+    Last Updated: August 25, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

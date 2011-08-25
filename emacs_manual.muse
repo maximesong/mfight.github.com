@@ -59,6 +59,55 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 <code>major</code>是窗口的主要模式，比如Text Mode, C Mode, Lisp Mode等等。
 
 <code>minor</code>是一串窗口的次要模式，比如说有关补全的模式autocomplete， yasnippet等。
+
+** 用户输入
+Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
+键盘输入大致分以下三个大类：
+
+1. 图形符号，比如'a', 'B'， ' = ',还包括一些非英语键盘上的字符。
+
+2. 控制字符，比如‘RET', 'DEL', 'ESC', 'F1', 'Home', 'Left'。
+
+3. Modifier Keys, 常用的有‘Control(Ctrl)', 'Meta(Alt)'。
+
+Modifier Keys的输入其实就是我们熟悉的组合键。比如<code>C-a</code>代表的是按住‘Control’,再按字母‘a’；<code>M-c</code>代表按住‘Meta(Alt)’, 再按‘c’。在一些终端上，'Meta'的使用会遇到问题。需要按‘Meta’的地方可以先按‘Esc’,放开后再按相应的字母。比如<code>M-c</code>可以先按‘Esc’,放开，再按‘c’。
+
+** 启动Emacs
+在终端上，只要输入<code>emacs</code>,就能启动Emacs。
+为了终端不被占用，在shell上也可以输入emacs&
+
+* 配置
+** 启动文件
+变量<code>inhibit-startup-screen</code>和<code>initial-buffer-choice</code>共同决定了Emacs启动后显示的buffer。
+
+默认这两个变量都是nil，Emacs显示开机欢迎界面。如果你希望不要显示开机画面，那么可以把<code>inhibit-startup-screen</code>设置成non-nil，比如：
+<example>
+(setq inhibit-startup-screen t)
+</example>
+
+如果你在命令行里指定了文件名，将会显示这些文件。如果没有，将会显示<code>'*strach*'</code>buffer。
+
+如果你需要开机后buffer固定显示某目录或是某文件（即使命令行参数中指定了一个或多个文件，它们将只被打开，而不会显示在buffer中），那么可以对<code>initial-buffer-choice</code>进行赋值。比如：
+<example>
+;; this will show the directory "~/Projects/" at startup
+(setq initial-buffer-choice "~/Projects/")
+</example>
+
+<example>
+;; this will show the directory "~/Projects/myfile.txt" at startup
+(setq initial-buffer-choice "~/Projects/myfile.txt")
+</example>
+
+<example>
+;; this will show the '*stratch*' buffer at startup
+(setq initial-buffer-choice t)
+</example>
+
+<code>*strach*</code>的内容可以通过变量initial-strach-message进行设置，比如：
+<example>
+(setq initial-scratch-message ";; Emacs makes a computer slow.\n")
+</example>
+
 * 快捷键
 ** 退出
 *** C-x C-c
