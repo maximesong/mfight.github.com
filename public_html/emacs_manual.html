@@ -59,6 +59,16 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec11">编辑</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec12">C-q</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -195,7 +205,7 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 (setq initial-buffer-choice t)
 </pre>
 
-<p><code>*strach</code>的内容可以通过变量initial-strach-message进行设置，比如：</p>
+<p><code>*strach*</code>的内容可以通过变量initial-strach-message进行设置，比如：</p>
 
 <pre class="example">
 (setq initial-scratch-message &quot;;; Emacs makes a computer slow.\n&quot;)
@@ -225,12 +235,30 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 
 
 
+<h3><a name="sec11" id="sec11"></a>编辑</h3>
+
+<h4><a name="sec12" id="sec12"></a>C-q</h4>
+
+<dl>
+<dt><strong>作用</strong></dt><dd>
+输入字符。</dd>
+</dl>
+
+<ul>
+<li>如果<code>C-q</code>后输入一个非图形字符，那么，这个字符将被插入（即使后面输入的是<code>C-g</code>。比如<code>C-q DEL</code>插入了字符<code>DEL</code>。</li>
+<li>如果<code>C-q</code>后输入的是一串八进制的数字，那么出现的第一个非数字输入将结束这个序列。最终八进制所代表的字符和那个非数字字符将被插入将被插入（如过非数字字符是<code>RET</code>,那么<code>
+RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>本身并不会被输出）。
+比如<code>'C-q 1 0 1 B'</code>输出<code>'AB'</code>, <code>'C-q 2 5 1 RET'</code>输出<code>©</code>。</li>
+</ul>
+
+
+
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: August 25, 2011  
+    Last Updated: August 26, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

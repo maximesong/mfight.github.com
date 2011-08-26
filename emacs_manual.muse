@@ -118,3 +118,15 @@ Modifier Keys的输入其实就是我们熟悉的组合键。比如<code>C-a</co
 图形化界面内，最小化程序。
 终端下，挂起emacs。
 
+** 编辑
+*** C-q
+作用 ::
+输入字符。
+ - 如果<code>C-q</code>后输入一个非图形字符，那么，这个字符将被插入（即使后面输入的是<code>C-g</code>。比如<code>C-q DEL</code>插入了字符<code>DEL</code>。
+ - 如果<code>C-q</code>后输入的是一串八进制的数字，那么出现的第一个非数字输入将结束这个序列。最终八进制所代表的字符和那个非数字字符将被插入将被插入（如过非数字字符是<code>RET</code>,那么<code>
+RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>本身并不会被输出）。
+比如<code>'C-q 1 0 1 B'</code>输出<code>'AB'</code>, <code>'C-q 2 5 1 RET'</code>输出<code>©</code>。
+
+
+
+
