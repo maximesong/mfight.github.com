@@ -127,6 +127,43 @@ Modifier Keys的输入其实就是我们熟悉的组合键。比如<code>C-a</co
 RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>本身并不会被输出）。
 比如<code>'C-q 1 0 1 B'</code>输出<code>'AB'</code>, <code>'C-q 2 5 1 RET'</code>输出<code>©</code>。
 
+*** C-x 8 RET
+作用 ::
+输入Unicode字符
+
+输入标准的Unicode名称或是Unicode的十六进制编码，将会在buffer中插入相应的Unicode字符。
+
+** 移动
+*** C-a
+移动到行首
+*** C-e
+移动到行末
+*** C-f
+向后移动一个字符
+*** C-b
+向前移动一个字符
+*** M-f
+向后移动一个单词
+*** M-b
+向前移动一个单词
+*** C-n
+向下移动一行
+*** C-p
+向上移动一行
+*** M-r
+
+*** M-<
+*** M->
+
+*** C-v
+*** M-v
+*** M-x goto-char
+
+*** M-g M-g 
+
+*** C-x C-n
+
+*** C-u C-x C-n
 
 
 

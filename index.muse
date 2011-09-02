@@ -12,7 +12,8 @@
 人只有有了“危机”（维基），才能不断地去进取！
 
 * 学习笔记
-
+** Linux
+[[linux_command.html][Linux命令行]]
 ** Emacs
 [[emacs_manual.html][基本使用]]
 

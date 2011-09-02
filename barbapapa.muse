@@ -1,0 +1,24 @@
+#title Barbapapa
+<contents>
+* 01
+** 短语
+*** voici venir lès Barbapapa
+这就是巴巴爸爸一家。
+
+*** On fait lès *fous* dans là famille des Barbapapa
+这个家庭中每个人都充满活力。
+** 单词
+*** venir
+来，来到。
+
+Je viens
+
+Tu viens
+
+Il vient
+
+Nous venons
+
+Vous venez
+
+Ils viennent
