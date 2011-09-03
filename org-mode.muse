@@ -1,0 +1,75 @@
+#title org-mode
+
+<contents>
+
+* 安装
+** 激活
+在配置文件中增加以下配置
+<src lang="lisp">
+;; the following lines are always needeed. Choose your own keys
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+;; not needed when global-font-lock is on
+(add-hook 'org-mode-hook 'turn-on-font-lock) 
+(global-set-key "\C-cl" 'org-store-line)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C=cb" 'org-iswitchb)
+</src>
+
+* 使用
+** 标题和纲要
+<code>org-mode</code>采用层次式的结构来安排文档，这是一种记录笔记和思想的的好方法。通过折叠大部分的内容，你可以通过那些展开的内容来获得全局的概要，和你关心和使用的部分。
+ 
+*** 层次结构的标题
+通过行首一个或多个<code>*</code>来给出标题的层次化结构，如：
+<example>
+* Top level headline
+** Second level
+*** 3rd level
+    some Text
+*** 3rd level
+    more text
+</example>
+
+*** 内容的展开与折叠循环
+纲要的使用使得隐藏部分的文本成为可能。<code>org-mode</code>使用两个命令来进行折叠和展开内容的循环，它们被分别绑定到<code>TAB</code>和<code>S-TAB</code>(或是<code>"C-u TAB"</code>)。
+
+**** TAB	子树循环：改变当前子树的状态
+            --> FOLDER --> CHILDREN --> SUBTREE --
+**** S-TAB 和 C-u TAB	全局循环：改变整个Buffer的状态
+            --> OVERVIEW --> CONTENTS --> SHOW ALL --
+
+*** 全局状态
+当Emacs第一次打开一个org文件的时候，全局状态被设为<code>OVERVIEW</code>，也就是只有顶层的标题是可见的。这个默认设定可以通过配置变量<code>org-startup-folded</code>来进行改变。对于每一个文件，也可以通过增加一个启动的关键词来<code>overview</code>, <code>content</code>, <code>showall</code>进行配置，比如：
+<example>
+#+STARTUP: content 
+</example>
+
+** 移动
+*** C-c C-n
+下一个标题
+*** C-c C-p
+上一个标题
+*** C-c C-f
+下一个同层标题
+*** C-c C-b
+上一个同层标题
+*** C-c C-u
+回到上一层标题
+
+** 结构修改
+*** M-RET
+插入一个和当前同层的标题。如果游标在一个普通列表项中，那么会插入一个新的列表项。
+*** M-S-RET
+插入一个新的TODO项，和当前的标题同层
+*** M-LEFT/RIGHT
+增加或减少当前标题的层数
+*** M-S-LEFT/RIGHT
+增加或减少当前子树的层数
+*** M-S-UP/DOWN
+向上/下移动子树。
+*** C-c C-w
+把一段内容定位到另一个标题中
+*** C-x n s/w
+把Buffer内容限定到当前子树/恢复到全部内容
+
+

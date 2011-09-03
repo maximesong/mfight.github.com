@@ -14,6 +14,8 @@
 * 学习笔记
 ** Linux
 [[linux_command.html][Linux命令行]]
+** Ubuntu
+[[ubuntu.html][Ubuntu使用]]
 ** Emacs
 [[emacs_manual.html][基本使用]]
 

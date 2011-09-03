@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Ubuntu</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>Ubuntu</h1>
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">小技巧</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">切换workspace</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec3">Launcher Bar</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">鼠标中键点击图标可以打开一个新的应用程序</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">快速切换任务</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">新建应用程序图标</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<p>本页的内容主要针对的是ubuntu11.04， Unity桌面
+<h2><a name="sec1" id="sec1"></a>小技巧</h2></p>
+
+<h3><a name="sec2" id="sec2"></a>切换workspace</h3>
+
+<p class="first">Ctrl + Alt + Arrow</p>
+
+
+
+<h2><a name="sec3" id="sec3"></a>Launcher Bar</h2>
+
+<h3><a name="sec4" id="sec4"></a>鼠标中键点击图标可以打开一个新的应用程序</h3>
+
+
+<h3><a name="sec5" id="sec5"></a>快速切换任务</h3>
+
+<p class="first">按住<code>Super</code>键（<code>Window</code>键），这时任务栏上会显示数字。按下相应数字即可跳到该程序。</p>
+
+
+<h3><a name="sec6" id="sec6"></a>新建应用程序图标</h3>
+
+<p class="first">一般来说，只要运行程序后，在launcher bar中右键点击程序图标，选择<code>Keep In Launcher</code>，就可以在launcher bar中添加应用程序了。</p>
+
+<p>但是对一些程序来说，这个方法并不管用。就笔者个人而言，当时是在ubuntu11.04下编译Emacs23.3后，遇到这个问题的。编译安装后，通过命令行<code>emacs</code>启动程序，能添加到launcher bar，不过再点击图标的时候，并不能运行程序。</p>
+
+<p>后来在网上查了资料，发现这种情况只要为程序编写一个<code>.desktop</code>桌面文件就可以了。一个比较简单的方法是在桌面上点击右键，选择<code>Create Launcher...</code>,然后再选择相应的可执行文件就可以产生一个桌面图标（也就是<code>.desktop</code>文件)了。如果用文本编辑器打开，会发现其中的内容是类似这样的</p>
+
+<pre class="example">
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=emacs
+Exec=/usr/local/bin/emacs
+Name[en_US]=GNU Emacs
+Name=GNU Emacs
+Icon=emacs
+</pre>
+
+<p>这些内容手动编辑和添加，效果也是一样的。
+然后就能通过launcher bar启动程序了。</p>
+
+<p>不过这还没完呢。在使用过程中发现已经启动的Emacs程序并不会出现launcher bar的emacs图标里。也就是说，launcher bar的一大主要功能&mdash;切换程序没有了。又去网上查了一下，找到了解决方案，只需要在原来的<code>.desktop</code>文件的末尾添加一个<code>StartupWMClass</code>属性。</p>
+
+<pre class="example">
+... # the previous contents
+StartupWMClass=Emacs
+</pre>
+最后再log out、log in一下，试一试，大功告成！
+
+<p>好事者可能会问，为什么<code>StartupWMClass</code>的值是<code>Emacs</code>,我自己取个名可不可以呢？</p>
+
+<p>这个大概是不可以的。对于<code>StartupWMClass</code>代表的是什么含义，笔者这个linux菜鸟也不甚了解。笔者猜测，这应该是应用程序本身的熟悉。看到网上有人说可以在命令行中通过如下方法获得:</p>
+
+<pre class="src">
+xprop | grep <span style="color: #8b2252;">"WM_CLASS"</span> | awk '{ print $4 }'
+</pre>
+输入命令后，通过点击相应应用程序的窗口，就可以获取<code>StartupWMClass</code>要填的值了。
+比如对于Emacs23.3,获得的结果是:
+
+<pre class="example">
+&quot;Emacs&quot;
+</pre>
+那么就在<code>.desktop</code>文件中加入:
+
+<pre class="example">
+StartupWMClass=Emacs
+</pre>
+关于<code>xprop</code>、<code>grep</code>、<code>awk</code>等命令的含义，自己在命令行下<code>man</code>一下吧。
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: September  4, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+

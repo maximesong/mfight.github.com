@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>org-mode</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>org-mode</h1>
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">安装</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">激活</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec3">使用</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">标题和纲要</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec5">层次结构的标题</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec6">Top level headline</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec7">Second level</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">3rd level</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">3rd level</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">内容的展开与折叠循环</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">全局状态</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec12">移动</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec13">C-c C-n</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">C-c C-p</a>
+</dt>
+<dt class="contents">
+<a href="#sec15">C-c C-f</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">C-c C-b</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">C-c C-u</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec18">结构修改</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec19">M-RET</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">M-S-RET</a>
+</dt>
+<dt class="contents">
+<a href="#sec21">M-LEFT/RIGHT</a>
+</dt>
+<dt class="contents">
+<a href="#sec22">M-S-LEFT/RIGHT</a>
+</dt>
+<dt class="contents">
+<a href="#sec23">M-S-UP/DOWN</a>
+</dt>
+<dt class="contents">
+<a href="#sec24">C-c C-w</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">C-x n s/w</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>安装</h2>
+
+<h3><a name="sec2" id="sec2"></a>激活</h3>
+
+<p class="first">在配置文件中增加以下配置</p>
+
+<pre class="src">
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">the following lines are always needeed. Choose your own keys
+</span>(add-to-list 'auto-mode-alist '(<span style="color: #8b2252;">"\\.org\\'"</span> . org-mode))
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">not needed when global-font-lock is on
+</span>(add-hook 'org-mode-hook 'turn-on-font-lock)
+(global-set-key <span style="color: #8b2252;">"\C-cl"</span> 'org-store-line)
+(global-set-key <span style="color: #8b2252;">"\C-ca"</span> 'org-agenda)
+(global-set-key <span style="color: #8b2252;">"\C=cb"</span> 'org-iswitchb)
+</pre>
+
+
+
+<h2><a name="sec3" id="sec3"></a>使用</h2>
+
+<h3><a name="sec4" id="sec4"></a>标题和纲要</h3>
+
+<p><code>org-mode</code>采用层次式的结构来安排文档，这是一种记录笔记和思想的的好方法。通过折叠大部分的内容，你可以通过那些展开的内容来获得全局的概要，和你关心和使用的部分。</p>
+
+<h4><a name="sec5" id="sec5"></a>层次结构的标题</h4>
+
+<p class="first">通过行首一个或多个<code>*</code>来给出标题的层次化结构，如：</p>
+
+<pre class="example">
+* <a name="sec6" id="sec6"></a>Top level headline
+** <a name="sec7" id="sec7"></a>Second level
+*** <a name="sec8" id="sec8"></a>3rd level
+    some Text
+*** <a name="sec9" id="sec9"></a>3rd level
+    more text
+</pre>
+
+
+<h4><a name="sec10" id="sec10"></a>内容的展开与折叠循环</h4>
+
+<p class="first">纲要的使用使得隐藏部分的文本成为可能。<code>org-mode</code>使用两个命令来进行折叠和展开内容的循环，它们被分别绑定到<code>TAB</code>和<code>S-TAB</code>(或是<code>&quot;C-u TAB&quot;</code>)。</p>
+
+<h5>TAB	子树循环：改变当前子树的状态</h5>
+
+<p style="text-align: center;">
+&mdash;&gt; FOLDER &mdash;&gt; CHILDREN &mdash;&gt; SUBTREE &mdash;
+</p>
+
+
+<h5>S-TAB 和 C-u TAB	全局循环：改变整个Buffer的状态</h5>
+
+<p style="text-align: center;">
+&mdash;&gt; OVERVIEW &mdash;&gt; CONTENTS &mdash;&gt; SHOW ALL &mdash;
+</p>
+
+
+
+<h4><a name="sec11" id="sec11"></a>全局状态</h4>
+
+<p class="first">当Emacs第一次打开一个org文件的时候，全局状态被设为<code>OVERVIEW</code>，也就是只有顶层的标题是可见的。这个默认设定可以通过配置变量<code>org-startup-folded</code>来进行改变。对于每一个文件，也可以通过增加一个启动的关键词来<code>overview</code>, <code>content</code>, <code>showall</code>进行配置，比如：</p>
+
+<pre class="example">
+#+STARTUP: content
+</pre>
+
+
+
+<h3><a name="sec12" id="sec12"></a>移动</h3>
+
+<h4><a name="sec13" id="sec13"></a>C-c C-n</h4>
+
+<p class="first">下一个标题</p>
+
+
+<h4><a name="sec14" id="sec14"></a>C-c C-p</h4>
+
+<p class="first">上一个标题</p>
+
+
+<h4><a name="sec15" id="sec15"></a>C-c C-f</h4>
+
+<p class="first">下一个同层标题</p>
+
+
+<h4><a name="sec16" id="sec16"></a>C-c C-b</h4>
+
+<p class="first">上一个同层标题</p>
+
+
+<h4><a name="sec17" id="sec17"></a>C-c C-u</h4>
+
+<p class="first">回到上一层标题</p>
+
+
+
+<h3><a name="sec18" id="sec18"></a>结构修改</h3>
+
+<h4><a name="sec19" id="sec19"></a>M-RET</h4>
+
+<p class="first">插入一个和当前同层的标题。如果游标在一个普通列表项中，那么会插入一个新的列表项。</p>
+
+
+<h4><a name="sec20" id="sec20"></a>M-S-RET</h4>
+
+<p class="first">插入一个新的TODO项，和当前的标题同层</p>
+
+
+<h4><a name="sec21" id="sec21"></a>M-LEFT/RIGHT</h4>
+
+<p class="first">增加或减少当前标题的层数</p>
+
+
+<h4><a name="sec22" id="sec22"></a>M-S-LEFT/RIGHT</h4>
+
+<p class="first">增加或减少当前子树的层数</p>
+
+
+<h4><a name="sec23" id="sec23"></a>M-S-UP/DOWN</h4>
+
+<p class="first">向上/下移动子树。</p>
+
+
+<h4><a name="sec24" id="sec24"></a>C-c C-w</h4>
+
+<p class="first">把一段内容定位到另一个标题中</p>
+
+
+<h4><a name="sec25" id="sec25"></a>C-x n s/w</h4>
+
+<p class="first">把Buffer内容限定到当前子树/恢复到全部内容</p>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: September  3, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+
