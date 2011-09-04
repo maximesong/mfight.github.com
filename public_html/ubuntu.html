@@ -41,6 +41,25 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec7">加载iso镜像</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">创建挂载点</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">挂载镜像</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">查看和使用</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">移除挂载</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </div>
 
@@ -119,11 +138,43 @@ StartupWMClass=Emacs
 
 
 
+<h2><a name="sec7" id="sec7"></a>加载iso镜像</h2>
+
+<h3><a name="sec8" id="sec8"></a>创建挂载点</h3>
+
+<pre class="src">
+$ sudo mkdir /mnt/iso
+</pre>
+
+
+<h3><a name="sec9" id="sec9"></a>挂载镜像</h3>
+
+<pre class="src">
+$ sudo mount -o loop -t iso9660 ISO_NAME.iso /mnt/iso/
+</pre>
+
+
+<h3><a name="sec10" id="sec10"></a>查看和使用</h3>
+
+<pre class="src">
+$ cd /mnt/iso/
+$ ls -l
+</pre>
+
+
+<h3><a name="sec11" id="sec11"></a>移除挂载</h3>
+
+<pre class="src">
+$ sudo umount /mnt/iso/
+</pre>
+
+
+
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  4, 2011  
+    Last Updated: September  5, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

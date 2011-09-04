@@ -57,3 +57,22 @@ xprop | grep "WM_CLASS" | awk '{ print $4 }'
 StartupWMClass=Emacs
 </example>
 关于<code>xprop</code>、<code>grep</code>、<code>awk</code>等命令的含义，自己在命令行下<code>man</code>一下吧。
+
+* 加载iso镜像
+** 创建挂载点
+<src lang="shell">
+$ sudo mkdir /mnt/iso
+</src>
+** 挂载镜像
+<src lang="shell">
+$ sudo mount -o loop -t iso9660 ISO_NAME.iso /mnt/iso/
+</src>
+** 查看和使用
+<src lang="shell">
+$ cd /mnt/iso/
+$ ls -l
+</src>
+** 移除挂载
+<src lang="shell">
+$ sudo umount /mnt/iso/
+</src>
