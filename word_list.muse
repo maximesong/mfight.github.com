@@ -998,3 +998,6 @@ a shape with four sides, only two of which are parallel
 
 granularity
 the state or quality of being composed of many individual pieces or elements
+
+diagonal
+a diagonal line is straight and joins two opposite corners of a flat shap, usually a square
