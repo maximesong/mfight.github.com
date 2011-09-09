@@ -17,9 +17,92 @@
     门打开了。
   - Ouvrez la fenetre, il fait chaud.
     开窗吧，很热。
+*** travailleur
+ - a.(m) 勤劳的
+ - n 劳动者
+*** sérieux
+ - a. 认真的
+*** paresseux
+ - a.(m) 懒惰的
+ - n. 懒人
+*** normal
+ - 正常的
+
+*** anormal
+ - 反常的
+
+#surement
+*** sûrement
+ - 必然，肯定，一定
+  - Ce type est sûrement japonais.
+    这个家伙一定是个日本人。 
+  - Il'est sûr que c'est lui.
+    一定是他。
+
+synoyme ::
+[[#certainment][certainment]]
+
+#certainment
+*** certainment 
+ - 肯定的， 一定的
+ - 确实，当然
+
+synoyme ::
+[[#surement][sûrement]]
+
+*** entendre
+ - 听到
+
+*** ravi
+a.(m)
+ - 高兴的
+  - je suis ravi(e) de vous connaitre
+synonyme ::
+content、heureux
+
+#sembler
+*** sembler
+v.i.
+ - 好像，似乎
+  - Elle semble très travilleuse.
+    她看起来很勤劳
+synoyme ::
+[[#paraitre][paraître]] 、 [[#avoir_lair][avoir l'air]]
+
+#paraitre
+*** paraître
+ - 似乎，好像
+  - vous paraissez vingt ans.
+    你看上去二十岁。
+
+synoyme ::
+[[#sembler][sembler]] 、 [[#avoir_lair][avoir l'air]]
 ** tournure
+
 *** l'agence de voyages
  - 旅行社
+
+*** sous-entendu
+ - 言下之义，意味着，意思是，暗示
+  - Il est sous-entendu que... 是不言而喻的。
+
+#avoir_lair
+*** avoir l'air 
+ - 看样子..., 似乎...
+  - Il a l'air très gentil.
+    他看上去很友好。
+
+synonyme ::
+[[#sembler][sembler]] 、 [[#paraitre][paraître]]
+
+**** avoir l'air de + inf.
+
+主语为人时，性数配合可有可无。
+主语为物时，性数配合必须有。
+  - tu as l'air de dire que je suis un sot.
+    你就像在说我是一个傻瓜。
+  - ça n'a l'air de rien.
+    它貌不惊人。
 
 ** phrase
 
