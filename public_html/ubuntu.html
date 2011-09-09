@@ -85,27 +85,22 @@
 
 
 <p>本页的内容主要针对的是ubuntu11.04， Unity桌面
-<h2><a name="sec1" id="sec1"></a>小技巧</h2></p>
-
-<h3><a name="sec2" id="sec2"></a>切换workspace</h3>
-
-<p class="first">Ctrl + Alt + Arrow</p>
+<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>小技巧</h2>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>切换workspace</h3>
+Ctrl + Alt + Arrow</p>
 
 
 
-<h2><a name="sec3" id="sec3"></a>Launcher Bar</h2>
-
-<h3><a name="sec4" id="sec4"></a>鼠标中键点击图标可以打开一个新的应用程序</h3>
-
-
-<h3><a name="sec5" id="sec5"></a>快速切换任务</h3>
-
-<p class="first">按住<code>Super</code>键（<code>Window</code>键），这时任务栏上会显示数字。按下相应数字即可跳到该程序。</p>
+<h2><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>Launcher Bar</h2>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec4" id="sec4"></a>鼠标中键点击图标可以打开一个新的应用程序</h3>
 
 
-<h3><a name="sec6" id="sec6"></a>新建应用程序图标</h3>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec5" id="sec5"></a>快速切换任务</h3>
+按住<code>Super</code>键（<code>Window</code>键），这时任务栏上会显示数字。按下相应数字即可跳到该程序。
 
-<p class="first">一般来说，只要运行程序后，在launcher bar中右键点击程序图标，选择<code>Keep In Launcher</code>，就可以在launcher bar中添加应用程序了。</p>
+
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec6" id="sec6"></a>新建应用程序图标</h3>
+一般来说，只要运行程序后，在launcher bar中右键点击程序图标，选择<code>Keep In Launcher</code>，就可以在launcher bar中添加应用程序了。
 
 <p>但是对一些程序来说，这个方法并不管用。就笔者个人而言，当时是在ubuntu11.04下编译Emacs23.3后，遇到这个问题的。编译安装后，通过命令行<code>emacs</code>启动程序，能添加到launcher bar，不过再点击图标的时候，并不能运行程序。</p>
 
@@ -158,23 +153,22 @@ StartupWMClass=Emacs
 
 
 
-<h2><a name="sec7" id="sec7"></a>加载iso镜像</h2>
-
-<h3><a name="sec8" id="sec8"></a>创建挂载点</h3>
+<h2><span class="toplink"><a href="#top">top</a></span><a name="sec7" id="sec7"></a>加载iso镜像</h2>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec8" id="sec8"></a>创建挂载点</h3>
 
 <pre class="src">
 $ sudo mkdir /mnt/iso
 </pre>
 
 
-<h3><a name="sec9" id="sec9"></a>挂载镜像</h3>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec9" id="sec9"></a>挂载镜像</h3>
 
 <pre class="src">
 $ sudo mount -o loop -t iso9660 ISO_NAME.iso /mnt/iso/
 </pre>
 
 
-<h3><a name="sec10" id="sec10"></a>查看和使用</h3>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec10" id="sec10"></a>查看和使用</h3>
 
 <pre class="src">
 $ cd /mnt/iso/
@@ -182,7 +176,7 @@ $ ls -l
 </pre>
 
 
-<h3><a name="sec11" id="sec11"></a>移除挂载</h3>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec11" id="sec11"></a>移除挂载</h3>
 
 <pre class="src">
 $ sudo umount /mnt/iso/

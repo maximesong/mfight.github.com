@@ -3,5 +3,23 @@
 
 * époside 2
 ** mot
+*** seule
+ - 单独
+  - Tu es seule?
+    你一个人住吗？ 
+*** sérieux
+ - 认真
+  - C'est un garçon sérieux.
+    这是一个认真的男人。
+*** ouver
+ - 打开
+  - Une porte s'ouvre. 
+    门打开了。
+  - Ouvrez la fenetre, il fait chaud.
+    开窗吧，很热。
+** tournure
+*** l'agence de voyages
+ - 旅行社
+
 ** phrase
 
