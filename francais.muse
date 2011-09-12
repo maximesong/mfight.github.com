@@ -1,4 +1,23 @@
-#title Francais
+#title Le Français
 <contents>
-* Barbapapa
-[[barbapapa.html][点击这里]]
+* Movie
+
+ -  [[barbapapa.html][Barbapapa]]
+
+* Alphabet
+
+ -  [[francais_code][code]]
+
+* Mot
+
+ -  [[francais_temps.html][le temps]]
+
+ -  [[francais_meubles.html][le meubles]]
+
+* Text
+
+ -  [[le_francais.html][le français]]
+
+ -   [[francais_reflets.html][reflets]]
+
+

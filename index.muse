@@ -14,6 +14,8 @@
 * 学习笔记
 ** Linux
 [[linux_command.html][Linux命令行]]
+** Ubuntu
+[[ubuntu.html][Ubuntu使用]]
 ** Emacs
 [[emacs_manual.html][基本使用]]
 
@@ -64,7 +66,8 @@ Q_UNUSED ::
 这条命令的作用是更新已经在object tree里的内容，而不会加入新的文件。同时那些被删除的文件也会从object tree中删除，是不是很好用呢？
 
 * 生活点滴
-
+    到现在我已经彻底意识到电脑完全成为了一个工具，使用电脑做些什么才是正经，Windows也好，Ubuntu也罢，不必在意操作系统究竟是什么，而需要在意的是你用电脑做了些什么，不要过度的舍本逐末，让大量的时间用在修理”工具“上。
+    ---[[http://www.bentutu.com/2011/08/ubuntu-11-04-install-config-experience-with-imobile365/][笨笨兔]]
 * 关于
 由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我[[wenhao.sng@gmail.com]]， 也可以加我qq：570660586。
 

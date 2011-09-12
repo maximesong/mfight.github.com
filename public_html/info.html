@@ -3,14 +3,14 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Emacs Lisp</title>
+    <title>Info</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
-    <h1>Emacs Lisp</h1>
+    <h1>Info</h1>
 <!-- menu start here -->
      <div class="menu">
         <div class="menuitem">
@@ -36,59 +36,21 @@
 <h6 class="mulu">Contents</h6>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec1">基础知识</a>
+<a href="#sec1">华师大班车</a>
 </dt>
-<dt class="contents">
-<a href="#sec2">实例</a>
-</dt>
-<dd>
-<dl class="contents">
-<dt class="contents">
-<a href="#sec3">复制行</a>
-</dt>
-</dl>
-</dd>
 </dl>
 </div>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>基础知识</h2>
-
-
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>实例</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>复制行</h3>
-一般在emacs复制某行的内容，有两种方法：
-
-<p>首先到行首，然后</p>
-
-<p>1. C-space C-e M-w</p>
-
-<p>2. C-k C-y</p>
-
-<p>这样有时候会让人觉得比较麻烦，那么写个小函数来解决这个问题吧。</p>
-
-<pre class="example">
-(global-set-key (kbd &quot;C-c C-w&quot;) 'copy-lines)
-
-(defun copy-lines(&amp;optional arg)
-  (interactive &quot;p&quot;)
-  (save-excursion
-    (beginning-of-line)
-    (set-mark (point))
-    (next-line arg)
-    (kill-ring-save (mark) (point))
-    )
-  )
-</pre>
-这样，不用先移动到行首，在任意位置只要<code>C-c C-w</code>就可以复制整行的内容了。
-
+<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>华师大班车</h2>
+<a href="huashidabanche.html">查看</a>
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  4, 2011  
+    Last Updated: September  9, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
