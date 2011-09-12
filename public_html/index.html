@@ -11,26 +11,6 @@
   </head>
   <body>
     <h1>EmacsFans的wiki主页</h1>
-<!-- menu start here -->
-     <div class="menu">
-        <div class="menuitem">
-          <a href=" ../index.html">Home</a>
-        </div>
-
-        <div class="menuitem">
-          <a href=" index.html">Computer</a>
-        </div>
-       </div>
-     <div class="menub">       
-	<div class="menuitemb">
-          <a href=" francais.html">Français</a>
-        </div>
-
-        <div class="menuitemb">
-          <a href=" word_list.html">Wordlist</a>
-        </div>
-      </div>
-    <!-- menu ends here -->
     <!-- Page published by Emacs Muse begins here -->
 <div class="mulu">
 <h6 class="mulu">Contents</h6>
@@ -87,11 +67,18 @@
 <dt class="contents">
 <a href="#sec12">生活点滴</a>
 </dt>
+<dd>
+<dl class="contents">
 <dt class="contents">
-<a href="#sec13">关于</a>
+<a href="#sec13">悲剧的暑假大作业</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec14">关于</a>
 </dt>
 <dt class="contents">
-<a href="#sec14">友情链接</a>
+<a href="#sec15">友情链接</a>
 </dt>
 </dl>
 </div>
@@ -108,26 +95,32 @@
 
 <p>人只有有了“危机”（维基），才能不断地去进取！</p>
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>学习笔记</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>Linux</h3>
-<a href="linux_command.html">Linux命令行</a>
+<h2><a name="sec1" id="sec1"></a>学习笔记</h2>
+
+<h3><a name="sec2" id="sec2"></a>Linux</h3>
+
+<p><a href="linux_command.html">Linux命令行</a></p>
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>Ubuntu</h3>
-<a href="ubuntu.html">Ubuntu使用</a>
+<h3><a name="sec3" id="sec3"></a>Ubuntu</h3>
+
+<p><a href="ubuntu.html">Ubuntu使用</a></p>
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec4" id="sec4"></a>Emacs</h3>
-<a href="emacs_manual.html">基本使用</a>
+<h3><a name="sec4" id="sec4"></a>Emacs</h3>
+
+<p><a href="emacs_manual.html">基本使用</a></p>
 
 <p><a href="emacs_lisp.html">Emacs Lisp</a></p>
 
 <p><a href="emacs_muse.html">Emacs Muse</a></p>
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec5" id="sec5"></a>Qt</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec6" id="sec6"></a>QExplicitlySharedDataPointer</h4>
-在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：
+<h3><a name="sec5" id="sec5"></a>Qt</h3>
+
+<h4><a name="sec6" id="sec6"></a>QExplicitlySharedDataPointer</h4>
+
+<p class="first">在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：</p>
 
 <blockquote>
 <p class="quoted">
@@ -140,7 +133,7 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 <p>那么，<code>QExplicitlySharedDataPointer</code>与<code>_QSharedDataPointer</code>有什么不同呢？在对某个共享数据指针进行写操作的时候，这个写操作应该作用到所有指针上，还是那个进行了操作的指针呢？对QExplicitlySharedDataPointer对象的写操作，将作用到所有的指针上。而QSharedDataPointer在计数器多余1的情况下，将自动生成一个副本。如果QExplicitlySharedDataPointer在某次操作时也想达到这个效果，可以在写操作前调用<code>detach()</code>方法。</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec7" id="sec7"></a>Qt Marcos</h4>
+<h4><a name="sec7" id="sec7"></a>Qt Marcos</h4>
 
 <dl>
 <dt><strong>Q_UNUSED</strong></dt><dd>
@@ -149,9 +142,11 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec8" id="sec8"></a>CSS</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec9" id="sec9"></a>在html中引用css</h4>
-如：
+<h3><a name="sec8" id="sec8"></a>CSS</h3>
+
+<h4><a name="sec9" id="sec9"></a>在html中引用css</h4>
+
+<p class="first">如：</p>
 
 <pre class="example">
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;sheet.css&quot; title=&quot;default&quot;&gt;
@@ -175,9 +170,11 @@ This means that QExplicitlySharedDataPointers behave like regular C++ pointers, 
 
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec10" id="sec10"></a>git</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec11" id="sec11"></a>更新已经删除的文件</h4>
-一般来说，用git rm就能把文件从目录中删除，同时从git的object tree中删除。但是，如果之前已经通过窗口或是别的方法，删除了文件，还需要用git rm来把文件一个个删除吗？完全不用，可以用这条命令。
+<h3><a name="sec10" id="sec10"></a>git</h3>
+
+<h4><a name="sec11" id="sec11"></a>更新已经删除的文件</h4>
+
+<p class="first">一般来说，用git rm就能把文件从目录中删除，同时从git的object tree中删除。但是，如果之前已经通过窗口或是别的方法，删除了文件，还需要用git rm来把文件一个个删除吗？完全不用，可以用这条命令。</p>
 
 <pre class="example">
 git add -u
@@ -187,19 +184,29 @@ git add -u
 
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec12" id="sec12"></a>生活点滴</h2>
+<h2><a name="sec12" id="sec12"></a>生活点滴</h2>
+
 <blockquote>
 <p class="quoted">到现在我已经彻底意识到电脑完全成为了一个工具，使用电脑做些什么才是正经，Windows也好，Ubuntu也罢，不必在意操作系统究竟是什么，而需要在意的是你用电脑做了些什么，不要过度的舍本逐末，让大量的时间用在修理”工具“上。
 &mdash;<a href="http://www.bentutu.com/2011/08/ubuntu-11-04-install-config-experience-with-imobile365/">笨笨兔</a></p>
 </blockquote>
 
+<h3><a name="sec13" id="sec13"></a>悲剧的暑假大作业</h3>
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec13" id="sec13"></a>关于</h2>
-由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我<a href="wenhao.sng@gmail.com">wenhao.sng@gmail.com</a>， 也可以加我qq：570660586。
+<p class="first">真不容易，这个暑假做了有史以来最差的一次团队项目。想了想原因，多半还是要怪自己。以前总是跟着大神做，报大腿嘛，一切都是那么轻松愉快加惬意。这次自己做组长，才知道有那么一种情况叫“人不齐”，才知道有那么一种情况叫“做不出”。事后再分析，我觉得最大的问题，出在团队的凝聚力上。我本来想着，既然是自己选的题目，大家应该对项目很有兴趣和热情，大家都有同一个目标，一切就很容易了。而实际上，每个人当然都可能会有自己更感兴趣的事情，不是吗？当太阳不再对行星有吸引力时，如何还能维持这个银河系呢，于是一切都崩塌了。现在回想起来，最大的败笔就在这里。我甚至从来都没有想过，要搞出个“人造太阳”，或者弄个绳子什么的把乱七八糟的东西都绑在一起。以至于最后，连自己都失去了把项目做下去的兴趣。</p>
+
+<p>如果除去这个项目关系到6学分的成绩，项目的失败也未必不是一件好事。至少，我学到了很多，也知道了还有很多要去学。</p>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec14" id="sec14"></a>友情链接</h2>
-<a href="http://www.emacswiki.org/">EmacsWiki</a> 学习Emacs很好的wiki网站
+
+<h2><a name="sec14" id="sec14"></a>关于</h2>
+
+<p class="first">由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我<a href="wenhao.sng@gmail.com">wenhao.sng@gmail.com</a>， 也可以加我qq：570660586。</p>
+
+
+<h2><a name="sec15" id="sec15"></a>友情链接</h2>
+
+<p><a href="http://www.emacswiki.org/">EmacsWiki</a> 学习Emacs很好的wiki网站</p>
 
 <p><a href="http://emacser.com/">Emacs中文网</a> 有很多很有用的内容。</p>
 
@@ -213,7 +220,7 @@ git add -u
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  5, 2011  
+    Last Updated: September 13, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
