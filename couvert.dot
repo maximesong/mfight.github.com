@@ -1,0 +1,40 @@
+digraph couvert {
+	subgraph cluster_plate {
+		node [style=filled,color=white];
+		style=filled;
+		label="plate";
+		color=lightgrey;
+		//	assiette->couteau;
+		"ok" -> "cancel";
+	
+	}
+	assiette[label="1", shape=polygon, sides=5, peripheries=3, color=lightblue, style=filled];
+	couteau[label="2"];
+	cuillère[label="3"];
+	fourchette[label="4"];
+	serviette[label="5"];
+	eau[label="6"];
+	blanc[label="7"];
+	rough[label="8"];
+	
+	{
+		rank = same;
+		assiette;
+		couteau;
+		fourchette;
+		cuillère;
+		serviette;
+	}
+	{
+		rank = same;
+		eau;
+		blanc;
+		rough;
+	}
+	fourchette ->	assiette ;
+	rough -> assiette;	
+	"verre à eau"
+	"verre à vin blanc"
+	"verre à vin rough"
+	
+}

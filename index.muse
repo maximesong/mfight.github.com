@@ -13,13 +13,13 @@
 
 * 学习笔记
 ** Linux
-[[linux_command.html][Linux命令行]]
+[[linux_command][Linux命令行]]
 ** Ubuntu
-[[ubuntu.html][Ubuntu使用]]
+[[ubuntu][Ubuntu使用]]
 ** Emacs
-[[emacs_manual.html][基本使用]]
+[[emacs_manual][基本使用]]
 
-[[emacs_lisp.html][Emacs Lisp]]
+[[emacs_lisp][Emacs Lisp]]
 ** Qt
 *** QExplicitlySharedDataPointer
 在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：
@@ -75,6 +75,6 @@ Q_UNUSED ::
 [[http://emacser.com/][Emacs中文网]] 有很多很有用的内容。
 
 
-[[http://ihome.ust.hk/~shiwu/wiki/index.html][十五的“危机]] 我的wiki风格就是从十五的wiki上照搬过来的。
+[[http://ihome.ust.hk/~shiwu/wiki/index][十五的“危机]] 我的wiki风格就是从十五的wiki上照搬过来的。
 
 [[http://blog.sunshy.info/][海洋的博客]] 一位学长的博客，也是刚刚起步，但内容相当专业哦。

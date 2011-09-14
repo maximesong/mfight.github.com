@@ -1,0 +1,193 @@
+#title nourriture
+<contents>
+
+* boisson
+n.f
+ - 饮料
+** café
+n.m
+ - 咖啡
+*** café noir
+ - 黑咖啡
+*** café au lait 
+ - 奶咖
+** thé
+n.m
+ - 茶
+*** thé vert
+ - 绿茶
+*** thé au jasmin
+ - 茉莉花茶
+** chocolat
+n.m
+ - 巧克力饮料
+** jus d'orange
+ - 桔汁
+** limonade
+ - 汽水
+** bière
+ - 啤酒
+** coca-cola
+ - 可口可乐
+** pepsi
+ - 百事可乐
+** glace
+f.
+ - 冰激凌
+
+
+* céréales
+f.pl
+ - 谷物，粮食 
+** tartine
+n.f
+ - 面包片
+** biscotte
+n.f
+ - 面包干，干面包片
+** toast
+n.m
+ - 烤面包片，吐司
+** croissant
+n.m
+ - 羊角面包
+** pain
+m.
+ - 面包
+
+* place
+** cuisine
+n.f
+ - 厨房
+** la salle à manger
+ - 餐厅
+
+* fruit
+n.m.
+ - 水果
+** mandarine
+n.f
+ - 桔子
+
+* plat
+n.m
+ - 一道菜
+** légume
+m.
+ - 蔬菜
+*** épinard
+n.m
+ - 菠菜
+*** chou
+n.m
+ - 白菜
+** viande
+n.f
+ - 肉
+*** porc
+n.m
+ - 猪肉
+*** bœuf
+n.m
+ - 牛肉
+*** mouton
+n.m.
+ - 羊肉
+*** poisson
+m.
+ - 鱼，鱼肉
+
+** riz
+n.m
+ - 米饭
+
+** autre
+*** omelette
+n.f.
+ - 煎蛋卷,炒蛋
+*** beurre
+n.m.
+ - 黄油
+*** salade
+n.f.
+ - 色拉
+* couvert
+n.m
+ - 餐具
+** assiette
+n.f.
+ - 盘子
+** couteau
+n.m.
+ - 刀子
+** cuillère
+n.f.
+ - 勺，调羹
+** fourchette
+n.f.
+ - 叉子
+** serviette
+n.f.
+ - 餐巾，毛巾
+** verre à eau
+n.m.
+ - 水杯
+** verre à vin blanc
+n.m.
+ - 白酒杯
+** verre à vin rouge
+n.m.
+ - 红酒杯
+
+* assaisonnement
+n.m
+ - 调味品
+** huile
+n.f.
+ - 油
+*** huile de sésame
+ - 香油
+** moutarde
+n.f.
+ - 芥末
+** piment
+n.m.
+ - 辣椒
+** sauce
+n.f.
+ - 调味汁
+*** sauce de soja
+ - 酱油
+** sel
+n.m.
+ - 盐
+** vinaigre
+n.m
+ - 醋
+* goût
+n.m
+ - 味道
+** salé,e
+ - 咸的
+** sucré,e
+ - 甜的
+** aigre
+ - 酸的
+** amer,ére
+ - 苦的
+** délicieux,se
+ - 美味的
+** exquis,e
+ - 美味可口的
+
+* repas
+n.m
+ - 餐
+** déjeuner
+n.m.
+ - 午饭
+** dîner
+n.m.
+ - 晚饭
+
+
