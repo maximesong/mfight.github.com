@@ -1,0 +1,9 @@
+#title Emacs Muse
+
+<contents>
+
+* 快捷键
+** C-c C-p
+发布所有更改了的muse页面
+** C-c C-t
+发布当前访问的文件
