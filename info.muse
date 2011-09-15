@@ -2,4 +2,4 @@
 <contents>
 
 * 华师大班车
-[[huashidabanche.html][查看]]
+[[huashidabanche][查看]]
