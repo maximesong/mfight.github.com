@@ -1,0 +1,19 @@
+#title leçon 16
+<contents>
+* mot 
+** construire
+v.t.
+ - 建造
+
+** pendant
+prép
+ - 在...期间
+  - pendant trios hours
+    三天
+* tournure
+** la Grande Muraille
+ - 长城
+
+* grammaire
+** le passé composé de l'indicatif
+ - [[francais_passe_indicatif][le passé composé de l'indicatif]]

@@ -9,6 +9,7 @@
 * G
 ** Grammaire
  - [[francais_pronom][pronom]]
+ - [[francais_passe_indicatif][le passé composé l'indicatif]]
 
 * M
 ** Mot
