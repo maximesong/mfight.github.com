@@ -10,6 +10,7 @@
 ** Grammaire
  - [[francais_pronom][pronom]]
  - [[francais_passe_indicatif][le passé composé l'indicatif]]
+ - [[francais_imperative][impérative]]
 
 * M
 ** Mot

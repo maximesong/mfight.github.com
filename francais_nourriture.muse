@@ -101,6 +101,10 @@ m.
 n.m
  - 米饭
 
+** soupe
+n.f
+ - 浓汤
+
 ** autre
 *** omelette
 n.f.
@@ -180,6 +184,13 @@ n.m
 ** exquis,e
  - 美味可口的
 
+* fruit
+n.m.
+ - 水果
+** raisin
+ - 葡萄
+*** raisins secs
+ - 葡萄干
 * repas
 n.m
  - 餐
