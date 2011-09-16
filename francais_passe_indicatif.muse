@@ -76,7 +76,7 @@ a.
 v.t.
  - 等
 
-** emtemdre
+** entendre
 v.t.dir
  - 听到
 
@@ -88,7 +88,7 @@ v.t.
 v.impers.
  - 必须
 
-** revevoir
+** recevoir
 v.t.
  - 收到
 
