@@ -2,7 +2,7 @@
 <contents>
 
 * mot
- - [[francais_nouriture.html][nourriture]]
+ - [[francais_nourriture][nourriture]]
 
 * tournure
 
