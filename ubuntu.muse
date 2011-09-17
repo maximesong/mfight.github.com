@@ -76,3 +76,37 @@ $ ls -l
 <src lang="shell">
 $ sudo umount /mnt/iso/
 </src>
+
+* 配置
+** 安装指纹识别
+电脑是thinkpad的，windows下指纹识别用得挺习惯的。在ubuntu下，也能用指纹识别吗？
+
+网上搜索了一下，大概有两种方法
+*** 使用thinkfinger
+**** 安装
+<src code="shell">
+sudo apt-get install thinkfinger-tools libpam-thinkfinger
+
+sudo /usr/lib/pam-thinkfinger/pam-thinkfinger-enable
+</src>
+**** 执行命令登记指纹
+<src code="shell">
+tf-tool --acquire # acquire the finger index
+
+tf-tool-verify # verify the finger index
+</src>
+在我的电脑上，执行<code>"tf-tool --acquire"</code>时提示错误<code>usb device not found</code>,重启后也没有效果。最后是用下面的方法解决的。
+*** 使用fingerprint-gui
+**** 安装
+<src code="shell">
+sudo add-apt-repository ppa:fingerprint/fingerprint-gui
+
+sudo apt-get update
+
+sudo apt-get install fingerprint-gui
+</src>
+**** 使用
+<src code="shell">
+sudo fingerprint-gui
+</src>
+

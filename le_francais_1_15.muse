@@ -1,0 +1,45 @@
+#title leçon 15
+<contents>
+
+* mot
+ - [[francais_nourriture][nourriture]]
+** mal
+a.m.
+ - 坏的，不好的
+
+** préférer
+v.t.
+ - 宁愿，宁可，更喜欢
+
+** assez
+ - 足够
+
+** meilleure
+a.(f)
+ - bon的比较级，较好的，更好的
+
+** exprimer
+v.t.
+ - 表达
+
+** ordre
+n.m.
+ - 命令
+
+** amicalement
+adv.
+ - 友善地，友好得
+** identique
+a.
+ - 一致的
+
+* tournure
+
+** le hall du restaurant universitaire
+ - 大学食堂
+
+* phrase
+
+
+* grammaire
+ - [[francais_imperative][impérative]]

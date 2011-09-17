@@ -1,0 +1,115 @@
+#title le passé composé de l'indicatif
+<contents>
+* la formation
+<example>
+avoir/être(indicatif présent) + verbe en question(participe passé) = passé composé
+</example>
+
+* le participe passé
+** 第一组规则动词
+词尾<code>-er</code>变成<code>-é</code>, 如：
+<example>
+regarder -> regardé
+</example>
+** 第二组规则动词
+词尾<code>-ir</code>变成<code>-i</code>, 如:
+<example>
+finir -> fini
+</example>
+** 第三组不规则动词
+词尾一般是<code>i</code>, <code>is</code>, <code>it</code>, <code>u</code>中的一个。
+*** 部分过去分词表
+**** 特殊
+avoir || eux
+être || été
+aller || allé
+devoir || dû
+**** 以u结尾
+attendre || attendu
+boire || bu
+connaître || connu
+entendre || entendu
+falloir || fallu
+lire || lu
+pleuvoir || plu
+recevoir || reçu
+savoir || su
+tenir || tenu
+retenir || retenu
+vouloir || voulu
+voir || vu
+**** 以i结尾
+sentir || senti
+accueillir || accueilli
+rire || ri
+**** 以is结尾
+mettre || mis
+prendre || pris
+appendre || appris
+**** 以it结尾
+dire || dit
+écrire || écrit
+faire || fait
+ 
+* moi
+** indicatif
+a.
+ - 直陈式
+
+** composé
+adj.
+ - 复合的
+
+** formation
+n.f.
+ - 组成，构成
+
+** participe
+m.
+ - 分词
+
+** présent
+a.
+ - 现在的
+
+** attendre
+v.t.
+ - 等
+
+** entendre
+v.t.dir
+ - 听到
+
+** boire
+v.t.
+ - 喝,饮
+
+** falloir
+v.impers.
+ - 必须
+
+** recevoir
+v.t.
+ - 收到
+
+** tenir
+v.i.
+ - 坚持
+
+** retenir
+v.t.
+ - 记住
+** sentir
+v.t.
+ - 散发...气味
+** accueillir
+v.t.
+ - 迎接，接待
+
+** écrire
+v.t.
+ - 写
+
+** mettre
+v.t.
+ - 放置

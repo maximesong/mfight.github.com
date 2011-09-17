@@ -1,23 +1,39 @@
 #title Le Français
 <contents>
-* Movie
 
- -  [[barbapapa.html][Barbapapa]]
-
-* Alphabet
+* A
+** Alphabet
 
  -  [[francais_code][code]]
 
-* Mot
+* G
+** Grammaire
+ - [[francais_pronom][pronom]]
+ - [[francais_passe_indicatif][le passé composé l'indicatif]]
+ - [[francais_imperative][impérative]]
 
- -  [[francais_temps.html][le temps]]
+* M
+** Mot
 
- -  [[francais_meubles.html][le meubles]]
+ - [[francais_temps][le temps]]
 
-* Text
+ - [[francais_meubles][le meubles]]
 
- -  [[le_francais.html][le français]]
+ - [[francais_nourriture][la nourriture]]
 
- -   [[francais_reflets.html][reflets]]
+** Movie
 
+ -  [[barbapapa][Barbapapa]]
 
+* L
+** littérature
+ - [[francais_poeme][poéme]]
+
+* T
+** Text
+
+ - [[le_francais][le français]]
+
+ - [[francais_reflets][reflets]]
+
+ - [[le-cours-de-oral][le cours de oral]]

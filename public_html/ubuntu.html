@@ -80,6 +80,26 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec12">配置</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec13">安装指纹识别</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec14">使用thinkfinger</a>
+</dt>
+<dt class="contents">
+<a href="#sec15">使用fingerprint-gui</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
 </dl>
 </div>
 
@@ -184,11 +204,59 @@ $ sudo umount /mnt/iso/
 
 
 
+<h2><span class="toplink"><a href="#top">top</a></span><a name="sec12" id="sec12"></a>配置</h2>
+<h3><span class="toplink"><a href="#top">top</a></span><a name="sec13" id="sec13"></a>安装指纹识别</h3>
+电脑是thinkpad的，windows下指纹识别用得挺习惯的。在ubuntu下，也能用指纹识别吗？
+
+<p>网上搜索了一下，大概有两种方法
+<h4><span class="toplink"><a href="#top">top</a></span><a name="sec14" id="sec14"></a>使用thinkfinger</h4>
+<h5><span class="toplink"><a href="#top">top</a></span>安装</h5></p>
+
+<pre class="src">
+sudo apt-get install thinkfinger-tools libpam-thinkfinger
+
+sudo /usr/lib/pam-thinkfinger/pam-thinkfinger-enable
+</pre>
+
+
+<h5><span class="toplink"><a href="#top">top</a></span>执行命令登记指纹</h5>
+
+<pre class="src">
+tf-tool --acquire # acquire the finger index
+
+tf-tool-verify # verify the finger index
+</pre>
+在我的电脑上，执行<code>&quot;tf-tool --acquire&quot;</code>时提示错误<code>usb device not found</code>,重启后也没有效果。最后是用下面的方法解决的。
+
+
+
+<h4><span class="toplink"><a href="#top">top</a></span><a name="sec15" id="sec15"></a>使用fingerprint-gui</h4>
+<h5><span class="toplink"><a href="#top">top</a></span>安装</h5>
+
+<pre class="src">
+sudo add-apt-repository ppa:fingerprint/fingerprint-gui
+
+sudo apt-get update
+
+sudo apt-get install fingerprint-gui
+</pre>
+
+
+<h5><span class="toplink"><a href="#top">top</a></span>使用</h5>
+
+<pre class="src">
+sudo fingerprint-gui
+</pre>
+
+
+
+
+
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  5, 2011  
+    Last Updated: September 14, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
