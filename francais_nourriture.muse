@@ -90,9 +90,12 @@ n.m
 *** bœuf
 n.m
  - 牛肉
+
+#mouton
 *** mouton
 n.m.
  - 羊肉
+ - 绵羊
 *** poisson
 m.
  - 鱼，鱼肉

@@ -27,6 +27,8 @@ a.(m)
 ** travailleur
  - a.(m) 勤劳的
  - n 劳动者
+
+#paresseux
 ** paresseux
  - a.(m) 懒惰的
  - n. 懒人

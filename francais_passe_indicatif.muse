@@ -92,13 +92,6 @@ v.impers.
 v.t.
  - 收到
 
-** tenir
-v.i.
- - 坚持
-
-** retenir
-v.t.
- - 记住
 ** sentir
 v.t.
  - 散发...气味

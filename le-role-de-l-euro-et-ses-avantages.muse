@@ -95,6 +95,7 @@ ou événement
 n.m.
  - 发生的事
 
+#principal
 ** principal, -e(aux)
 a.
  - 主要的，首要的，基本的
