@@ -13,16 +13,20 @@
 
 * 学习笔记
 ** Linux
-[[linux_command][Linux命令行]]
+ - [[linux_command][Linux命令行]]
+ - [[linux_configuration][Linux配置]]
 ** Ubuntu
-[[ubuntu][Ubuntu使用]]
+ - [[ubuntu][Ubuntu使用]]
+
 ** Emacs
-[[emacs_manual][基本使用]]
+ - [[emacs_manual][基本使用]]
 
+ - [[emacs_lisp][Emacs Lisp]]
 
-[[emacs_lisp][Emacs Lisp]]
+ - [[emacs_muse][Emacs Muse]]
 
-[[emacs_muse][Emacs Muse]]
+** 课程
+[[courses][courses]]
 
 ** Qt
 *** QExplicitlySharedDataPointer
@@ -58,7 +62,6 @@ Q_UNUSED ::
 注意到，除了默认的风格，其余两个风格的类型应写为<code>"alternate stylesheet"</code>。
 我们来看看在浏览器中的效果。
 [[alternate-style.png]]
-
 还不错哦。
 
 ** git

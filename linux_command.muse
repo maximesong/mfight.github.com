@@ -15,3 +15,11 @@ ldd [OPTION]... FILE...
 打印磁盘的使用情况
 用法 ::
 df [OPTION]... [FILE]...
+
+* ssh-keygen
+作用 ::
+生成，管理和转换ssh的授权密钥
+简略用法 ::
+ssh-keygen -t _type_ [-C _comment_]
+
+_type_ 的值决定了生成的key的种类，可以是rsa1、rsa、dsa等。

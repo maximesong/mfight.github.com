@@ -1,0 +1,65 @@
+digraph D {
+	edge [dir=none];
+	graph [bgcolor="#808080"]
+	{
+		node [shape=plaintext];		
+		x1 x2 x3;
+	}
+	{
+		node [shape=plaintext label=""];
+		x1_d x2_d x3_d;
+	}
+	node [width=0.3 height=0.3 label=""];
+	{
+		node [shape=box URL="http://www.emacsfans.co.cc", tooltip="emacs"]
+		node1;
+		node2;
+		node3;
+	}
+	{
+		edge [color="red"]
+		x1 -> node1;
+
+	}
+	{
+		edge [dir=forward, color="red", arrowsize=0.5];
+		node3 -> x1_d;
+	}
+	{
+		edge [dir=forward, color="blue", arrowsize=0.5];
+		node3 -> x3_d;
+	}
+	{
+		edge [dir=forward, color="green", arrowsize=0.5];
+		node2 -> x2_d;
+	}
+	{
+		edge [color="green"]
+		x2 -> node1;
+	}
+	{
+		edge [color="blue"]
+		x3 -> node2;
+
+	}
+	{
+		edge [color="red:black:green", label=1]
+		node1 -> node2;
+	}
+	{
+		edge [color="red:black:blue", label=1]
+		node2 -> node3;
+	}
+	/*
+	{
+		edge [color="black"]
+		node1 -> node2 -> node3;
+	}
+	*/
+	{
+		rank=same;
+		node1;
+		node2;
+		node3;
+	}
+}

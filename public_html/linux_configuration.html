@@ -3,14 +3,14 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Linux命令行</title>
+    <title>linux configuration</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
-    <h1>Linux命令行</h1>
+    <h1>linux configuration</h1>
 <!-- menu start here -->
      <div class="menu">
         <div class="menuitem">
@@ -36,57 +36,47 @@
 <h6 class="mulu">Contents</h6>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec1">ldd</a>
+<a href="#sec1">添加超级用户权限</a>
 </dt>
 <dt class="contents">
-<a href="#sec2">df</a>
-</dt>
-<dt class="contents">
-<a href="#sec3">ssh-keygen</a>
+<a href="#sec2">Fedora命令自动补全</a>
 </dt>
 </dl>
 </div>
 
 
-<p>对于linux命令行还不是很熟悉，那就日积月累，聚沙成塔吧。</p>
+<h2><a name="sec1" id="sec1"></a>添加超级用户权限</h2>
 
-<h2><a name="sec1" id="sec1"></a>ldd</h2>
-
-<dl>
-<dt><strong>作用</strong></dt><dd>
-打印出共享库依赖。</dd>
-<dt><strong>用法</strong></dt><dd>
-ldd [OPTION]... FILE...</dd>
-</dl>
+<p class="first">修改/etc/sudoers</p>
 
 
-<h2><a name="sec2" id="sec2"></a>df</h2>
+<h2><a name="sec2" id="sec2"></a>Fedora命令自动补全</h2>
 
-<dl>
-<dt><strong>作用</strong></dt><dd>
-打印磁盘的使用情况</dd>
-<dt><strong>用法</strong></dt><dd>
-df [OPTION]... [FILE]...</dd>
-</dl>
+<p class="first">用惯了ubuntu的apt-get，用fedora的yum时没有了自动补全，非常不习惯。后来才知道，fedora相比ubuntu，少了一个叫bash-completion的东西。那就装上呗。</p>
 
+<pre class="src">
+sudo yum install bash-completion
+</pre>
+编辑/etc/.bashrc文件，添加:
 
-<h2><a name="sec3" id="sec3"></a>ssh-keygen</h2>
+<pre class="src">
+if [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+</pre>
+如果修改的是～/.bashrc，则需要执行
 
-<dl>
-<dt><strong>作用</strong></dt><dd>
-生成，管理和转换ssh的授权密钥</dd>
-<dt><strong>简略用法</strong></dt><dd>
-ssh-keygen -t <span style="text-decoration: underline;">type</span> [-C <span style="text-decoration: underline;">comment</span>]</dd>
-</dl>
-
-<p><span style="text-decoration: underline;">type</span> 的值决定了生成的key的种类，可以是rsa1、rsa、dsa等。</p>
+<pre class="src">
+source /etc/bash_completion
+</pre>
+大功告成，试试看Tab的自动补全吧。
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September 20, 2011  
+    Last Updated: September 21, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
