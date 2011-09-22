@@ -44,6 +44,12 @@
 <dt class="contents">
 <a href="#sec3">ssh-keygen</a>
 </dt>
+<dt class="contents">
+<a href="#sec4">dirname</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">unset</a>
+</dt>
 </dl>
 </div>
 
@@ -82,11 +88,53 @@ ssh-keygen -t <span style="text-decoration: underline;">type</span> [-C <span st
 <p><span style="text-decoration: underline;">type</span> 的值决定了生成的key的种类，可以是rsa1、rsa、dsa等。</p>
 
 
+<h2><a name="sec4" id="sec4"></a>dirname</h2>
+
+<dl>
+<dt><strong>作用</strong></dt><dd>
+输出路径的上一个没有反斜杠的部分,并且最后的反斜杠被去掉</dd>
+<dt><strong>例子</strong></dt><dd>
+1.</dd>
+</dl>
+
+<pre class="src">
+dirname /usr/foldername/
+</pre>
+输出<code>/usr</code>
+
+<p>2.</p>
+
+<pre class="src">
+dirname /usr/filename
+</pre>
+输出<code>/usr</code>
+
+<p>3.</p>
+
+<pre class="src">
+dirname filename
+</pre>
+输出<code>.</code>
+
+
+<h2><a name="sec5" id="sec5"></a>unset</h2>
+
+<dl>
+<dt><strong>作用</strong></dt><dd>
+对于每个输入的名字，去除变量或者函数。</dd>
+<dt><strong>用法</strong></dt><dd>
+unset [-fv] [name ...]
+<code>-v</code> 代表shell的变量。</dd>
+</dl>
+
+<p><code>-f</code> 代表shell的函数。</p>
+
+
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September 20, 2011  
+    Last Updated: September 22, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

@@ -1069,4 +1069,5 @@ if people swarm somewhere, they go there as a large, uncontrolled crowd
 congestion
 a gathering or accumulation; a heap or pile
 
-
+vderbatim
+repeating the actual words that were spoken or written.
