@@ -1,0 +1,13 @@
+digraph D {
+	node [shape=none];
+	communication[label="communication\nnetworks"];
+	switched[label="switched\nnetworks"];
+	circuit_switched[label="circuit-switched\nnetworks"];
+	packet_switched[label="packet-switched\nnetworks"];
+	broadcast[label="broadcast\nnetworks"];
+	datagram[label="datagram\nnetworks"];
+	virtual_circuit[label="virtual circuit\nnetworks"]
+	communication -> { switched  broadcast };
+	switched -> { circuit_switched  packet_switched };
+	packet_switched -> { datagram virtual_circuit };
+}

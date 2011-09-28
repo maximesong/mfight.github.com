@@ -1,0 +1,39 @@
+#title Taxonomy of Communication Networks
+
+* Overview
+[[../network_texonomy.png]]
+
+* Broadcast Networks
+definition ::
+Nodes share a common channel;information transmitted by a node is received by all other nodes in the network
+
+examples ::
+ - TV
+ - radio
+
+* Switched Networks
+definition ::
+Information is transmitted to a small sub-set(usually only one) of the nodes
+
+**  Circuit switching
+definition ::
+dedicated circuit per call/session
+
+example ::
+ - telephone
+ - GSM High-Speed Circuit-Switched Data(HSCSD)
+
+feature ::
+ - each link has a number of "circuits"
+(sometimes we refer to a "ciruit" as a channel or a line)
+
+ - an end-to-end connection reserves one "circuit" at each link
+
+** Packet switching
+definition ::
+data sent through network in discrete "chunks"
+
+example ::
+ - Internet
+ - Gneneral Packet Radio Service(GPRS)
+

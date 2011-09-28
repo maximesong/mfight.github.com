@@ -25,6 +25,8 @@ printemps
 automne
 *** 冬天
 hiver
+
+#mois
 ** 月份 les mois de l'année
 *** 一月
 janvier

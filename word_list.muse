@@ -718,8 +718,6 @@ to delay doing something that you ought to do, usually because you do not what t
 profound
 having a strong influence or effect
 
-propagate
-to spread an idea, belief etc to many people
 
 propagate ::
 to spread an idea, belief etc to many people.
@@ -1071,3 +1069,33 @@ a gathering or accumulation; a heap or pile
 
 vderbatim
 repeating the actual words that were spoken or written.
+
+taxonomy
+the process or a system of organizing things into different groups that show their natural relationships especially plants or animals.
+
+recap
+to repeat the main points of something that has just been said.
+
+dedicated
+make for or used for only one particular purpose
+
+syllabus
+a plan that states exactly what students at a school or college should learn in a particular subject
+
+escalate
+if fighting, violence, or a bad situation escalates, or if someone escalate it, it becomes much worse
+
+empirical
+based on scientific testing or practical experience, not on ideas
+
+circumvent
+to avoid a problem or the rule that restricts you, especially in a clever or dishonest way -- used to show disapproval
+
+penetrate
+to enter something and pass or spread through it, especially when this is difficult
+
+infrastructure
+the basic systems and structures that a country or organization needs in order to work properly, for example roads, railways, banks etc
+
+hop
+a short jump

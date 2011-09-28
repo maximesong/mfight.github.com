@@ -50,6 +50,7 @@ n.f.
 
 * table
 
+#bureau
 ** bureau
 n.m.
  - 办公桌
