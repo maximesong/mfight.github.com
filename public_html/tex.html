@@ -3,14 +3,14 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>linux configuration</title>
+    <title>Tex</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
-    <h1>linux configuration</h1>
+    <h1>Tex</h1>
 <!-- menu start here -->
      <div class="menu">
         <div class="menuitem">
@@ -36,18 +36,12 @@
 <h6 class="mulu">Contents</h6>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec1">添加超级用户权限</a>
-</dt>
-<dt class="contents">
-<a href="#sec2">Fedora命令自动补全</a>
-</dt>
-<dt class="contents">
-<a href="#sec3">User and Password</a>
+<a href="#sec1">latex</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec4">/etc/passwd</a>
+<a href="#sec2">ubuntu安装</a>
 </dt>
 </dl>
 </dd>
@@ -55,69 +49,13 @@
 </div>
 
 
-<h2><a name="sec1" id="sec1"></a>添加超级用户权限</h2>
+<h2><a name="sec1" id="sec1"></a>latex</h2>
 
-<p class="first">修改/etc/sudoers</p>
-
-
-<h2><a name="sec2" id="sec2"></a>Fedora命令自动补全</h2>
-
-<p class="first">用惯了ubuntu的apt-get，用fedora的yum时没有了自动补全，非常不习惯。后来才知道，fedora相比ubuntu，少了一个叫bash-completion的东西。那就装上呗。</p>
-
-<pre class="src">
-sudo yum install bash-completion
-</pre>
-编辑/etc/.bashrc文件，添加:
-
-<pre class="src">
-if [ -f /etc/bash_completion ]; then
-. /etc/bash_completion
-fi
-</pre>
-如果修改的是～/.bashrc，则需要执行
-
-<pre class="src">
-source /etc/bash_completion
-</pre>
-大功告成，试试看Tab的自动补全吧。
-
-
-<h2><a name="sec3" id="sec3"></a>User and Password</h2>
-
-<h3><a name="sec4" id="sec4"></a>/etc/passwd</h3>
-
-<p><code>/etc/passwd</code>中储存的是用户信息，它的格式一般如下所示：</p>
+<h3><a name="sec2" id="sec2"></a>ubuntu安装</h3>
 
 <pre class="example">
-jsmith:x:1001:1000:Joe Smith,Room 1007,(234)555-8910,(234)555-0044,email:/home/jsmith:/bin/sh
+sudo apt-get install texlive-full latex-beamer
 </pre>
-
-<table class="muse-table" border="2" cellpadding="5">
-  <thead>
-    <tr>
-      <th>user name</th>
-      <th>password</th>
-      <th>user indentify</th>
-      <th>group indentify</th>
-      <th>Gecos field</th>
-      <th>home directory</th>
-      <th>shells</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>jsmith</td>
-      <td>x</td>
-      <td>1001</td>
-      <td>1000</td>
-      <td>Joe Smith, Room 1007, (234)555-8910, (234) 55-0033</td>
-      <td>/home/jsmith</td>
-      <td>/bin/sh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>密码是不可见的，用x显示。linux一般在/etc/shadow中存有密码的hash值。</p>
 
 
 
@@ -125,7 +63,7 @@ jsmith:x:1001:1000:Joe Smith,Room 1007,(234)555-8910,(234)555-0044,email:/home/j
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September 29, 2011  
+    Last Updated: October  2, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

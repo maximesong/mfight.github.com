@@ -25,6 +25,8 @@
 
  - [[emacs_muse][Emacs Muse]]
 
+** Vi && Vim
+ - [[vi][vi]]
 ** 课程
 [[courses][courses]]
 

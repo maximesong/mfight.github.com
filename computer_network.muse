@@ -13,4 +13,4 @@
 
 * 学习笔记
  - [[computer_network_introduction][Introduction]]
- - [[network_texonomy][A Taxonomy of Communication Networks]]
+ - [[network_taxonomy][A Taxonomy of Communication Networks]]

@@ -1,0 +1,11 @@
+digraph D {
+	node [shape=plaintext];
+	bar [label=
+	     <<TABLE>
+	     <TR>
+	     <TD BGCOLOR="yellow"> Header </TD>
+	     <TD BGCOLOR="lightblue"> Data </TD>
+	     <TD BGCOLOR="yellow"> Trailer </TD>
+	     </TR>
+	     </TABLE>>];	
+}

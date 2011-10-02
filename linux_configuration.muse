@@ -20,3 +20,15 @@ fi
 source /etc/bash_completion
 </src>
 大功告成，试试看Tab的自动补全吧。
+
+* User and Password
+** /etc/passwd
+<code>/etc/passwd</code>中储存的是用户信息，它的格式一般如下所示：
+<example>
+jsmith:x:1001:1000:Joe Smith,Room 1007,(234)555-8910,(234)555-0044,email:/home/jsmith:/bin/sh
+</example>
+
+|| user name || password || user indentify || group indentify || Gecos field || home directory || shells || 
+| jsmith | x | 1001 | 1000 | Joe Smith, Room 1007, (234)555-8910, (234) 55-0033 | /home/jsmith | /bin/sh |
+
+密码是不可见的，用x显示。linux一般在/etc/shadow中存有密码的hash值。

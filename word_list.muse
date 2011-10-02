@@ -1099,3 +1099,32 @@ the basic systems and structures that a country or organization needs in order t
 
 hop
 a short jump
+
+obscure
+1.not well known and usually not very important
+2.difficult to understand
+
+vintage
+a particular year or place in which a wine is made, or the wine itself.
+
+outage
+a period of time during which a service such as the electricity supply cannot be provided
+
+intrepid
+willing to do dangerous things or go to dangerous places -- often used humorously
+
+
+wipe
+to rub a surface with something in order to remove dirt, liquid etc
+
+adept
+good at something that needs care and skill
+
+multiplexer
+a piece of computer equipment that is used to send several electrical ignals using only one connection, especially with a MODEM
+
+nodal
+being or connected with a node
+
+equilibrium
+a balance between different people, groups, or forces that compete with each other, so that none is stronger than the others and a situation is not likely to change suddenly.

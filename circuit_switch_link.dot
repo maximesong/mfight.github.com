@@ -1,0 +1,39 @@
+graph D {
+	bgcolor=gray;
+	size="6,6";
+	ratio=0.5;
+	fiexedsize=true;
+	
+	{
+		node [color=black, shape=box];
+		host_a [label="Host A"];
+		host_b [label="Host B"];
+	}
+	{
+		node [color=green label="", shape=doublecircle];
+		node_1;
+		node_2;		
+		node_4;
+	}
+	{
+		node [color=black, label="", shape=doublecircle];
+		node_3;
+	}
+
+	{
+		edge [color="green"]
+		host_a -- node_1;
+		node_4 -- host_b;
+	}
+	{
+		edge [penwidth=4,color="green"]
+		node_1 -- node_2;
+		node_2 -- node_4[label="an connections \n reserves a circuit\n at each link"];
+	}
+	{
+		edge [color="red:orange:yellow:green:blue:purple"]
+		node_1 -- node_3[label="each link has a \nnumber of circuits"];
+		node_3 -- node_4;
+	}
+	
+}

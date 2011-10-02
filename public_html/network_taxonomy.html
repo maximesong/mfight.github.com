@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,7 +6,7 @@
     <title>Taxonomy of Communication Networks</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
-          content="text/html; charset=iso-8859-1" />
+          content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
@@ -23,7 +23,7 @@
        </div>
      <div class="menub">       
 	<div class="menuitemb">
-          <a href=" francais.html">Fran�ais</a>
+          <a href=" francais.html">Français</a>
         </div>
 
         <div class="menuitemb">
@@ -52,12 +52,7 @@ Nodes share a common channel;information transmitted by a node is received by al
 </ul>
 
 
-<h2>Switched Networks</h2>
-
-<dl>
-<dt><strong>definition</strong></dt><dd>
-Information is transmitted to a small sub-set(usually only one) of the nodes</dd>
-</dl>
+<h2>Sw./latex/latex2png-network_taxonomy__405946043.pngnetwork_taxonomy__307998884.png is transmitted to a small sub-set(usually only one) of the nodes</h2>
 
 <h3>Circuit switching</h3>
 
@@ -84,6 +79,75 @@ dedicated circuit per call/session</dd>
 <li>an end-to-end connection reserves one &quot;circuit&quot; at each link</li>
 </ul>
 
+<p class="image"><img src="../circuit_switch_link.png" alt="" /></p>
+
+<dl>
+<dt><strong>multiplexing for sharing resources</strong></dt><dd></dd>
+</dl>
+
+<ul>
+<li>TDM(Time-Division Multiplexing)</li>
+</ul>
+
+<p class="image"><img src="../time_division_multiplexing.png" alt="" /></p>
+
+<ul>
+<li>FDM(Frequency-Division Multiplexing)</li>
+<li>Others,e.g., CDM(Code-Division Multiplexing), color/lambda division</li>
+</ul>
+
+<h4>three phases</h4>
+
+<p class="first">1. circuit establishment
+2. data transfer
+3. circuit termination</p>
+
+
+<h4>circuit switch delay</h4>
+
+<p class="image"><img src="../circuit_switch_delay.png" alt="" /></p>
+
+<p class="image"><img src="../circuit_switch_data_delay.png" alt="" /></p>
+
+<h5>propagation delay</h5>
+
+<p>delay for the first bit to go from a source to a destination</p>
+
+<ul>
+<li>d = length of physical link</li>
+<li>s = propagation speed in propogation speed in medium(~2 * 10^5 km/sec)</li>
+<li>propagation delay = d / s</li>
+</ul>
+
+<pre class="example">
+Suppose the distance between A and B is 4000km,
+then one-way propagation delay is:
+4000km / (200,000km/s) = 20ms
+</pre>
+
+
+<h5>transmission delay</h5>
+
+<p>time to pump data onto link at reserved rate</p>
+
+<ul>
+<li>R = reserved bandwidth(bps)</li>
+<li>L = message length(bits)</li>
+<li>time to send a packet into link = L / R</li>
+</ul>
+
+<pre class="example">
+Suppose we reserve a one slot HSCSD channel
+ - each HSCSD frame can transmit about 115kbs
+ - a frame is divided into 8 slots, each is about 14kbs
+Then the transmission delay of using one reserved slot for a message of 1 kbits:
+1kbits / 14kbps = 70ms
+</pre>
+
+<p class="image"><img src="../circuit_switch_example.png" alt="" /></p>
+
+
+
 
 <h3>Packet switching</h3>
 
@@ -99,13 +163,179 @@ data sent through network in discrete &quot;chunks&quot;</dd>
 <li>Gneneral Packet Radio Service(GPRS)</li>
 </ul>
 
+<dl>
+<dt><strong>feature</strong></dt><dd></dd>
+</dl>
+
+
+<ul>
+<li>Each end-to-end data <em>flow</em> (ie., a sender-receiver pair) divided into <em>packets</em>.
+<h4>packet structure</h4></li>
+</ul>
+
+<p class="image"><img src="../packet_switch_structure.png" alt="" /></p>
+
+<ul>
+<li>header and trailer carry control information(eg., destination address, check sum)</li>
+</ul>
+
+<ul>
+<li>At each node the entire packet is received, processed(e.g.,routing), stored briefly, and then forwarded to the next node; thus packet-switched networks are also callled <em>store-and-forward networks</em>.</li>
+</ul>
+
+<p class="image"><img src="../packet_switching.png" alt="" /></p>
+
+
+<h4>packet switching router</h4>
+
+<p class="image"><img src="../packet_switching_router.png" alt="" /></p>
+
+
+<h4>resources</h4>
+
+<ul>
+<li>resources used as needed</li>
+<li>on its turn, a packet used full link bandwidth</li>
+</ul>
+
+
+
+
+<h3>Circuit switching vs Packet switching</h3>
+
+<table class="muse-table" border="2" cellpadding="5">
+  <thead>
+    <tr>
+      <th></th>
+      <th>circuit switching</th>
+      <th>packet switching</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>resource</td>
+      <td>partitioned</td>
+      <td>not partitioned</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reservation / setup</td>
+      <td>need reservation(setup delay)</td>
+      <td>no reservation</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>resources contention</td>
+      <td>busy signal(session loss)</td>
+      <td>congestion(long delay and packet losses|</td>
+    </tr>
+    <tr>
+      <td>service guarantee</td>
+      <td>yes</td>
+      <td>no</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>charing</td>
+      <td>time</td>
+      <td>packet</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>header</td>
+      <td>no header</td>
+      <td>per packet header</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>fast path processing</td>
+      <td>fast</td>
+      <td>per packet processing</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Four types of delay at each hop</h3>
+
+<h4>Nodal processing delay</h4>
+
+<p class="first">check errors &amp; routing</p>
+
+
+<h4>Queueing</h4>
+
+<p class="first">time waiting for its turn at output link</p>
+
+
+<h4>Transmission delay</h4>
+
+<p class="first">time to pump packet onto a link at link speed</p>
+
+
+<h4>Propagation delay</h4>
+
+<p class="first">router to router propagation</p>
+
+<p>The focus is on uqeueing and transmission delay.</p>
+
+
+<h4>Comparasion</h4>
+
+<pre class="example">
+Assume:
+R = link bandswidth(bps)
+L = average packet length(bits)
+a = average packet arrival rate(pkt/sec)
+R / L = packet service rate(pkt/sec)
+</pre>
+
+<pre class="example">
+Case 1(not reserve) :
+Packet arrival rate: λ
+Packet service rate: μ
+</pre>
+<blockquote>
+<p class="quoted">let  <!-- $\rho = \frac{\lambda}{\mu}$--><img src="./latex/latex2png-network_taxonomy__126951189.png" alt="latex2png equation" class="latex-inline" /></p>
+</blockquote>
+
+
+<blockquote>
+<p class="quoted"><!-- $ p_k\lambda = p_{k+1}\mu $--><img src="./latex/latex2png-network_taxonomy__330138311.png" alt="latex2png equation" class="latex-inline" /></p>
+</blockquote>
+
+
+<blockquote>
+<p class="quoted"><!-- $ p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$--><img src="./latex/latex2png-network_taxonomy__307998884.png" alt="latex2png equation" class="latex-inline" /></p>
+</blockquote>
+
+
+<blockquote>
+<p class="quoted"><!-- $ p_0 = 1 - \rho $--><img src="./latex/latex2png-network_taxonomy__405946043.png" alt="latex2png equation" class="latex-inline" /></p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+<h2>Questions</h2>
+
+<p class="first">1. Where is the control information for circuit switching?</p>
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September 27, 2011  
+    Last Updated: October  2, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

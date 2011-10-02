@@ -29,6 +29,52 @@ feature ::
 
  - an end-to-end connection reserves one "circuit" at each link
 
+[[../circuit_switch_link.png]]
+
+multiplexing for sharing resources ::
+
+ - TDM(Time-Division Multiplexing)
+
+[[../time_division_multiplexing.png]]
+ - FDM(Frequency-Division Multiplexing)
+ - Others,e.g., CDM(Code-Division Multiplexing), color/lambda division
+
+*** three phases
+1. circuit establishment
+2. data transfer
+3. circuit termination
+
+*** circuit switch delay
+[[../circuit_switch_delay.png]]
+
+[[../circuit_switch_data_delay.png]]
+
+**** propagation delay
+delay for the first bit to go from a source to a destination
+ - d = length of physical link
+ - s = propagation speed in propogation speed in medium(~2 * 10^5 km/sec)
+ - propagation delay = d / s
+<example>
+Suppose the distance between A and B is 4000km, 
+then one-way propagation delay is:
+4000km / (200,000km/s) = 20ms
+</example>
+
+**** transmission delay
+time to pump data onto link at reserved rate
+ - R = reserved bandwidth(bps)
+ - L = message length(bits)
+ - time to send a packet into link = L / R
+<example>
+Suppose we reserve a one slot HSCSD channel
+ - each HSCSD frame can transmit about 115kbs
+ - a frame is divided into 8 slots, each is about 14kbs
+Then the transmission delay of using one reserved slot for a message of 1 kbits:
+1kbits / 14kbps = 70ms
+</example>
+
+[[../circuit_switch_example.png]]
+
 ** Packet switching
 definition ::
 data sent through network in discrete "chunks"
@@ -36,4 +82,81 @@ data sent through network in discrete "chunks"
 example ::
  - Internet
  - Gneneral Packet Radio Service(GPRS)
+
+feature ::
+
+
+ - Each end-to-end data *flow* (ie., a sender-receiver pair) divided into *packets*.
+*** packet structure
+[[../packet_switch_structure.png]]
+  - header and trailer carry control information(eg., destination address, check sum)
+
+ - At each node the entire packet is received, processed(e.g.,routing), stored briefly, and then forwarded to the next node; thus packet-switched networks are also callled *store-and-forward networks*.
+
+[[../packet_switching.png]]
+
+*** packet switching router
+[[../packet_switching_router.png]]
+
+*** resources
+ - resources used as needed
+ - on its turn, a packet used full link bandwidth
+
+
+** Circuit switching vs Packet switching
+||  || circuit switching || packet switching ||
+| resource | partitioned | not partitioned |
+| reservation / setup | need reservation(setup delay) | no reservation |
+| resources contention | busy signal(session loss) | congestion(long delay and packet losses|
+| service guarantee | yes | no |
+| charing | time | packet |
+| header | no header | per packet header |
+| fast path processing | fast | per packet processing |
+
+** Four types of delay at each hop
+*** Nodal processing delay
+check errors & routing
+*** Queueing
+time waiting for its turn at output link
+*** Transmission delay
+time to pump packet onto a link at link speed
+*** Propagation delay
+router to router propagation
+
+The focus is on uqeueing and transmission delay.
+
+*** Comparasion
+<example>
+Assume:
+R = link bandswidth(bps)
+L = average packet length(bits)
+a = average packet arrival rate(pkt/sec)
+R / L = packet service rate(pkt/sec)
+</example>
+
+<example>
+Case 1(not reserve) :
+Packet arrival rate: λ
+Packet service rate: μ
+</example>
+ let  $\rho = \frac{\lambda}{\mu}$
+
+
+ $ p_k\lambda = p_{k+1}\mu $
+
+
+ $ p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$
+
+
+ $ p_0 = 1 - \rho $
+
+
+
+
+
+
+
+
+* Questions
+1. Where is the control information for circuit switching?
 

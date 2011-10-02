@@ -1,0 +1,26 @@
+digraph D {
+	
+	node [shape=plaintext];
+	bar [label=
+	     <<TABLE>
+	     <TR>
+	     <TD> 1 </TD>
+	     <TD BGCOLOR="green4"> 2 </TD>
+	     <TD BGCOLOR="aquamarine"> 3 </TD>
+	     <TD BGCOLOR="mediumaquamarine"> 4 </TD>
+	     <TD> 1 </TD>
+	     <TD BGCOLOR="green4"> 2 </TD>
+	     <TD BGCOLOR="aquamarine"> 3 </TD>
+	     <TD BGCOLOR="mediumaquamarine"> 4 </TD>
+	     <TD PORT="frame_start"> 1 </TD>
+	     <TD BGCOLOR="green4"> 2 </TD>
+	     <TD BGCOLOR="aquamarine"> 3 </TD>
+	     <TD BGCOLOR="mediumaquamarine" PORT="frame_end"> 4 </TD>
+	     <TD> 1 </TD>
+	     <TD BGCOLOR="green4"> 2 </TD>
+	     <TD BGCOLOR="aquamarine"> 3 </TD>
+	     <TD BGCOLOR="mediumaquamarine"> 4 </TD>
+	     </TR>
+	     </TABLE>>]
+	bar:frame_start -> bar:frame_end[dir=both, label="frame"];
+     }

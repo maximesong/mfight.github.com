@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>vi</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>vi</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">命令</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">ZZ</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">ex command</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">:q</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">:w [new file]</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">:wq</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">:e!</a>
+</dt>
+<dt class="contents">
+<a href="#sec8">:q!</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">:! command</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">:sh</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">C-z</a>
+</dt>
+<dt class="contents">
+<a href="#sec12">C-f</a>
+</dt>
+<dt class="contents">
+<a href="#sec13">C-b</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">C-d</a>
+</dt>
+<dt class="contents">
+<a href="#sec15">C-u</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">[NUM]z</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">z.</a>
+</dt>
+<dt class="contents">
+<a href="#sec18">z-</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">i</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">h</a>
+</dt>
+<dt class="contents">
+<a href="#sec21">j</a>
+</dt>
+<dt class="contents">
+<a href="#sec22">k</a>
+</dt>
+<dt class="contents">
+<a href="#sec23">l</a>
+</dt>
+<dt class="contents">
+<a href="#sec24">0</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">$</a>
+</dt>
+<dt class="contents">
+<a href="#sec26">w</a>
+</dt>
+<dt class="contents">
+<a href="#sec27">W</a>
+</dt>
+<dt class="contents">
+<a href="#sec28">b</a>
+</dt>
+<dt class="contents">
+<a href="#sec29">B</a>
+</dt>
+<dt class="contents">
+<a href="#sec30">[NUM]G</a>
+</dt>
+<dt class="contents">
+<a href="#sec31">a</a>
+</dt>
+<dt class="contents">
+<a href="#sec32">c</a>
+</dt>
+<dt class="contents">
+<a href="#sec33">C</a>
+</dt>
+<dt class="contents">
+<a href="#sec34">r</a>
+</dt>
+<dt class="contents">
+<a href="#sec35">R</a>
+</dt>
+<dt class="contents">
+<a href="#sec36">[NUM]s</a>
+</dt>
+<dt class="contents">
+<a href="#sec37">～</a>
+</dt>
+<dt class="contents">
+<a href="#sec38">d</a>
+</dt>
+<dt class="contents">
+<a href="#sec39">u</a>
+</dt>
+<dt class="contents">
+<a href="#sec40">U</a>
+</dt>
+<dt class="contents">
+<a href="#sec41">p</a>
+</dt>
+<dt class="contents">
+<a href="#sec42">P</a>
+</dt>
+<dt class="contents">
+<a href="#sec43">y</a>
+</dt>
+<dt class="contents">
+<a href="#sec44">.</a>
+</dt>
+<dt class="contents">
+<a href="#sec45">[NUM]S</a>
+</dt>
+<dt class="contents">
+<a href="#sec46">C-r</a>
+</dt>
+<dt class="contents">
+<a href="#sec47">A</a>
+</dt>
+<dt class="contents">
+<a href="#sec48">I</a>
+</dt>
+<dt class="contents">
+<a href="#sec49">o</a>
+</dt>
+<dt class="contents">
+<a href="#sec50">O</a>
+</dt>
+<dt class="contents">
+<a href="#sec51">J</a>
+</dt>
+<dt class="contents">
+<a href="#sec52">C-l</a>
+</dt>
+<dt class="contents">
+<a href="#sec53">[NUM] H</a>
+</dt>
+<dt class="contents">
+<a href="#sec54">M</a>
+</dt>
+<dt class="contents">
+<a href="#sec55">[NUM] L</a>
+</dt>
+<dt class="contents">
+<a href="#sec56"></a>
+</dt>
+<dt class="contents">
+<a href="#sec57">+</a>
+</dt>
+<dt class="contents">
+<a href="#sec58">-</a>
+</dt>
+<dt class="contents">
+<a href="#sec59">^</a>
+</dt>
+<dt class="contents">
+<a href="#sec60">|</a>
+</dt>
+<dt class="contents">
+<a href="#sec61">e</a>
+</dt>
+<dt class="contents">
+<a href="#sec62">E</a>
+</dt>
+<dt class="contents">
+<a href="#sec63">(</a>
+</dt>
+<dt class="contents">
+<a href="#sec64">）</a>
+</dt>
+<dt class="contents">
+<a href="#sec65">{</a>
+</dt>
+<dt class="contents">
+<a href="#sec66">{</a>
+</dt>
+<dt class="contents">
+<a href="#sec67">[[</a>
+</dt>
+<dt class="contents">
+<a href="#sec68">]]</a>
+</dt>
+<dt class="contents">
+<a href="#sec69">N</a>
+</dt>
+<dt class="contents">
+<a href="#sec70">n</a>
+</dt>
+<dt class="contents">
+<a href="#sec71">/</a>
+</dt>
+<dt class="contents">
+<a href="#sec72">？</a>
+</dt>
+<dt class="contents">
+<a href="#sec73">/</a>
+</dt>
+<dt class="contents">
+<a href="#sec74">?</a>
+</dt>
+<dt class="contents">
+<a href="#sec75">d?</a>
+</dt>
+<dt class="contents">
+<a href="#sec76">f</a>
+</dt>
+<dt class="contents">
+<a href="#sec77">F</a>
+</dt>
+<dt class="contents">
+<a href="#sec78">t</a>
+</dt>
+<dt class="contents">
+<a href="#sec79">T</a>
+</dt>
+<dt class="contents">
+<a href="#sec80">;</a>
+</dt>
+<dt class="contents">
+<a href="#sec81">,</a>
+</dt>
+<dt class="contents">
+<a href="#sec82">C-g</a>
+</dt>
+<dt class="contents">
+<a href="#sec83">``</a>
+</dt>
+<dt class="contents">
+<a href="#sec84">"p</a>
+</dt>
+<dt class="contents">
+<a href="#sec85">"yy</a>
+</dt>
+<dt class="contents">
+<a href="#sec86">"p</a>
+</dt>
+<dt class="contents">
+<a href="#sec87">m</a>
+</dt>
+<dt class="contents">
+<a href="#sec88">'</a>
+</dt>
+<dt class="contents">
+<a href="#sec89">`</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec90">Settings</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec91">set wm=</a>
+</dt>
+<dt class="contents">
+<a href="#sec92">set nu</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec93">Open file</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec94">vi +n file</a>
+</dt>
+<dt class="contents">
+<a href="#sec95">vi + file</a>
+</dt>
+<dt class="contents">
+<a href="#sec96">vi +/pattern file</a>
+</dt>
+<dt class="contents">
+<a href="#sec97">view file / vi - file</a>
+</dt>
+<dt class="contents">
+<a href="#sec98">vi -r file</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>命令</h2>
+
+<h3><a name="ZZ" id="ZZ"></a><a name="sec2" id="sec2"></a>ZZ</h3>
+
+<ul>
+<li>保存并退出
+see also: <a href="#wq">:wq</a></li>
+</ul>
+
+
+
+
+<h3><a name="sec3" id="sec3"></a>ex command</h3>
+
+<h4><a name="sec4" id="sec4"></a>:q</h4>
+
+<ul>
+<li>退出，不保存</li>
+</ul>
+
+
+<h4><a name="sec5" id="sec5"></a>:w [new file]</h4>
+
+<ul>
+<li>保存，不退出</li>
+</ul>
+
+<h4><a name="wq" id="wq"></a><a name="sec6" id="sec6"></a>:wq</h4>
+
+<ul>
+<li>保存并退出
+see alos: <a href="#ZZ">ZZ</a></li>
+</ul>
+
+
+<h4><a name="sec7" id="sec7"></a>:e!</h4>
+
+<ul>
+<li>去除所有修改，回到上一次保存的文件版本。</li>
+</ul>
+
+
+<h4><a name="sec8" id="sec8"></a>:q!</h4>
+
+<ul>
+<li>退出不保存修改</li>
+</ul>
+
+
+<h4><a name="sec9" id="sec9"></a>:! command</h4>
+
+<ul>
+<li>执行unix的命令</li>
+</ul>
+
+
+<h4><a name="sec10" id="sec10"></a>:sh</h4>
+
+<ul>
+<li>创建一个shell，用<code>C-d</code>来回到vi</li>
+</ul>
+
+
+<h4><a name="sec11" id="sec11"></a>C-z</h4>
+
+<ul>
+<li>挂起vi，用<code>fg &lt;ENTER&gt;</code>回到vi</li>
+</ul>
+
+
+<h4><a name="sec12" id="sec12"></a>C-f</h4>
+
+<ul>
+<li>向前一个屏幕</li>
+</ul>
+
+
+<h4><a name="sec13" id="sec13"></a>C-b</h4>
+
+<ul>
+<li>向后一个屏幕</li>
+</ul>
+
+
+<h4><a name="sec14" id="sec14"></a>C-d</h4>
+
+<ul>
+<li>向前半个屏幕</li>
+</ul>
+
+
+<h4><a name="sec15" id="sec15"></a>C-u</h4>
+
+<ul>
+<li>向后半个屏幕</li>
+</ul>
+
+
+<h4><a name="sec16" id="sec16"></a>[NUM]z&lt;Enter&gt;</h4>
+
+<ul>
+<li>当前(或第&lt;NUM&gt;行)行滚动到顶部</li>
+</ul>
+
+
+<h4><a name="sec17" id="sec17"></a>z.</h4>
+
+<ul>
+<li>当前（或第&lt;NUM&gt;行)行滚动到中间</li>
+</ul>
+
+
+<h4><a name="sec18" id="sec18"></a>z-</h4>
+
+<ul>
+<li>当前（或第&lt;NUM&gt;行)行滚动到底部</li>
+</ul>
+
+
+<h4><a name="sec19" id="sec19"></a>i</h4>
+
+<ul>
+<li>进入插入模式</li>
+</ul>
+
+
+<h4><a name="sec20" id="sec20"></a>h</h4>
+
+<ul>
+<li>左</li>
+</ul>
+
+
+<h4><a name="sec21" id="sec21"></a>j</h4>
+
+<ul>
+<li>下</li>
+</ul>
+
+
+<h4><a name="sec22" id="sec22"></a>k</h4>
+
+<ul>
+<li>上</li>
+</ul>
+
+
+<h4><a name="sec23" id="sec23"></a>l</h4>
+
+<ul>
+<li>右</li>
+</ul>
+
+
+<h4><a name="sec24" id="sec24"></a>0</h4>
+
+<ul>
+<li>移动到行首</li>
+</ul>
+
+
+<h4><a name="sec25" id="sec25"></a>$</h4>
+
+<ul>
+<li>移动到行尾</li>
+</ul>
+
+
+<h4><a name="sec26" id="sec26"></a>w</h4>
+
+<ul>
+<li>移动到下一个单词前</li>
+</ul>
+
+
+<h4><a name="sec27" id="sec27"></a>W</h4>
+
+<ul>
+<li>移动到下一个单词前，忽略标点。</li>
+</ul>
+
+
+<h4><a name="sec28" id="sec28"></a>b</h4>
+
+<ul>
+<li>移动到上一个单词</li>
+</ul>
+
+
+<h4><a name="sec29" id="sec29"></a>B</h4>
+
+<ul>
+<li>移动到上一个单词，忽略标点</li>
+</ul>
+
+
+<h4><a name="sec30" id="sec30"></a>[NUM]G</h4>
+
+<ul>
+<li>移动到某一行。如果不指定NUM,则移动到最后一行。</li>
+</ul>
+
+
+<h4><a name="sec31" id="sec31"></a>a</h4>
+
+<ul>
+<li>增加内容</li>
+</ul>
+
+
+<h4><a name="sec32" id="sec32"></a>c</h4>
+
+<ul>
+<li>修改</li>
+</ul>
+
+<h5>cw</h5>
+
+<ul>
+<li>修改一个单词</li>
+</ul>
+
+
+<h5>c2b</h5>
+
+<ul>
+<li>修改上两个单词</li>
+</ul>
+
+
+<h5>c$</h5>
+
+<ul>
+<li>修改到行尾</li>
+</ul>
+
+
+<h5>c0</h5>
+
+<ul>
+<li>修改到行首</li>
+</ul>
+
+
+<h5>cc</h5>
+
+<ul>
+<li>修改整行</li>
+</ul>
+
+
+
+<h4><a name="sec33" id="sec33"></a>C</h4>
+
+<ul>
+<li>修改该行剩下的内容</li>
+</ul>
+
+
+<h4><a name="sec34" id="sec34"></a>r</h4>
+
+<ul>
+<li>替换一个字符</li>
+</ul>
+
+
+<h4><a name="sec35" id="sec35"></a>R</h4>
+
+<ul>
+<li>进入替换行模式，直到按<code>Enter</code>进入下一行</li>
+</ul>
+
+
+<h4><a name="sec36" id="sec36"></a>[NUM]s</h4>
+
+<ul>
+<li>替换多个字符</li>
+</ul>
+
+
+<h4><a name="sec37" id="sec37"></a>～</h4>
+
+<ul>
+<li>变换大小写</li>
+</ul>
+
+
+<h4><a name="sec38" id="sec38"></a>d</h4>
+
+<h5>dw</h5>
+
+<ul>
+<li>删除单词</li>
+</ul>
+
+
+<h5>dd</h5>
+
+<ul>
+<li>删除行</li>
+</ul>
+
+
+<h5>D</h5>
+
+<ul>
+<li>删除剩余行</li>
+</ul>
+
+
+<h5>x</h5>
+
+<ul>
+<li>删除字符</li>
+</ul>
+
+
+
+<h4><a name="sec39" id="sec39"></a>u</h4>
+
+<ul>
+<li>撤销最近的一次命令</li>
+</ul>
+
+
+<h4><a name="sec40" id="sec40"></a>U</h4>
+
+<ul>
+<li>恢复最近的一次针对所在行命令</li>
+</ul>
+
+
+<h4><a name="sec41" id="sec41"></a>p</h4>
+
+<ul>
+<li>将删除的内容放在之后（内容超过1行，就放在下一行）</li>
+</ul>
+
+
+<h4><a name="sec42" id="sec42"></a>P</h4>
+
+<ul>
+<li>将删除的内容内容放在之前</li>
+</ul>
+
+
+<h4><a name="sec43" id="sec43"></a>y</h4>
+
+<ul>
+<li>复制
+<h5>yy</h5></li>
+
+<li>复制行</li>
+</ul>
+
+
+<h5>yw</h5>
+
+<ul>
+<li>复制单词</li>
+</ul>
+
+
+
+<h4><a name="sec44" id="sec44"></a>.</h4>
+
+<ul>
+<li>重复上一步的工作</li>
+</ul>
+
+
+<h4><a name="sec45" id="sec45"></a>[NUM]S</h4>
+
+<ul>
+<li>替换多个行</li>
+</ul>
+
+
+<h4><a name="sec46" id="sec46"></a>C-r</h4>
+
+<ul>
+<li>撤销“撤销”</li>
+</ul>
+
+
+
+<h4><a name="sec47" id="sec47"></a>A</h4>
+
+<ul>
+<li>扩展行尾</li>
+</ul>
+
+
+<h4><a name="sec48" id="sec48"></a>I</h4>
+
+<ul>
+<li>插入行首</li>
+</ul>
+
+
+<h4><a name="sec49" id="sec49"></a>o</h4>
+
+<ul>
+<li>下增行</li>
+</ul>
+
+
+<h4><a name="sec50" id="sec50"></a>O</h4>
+
+<ul>
+<li>上增行</li>
+</ul>
+
+
+<h4><a name="sec51" id="sec51"></a>J</h4>
+
+<ul>
+<li>合并两行</li>
+</ul>
+
+
+<h4><a name="sec52" id="sec52"></a>C-l</h4>
+
+<ul>
+<li>重绘屏幕</li>
+</ul>
+
+
+<h4><a name="sec53" id="sec53"></a>[NUM] H</h4>
+
+<ul>
+<li>移动到屏幕第1(&lt;NUM&gt;)行</li>
+</ul>
+
+
+<h4><a name="sec54" id="sec54"></a>M</h4>
+
+<ul>
+<li>移动到屏幕中间</li>
+</ul>
+
+
+<h4><a name="sec55" id="sec55"></a>[NUM] L</h4>
+
+<ul>
+<li>移动到屏幕倒数第1(&lt;NUM&gt;)行</li>
+</ul>
+
+
+<h4>&lt;ENTER&gt;<a name="sec56" id="sec56"></a</h4>
+
+<ul>
+<li>移动到下一行行首</li>
+</ul>
+
+
+<h4><a name="sec57" id="sec57"></a>+</h4>
+
+<ul>
+<li>移动到下一行行首</li>
+</ul>
+
+
+<h4><a name="sec58" id="sec58"></a>-</h4>
+
+<ul>
+<li>移动到上一行行首</li>
+</ul>
+
+
+<h4><a name="sec59" id="sec59"></a>^</h4>
+
+<ul>
+<li>移动到所在行的第一个非空字符</li>
+</ul>
+
+
+<h4>&lt;NUM&gt;<a name="sec60" id="sec60"></a|</h4>
+
+<ul>
+<li>移动到第&lt;NUM&gt;栏</li>
+</ul>
+
+
+<h4><a name="sec61" id="sec61"></a>e</h4>
+
+<ul>
+<li>移动到下一个单词后</li>
+</ul>
+
+
+<h4><a name="sec62" id="sec62"></a>E</h4>
+
+<ul>
+<li>移动到下一个单词后，忽略标点</li>
+</ul>
+
+
+<h4><a name="sec63" id="sec63"></a>(</h4>
+
+<ul>
+<li>移动到该句的开始</li>
+</ul>
+
+
+<h4><a name="sec64" id="sec64"></a>）</h4>
+
+<ul>
+<li>移动到下一句的开始</li>
+</ul>
+
+
+<h4><a name="sec65" id="sec65"></a>{</h4>
+
+<ul>
+<li>移动到该段的开始</li>
+</ul>
+
+
+<h4><a name="sec66" id="sec66"></a>{</h4>
+
+<ul>
+<li>移动到下一段的开始</li>
+</ul>
+
+
+<h4><a name="sec67" id="sec67"></a>[[</h4>
+
+<ul>
+<li>移动到该节的开始</li>
+</ul>
+
+
+<h4><a name="sec68" id="sec68"></a>]]</h4>
+
+<ul>
+<li>移动到下一节的开始</li>
+</ul>
+
+
+<h4><a name="sec69" id="sec69"></a>N</h4>
+
+<ul>
+<li>向相反的方向搜索</li>
+</ul>
+
+
+<h4><a name="sec70" id="sec70"></a>n</h4>
+
+<ul>
+<li>向相同的方向搜索</li>
+</ul>
+
+
+<h4><a name="sec71" id="sec71"></a>/&lt;PATTERN&gt;</h4>
+
+<ul>
+<li>向后搜索</li>
+</ul>
+
+
+<h4><a name="sec72" id="sec72"></a>？&lt;PATTERN&gt;</h4>
+
+<ul>
+<li>向前搜索</li>
+</ul>
+
+
+<h4><a name="sec73" id="sec73"></a>/&lt;ENTER&gt;</h4>
+
+<ul>
+<li>向后重复搜索</li>
+</ul>
+
+
+<h4><a name="sec74" id="sec74"></a>?&lt;ENTER&gt;</h4>
+
+<ul>
+<li>向前重复搜索</li>
+</ul>
+
+
+<h4><a name="sec75" id="sec75"></a>d?&lt;PATTERN&gt;</h4>
+
+<ul>
+<li>向前删除直到&lt;PATTERN&gt;</li>
+</ul>
+
+
+<h4><a name="sec76" id="sec76"></a>f&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到该行中下一个出现&lt;CH&gt;的地方</li>
+</ul>
+
+
+<h4><a name="sec77" id="sec77"></a>F&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到该行中之前出现&lt;CH&gt;的地方</li>
+</ul>
+
+
+<h4><a name="sec78" id="sec78"></a>t&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到下一个出现&lt;CH&gt;前</li>
+</ul>
+
+
+<h4><a name="sec79" id="sec79"></a>T&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到上一个出现&lt;CH&gt;后</li>
+</ul>
+
+
+<h4><a name="sec80" id="sec80"></a>;</h4>
+
+<ul>
+<li>用相同的方向查找&lt;CH&gt;</li>
+</ul>
+
+
+<h4><a name="sec81" id="sec81"></a>,</h4>
+
+<ul>
+<li>用相反的方向查找&lt;CH&gt;</li>
+</ul>
+
+
+<h4><a name="sec82" id="sec82"></a>C-g</h4>
+
+<ul>
+<li>显示行号等信息</li>
+</ul>
+
+
+<h4><a name="sec83" id="sec83"></a>``</h4>
+
+<ul>
+<li>回到上一个修改过的地方</li>
+</ul>
+
+
+<h4><a name="sec84" id="sec84"></a>&quot;&lt;NUM&gt;p</h4>
+
+<ul>
+<li>粘帖第&lt;NUM&gt;个寄存器中的内容</li>
+</ul>
+
+
+<h4><a name="sec85" id="sec85"></a>&quot;&lt;CH&gt;yy</h4>
+
+<ul>
+<li>复制行到寄存器&lt;CH&gt;</li>
+</ul>
+
+
+<h4><a name="sec86" id="sec86"></a>&quot;&lt;CH&gt;p</h4>
+
+<ul>
+<li>粘帖寄存器&lt;CH&gt;中的内容</li>
+</ul>
+
+
+<h4><a name="sec87" id="sec87"></a>m&lt;CH&gt;</h4>
+
+<ul>
+<li>标记当前的位置为&lt;CH&gt;</li>
+</ul>
+
+
+<h4><a name="sec88" id="sec88"></a>'&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到标记为&lt;CH&gt;那行的第一个字符</li>
+</ul>
+
+
+<h4><a name="sec89" id="sec89"></a>`&lt;CH&gt;</h4>
+
+<ul>
+<li>移动到标记为&lt;CH&gt;的那个字符</li>
+</ul>
+
+
+
+
+
+<h2><a name="sec90" id="sec90"></a>Settings</h2>
+
+<h3><a name="sec91" id="sec91"></a>set wm=&lt;NUM&gt;</h3>
+
+<ul>
+<li>设置自动换行</li>
+</ul>
+
+
+<h3><a name="sec92" id="sec92"></a>set nu</h3>
+
+<ul>
+<li>显示行数</li>
+</ul>
+
+
+
+<h2><a name="sec93" id="sec93"></a>Open file</h2>
+
+<h3><a name="sec94" id="sec94"></a>vi +n file</h3>
+
+<ul>
+<li>在第n行打开文件</li>
+</ul>
+
+
+<h3><a name="sec95" id="sec95"></a>vi + file</h3>
+
+<ul>
+<li>在最后一行打开文件</li>
+</ul>
+
+
+<h3><a name="sec96" id="sec96"></a>vi +/pattern file</h3>
+
+<ul>
+<li>在第一个出现pattern的地方打开文件</li>
+</ul>
+
+
+<h3><a name="sec97" id="sec97"></a>view file / vi - file</h3>
+
+<ul>
+<li>只读模式打开文件</li>
+</ul>
+
+
+<h3><a name="sec98" id="sec98"></a>vi -r file</h3>
+
+<ul>
+<li>恢复文件buffer</li>
+</ul>
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: October  2, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+
