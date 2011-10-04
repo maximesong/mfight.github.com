@@ -32,12 +32,85 @@
       </div>
     <!-- menu ends here -->
     <!-- Page published by Emacs Muse begins here -->
-<h2>Overview</h2>
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Overview</a>
+</dt>
+<dt class="contents">
+<a href="#sec2">Broadcast Networks</a>
+</dt>
+<dt class="contents">
+<./latex/latex2png-network_taxonomy__242582677.pngmy__402086668.pngng-network_taxonomy__247192425.png737271.pngg-network_taxonomy__308145316.pngnts">
+<a href="#sec4">Circuit switching</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec5">three phases</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">circuit switch delay</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec7">Packet switching</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">packet structure</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">packet switching router</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">resources</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec11">Circuit switching vs Packet switching</a>
+</dt>
+<dt class="contents">
+<a href="#sec12">Four types of delay at each hop</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec13">Nodal processing delay</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">Queueing</a>
+</dt>
+<dt class="contents">
+<a href="#sec15">Transmission delay</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">Propagation delay</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">Comparasion</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec18">Questions</a>
+</dt>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>Overview</h2>
 
 <p class="image"><img src="../network_texonomy.png" alt="" /></p>
 
 
-<h2>Broadcast Networks</h2>
+<h2><a name="sec2" id="sec2"></a>Broadcast Networks</h2>
 
 <dl>
 <dt><strong>definition</strong></dt><dd>
@@ -52,9 +125,14 @@ Nodes share a common channel;information transmitted by a node is received by al
 </ul>
 
 
-<h2>Sw./latex/latex2png-network_taxonomy__405946043.pngnetwork_taxonomy__307998884.png is transmitted to a small sub-set(usually only one) of the nodes</h2>
+<h2><a name="sec3" id="sec3"></a>Switched Networks</h2>
 
-<h3>Circuit switching</h3>
+<dl>
+<dt><strong>definition</strong></dt><dd>
+Information is transmitted to a small sub-set(usually only one) of the nodes</dd>
+</dl>
+
+<h3><a name="sec4" id="sec4"></a>Circuit switching</h3>
 
 <dl>
 <dt><strong>definition</strong></dt><dd>
@@ -96,14 +174,14 @@ dedicated circuit per call/session</dd>
 <li>Others,e.g., CDM(Code-Division Multiplexing), color/lambda division</li>
 </ul>
 
-<h4>three phases</h4>
+<h4><a name="sec5" id="sec5"></a>three phases</h4>
 
 <p class="first">1. circuit establishment
 2. data transfer
 3. circuit termination</p>
 
 
-<h4>circuit switch delay</h4>
+<h4><a name="sec6" id="sec6"></a>circuit switch delay</h4>
 
 <p class="image"><img src="../circuit_switch_delay.png" alt="" /></p>
 
@@ -149,7 +227,7 @@ Then the transmission delay of using one reserved slot for a message of 1 kbits:
 
 
 
-<h3>Packet switching</h3>
+<h3><a name="sec7" id="sec7"></a>Packet switching</h3>
 
 <dl>
 <dt><strong>definition</strong></dt><dd>
@@ -170,7 +248,7 @@ data sent through network in discrete &quot;chunks&quot;</dd>
 
 <ul>
 <li>Each end-to-end data <em>flow</em> (ie., a sender-receiver pair) divided into <em>packets</em>.
-<h4>packet structure</h4></li>
+<h4><a name="sec8" id="sec8"></a>packet structure</h4></li>
 </ul>
 
 <p class="image"><img src="../packet_switch_structure.png" alt="" /></p>
@@ -186,12 +264,12 @@ data sent through network in discrete &quot;chunks&quot;</dd>
 <p class="image"><img src="../packet_switching.png" alt="" /></p>
 
 
-<h4>packet switching router</h4>
+<h4><a name="sec9" id="sec9"></a>packet switching router</h4>
 
 <p class="image"><img src="../packet_switching_router.png" alt="" /></p>
 
 
-<h4>resources</h4>
+<h4><a name="sec10" id="sec10"></a>resources</h4>
 
 <ul>
 <li>resources used as needed</li>
@@ -201,7 +279,7 @@ data sent through network in discrete &quot;chunks&quot;</dd>
 
 
 
-<h3>Circuit switching vs Packet switching</h3>
+<h3><a name="sec11" id="sec11"></a>Circuit switching vs Packet switching</h3>
 
 <table class="muse-table" border="2" cellpadding="5">
   <thead>
@@ -258,31 +336,31 @@ data sent through network in discrete &quot;chunks&quot;</dd>
 </table>
 
 
-<h3>Four types of delay at each hop</h3>
+<h3><a name="sec12" id="sec12"></a>Four types of delay at each hop</h3>
 
-<h4>Nodal processing delay</h4>
+<h4><a name="sec13" id="sec13"></a>Nodal processing delay</h4>
 
 <p class="first">check errors &amp; routing</p>
 
 
-<h4>Queueing</h4>
+<h4><a name="sec14" id="sec14"></a>Queueing</h4>
 
 <p class="first">time waiting for its turn at output link</p>
 
 
-<h4>Transmission delay</h4>
+<h4><a name="sec15" id="sec15"></a>Transmission delay</h4>
 
 <p class="first">time to pump packet onto a link at link speed</p>
 
 
-<h4>Propagation delay</h4>
+<h4><a name="sec16" id="sec16"></a>Propagation delay</h4>
 
 <p class="first">router to router propagation</p>
 
 <p>The focus is on uqeueing and transmission delay.</p>
 
 
-<h4>Comparasion</h4>
+<h4><a name="sec17" id="sec17"></a>Comparasion</h4>
 
 <pre class="example">
 Assume:
@@ -297,28 +375,25 @@ Case 1(not reserve) :
 Packet arrival rate: λ
 Packet service rate: μ
 </pre>
-<blockquote>
-<p class="quoted">let  <!-- $\rho = \frac{\lambda}{\mu}$--><img src="./latex/latex2png-network_taxonomy__126951189.png" alt="latex2png equation" class="latex-inline" /></p>
-</blockquote>
 
+<!-- $utilization:\ \rho = \frac{\lambda}{\mu} = \frac{a}{R / L} = \frac{La}{R}$--><img src="./latex/latex2png-network_taxonomy__118516322.png" alt="latex2png equation" class="latex-inline" />
+<!-- $p_k\lambda = p_{k+1}\mu $--><img src="./latex/latex2png-network_taxonomy__330129159.png" alt="latex2png equation" class="latex-inline" />
+<!-- $p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$--><img src="./latex/latex2png-network_taxonomy__308145316.png" alt="latex2png equation" class="latex-inline" />
+<!-- $p_0 = 1 - \rho$--><img src="./latex/latex2png-network_taxonomy__41737271.png" alt="latex2png equation" class="latex-inline" />
 
-<blockquote>
-<p class="quoted"><!-- $ p_k\lambda = p_{k+1}\mu $--><img src="./latex/latex2png-network_taxonomy__330138311.png" alt="latex2png equation" class="latex-inline" /></p>
-</blockquote>
+<p>Average queue size:
+<!-- $$ E(Q) = \sum_{i=0}^{\infty}ip_i = (1 - \rho)\sum_{i=0}^{\infty}i\rho^i = \frac{\rho}{1 - \rho}$$--><img src="./latex/latex2png-network_taxonomy__500320717.png" alt="latex2png equation" class="latex-inline" /></p>
 
+<p>Average queue delay:
+<!-- $ w = \frac{L}{R}\frac{\rho}{1-\rho} $--><img src="./latex/latex2png-network_taxonomy__247192425.png" alt="latex2png equation" class="latex-inline" /></p>
 
-<blockquote>
-<p class="quoted"><!-- $ p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$--><img src="./latex/latex2png-network_taxonomy__307998884.png" alt="latex2png equation" class="latex-inline" /></p>
-</blockquote>
+<p>Transmission delay:
+<!-- $ \frac{L}{R} $--><img src="./latex/latex2png-network_taxonomy__402086668.png" alt="latex2png equation" class="latex-inline" /></p>
 
+<p>Queueing + transmission:
+<!-- $ \frac{L}{R} \frac{1}{1-\rho} $--><img src="./latex/latex2png-network_taxonomy__242582677.png" alt="latex2png equation" class="latex-inline" /></p>
 
-<blockquote>
-<p class="quoted"><!-- $ p_0 = 1 - \rho $--><img src="./latex/latex2png-network_taxonomy__405946043.png" alt="latex2png equation" class="latex-inline" /></p>
-</blockquote>
-
-
-
-
+<p class="image"><img src="../queue_delay.svg" alt="" /></p>
 
 
 
@@ -326,7 +401,9 @@ Packet service rate: μ
 
 
 
-<h2>Questions</h2>
+
+
+<h2><a name="sec18" id="sec18"></a>Questions</h2>
 
 <p class="first">1. Where is the control information for circuit switching?</p>
 
@@ -335,7 +412,7 @@ Packet service rate: μ
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: October  2, 2011  
+    Last Updated: October  3, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

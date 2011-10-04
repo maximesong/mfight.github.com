@@ -1,4 +1,5 @@
 #title Taxonomy of Communication Networks
+<contents>
 
 * Overview
 [[../network_texonomy.png]]
@@ -25,7 +26,7 @@ example ::
 
 feature ::
  - each link has a number of "circuits"
-(sometimes we refer to a "ciruit" as a channel or a line)
+(sometimes we refer to a "circuit" as a channel or a line)
 
  - an end-to-end connection reserves one "circuit" at each link
 
@@ -139,24 +140,85 @@ Case 1(not reserve) :
 Packet arrival rate: λ
 Packet service rate: μ
 </example>
- let  $\rho = \frac{\lambda}{\mu}$
+
+$utilization:\ \rho = \frac{\lambda}{\mu} = \frac{a}{R / L} = \frac{La}{R}$
+$p_k\lambda = p_{k+1}\mu $
+$p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$
+$p_0 = 1 - \rho$
+
+Average queue size:
+<latex inline="true" scale="1">$$ E(Q) = \sum_{i=0}^{\infty}ip_i = (1 - \rho)\sum_{i=0}^{\infty}i\rho^i = \frac{\rho}{1 - \rho}$$</latex>
+
+Average queue delay:
+$ w = \frac{L}{R}\frac{\rho}{1-\rho} $
+
+Transmission delay:
+$ \frac{L}{R} $
+
+Queueing + transmission:
+$ \frac{L}{R} \frac{1}{1-\rho} $
+
+[[../queue_delay.svg]]
+
+ - ρ ~ 0 : average queueing delay small
+ - ρ -> 1 : delay becomes large
+ - ρ > 1 : more "work" arriving than can be serviced, average delay infinite!
+
+*** Statistical Multiplexing
+**** Reservation/Dedication(aka circuit-switching)
+ - n flows.
+ - each flow has an arrival rate of a/n.
+ - each flow uses its own reserved (sub)link with rate R/n.
+ - queueing delay + transimission delay: L/R * (1 / (1 - ρ))
+**** No reservation(aka packet switching)
+ - all arrival into the single link with rate a.
+ - the link has bandwidth R.
+ - queueing delay + transimission delay: *n* * L/R * (1 / (1 - ρ))
 
 
- $ p_k\lambda = p_{k+1}\mu $
+ - On-demand time-division
+ - Schedule link on a per-packet basis
+ - Packets from different sources interleaved on link
+ - Buffer packets that are contending for the link
+ - Buffer(queue) overflow is called congestion
 
+** Datagram nerwork
+ - each packet of a flow is switched independently
+  - each packet header contains complete destination address
+  - receibing a packet, a router looks at the packet's destination address and searches its current routing table to determine the possible next hops, and pick one.
+ - commonly, when we say packet switching we mean datagram switching
+  - e.g. IP networks
+ - analogy:postal mail system 
+*** time delay
+[[../datagram_delay.png]]
 
- $ p_{k+1} = \frac{\lambda}{\mu}p_k = (\frac{\lambda}{\mu})^{k+1}p_0 = \rho^{k+1}p_0$
+** Virtual circuit network
+ - all packets from one flow are sent along a pre-established path(= virtual circuit)
+  - e.g. Multiple Label Packet Switching(MPLS) in IP networks
+ - fixed path determined at virtual circuit setup time, remains fixed thru flow
+ - each packet carries a short tag (virtual-circuit (VC) #); tag determines next hop
 
+*** time delay
+**** three phases
+ - VC establishment
+ - data transfer
+ - VC disconnect
 
- $ p_0 = 1 - \rho $
+**** time delay
+[[../vc_delay.png]]
 
-
-
-
-
-
-
-
+** Packet Switching vs. Circuit Switching
+*** Advantages
+ - most important advantage of packet-switching over circuit switching is stastical multiplexing, and therefore efficient bandwidth usage.
+*** Disadvantages
+ - potential congestion: packet delay and high loss
+  - protocols needed for reliable data transfer, congestion control
+  - it is possible to guarantee quality of service(QoS) in packet-switched networks and still gain statistical multiplexing, but it adds much complexity
+ - packet header overhead
+ - per packet processing overhead
 * Questions
-1. Where is the control information for circuit switching?
-
+1. Where is the control information for circuit switching ?
+2. How big is the lookup table at each rouer ?
+3. How about datagram ?
+4. What are the benefits of datagram switching over virtual circuit switching ?
+5. What are the benefits of virtual circuit switching over datagram switching ?
