@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Layered Network Architecture</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>Layered Network Architecture</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">layering</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">definition</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">why</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">Networks are complex</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">Effect</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">Example</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec7">concepts</a>
+</dt>
+<dt class="contents">
+<a href="#sec8">Key design issue: how do you divide functionalities among the layers?</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec9">The End-to-End Arguments</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>layering</h2>
+
+<h3><a name="sec2" id="sec2"></a>definition</h3>
+
+<ul>
+<li>a technique to organize a networked system into a succession of logically distinct entities, such that the service provided by one entity is solely based on the service provided by the previous(lower entity).
+<img src="../layered_network.png" alt="" /></li>
+</ul>
+
+
+<h3><a name="sec3" id="sec3"></a>why</h3>
+
+<h4><a name="sec4" id="sec4"></a>Networks are complex</h4>
+
+<ul>
+<li>Hardware
+
+<ul>
+<li>Hosts</li>
+<li>Routers</li>
+<li>Links of various media</li>
+</ul></li>
+<li>Software
+
+<ul>
+<li>Applications</li>
+<li>Protocols</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec5" id="sec5"></a>Effect</h4>
+
+<ul>
+<li>explicit structure allows identification of the relationship among complex system's pieces</li>
+<li>modularization eases maintenance, updating of system. Change of implementation of layer's service transparent to rest of system.</li>
+</ul>
+
+
+<h4><a name="sec6" id="sec6"></a>Example</h4>
+
+<h5>application</h5>
+
+<ul>
+<li>provide services to users</li>
+</ul>
+
+<dl>
+<dt><strong>protocol</strong></dt><dd></dd>
+</dl>
+
+<ul>
+<li>Send messages to peer</li>
+<li>for example, helo, mail from, rcpt to are messages between two SMTP peers</li>
+</ul>
+
+
+<h5>transport</h5>
+
+<ul>
+<li>take msg from app</li>
+</ul>
+
+<dl>
+<dt><strong>protocol</strong></dt><dd></dd>
+</dl>
+
+<ul>
+<li>Add control info to form &quot;datagram&quot;</li>
+<li>send datagram to peer</li>
+<li>wait for peer to ack receipt;if no ack, retransmit</li>
+</ul>
+
+
+
+
+<h3><a name="sec7" id="sec7"></a>concepts</h3>
+
+<dl>
+<dt><strong>ISO</strong></dt><dd>
+International Standard Organization</dd>
+<dt><strong>OSI</strong></dt><dd>
+Open System Interconnection</dd>
+
+<dt><strong>Service</strong></dt><dd>
+says what a layer does</dd>
+<dt><strong>Interface</strong></dt><dd>
+says how to access the service</dd>
+<dt><strong>Protocol</strong></dt><dd>
+says how the service is inplemented</dd>
+</dl>
+
+<ul>
+<li>A set of rules and formats that govern the communications between two peers.</li>
+</ul>
+
+
+
+<h3><a name="sec8" id="sec8"></a>Key design issue: how do you divide functionalities among the layers?</h3>
+
+<h4><a name="sec9" id="sec9"></a>The End-to-End Arguments</h4>
+
+<p class="first">The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the endpoints of the communication systems. Therefore, providing that questioned function as a feature of the communications systems iteself is not possible. &mdash;-J.Saltzer, D.Reed, and D.Clark, 1984</p>
+
+<ul>
+<li>The application knows the requirements best, place functionalities as high in the layer as possible</li>
+<li>Think twice before implementing a functionality at a lower layer, even when you believe it will be useful to an application</li>
+</ul>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: October  3, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+

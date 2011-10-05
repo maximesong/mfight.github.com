@@ -94,12 +94,48 @@
 <dt class="contents">
 <a href="#sec17">Comparasion</a>
 </dt>
+<dt class="contents">
+<a href="#sec18">Statistical Multiplexing</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec19">Datagram nerwork</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec20">time delay</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec21">Virtual circuit network</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec22">time delay</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec23">Packet Switching vs. Circuit Switching</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec24">Advantages</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">Disadvantages</a>
+</dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec18">Questions</a>
+<a href="#sec26">Questions</a>
 </dt>
 </dl>
 </div>
@@ -152,7 +188,7 @@ dedicated circuit per call/session</dd>
 
 <ul>
 <li>each link has a number of &quot;circuits&quot;
-(sometimes we refer to a &quot;ciruit&quot; as a channel or a line)</li>
+(sometimes we refer to a &quot;circuit&quot; as a channel or a line)</li>
 
 <li>an end-to-end connection reserves one &quot;circuit&quot; at each link</li>
 </ul>
@@ -395,17 +431,129 @@ Packet service rate: μ
 
 <p class="image"><img src="../queue_delay.svg" alt="" /></p>
 
+<ul>
+<li>ρ ~ 0 : average queueing delay small</li>
+<li>ρ -&gt; 1 : delay becomes large</li>
+<li>ρ &gt; 1 : more &quot;work&quot; arriving than can be serviced, average delay infinite!</li>
+</ul>
+
+
+<h4><a name="sec18" id="sec18"></a>Statistical Multiplexing</h4>
+
+<h5>Reservation/Dedication(aka circuit-switching)</h5>
+
+<ul>
+<li>n flows.</li>
+<li>each flow has an arrival rate of a/n.</li>
+<li>each flow uses its own reserved (sub)link with rate R/n.</li>
+<li>queueing delay + transimission delay: L/R * (1 / (1 - ρ))</li>
+</ul>
+
+
+<h5>No reservation(aka packet switching)</h5>
+
+<ul>
+<li>all arrival into the single link with rate a.</li>
+<li>the link has bandwidth R.</li>
+<li>queueing delay + transimission delay: <em>n</em> * L/R * (1 / (1 - ρ))</li>
+</ul>
+
+
+<ul>
+<li>On-demand time-division</li>
+<li>Schedule link on a per-packet basis</li>
+<li>Packets from different sources interleaved on link</li>
+<li>Buffer packets that are contending for the link</li>
+<li>Buffer(queue) overflow is called congestion</li>
+</ul>
 
 
 
 
+<h3><a name="sec19" id="sec19"></a>Datagram nerwork</h3>
+
+<ul>
+<li>each packet of a flow is switched independently
+
+<ul>
+<li>each packet header contains complete destination address</li>
+<li>receibing a packet, a router looks at the packet's destination address and searches its current routing table to determine the possible next hops, and pick one.</li>
+</ul></li>
+<li>commonly, when we say packet switching we mean datagram switching
+
+<ul>
+<li>e.g. IP networks</li>
+</ul></li>
+<li>analogy:postal mail system
+<h4><a name="sec20" id="sec20"></a>time delay</h4></li>
+</ul>
+
+<p class="image"><img src="../datagram_delay.png" alt="" /></p>
+
+
+
+<h3><a name="sec21" id="sec21"></a>Virtual circuit network</h3>
+
+<ul>
+<li>all packets from one flow are sent along a pre-established path(= virtual circuit)
+
+<ul>
+<li>e.g. Multiple Label Packet Switching(MPLS) in IP networks</li>
+</ul></li>
+<li>fixed path determined at virtual circuit setup time, remains fixed thru flow</li>
+<li>each packet carries a short tag (virtual-circuit (VC) #); tag determines next hop</li>
+</ul>
+
+<h4><a name="sec22" id="sec22"></a>time delay</h4>
+
+<h5>three phases</h5>
+
+<ul>
+<li>VC establishment</li>
+<li>data transfer</li>
+<li>VC disconnect</li>
+</ul>
+
+
+<h5>time delay</h5>
+
+<p class="image"><img src="../vc_delay.png" alt="" /></p>
 
 
 
 
-<h2><a name="sec18" id="sec18"></a>Questions</h2>
+<h3><a name="sec23" id="sec23"></a>Packet Switching vs. Circuit Switching</h3>
 
-<p class="first">1. Where is the control information for circuit switching?</p>
+<h4><a name="sec24" id="sec24"></a>Advantages</h4>
+
+<ul>
+<li>most important advantage of packet-switching over circuit switching is stastical multiplexing, and therefore efficient bandwidth usage.</li>
+</ul>
+
+
+<h4><a name="sec25" id="sec25"></a>Disadvantages</h4>
+
+<ul>
+<li>potential congestion: packet delay and high loss
+
+<ul>
+<li>protocols needed for reliable data transfer, congestion control</li>
+<li>it is possible to guarantee quality of service(QoS) in packet-switched networks and still gain statistical multiplexing, but it adds much complexity</li>
+</ul></li>
+<li>packet header overhead</li>
+<li>per packet processing overhead</li>
+</ul>
+
+
+
+
+<h2><a name="sec26" id="sec26"></a>Questions</h2>
+
+<p class="first">1. Where is the control information for circuit switching ?
+2. How big is the lookup table at each rouer ?
+3. How about datagram ?
+4. What are the benefits of datagram switching over virtual circuit switching ?
+5. What are the benefits of virtual circuit switching over datagram switching ?</p>
 
 
 <!-- Emacs Muse Footer -->

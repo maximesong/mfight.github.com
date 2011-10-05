@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>laTeX</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>laTeX</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<h2>Emacs laTeX-mode</h2>
+
+<h3>C-j</h3>
+
+<ul>
+<li>插入段落分割（两个空行），并且检查前一个段落的括号匹配</li>
+</ul>
+
+
+<h3>C-c {</h3>
+
+<ul>
+<li>插入一对大括号</li>
+</ul>
+
+
+<h3>C-c }</h3>
+
+<ul>
+<li>移动到下一个没有匹配的右括号</li>
+</ul>
+
+
+<h3>C-c C-o</h3>
+
+<ul>
+<li>插入'\begin'和'\end',可配置<code>latex-block-names</code>来增加自动补全。</li>
+</ul>
+
+
+<h3>C-c C-e</h3>
+
+<ul>
+<li>关闭一个block。</li>
+</ul>
+
+
+<h3>C-c C-r</h3>
+
+<ul>
+<li>在当前区域运行tex，并加入header</li>
+</ul>
+
+
+<h3>C-c C-b</h3>
+
+<ul>
+<li>在整个buffer区域运行tex</li>
+</ul>
+
+
+<h3>C-c C-f</h3>
+
+<ul>
+<li>在当前文件运行tex</li>
+</ul>
+
+
+<h3>C-c C-k</h3>
+
+<ul>
+<li>结束tex子进程</li>
+</ul>
+
+
+<h3>C-c C-v</h3>
+
+<ul>
+<li>查看上一次tex运行后的输出</li>
+</ul>
+
+
+<h3>C-c C-q</h3>
+
+<ul>
+<li>查看打印队列</li>
+</ul>
+
+
+<h3>C-c C-c</h3>
+
+<ul>
+<li>启动其他一些编译命令。</li>
+</ul>
+
+
+
+<h2>latex</h2>
+
+<h3>注释</h3>
+
+<h4>%</h4>
+
+<ul>
+<li>行注释，'%'之后的内容被忽略</li>
+</ul>
+
+
+<h4>\begin{comment} ... \end{comment}</h4>
+
+<ul>
+<li>注释，需要<code>\usepackage{verbatim}</code></li>
+</ul>
+
+
+<h4>documentclass{...}</h4>
+
+<ul>
+<li>设定文档的类型
+<h5>类型</h5></li>
+</ul>
+
+<h5>article</h5>
+
+<ul>
+<li>期刊，杂志的文章，演示，短的报告，程序文档，邀请函</li>
+</ul>
+
+
+<h5>proc</h5>
+
+<ul>
+<li>基于article的用于会议记录的文档类型</li>
+</ul>
+
+
+<h5>report</h5>
+
+<ul>
+<li>有几个章节的长报告，小的书，博士论文</li>
+</ul>
+
+
+<h5>book</h5>
+
+<ul>
+<li>书</li>
+</ul>
+
+
+<h5>slides</h5>
+
+<ul>
+<li>幻灯片</li>
+</ul>
+
+
+
+<h5>选项</h5>
+
+<h5>10pt, 11pt, 12pt</h5>
+
+<ul>
+<li>设置主要字体的大小，如果不设置，默认的是10pt。</li>
+</ul>
+
+
+<h5>a4paper, letterpaper, ...</h5>
+
+<ul>
+<li>设定纸的大小。默认的大小是letterpapaper。</li>
+</ul>
+
+<dl>
+<dt><strong>其他</strong></dt><dd></dd>
+</dl>
+
+<ul>
+<li>a5paper</li>
+<li>b5paper</li>
+<li>executivepaper</li>
+<li>legalpaper</li>
+</ul>
+
+
+<h5>titlepage, notitlepage</h5>
+
+<ul>
+<li>设定新的一页是否紧跟着文档的标题还是另启一页。article不另启一页，report和book则另启一页。</li>
+</ul>
+
+
+<h5>onecolumn, twocolumn</h5>
+
+<ul>
+<li>设定文档分一栏或两栏</li>
+</ul>
+
+
+<h5>twoside，oneside</h5>
+
+<ul>
+<li>设定文档是两面还是一面的。这个只对排版起作用，与打印的实际情况无关。</li>
+</ul>
+
+
+<h5>landscape</h5>
+
+<ul>
+<li>使用平放布局</li>
+</ul>
+
+
+<h5>openright, openany</h5>
+
+<ul>
+<li></li>
+</ul>
+
+
+
+
+<h4>usepackage{...}</h4>
+
+<ul>
+<li>加载包</li>
+</ul>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: October  3, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+</div>
+
+</body>
+</html>
+
