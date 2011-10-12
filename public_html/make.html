@@ -41,11 +41,7 @@
 <dt class="contents">
 <a href="#sec2">make的定义文件--简单的makefile</a>
 </dt>
-<dt class="contents">
-<a href="#sec3">目标和前提</a>
-</dt>
-<dt class="contents">
-<a href="#sec4">参数</a>
+<dt class="contents"./latex/latex2png-make__94089195.png<a href="#sec4">参数</a>
 </dt>
 <dd>
 <dl class="contents">
@@ -54,16 +50,81 @@
 </dt>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec6">变量</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec7">自动变量</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">$@</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">$%</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">$<</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">$?</a>
+</dt>
+<dt class="contents">
+<a href="#sec12">$^</a>
+</dt>
+<dt class="contents">
+<a href="#sec13">$+</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">$*</a>
+</dt>
+<dt class="contents">
+<a href="#sec15">$(@D)</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">$(<F)</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec17">系统变量</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec18">VPATH</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">vpath</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec20">Pattern Rules</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec21">Static Pattern Rules</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </div>
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>make的作用</h2>
-程序员在调试程序时，时常要做一些常规的工作。这些工作往往又是机械而又无趣的。即使如此，如果这些工作出了错误，程序员往往又要花大量的时间来发现错误。比如说，很多开发者经历过修改一个函数来修复一个bug，但是新代码却没有修复那个bug。后来，他们发现他们根本没有执行修改后的函数，因为他们没有重新编译源代码，重新链接可执行文件，或者重新构建一个jar。
+<h2><a name="sec1" id="sec1"></a>make的作用</h2>
+
+<p class="first">程序员在调试程序时，时常要做一些常规的工作。这些工作往往又是机械而又无趣的。即使如此，如果这些工作出了错误，程序员往往又要花大量的时间来发现错误。比如说，很多开发者经历过修改一个函数来修复一个bug，但是新代码却没有修复那个bug。后来，他们发现他们根本没有执行修改后的函数，因为他们没有重新编译源代码，重新链接可执行文件，或者重新构建一个jar。</p>
 
 <p>make的作用在于它能够依靠用户定义的依赖关系，自动化执行从源代码到可执行文件的功能。make的优点在于它可以通过关系和时间戳，来决定哪些过程需要被再做一遍。</p>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>make的定义文件&mdash;简单的makefile</h2>
+<h2><a name="sec2" id="sec2"></a>make的定义文件&mdash;简单的makefile</h2>
 
 <pre class="src">
 <span style="color: #0000ff;">hello</span>: hello.c
@@ -78,7 +139,7 @@ make
 <p>代码中<code>hello:</code>代表的是目标，如果<code>make</code>没有参数，就执行第一个目标，称为默认目标。</p>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>目标和前提</h2>
+<h2><a name="sec3" id="sec3"></a>目标和前提</h2>
 
 <pre class="src">
 <span style="color: #0000ff;">target</span>: prereq_1 prereq_2
@@ -86,9 +147,70 @@ make
 </pre>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec4" id="sec4"></a>参数</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec5" id="sec5"></a>&mdash;just-print(或-n)</h3>
-告诉make只要显示它为某个目标会执行的命令，而不真正执行。
+<h2><a name="sec4" id="sec4"></a>参数</h2>
+
+<h3><a name="sec5" id="sec5"></a>&mdash;just-print(或-n)</h3>
+
+<p class="first">告诉make只要显示它为某个目标会执行的命令，而不真正执行。</p>
+
+
+
+<h2><a name="sec6" id="sec6"></a>变量</h2>
+
+<h3><a name="sec7" id="sec7"></a>自动变量</h3>
+
+<h4><a name="sec8" id="sec8"></a><!-- $@</h4>
+
+ - 目标
+*** <a name="sec9" id="sec9"></a>$--><img src="./latex/latex2png-make__198199057.png" alt="latex2png equation" class="latex-inline" />%
+
+<ul>
+<li>压缩包成员归约的文件名</li>
+</ul>
+
+
+<h4><a name="sec10" id="sec10"></a><!-- $<</h4>
+
+ - 第一个前置条件
+*** <a name="sec11" id="sec11"></a>$--><img src="./latex/latex2png-make__94089195.png" alt="latex2png equation" class="latex-inline" />?
+
+<ul>
+<li>所有比目标新的前置条件名</li>
+</ul>
+
+
+<h4><a name="sec12" id="sec12"></a>+</h4>
+
+<ul>
+<li>所有的前置条件名，未去除重复</li>
+</ul>
+
+
+<h4><a name="sec14" id="sec14"></a>(@D)</h4>
+
+<ul>
+<li>目标的路径名</li>
+</ul>
+
+
+<h4><a name="sec16" id="sec16"></a>(<span style="color: #a0522d;">COMPILE.mod</span>) -o <span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span> -e <span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span> $<span style="color: #008b8b;">^</span></h4>
+
+<span style="color: #0000ff;">%</span>: %.cpp
+    $(<span style="color: #a0522d;">LINK.cpp</span>) $<span style="color: #008b8b;">^</span> $(<span style="color: #a0522d;">LOADLIBES</span>) $(<span style="color: #a0522d;">LDLIBS</span>) -o <span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span>
+
+<span style="color: #0000ff;">%</span>: %.sh
+    cat $<span style="color: #008b8b;">&lt;</span> &gt;<span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span>
+    chmod a+x <span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span>
+</pre>
+
+
+
+<h3><a name="sec21" id="sec21"></a>Static Pattern Rules</h3>
+
+<pre class="src">
+<span style="color: #0000ff;">$(</span><span style="color: #0000ff;">OBJECTS</span><span style="color: #0000ff;">)</span>: %.o: %c
+      $(<span style="color: #a0522d;">CC</span>) -c $(<span style="color: #a0522d;">CFLAGS</span>) $<span style="color: #008b8b;">&lt;</span> -o <span style="color: #0000ff;">$</span><span style="color: #008b8b;">@</span>
+</pre>
 
 
 
@@ -96,7 +218,7 @@ make
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  6, 2011  
+    Last Updated: October  9, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

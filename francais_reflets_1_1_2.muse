@@ -14,6 +14,7 @@ a.(m)
  - 单独
   - Tu es seule?
     你一个人住吗？ 
+#serieux
 ** sérieux,se
  - a.认真
   - C'est un garçon sérieux.

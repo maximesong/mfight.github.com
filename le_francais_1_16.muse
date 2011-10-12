@@ -73,6 +73,7 @@ n.m.
 synonyme ::
 [[#faute][faute]]
 
+#devoir
 ** devoir
 v.t.
  - 有义务，有责任，应该
@@ -299,6 +300,7 @@ a.
   - école primaire
     小学 
 
+#qualite
 ** qualité
 n.f.
  - 优点，品质

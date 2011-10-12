@@ -27,11 +27,56 @@ target: prereq_1 prereq_2
 ** --just-print(或-n)
 告诉make只要显示它为某个目标会执行的命令，而不真正执行。
 
+* 变量
+** 自动变量
+*** $@
+ - 目标
+*** $%
+ - 压缩包成员归约的文件名
+*** $<
+ - 第一个前置条件
+*** $?
+ - 所有比目标新的前置条件名
+
+*** $^
+ - 所有的前置条件名，去除了重复
+
+*** $+
+ - 所有的前置条件名，未去除重复
+
+*** $*
+ - 目标文件的主干名（去除了后缀）
+
+*** $(@D)
+ - 目标的路径名
+
+*** $(<F)
+ - 第一个前置条件的文件名（去除了路径）
+
+** 系统变量
+
+*** VPATH
+ - make寻找文件的路径
+
+*** vpath
+ - vpath %.c src
+ - vpath %.h include
 
 
+* Pattern Rules
+<src lang="makefile">
+%: %.mod
+    $(COMPILE.mod) -o $@ -e $@ $^
 
+%: %.cpp
+    $(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
-
-
-
-
+%: %.sh
+    cat $< >$@
+    chmod a+x $@
+</src>
+** Static Pattern Rules
+<src lang="makefile">
+$(OBJECTS): %.o: %c
+      $(CC) -c $(CFLAGS) $< -o $@
+</src>

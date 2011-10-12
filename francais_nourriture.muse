@@ -182,6 +182,7 @@ n.m
  - 酸的
 ** amer,ére
  - 苦的
+#delicieux
 ** délicieux,se
  - 美味的
 ** exquis,e

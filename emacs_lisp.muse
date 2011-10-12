@@ -29,3 +29,38 @@
   )
 </example>
 这样，不用先移动到行首，在任意位置只要<code>C-c C-w</code>就可以复制整行的内容了。
+
+** 插入标题
+<example>
+(defun insert-headline (headline-level)
+  "Insert a headline in muse-mode"
+  (interactive)
+  (setq num 0)
+  (while (< num headline-level)
+    (insert "*")
+    (setq num (1+ num)))
+  (insert " ")
+  (insert (read-string "Headline:"))
+  (insert "\n - "))
+
+(defun insert-headline-level-2 ()
+  "Insert a headline of level two in muse-mode"
+  (interactive)
+  (insert-headline 2))
+
+(global-set-key "\C-c2" 'insert-headline-level-2)
+
+(defun insert-headline-level-3 ()
+  "Insert a headline of level three in muse-mode"
+  (interactive)
+  (insert-headline 3))
+
+(global-set-key "\C-c3" 'insert-headline-level-3)
+
+(defun insert-headline-level-4 ()
+  "Insert a headline of level four in muse-mode"
+  (interactive)
+  (insert-headline 4))
+
+(global-set-key "\C-c4" 'insert-headline-level-4)
+</example>

@@ -25,6 +25,8 @@
 
  - [[emacs_muse][Emacs Muse]]
 
+** make
+ - [[make][GNU make]]
 ** Vi && Vim
  - [[vi][vi]]
 ** 课程

@@ -46,18 +46,23 @@
 <dt class="contents">
 <a href="#sec3">复制行</a>
 </dt>
+<dt class="contents">
+<a href="#sec4">插入标题</a>
+</dt>
 </dl>
 </dd>
 </dl>
 </div>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>基础知识</h2>
+<h2><a name="sec1" id="sec1"></a>基础知识</h2>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>实例</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>复制行</h3>
-一般在emacs复制某行的内容，有两种方法：
+<h2><a name="sec2" id="sec2"></a>实例</h2>
+
+<h3><a name="sec3" id="sec3"></a>复制行</h3>
+
+<p class="first">一般在emacs复制某行的内容，有两种方法：</p>
 
 <p>首先到行首，然后</p>
 
@@ -83,12 +88,49 @@
 这样，不用先移动到行首，在任意位置只要<code>C-c C-w</code>就可以复制整行的内容了。
 
 
+<h3><a name="sec4" id="sec4"></a>插入标题</h3>
+
+<pre class="example">
+(defun insert-headline (headline-level)
+  &quot;Insert a headline in muse-mode&quot;
+  (interactive)
+  (setq num 0)
+  (while (&lt; num headline-level)
+    (insert &quot;*&quot;)
+    (setq num (1+ num)))
+  (insert &quot; &quot;)
+  (insert (read-string &quot;Headline:&quot;))
+  (insert &quot;\n - &quot;))
+
+(defun insert-headline-level-2 ()
+  &quot;Insert a headline of level two in muse-mode&quot;
+  (interactive)
+  (insert-headline 2))
+
+(global-set-key &quot;\C-c2&quot; 'insert-headline-level-2)
+
+(defun insert-headline-level-3 ()
+  &quot;Insert a headline of level three in muse-mode&quot;
+  (interactive)
+  (insert-headline 3))
+
+(global-set-key &quot;\C-c3&quot; 'insert-headline-level-3)
+
+(defun insert-headline-level-4 ()
+  &quot;Insert a headline of level four in muse-mode&quot;
+  (interactive)
+  (insert-headline 4))
+
+(global-set-key &quot;\C-c4&quot; 'insert-headline-level-4)
+</pre>
+
+
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  4, 2011  
+    Last Updated: October 10, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

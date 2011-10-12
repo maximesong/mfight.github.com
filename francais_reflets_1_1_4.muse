@@ -229,7 +229,299 @@ officiel, officielle
 a.
  - 官方的
 
+** acheter
+v.t.
+ - 购买
 
+** agaçant
+agaçant,agaçante
+adj.
+ - 让人烦的
+
+** aimer
+v.t.
+ - 爱，喜欢
+** allô
+interj.
+ - 喂
+
+** anniversaore
+n.m.
+ - 生日
+
+** appareil
+n.m.
+ - 电话机
+
+** après
+prép
+ - 在...之后
+
+** arriver
+v.i.
+ - 到达
+
+** beau
+beau，belle，bel，beaux
+adj.
+ - 美丽的
+
+** beaucoup
+adv.
+ - 很多，非常
+
+** bien
+adv.
+ - 的确，确定
+
+** bientôt
+adv.
+ - 马上，不久
+
+** bouquet
+n.m.
+ - 花束
+
+** boutique
+m.f.
+ - 店铺
+
+** bravo
+interj.
+ - 好真棒
+
+** charmant
+charmant，charmante
+adj.
+ - 充满魅力的
+
+** contre
+prép
+ - 反对，冲着
+
+** courrier
+n.m.
+ - 邮件
+
+** decouvrir
+v.i.
+ - 发现
+
+** dépêcher
+v.
+ - 赶快，赶紧
+
+** déjeuner
+n.m.
+ - 午餐
+
+** encore
+adv.
+ - 还有
+
+** entrer
+v.i.
+ - 进来
+
+** espérer
+v.i.
+ - 希望
+
+** fâché
+fâché，fâchée
+adj.
+ - 生气的
+
+** quand
+adv.interr.
+ - 什么时候
+
+** remercier
+v.t.
+ - 感谢
+  - je te remercie!谢谢你！
+
+** responsable
+n.
+ - 负责人
+
+** santé
+n.f.
+ - 健康
+
+** secrétaire
+n.
+ - 秘书
+
+** service
+n.m.
+ - 部门
+
+** stage
+n.m.
+ - 实习
+
+*** maître de stage
+ - 实习导师
+
+*** tuteur de stage
+ - 实习师傅
+
+** sur
+prép
+ - 在...上
+
+** surtout
+adv.
+ - 尤其
+
+** tard
+adv.
+ - 晚
+
+** départ
+n.m.
+ - 出发
+
+** arrivée
+n.f.
+ - 到达
+
+** sentir
+v.t.
+ - 感觉，觉得
+ - 闻，闻到
+  - ça l'air pas mal
+** séjour
+n.m
+  - 逗留，暂住
+
+** fleur
+n.f.
+ - 花
+
+** fleuriste
+n.
+ - 画商
+
+** gâteau
+(pluriel gâteaux)
+n.m.
+ - 蛋糕
+
+** gêné
+gêné, gênée
+adj.
+ - 不好意思的，尴尬的
+
+** gens
+m.n.pl.
+ - 人们
+
+
+** grave
+adj.
+ - 严重的
+  - ce n'est pas grave. 不要紧
+
+** hésiter
+v.i.
+ - 犹豫，迟疑
+*** hésiter à inf.
+ - 对做某事迟疑不决
+
+** heureusement
+adv.
+ - 幸亏
+
+** idée
+n.f.
+ - 想法，主意
+
+** inséparable
+adj.
+ - 不可分离的
+
+** joyeux
+joyeux，joyeuse
+adj.
+ - 快乐的
+
+** lettre
+n.f
+ - 信
+
+** lever
+n.f.
+ - 举起
+
+** mériter
+v.t.
+ - 配得上
+
+** offrir
+v.t.
+ - 赠送，提供
+
+** ordinateur
+n.m.
+ - 计算机，电脑
+
+** parfois
+adj.
+ - 有时
+
+** patient
+patient，patiente
+adj.
+ - 耐心的
+
+** poser
+v.t.
+ - 放
+
+** prendre
+v.t.
+ - 拿
+
+** tourner
+v.pr.
+ - 转向
+*** se tourner vers
+ - 转向
+
+** visite
+n.f.
+ - 来访
+
+** voir
+v.t.
+ - 看见，会见
+
+** frapper
+v.t.dir
+ - 敲打
+*** frapper à qch.
+ - 敲...
+
+** rapport
+m.
+ - 报告
+*** rapport de stage
+ - 实习报告
+
+** tuteur
+tuteur,tutrice
+n.
+ - 监护人
+
+** soutenance
+n.f.
+ - 答辩
+
+* phrase
+** parler chinois
+ - 说中文
 
 * révision
 ** mois
@@ -240,3 +532,25 @@ a.
 
 ** joie
 [[francais_poeme#joie][repasser]]
+
+** délicieux
+[[francais_nourriture#delicieux][repasser]]
+
+** bureau
+[[francais_meubles#bureau][repasser]]
+
+** méchant
+[[le-cours-de-oral-lundi-6#mechant][repasser]]
+
+** qualité
+[[le_francais_1_16.muse#qualite][repasser]]
+
+** temps
+[[francais_temps][repasser]]
+
+** timide
+[[le-cours-de-oral-lundi-6#timide][repasser]]
+
+** tous
+[[le_francais_1_16.muse#tous][repasser]]
+

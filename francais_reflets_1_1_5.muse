@@ -1,0 +1,29 @@
+#title épisode 5
+
+* mot
+** célibat 
+n.m
+ - 单身，不婚
+** boom
+n.热
+*** baby boom
+ - 生育高峰
+** mémé
+n.f
+ - <儿语>奶奶
+** tata
+n.f
+ - <儿语>阿姨，姑姑，婶婶
+** tonton
+n.m
+ - <儿语>叔叔，舅舅
+** pépé 
+n.m.
+ - <儿语>爷爷
+
+* phrase
+** Institute National de la Statistique Etudes Economiques
+ - 法国统计局
+
+** Pacte civil de solidarité
+ - 民间的伙伴关系(比结婚弱）
