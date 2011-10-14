@@ -171,9 +171,15 @@ v.t.
  - 公正的，公平的
  - 正确的
 
+#vrai
 ** vrai
+a.
  - 真的
 
+#fausse
+** fausse
+adj.f.
+ - 假的
 * tournure
 
 ** l'agence de voyages
@@ -209,10 +215,21 @@ antonyme ::
 ** école primaire
  - 小学
 
+#faire_le_menage
 ** faire le menage
  - 做家务
-*** faire le linge 洗衣服
-*** faire la cusine 烧饭
+*** faire le linge 
+ - 洗衣服
+*** faire la cusine 
+ - 烧饭
+*** faire la vaisselle 
+ - 洗碗
+*** faire les courses
+ - 买东西
+*** transporter les enfants
+ - 送孩子
+*** habiller les enfants
+ - 给孩子穿衣服
 
 ** lait écrèmé
  - 脱脂乳
