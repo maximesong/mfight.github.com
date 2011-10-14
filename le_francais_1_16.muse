@@ -59,6 +59,8 @@ n.
 ** arbre
 n.m.
  - 树
+
+#pendant
 ** pendant
 prép
  - 在...期间

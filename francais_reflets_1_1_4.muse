@@ -161,6 +161,7 @@ ph.
 n.f
  - 油煎鸡蛋薄饼
 
+#specialite
 ** spécialité
 n.f.
  - 专科，专业，专门知识
@@ -274,6 +275,7 @@ adv.
 adv.
  - 的确，确定
 
+#bientot
 ** bientôt
 adv.
  - 马上，不久
@@ -490,9 +492,13 @@ v.pr.
 *** se tourner vers
  - 转向
 
+#visite
 ** visite
 n.f.
  - 来访
+
+*** rendre une visite à qn
+ - 拜访某人
 
 ** voir
 v.t.

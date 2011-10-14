@@ -52,3 +52,5 @@ v.i.
 
 * Lundi
 [[le-cours-de-oral-lundi][le cours de oral lundi]]
+
+[[le-cours-de-oral-jeudi][le cours de oral jeudi]]

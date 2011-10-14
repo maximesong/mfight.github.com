@@ -19,9 +19,20 @@ a.
 ** ajouter
 
 ** assoir
+v.t.
+ - 使坐
 
+*** s'assoir
+v.pr.
+ - 坐下
+
+#avant
 ** avant
-** avant de + inf.
+prép
+ - 在...之前
+
+*** avant de + inf.
+ - 在做某事之前
 
 ** bancaire
 
