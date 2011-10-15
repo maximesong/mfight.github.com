@@ -51,7 +51,7 @@ dire || dit
 écrire || écrit
 faire || fait
  
-* moi
+* mot
 ** indicatif
 a.
  - 直陈式

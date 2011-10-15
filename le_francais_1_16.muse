@@ -9,6 +9,21 @@ v.t.
 adj.
  - 农业的
 
+** apprendre
+v.t.
+ - 学，学习
+
+*** apprendre qch. par coeur
+ - 熟记
+*** apprendre à inf.
+ - 学..., 养成...习惯
+*** apprendre qch à qn
+ - 告诉，通知
+*** apprendre à qn. qch.
+ - 教某人某事
+*** apprendre à qn. à inf.
+ - 教某人做某事
+
 ** agriculture
 n.f
  - 农业
@@ -357,6 +372,19 @@ n.f.
 ** visage
 n.m.
  - 脸，面孔
+
+** retrouver
+v.t.
+ - 重新获得，重新找到
+ - 重新发现
+ - 恢复
+ - 再见到
+
+*** se retrouver
+v.pr.
+ - 重逢，相见
+
+
 * tournure
 ** la Grande Muraille
  - 长城
@@ -398,6 +426,10 @@ synonyme ::
 * phrase
 ** Bon à rien
  - 废物，没用的人
+
+** faire des phrases
+ - 造句
+
 
 * grammaire
 ** le passé composé de l'indicatif
