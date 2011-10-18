@@ -27,6 +27,11 @@ n.m
  - 汽水
 ** bière
  - 啤酒
+
+** champagne
+n.m
+ - 香槟酒
+
 ** coca-cola
  - 可口可乐
 ** pepsi
@@ -69,6 +74,7 @@ n.m.
 n.f
  - 桔子
 
+#plat
 * plat
 n.m
  - 一道菜
@@ -84,9 +90,24 @@ n.m
 ** viande
 n.f
  - 肉
+
+#porc
 *** porc
 n.m
  - 猪肉
+
+synoyme ::
+[[#cochon][cochon]]
+
+#cochon
+*** cochon
+n.m
+ - 猪
+ - 猪肉
+
+synoyme ::
+[[#porc][porc]]
+
 *** bœuf
 n.m
  - 牛肉
@@ -99,6 +120,40 @@ n.m.
 *** poisson
 m.
  - 鱼，鱼肉
+
+*** canard
+n.m.
+ - 鸭
+**** le canard laqué
+ - 烤鸭
+
+*** cheval
+n.m.
+ - 马
+ - 马肉
+
+** gras-double
+n.m.
+ - 牛肚
+
+
+** ratatouille
+n.f
+ - 蹩脚的杂烩
+ - 某些地方菜的名称
+
+** tarte
+n.f
+ - 奶油水果馅饼，蛋挞
+
+** praline
+n.f
+ - 糖衣杏仁
+
+
+** amande
+n.f
+ - 杏仁
 
 ** riz
 n.m
@@ -118,6 +173,11 @@ n.m.
 *** salade
 n.f.
  - 色拉
+
+*** fromage
+n.m.
+ - 干酪，奶酪
+
 * couvert
 n.m
  - 餐具
@@ -146,6 +206,37 @@ n.m.
 n.m.
  - 红酒杯
 
+* ingrédient
+n.m.
+ - 成分，组成部分；配料
+
+** pâtes
+n.f.pl.
+ - 面团
+
+** oignon
+n.m
+ - 洋葱，葱头
+** persil
+m.
+ - 香芹
+** ail
+n.m.
+ - 大蒜
+
+** oœf
+n.m.
+ - 蛋；鸡蛋
+*** blanc d'oœf
+ - 蛋白，蛋清
+*** jaune d'oœf
+ - 蛋黄
+
+** mélanger
+v.t.
+ - 混合
+
+
 * assaisonnement
 n.m
  - 调味品
@@ -171,6 +262,18 @@ n.m.
 ** vinaigre
 n.m
  - 醋
+** sucre
+n.m.
+ - 糖
+** poivre
+n.m
+ - 胡椒，胡椒粉
+
+** créme
+n.f
+ - 乳油，奶油
+
+
 * goût
 n.m
  - 味道
@@ -192,10 +295,17 @@ n.m
 * fruit
 n.m.
  - 水果
+
 ** raisin
  - 葡萄
+
 *** raisins secs
  - 葡萄干
+
+** pomme
+n.f.
+ - 苹果
+
 * repas
 n.m
  - 餐
@@ -206,4 +316,16 @@ n.m.
 n.m.
  - 晚饭
 
-
+* faire cuire
+** faire sauter
+ - 炒菜
+** faire mijoter
+ - 炖
+** faire au four
+ - 烤，烘
+** faire bouillir
+ - 煮
+** faire frire
+ - 油炸
+** faire cuire à la vapeur
+ - 蒸

@@ -1,4 +1,12 @@
 #title le cours de oral lundi
 <contents>
+* Prof
+** prénom et nom
+Yohann mainguy
+** e-mail
+faguopengyou@gmail.com
+
 * Cours
  - [[le-cours-de-oral-lundi-6][cours six]]
+
+ - [[le-cours-de-oral-lundi-7][cours sept]]

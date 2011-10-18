@@ -109,9 +109,13 @@ avant
 快
 
 
-
+#nouveau
 *** nouveau
+nouvel, nouvelle, nouveaux
+a.
 新的
+antonyme ::
+[[le_francais_1_16.muse#vieux][vieux]]
 
 *** jouer
 v.i.

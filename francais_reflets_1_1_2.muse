@@ -220,7 +220,7 @@ antonyme ::
  - 做家务
 *** faire le linge 
  - 洗衣服
-*** faire la cusine 
+*** faire la cuisine 
  - 烧饭
 *** faire la vaisselle 
  - 洗碗
@@ -259,7 +259,7 @@ synoyme ::
 ** un noce de diamant
  - 钻石婚
 
-** la cusine en chef
+** la cuisine en chef
  - 主厨
 
 ** ne ... ni ... ni ...

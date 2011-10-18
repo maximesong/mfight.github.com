@@ -39,6 +39,7 @@ pluriel ::  cristaux
 n.m
  - 水晶
 
+#preparer
 ** préparer
 v.t.
  - 准备，预备，筹备
@@ -166,6 +167,7 @@ n.f
 n.f.
  - 专科，专业，专门知识
  - 专长，特长；名菜，拿手菜；特产
+ - 特产，名菜，拿手菜
 
 ** breton
 a.

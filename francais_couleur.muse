@@ -1,3 +1,15 @@
 #title couleur
 <contents>
 
+* couleurs
+** rosé
+a.(m)
+ - 淡粉红色的
+
+** blonde
+a.(f)
+ - 金黄色的
+
+** jaune
+a.
+ - 黄色的

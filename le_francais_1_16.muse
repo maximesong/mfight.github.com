@@ -34,7 +34,8 @@ adj.
  - 旧时的，从前的，前任的
   - l'ancien président
     前总统
- 
+
+#vieux 
 ** vieux
 vieil, vieille
 a.
@@ -45,6 +46,10 @@ a.
  - 古老的
   - un vieil arbre
     古树
+
+antonyme ::
+[[le_francais_1_16#vieux][vieux]]
+
 
 ** avenir
 n.m
@@ -301,9 +306,6 @@ n.f.
 adv.
  - 然而，无论如何，可是
 
-** préparer
-v.t.
- - 准备，预备，筹备
 
 ** école
 n.f.
@@ -445,3 +447,6 @@ synonyme ::
 
 ** principal
 [[le-role-de-l-euro-et-ses-avantages#principal][repasser]]
+
+** préparer
+[[francais_reflets_1_1_4#preparer][repasser]]
