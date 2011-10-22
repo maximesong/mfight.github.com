@@ -2,6 +2,69 @@
 <contents>
 
 * 基础知识
+** defgroup
+defgroup group members odc [keyword value]...
+<example>
+(defgroup grep nil
+  "Run grep as inferior of Emacs, parse error messages."
+  :group 'tools
+  :group 'processes)
+</example>
+
+** defvar
+defvar symbol [value [doc-string]]
+<example>
+(defvar grep-host-defaults-alist nil
+  "Default values depending on target host.
+`grep-compute-defaults' returns default values for every local or
+remote host `grep' runs.  These values can differ from host to
+host.  Once computed, the default values are kept here in order
+to avoid computing them again.")
+</example>
+** defun
+defun name argument-list body-forms
+<example>
+(defun grep-apply-setting (symbol value)
+  "Set SYMBOL to VALUE, and update `grep-host-defaults-alist'.
+SYMBOL should be one of `grep-command', `grep-template',
+`grep-use-null-device', `grep-find-command',
+`grep-find-template', `grep-find-use-xargs', or
+`grep-highlight-matches'."
+  (when grep-host-defaults-alist
+    (let* ((host-id
+	    (intern (or (file-remote-p default-directory) "localhost")))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value)))
+  (set-default symbol value))
+</example>
+
+** when
+when condition then-forms...
+<example>
+(when grep-host-defaults-alist
+    (let* ((host-id
+	    (intern (or (file-remote-p default-directory) "localhost")))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value)))
+</example>
+
+** let
+let (bindings...) forms...
+<example>
+(let* ((host-id
+	    (intern (or (file-remote-p default-directory) "localhost")))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value))
+</example>
+
+** defcustom
+decustom option standard doc [keyword value]...
 
 * 实例
 ** 复制行

@@ -408,10 +408,7 @@ n.f.
 n.
  - 画商
 
-** gâteau
-(pluriel gâteaux)
-n.m.
- - 蛋糕
+
 
 ** gêné
 gêné, gênée
@@ -562,3 +559,5 @@ n.f.
 ** tous
 [[le_francais_1_16.muse#tous][repasser]]
 
+** gâteau
+[[francais_nourriture#gateau][repasser]]

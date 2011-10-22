@@ -38,16 +38,38 @@
 <dt class="contents">
 <a href="#sec1">基础知识</a>
 </dt>
+<dd>
+<dl class="contents">
 <dt class="contents">
-<a href="#sec2">实例</a>
+<a href="#sec2">defgroup</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">defvar</a>
+</dt>
+<dt class="contents">
+<a href="#sec4">defun</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">when</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">let</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">defcustom</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec8">实例</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec3">复制行</a>
+<a href="#sec9">复制行</a>
 </dt>
 <dt class="contents">
-<a href="#sec4">插入标题</a>
+<a href="#sec10">插入标题</a>
 </dt>
 </dl>
 </dd>
@@ -57,10 +79,92 @@
 
 <h2><a name="sec1" id="sec1"></a>基础知识</h2>
 
+<h3><a name="sec2" id="sec2"></a>defgroup</h3>
 
-<h2><a name="sec2" id="sec2"></a>实例</h2>
+<p class="first">defgroup group members odc [keyword value]...</p>
 
-<h3><a name="sec3" id="sec3"></a>复制行</h3>
+<pre class="example">
+(defgroup grep nil
+  &quot;Run grep as inferior of Emacs, parse error messages.&quot;
+  :group 'tools
+  :group 'processes)
+</pre>
+
+
+<h3><a name="sec3" id="sec3"></a>defvar</h3>
+
+<p class="first">defvar symbol [value [doc-string]]</p>
+
+<pre class="example">
+(defvar grep-host-defaults-alist nil
+  &quot;Default values depending on target host.
+`grep-compute-defaults' returns default values for every local or
+remote host `grep' runs.  These values can differ from host to
+host.  Once computed, the default values are kept here in order
+to avoid computing them again.&quot;)
+</pre>
+
+
+<h3><a name="sec4" id="sec4"></a>defun</h3>
+
+<p class="first">defun name argument-list body-forms</p>
+
+<pre class="example">
+(defun grep-apply-setting (symbol value)
+  &quot;Set SYMBOL to VALUE, and update `grep-host-defaults-alist'.
+SYMBOL should be one of `grep-command', `grep-template',
+`grep-use-null-device', `grep-find-command',
+`grep-find-template', `grep-find-use-xargs', or
+`grep-highlight-matches'.&quot;
+  (when grep-host-defaults-alist
+    (let* ((host-id
+	    (intern (or (file-remote-p default-directory) &quot;localhost&quot;)))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value)))
+  (set-default symbol value))
+</pre>
+
+
+<h3><a name="sec5" id="sec5"></a>when</h3>
+
+<p class="first">when condition then-forms...</p>
+
+<pre class="example">
+(when grep-host-defaults-alist
+    (let* ((host-id
+	    (intern (or (file-remote-p default-directory) &quot;localhost&quot;)))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value)))
+</pre>
+
+
+<h3><a name="sec6" id="sec6"></a>let</h3>
+
+<p class="first">let (bindings...) forms...</p>
+
+<pre class="example">
+(let* ((host-id
+	    (intern (or (file-remote-p default-directory) &quot;localhost&quot;)))
+	   (host-defaults (assq host-id grep-host-defaults-alist))
+	   (defaults (assq nil grep-host-defaults-alist)))
+      (setcar (cdr (assq symbol host-defaults)) value)
+      (setcar (cdr (assq symbol defaults)) value))
+</pre>
+
+
+<h3><a name="sec7" id="sec7"></a>defcustom</h3>
+
+<p class="first">decustom option standard doc [keyword value]...</p>
+
+
+
+<h2><a name="sec8" id="sec8"></a>实例</h2>
+
+<h3><a name="sec9" id="sec9"></a>复制行</h3>
 
 <p class="first">一般在emacs复制某行的内容，有两种方法：</p>
 
@@ -88,7 +192,7 @@
 这样，不用先移动到行首，在任意位置只要<code>C-c C-w</code>就可以复制整行的内容了。
 
 
-<h3><a name="sec4" id="sec4"></a>插入标题</h3>
+<h3><a name="sec10" id="sec10"></a>插入标题</h3>
 
 <pre class="example">
 (defun insert-headline (headline-level)
@@ -130,7 +234,7 @@
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: October 10, 2011  
+    Last Updated: October 18, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

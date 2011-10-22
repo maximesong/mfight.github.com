@@ -30,6 +30,7 @@ sec, sèche
 a.
  - 干的
 
+#guitare
 ** guitare
 n.f.
  - 吉他
@@ -85,8 +86,6 @@ n.m.
 *** faire du bateau
  - 划船
 
-
-
 ** télévisé
 a.(m)
  - 电视传送的，电视放映的
@@ -103,9 +102,14 @@ a.
 a.
  - 胖的
 
-** métre
+** mètre
 n.m.
- - 民
+ - 米
+
+** somnolent
+a.(m)
+ - 半睡半醒的
+ - 昏昏欲睡的
 
 ** téléphérique
 n.m.
@@ -152,6 +156,9 @@ n.m
 n.m.
  - 酒
 
+** calme
+a.
+ - 安静的，平静的，宁静的
 
 * phrase
 ** je suis allé...

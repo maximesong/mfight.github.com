@@ -1,5 +1,5 @@
 #title épisode 5
-
+<contents>
 * mot
 ** célibat 
 n.m
@@ -151,6 +151,187 @@ n.m
 f.
  - 任务，工作
 
+** aborder
+v.t.
+ - 靠近某人与其攀谈
+ - 着手，开始从事
+ - 涉及
+
+** lecture
+n.f.
+ - 阅读，阅览
+
+** activité
+n.f.
+ - 活动
+
+** admiratif
+admiratif, admirative
+adj.
+ - 仰慕的，钦佩的
+
+** approcher
+v.t.
+ - 移近
+ - 走近，靠近
+
+*** s'approcher
+v.pr.
+ - 走近，靠近
+
+** campagne
+n.f.
+ - 乡村
+
+** course
+n.f.
+ - 购物
+
+*** etre admiratif devant/pour qn.
+ - 对某人钦佩
+
+
+#decourager
+** décourager
+v.t.
+ - 使失去勇气，使气馁，使泄气
+
+antonyme ::
+[[#encourager][encourager]]
+
+*** se décourager
+v.pr
+ - 失去勇气，气馁，泄气
+
+
+#encourager
+** encourager
+v.t.
+ - 鼓舞，激励，勉励
+** s'encourager
+v.pr.
+ - 相互鼓励，相互勉励
+
+antonyme ::
+[[#decourager][decourager]]
+
+** chose
+n.f.
+ - 东西
+
+** cinéma
+n.m.
+ - 电影，电影院
+*** aller au cinéma
+ - 看电影
+
+** courage
+n.m.
+ - 勇气
+*** Bon courage
+ - 加油
+
+** depuis
+prép
+ - 自从...以来
+
+** désolé
+désolé, désolée
+adj.
+ - 感到抱歉
+
+** deuxième
+adj.num.
+ - 第二
+
+** second
+adj.num.ord.
+ - 第二
+ - 次要的，二等的
+ - 另一个，第二个
+
+** dire
+v.t.
+ - 说
+
+** donner
+v.t.
+ - 给
+*** donner qch. à qn.
+ - 某物给某人
+
+** droit
+n.m.
+ - 法律
+
+
+** efficase
+adj.
+ - 有效率的，起作用的
+
+
+** enfant
+n.
+ - 孩子
+
+** enquête
+n.f.
+ - 调查
+
+** études
+n.f.pl.
+ - 学业
+
+** étudier
+v.t.
+ - 学习（一门专业），研究
+
+** exposition
+n.f.
+ - 展览
+*** exposition universelle
+ - 世博会
+
+
+** fac
+n.f.
+ - 学院，大学，faculté的缩写，用于口语
+
+** faculté
+n.f.
+ - 学院，大学
+
+#facile
+** facile
+adj.
+ - 简单的，容易的
+
+antonyme ::
+[[#difficult][difficult]]
+
+#difficult
+** difficile
+a.
+ - 难的，困难的
+
+antonyme ::
+[[#facile][facile]]
+
+** faire
+v.t.
+ - 做
+
+** invitation
+n.f.
+ - 邀请
+
+** inviter
+v.t.
+ - 邀请
+
+** jardin
+n.m.
+ - 花园
 
 
 * phrase
@@ -169,4 +350,13 @@ f.
 
 ** faire le ménage (*series*)
 [[francais_reflets_1_1_2#faire_le_menage][repasser]]
+
+** cuisine
+[[francais_nourriture#cuisine][repasser]]
+
+** guitare
+[[le-cours-de-oral-lundi-6#guitare][repasser]]
+
+** jeu
+[[le_francais_1_16#jeu][repasser]]
 

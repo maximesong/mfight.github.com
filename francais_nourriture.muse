@@ -61,9 +61,14 @@ m.
  - 面包
 
 * place
+#cuisine
 ** cuisine
 n.f
  - 厨房
+ - 烹饪
+*** faire la cuisine
+ - 做饭，做菜
+
 ** la salle à manger
  - 餐厅
 
@@ -163,6 +168,14 @@ n.m
 n.f
  - 浓汤
 
+
+#gateau
+** gâteau
+(pluriel gâteaux)
+n.m.
+ - 蛋糕
+
+
 ** autre
 *** omelette
 n.f.
@@ -177,6 +190,7 @@ n.f.
 *** fromage
 n.m.
  - 干酪，奶酪
+
 
 * couvert
 n.m
@@ -213,6 +227,12 @@ n.m.
 ** pâtes
 n.f.pl.
  - 面团
+
+** farine
+n.f.
+ - 面粉
+
+
 
 ** oignon
 n.m
@@ -305,6 +325,11 @@ n.m.
 ** pomme
 n.f.
  - 苹果
+
+** banane
+n.f
+ - 香蕉
+
 
 * repas
 n.m

@@ -1,4 +1,5 @@
 #title Cours 7
+<contents>
 
 * mot
 ** cuisinier
@@ -15,7 +16,7 @@ n.m.
 n.f.
  - 蒸汽
 
-** cusiner
+** cuisiner
 v.i.
  - 烹饪，做菜
 v.t.
@@ -45,11 +46,23 @@ a.
  - 长的
  - 久的
 
+#simple
 ** simple
 a.
  - 简单的
  - 单一的，单纯的
  - 普通的，平凡的
+
+antonyme ::
+[[#complique][complique]]
+
+#complique
+** compliqué
+adj.
+ - 复杂的，难懂的
+
+antonyme ::
+[[#simple][simple]]
 
 ** secret
 a.
@@ -82,6 +95,23 @@ f.
 ** séparer
 v.t.
  - 使分开
+
+** bol
+n.m
+ - 碗
+
+** couper
+v.t.dir
+ - 切，割
+
+
+** lamelle
+n.f.
+ - 小薄片
+
+** prêt
+a.(m)
+ - 准备好的，预备好的
 
 
 * phrase
