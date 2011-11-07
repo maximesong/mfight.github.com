@@ -55,6 +55,7 @@ n.f.
 （pluriel bureaux)
 n.m.
  - 办公桌
+ - 书房
 
 ** pupitre
 n.m.
