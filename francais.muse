@@ -21,6 +21,11 @@
 
  - [[francais_nourriture][la nourriture]]
 
+ - [[francais_vetement][le vêtement]]
+
+ - [[francais_animal][le animal]]
+
+ - [[francais_corps][le corps]]
 ** Movie
 
  -  [[barbapapa][Barbapapa]]

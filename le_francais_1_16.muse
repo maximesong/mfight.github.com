@@ -59,12 +59,14 @@ n.m
 n.m
  - 建筑
 
+#colere
 ** colère
 n.f
  - 愤怒，怒气
 *** être en colère
  - 发怒，发脾气
-
+*** se mettre en colère
+ - 发脾气
 
 ** attention
 n.f

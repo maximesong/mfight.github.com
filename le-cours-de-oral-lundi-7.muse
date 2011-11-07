@@ -109,8 +109,10 @@ v.t.dir
 n.f.
  - 小薄片
 
+#pret
 ** prêt
-a.(m)
+prêt, prête
+a.
  - 准备好的，预备好的
 
 

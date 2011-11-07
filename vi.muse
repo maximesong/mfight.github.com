@@ -300,6 +300,9 @@ see alos: [[#ZZ][ZZ]]
 ** set nu
  - 显示行数
 
+** set nonu
+ - 取消自动显示行数
+
 * Open file
 ** vi +n file
  - 在第n行打开文件

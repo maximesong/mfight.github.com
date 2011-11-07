@@ -44,6 +44,12 @@ n.m
 v.t.
  - 准备，预备，筹备
 
+*** se préparer
+v.pr
+ - 准备，预备
+
+
+
 ** fête
 n.f.
  - 节日
@@ -192,6 +198,7 @@ n.f
 n.f.
  - 尊严，威严
 
+#tete
 ** tête
 n.f
  - 头，头部，脑袋
@@ -464,6 +471,7 @@ v.t.
 v.t.
  - 赠送，提供
 
+#ordinateur
 ** ordinateur
 n.m.
  - 计算机，电脑

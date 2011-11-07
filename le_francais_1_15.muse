@@ -3,9 +3,15 @@
 
 * mot
  - [[francais_nourriture][nourriture]]
+
+#mal
 ** mal
-a.m.
+a.
  - 坏的，不好的
+m.
+ - 疼，痛
+*** avoir mal à
+ - （某处）疼痛
 
 ** préférer
 v.t.
@@ -43,3 +49,6 @@ a.
 
 * grammaire
  - [[francais_imperative][impérative]]
+
+
+

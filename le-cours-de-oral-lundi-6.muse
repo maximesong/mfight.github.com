@@ -35,6 +35,7 @@ a.
 n.f.
  - 吉他
 
+#chargee
 ** chargée
 adj.f
  - 繁忙的

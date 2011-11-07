@@ -1,0 +1,15 @@
+#title vêtement
+
+#chaussette
+** chaussette
+n.f.
+ - 袜子
+
+** pantalon
+n.m.
+ - 裤子
+
+** soulier
+[[le_francais_1_17.muse#soulier][lien]]
+
+

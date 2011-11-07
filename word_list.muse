@@ -919,8 +919,8 @@ turbulent
 a turbulent situation or period of time is one in which three are a lot of sudden changes.
 
 tweak
-to suddenly pull or twist something
-
+1. to suddenly pull or twist something
+2. to make small changes to a machine, vehicle, or system in order to improve the way it works
 undermine
 to gradually make someone or something less strong or effective
 
@@ -1026,7 +1026,7 @@ thorny
 a question etc that is complicated and difficult
 
 prudent
-sensible and careful, especially by trying to avoid unnecssary risks
+sensible and careful, especially by trying to avoid unnecessary risks
 
 sanity
 the condition of being mentally healthy
@@ -1305,3 +1305,97 @@ when someone uses another person's words, ideas, or work and pretends they are t
 
 pedal
 one of the two parts of a bicycle that you push round with your feet to make the bicycle go forward
+
+spartan
+spartan conditions or ways of living are simple and without any comfort
+
+opaque
+difficult to understand
+
+quantum
+a unit of energy in nuclear physics
+
+spawn
+to make a series of things happen or start to exist
+
+bump
+to hit or knock against something
+
+preempt
+to make what someone has planned or do or say unnecessary or ineffective by saying or doing something first
+
+tirivial
+not serious, important, or valuable
+
+dump
+to put something somewhere in a careless untidy way
+
+collide
+to disagree strongly with a person or group, especially on a particular subject
+
+
+mimic
+to copy the way someone speaks or behaves, especially in order to make people laugh.
+
+conjunction
+working, happening, or be used with someone or something else
+
+dictate
+dictateto say words for someone else to write down
+
+premature
+happening before the natural or proper time
+
+apostrophe
+the sign that is used to writing to show that numbers or letters have been left out, as in don't
+
+fission
+the process of splitting an atom to produce large amounts or energy or an explosion
+
+dialect
+a form of a language which is spoken only in one area, with words or grammar that are slightly different from other forms of the same language
+
+cushion
+something that stops one thing from hitting another thing
+
+spurts
+to suddenly start moving more quickly, especially for a short time
+
+stringent
+a stringent law, rule, standard etc is very strict and must be obeyed
+
+constituent
+one of the substances or things that combine to form something
+
+manifestation
+a very clear sign that a particular situation or feeling exists
+
+merit
+an advantage or good feature of something
+
+notorious
+famous or well known for something bad
+
+lump
+to put two or more different people or things together and consider them as a single group, sometimes wrongly
+
+proliferation
+a sudden increase in the amount or number of something
+
+malicious
+very unkind and cruel, and deliberately behaving in a way that is likely to upset or hurt someone
+
+canonical
+in the simplest mathematical form
+
+rarity
+to not happen or exist very often
+
+commanplace
+happening or existing in many places, and therefore not special or unusual
+
+reinforce
+to give support to an opinion, idea, or feeling, and make it stronger
+
+suffocated
+to feel as if you are not free or do not have enough space

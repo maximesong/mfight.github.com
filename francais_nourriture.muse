@@ -207,6 +207,8 @@ n.f.
 ** fourchette
 n.f.
  - 叉子
+
+#serviette
 ** serviette
 n.f.
  - 餐巾，毛巾
