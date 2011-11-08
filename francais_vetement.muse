@@ -12,4 +12,5 @@ n.m.
 ** soulier
 [[le_francais_1_17.muse#soulier][lien]]
 
-
+** manteau
+[[francais_reflets_1_1_7#manteau][lien]]

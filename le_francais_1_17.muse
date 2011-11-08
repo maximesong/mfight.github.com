@@ -92,6 +92,7 @@ mauvais, mauvaise
 a.
  - 坏的，不好的
 
+#metro
 ** métro
 n.m.
  - 地铁
@@ -203,6 +204,33 @@ v.t.
 
 *** suivre un cours
  - 上课，听课
+
+** jument
+n.f
+ - 母马
+
+** légalement
+adv.
+ - 合法的，依法的，按法律的
+
+** accès
+n.m.
+ - 进入，到达，靠近，接近
+ - 发病，发作
+ - 激动，冲动
+
+** débarqué
+a.
+ - 下车的，下船的
+
+n.m.
+ - 下船的人，下车的人
+
+** familial
+familial, familiale
+a.
+ - 家庭的
+ - 家属的，家族的
 
 
 * phrase

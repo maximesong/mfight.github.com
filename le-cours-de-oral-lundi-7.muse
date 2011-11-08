@@ -33,10 +33,14 @@ n.f
 adj.
  - 炖
 
+#pied
 ** pied
 n.m
  - 脚
 
+*** à pied
+loc.adv.
+ - 步行，徒步
 ** rapide
 a.
  - 快的

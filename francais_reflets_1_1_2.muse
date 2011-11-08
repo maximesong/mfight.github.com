@@ -78,8 +78,6 @@ synoyme ::
 synoyme ::
 [[#surement][sûrement]]
 
-** entendre
- - 听到
 
 ** ravi
 a.(m)
@@ -290,3 +288,7 @@ synoyme ::
 
 ** on est égal
 人人平等
+
+* révision
+** entendre
+[[francais_passe_indicatif.muse#entendre][repasser]]

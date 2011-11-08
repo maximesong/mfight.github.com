@@ -76,6 +76,7 @@ a.
 v.t.
  - 等
 
+#entendre
 ** entendre
 v.t.dir
  - 听到
@@ -92,9 +93,7 @@ v.impers.
 v.t.
  - 收到
 
-** sentir
-v.t.
- - 散发...气味
+
 ** accueillir
 v.t.
  - 迎接，接待
@@ -103,6 +102,12 @@ v.t.
 v.t.
  - 写
 
+#mettre
 ** mettre
 v.t.
  - 放置
+ - 戴上，穿上；花（时间）
+
+* révision
+** sentir
+[[francais_reflets_1_1_4#sentir][repasser]]

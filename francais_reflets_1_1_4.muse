@@ -203,6 +203,9 @@ n.f.
 n.f
  - 头，头部，脑袋
 
+*** en faire une tête
+ - 板着脸
+
 ** défilé
 n.m.
  - 游行，游行队伍
@@ -399,6 +402,7 @@ n.m.
 n.f.
  - 到达
 
+#sentir
 ** sentir
 v.t.
  - 感觉，觉得

@@ -55,6 +55,7 @@ antonyme ::
 n.m
  - 将来，未来
 
+#batiment
 ** bâtiment
 n.m
  - 建筑
@@ -68,6 +69,7 @@ n.f
 *** se mettre en colère
  - 发脾气
 
+#attention
 ** attention
 n.f
  - 当心
@@ -184,9 +186,6 @@ n.m
 *** faire un effort
  - 做出努力
 
-** emploi
-n.m
- - 职业，工作
 
 *** être sans emploi
  - 失业
@@ -259,6 +258,7 @@ n.f.
 n.m.
  - 第二天
 
+#ligne
 ** ligne
 n.f.
  - 线，线路
@@ -453,3 +453,6 @@ synonyme ::
 
 ** préparer
 [[francais_reflets_1_1_4#preparer][repasser]]
+
+** emploi
+[[francais_reflets_1_1_2.muse#emploi][repasser]]
