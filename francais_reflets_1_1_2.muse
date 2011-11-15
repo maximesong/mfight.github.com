@@ -160,6 +160,7 @@ antonyme ::
   - insister pour la réponse 坚决要求答复 
   - insister pour lui parler 坚持要求同他谈
 
+#gagner
 ** gagner
 v.t.
  - 挣得，赚得
@@ -222,6 +223,7 @@ antonyme ::
  - 烧饭
 *** faire la vaisselle 
  - 洗碗
+#faire_les_courses
 *** faire les courses
  - 买东西
 *** transporter les enfants

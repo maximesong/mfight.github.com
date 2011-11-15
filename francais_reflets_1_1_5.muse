@@ -106,6 +106,7 @@ n.f
 n.f.
  - 决定，决心，决议；
 
+#necessaire
 ** nécessaire
 a.
  - 必须的

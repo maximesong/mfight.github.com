@@ -200,9 +200,33 @@ a.
 a.(m)
  - 危险的，冒险的
 
-** bas, basse
+#bas
+** bas
+bas, basse
+
 adj.
  - 低的
+
+n.m.
+ - 下方，下部，下端
+
+*** en bas
+ - 向下的
+ - 在...下面
+
+** haut
+adj.
+ - 高的
+
+n.m.
+ - 高，高度
+
+adv.高；高高地
+ - 高声地
+
+**** en haut
+ - 在...上面
+
 
 ** demeurer
 vi.

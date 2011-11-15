@@ -7,7 +7,7 @@
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script><form name="cse" id="searchbox_demo" action="http://www.google.com/cse"><input type="hidden" name="cref" value="" /><input type="hidden" name="ie" value="utf-8" /><input type="hidden" name="hl" value="" /><input name="q" type="text" size="40" /><input type="submit" name="sa" value="Search" /></form><script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang="></script>
   </head>
   <body>
     <h1>Emacs基础使用</h1>
@@ -166,8 +166,9 @@
 </div>
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec1" id="sec1"></a>基础知识</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec2" id="sec2"></a>窗口布局</h3>
+<h2><a name="sec1" id="sec1"></a>基础知识</h2>
+
+<h3><a name="sec2" id="sec2"></a>窗口布局</h3>
 
 <dl>
 <dt><strong>Frame</strong></dt><dd>
@@ -243,9 +244,10 @@ carriage-return, <code>cs</code>显示为<code>'\'</code>或<code>'(Mac)'</code>
 <p><code>minor</code>是一串窗口的次要模式，比如说有关补全的模式autocomplete， yasnippet等。</p>
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec3" id="sec3"></a>用户输入</h3>
-Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
-键盘输入大致分以下三个大类：
+<h3><a name="sec3" id="sec3"></a>用户输入</h3>
+
+<p class="first">Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
+键盘输入大致分以下三个大类：</p>
 
 <p>1. 图形符号，比如'a', 'B'， ' = ',还包括一些非英语键盘上的字符。</p>
 
@@ -256,15 +258,18 @@ Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
 <p>Modifier Keys的输入其实就是我们熟悉的组合键。比如<code>C-a</code>代表的是按住‘Control’,再按字母‘a’；<code>M-c</code>代表按住‘Meta(Alt)’, 再按‘c’。在一些终端上，'Meta'的使用会遇到问题。需要按‘Meta’的地方可以先按‘Esc’,放开后再按相应的字母。比如<code>M-c</code>可以先按‘Esc’,放开，再按‘c’。</p>
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec4" id="sec4"></a>启动Emacs</h3>
-在终端上，只要输入<code>emacs</code>,就能启动Emacs。
-为了终端不被占用，在shell上也可以输入emacs&amp;
+<h3><a name="sec4" id="sec4"></a>启动Emacs</h3>
+
+<p class="first">在终端上，只要输入<code>emacs</code>,就能启动Emacs。
+为了终端不被占用，在shell上也可以输入emacs&amp;</p>
 
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec5" id="sec5"></a>配置</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec6" id="sec6"></a>启动文件</h3>
-变量<code>inhibit-startup-screen</code>和<code>initial-buffer-choice</code>共同决定了Emacs启动后显示的buffer。
+<h2><a name="sec5" id="sec5"></a>配置</h2>
+
+<h3><a name="sec6" id="sec6"></a>启动文件</h3>
+
+<p class="first">变量<code>inhibit-startup-screen</code>和<code>initial-buffer-choice</code>共同决定了Emacs启动后显示的buffer。</p>
 
 <p>默认这两个变量都是nil，Emacs显示开机欢迎界面。如果你希望不要显示开机画面，那么可以把<code>inhibit-startup-screen</code>设置成non-nil，比如：</p>
 
@@ -299,9 +304,11 @@ Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
 
 
 
-<h2><span class="toplink"><a href="#top">top</a></span><a name="sec7" id="sec7"></a>快捷键</h2>
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec8" id="sec8"></a>退出</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec9" id="sec9"></a>C-x C-c</h4>
+<h2><a name="sec7" id="sec7"></a>快捷键</h2>
+
+<h3><a name="sec8" id="sec8"></a>退出</h3>
+
+<h4><a name="sec9" id="sec9"></a>C-x C-c</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -309,7 +316,7 @@ Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
 </dl>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec10" id="sec10"></a>C-z</h4>
+<h4><a name="sec10" id="sec10"></a>C-z</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -319,8 +326,9 @@ Emacs是为键盘输入而设计的，因为这通常要比鼠标输入要快。
 
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec11" id="sec11"></a>编辑</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec12" id="sec12"></a>C-q</h4>
+<h3><a name="sec11" id="sec11"></a>编辑</h3>
+
+<h4><a name="sec12" id="sec12"></a>C-q</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -335,7 +343,7 @@ RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>
 </ul>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec13" id="sec13"></a>C-x 8 RET</h4>
+<h4><a name="sec13" id="sec13"></a>C-x 8 RET</h4>
 
 <dl>
 <dt><strong>作用</strong></dt><dd>
@@ -346,70 +354,81 @@ RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>
 
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec14" id="sec14"></a>移动</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec15" id="sec15"></a>C-a</h4>
-移动到行首
+<h3><a name="sec14" id="sec14"></a>移动</h3>
+
+<h4><a name="sec15" id="sec15"></a>C-a</h4>
+
+<p class="first">移动到行首</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec16" id="sec16"></a>C-e</h4>
-移动到行末
+<h4><a name="sec16" id="sec16"></a>C-e</h4>
+
+<p class="first">移动到行末</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec17" id="sec17"></a>C-f</h4>
-向后移动一个字符
+<h4><a name="sec17" id="sec17"></a>C-f</h4>
+
+<p class="first">向后移动一个字符</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec18" id="sec18"></a>C-b</h4>
-向前移动一个字符
+<h4><a name="sec18" id="sec18"></a>C-b</h4>
+
+<p class="first">向前移动一个字符</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec19" id="sec19"></a>M-f</h4>
-向后移动一个单词
+<h4><a name="sec19" id="sec19"></a>M-f</h4>
+
+<p class="first">向后移动一个单词</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec20" id="sec20"></a>M-b</h4>
-向前移动一个单词
+<h4><a name="sec20" id="sec20"></a>M-b</h4>
+
+<p class="first">向前移动一个单词</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec21" id="sec21"></a>C-n</h4>
-向下移动一行
+<h4><a name="sec21" id="sec21"></a>C-n</h4>
+
+<p class="first">向下移动一行</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec22" id="sec22"></a>C-p</h4>
-向上移动一行
+<h4><a name="sec22" id="sec22"></a>C-p</h4>
+
+<p class="first">向上移动一行</p>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec23" id="sec23"></a>M-r</h4>
+<h4><a name="sec23" id="sec23"></a>M-r</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec24" id="sec24"></a>M-&lt;</h4>
+<h4><a name="sec24" id="sec24"></a>M-&lt;</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec25" id="sec25"></a>M-&gt;</h4>
+<h4><a name="sec25" id="sec25"></a>M-&gt;</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec26" id="sec26"></a>C-v</h4>
+<h4><a name="sec26" id="sec26"></a>C-v</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec27" id="sec27"></a>M-v</h4>
+<h4><a name="sec27" id="sec27"></a>M-v</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec28" id="sec28"></a>M-x goto-char</h4>
+<h4><a name="sec28" id="sec28"></a>M-x goto-char</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec29" id="sec29"></a>M-g M-g</h4>
+<h4><a name="sec29" id="sec29"></a>M-g M-g</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec30" id="sec30"></a>C-x C-n</h4>
+<h4><a name="sec30" id="sec30"></a>C-x C-n</h4>
 
 
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec31" id="sec31"></a>C-u C-x C-n</h4>
+<h4><a name="sec31" id="sec31"></a>C-u C-x C-n</h4>
 
 
 
-<h3><span class="toplink"><a href="#top">top</a></span><a name="sec32" id="sec32"></a>查看</h3>
-<h4><span class="toplink"><a href="#top">top</a></span><a name="sec33" id="sec33"></a>C-x =</h4>
-获得光标所在字符的信息。
+<h3><a name="sec32" id="sec32"></a>查看</h3>
+
+<h4><a name="sec33" id="sec33"></a>C-x =</h4>
+
+<p class="first">获得光标所在字符的信息。</p>
 
 
 
@@ -418,14 +437,17 @@ RET</code>只是起到结束八进制数字并插入的作用，<code>RET</code>
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: September  5, 2011  
+    Last Updated: September 27, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
   <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
 <noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
-</div>
 
+<form name="cse" id="searchbox_demo" action="http://www.google.com/cse"><input type="hidden" name="cref" value="" /><input type="hidden" name="ie" value="utf-8" /><input type="hidden" name="hl" value="" /><input name="q" type="text" size="40" /><input type="submit" name="sa" value="Search" /></form><script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang="></script>
+
+</div>
+      
 </body>
 </html>
 

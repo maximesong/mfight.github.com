@@ -121,7 +121,12 @@ v.t.
 a.
  - 不动的，固定的，静止的
 
-*** agent de immobile
+** immobilier
+immobilier, immobilière
+a.
+ - 不动产的，房产的
+
+*** agent de immobiler
  - 房产中介人
 
 
@@ -129,8 +134,7 @@ a.
 v.t.
  - 称赞，表扬，夸奖
  - 出租；租用
-
-
+  - louer au locataire 向房客出租 
 
 ** décrire
 v.t.

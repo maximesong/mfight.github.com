@@ -1,4 +1,5 @@
 #title Époside 4
+<contents>
 
 * subjet
 [[francais_fete][fête]]
@@ -74,16 +75,19 @@ prép.
 m.
  - 壶，坛，盆；砂锅；
 
+#armistice
 ** armistice
 n.m
  - 停战，休战
 
+#guerre
 ** guerre
 n.f
  - 战争
 
-** mondiale
-mondiale, mondiale
+#mondial
+** mondial
+mondial, mondiale
 (pluriel mondiaux)
  - 世界的，世界性的
 
@@ -314,9 +318,10 @@ adj.
 prép
  - 反对，冲着
 
+#courrier
 ** courrier
 n.m.
- - 邮件
+ - 邮件,信件
 
 ** decouvrir
 v.i.
@@ -408,9 +413,12 @@ v.t.
  - 感觉，觉得
  - 闻，闻到
   - ça l'air pas mal
+
+#séjour
 ** séjour
 n.m
   - 逗留，暂住
+  - 客厅，起居室
 
 ** fleur
 n.f.

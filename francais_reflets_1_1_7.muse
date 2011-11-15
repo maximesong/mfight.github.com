@@ -51,6 +51,7 @@ n.f.
 adv.
  - 多少
 
+#cummun
 ** commun
 commun, commune
 adj.
@@ -60,7 +61,7 @@ adj.
 adv.
  - 完全的
 
-** cotent
+** content
 content, contente
 adj.
  - 高兴的
@@ -238,6 +239,7 @@ adj.
 n.f.
  - 后续
 
+#a_la_suite_de
 *** à la suite de
 loc.prép.
  - 在...之后
@@ -388,6 +390,84 @@ n.f.
 *** point d'interrogation
  - 问号
 
+** raisonnable
+a.
+ - 有理性的，有理智的
+ - 讲道理的，通情达理的
+
+** pousser
+v.t.
+ - 推，推动
+
+v.i.
+ - 生长，长出
+
+** hôtel
+n.m.
+ - 旅馆，旅店，饭店，酒店
+
+** peine
+n.f
+ - 刑罚；惩罚，惩处，处分
+ - 痛苦，难受，悲痛
+ - 担心，不安，忧虑
+ - 困难，障碍
+
+** bouger
+v.i.
+ - 动
+ - 移动
+
+v.t.
+ - 移动
+
+** tricoter
+v.t.
+ - 编结，针织
+
+v.i.
+ - 打毛线； 编织
+
+** paraître
+v.i.
+ - 出现，露出
+ - 显露，显现；表现出
+ - 出版，发行，发表
+ - 似乎好像，仿佛，显得
+
+** fraîche
+n.f.
+ - 清凉
+
+** étoiler
+v.t.
+ - 使布满星星，使布满星状物
+
+** brûle
+m.
+ - 焦味
+
+** cheveux
+n.m.
+ - 头发
+
+** diriger
+v.t.
+ - 领导，指挥；管理
+ - 指导，引导
+ - 驾驶，操纵
+
+** payer
+v.t.
+ - 支付，交纳，缴纳，偿付，偿还
+ - 付款，付钱给（某人）
+
+v.i.
+ - 付钱，付款，付账
+
+** orchestre
+n.m.
+ - 管弦乐队
 
 * phrase
 ** robe de chambre
@@ -442,3 +522,6 @@ loc.prép de
 
 ** tête
 [[francais_reflets_1_1_4.muse#tete][repasser]]
+
+** courrier
+[[francais_reflets_1_1_4.muse#courrier][repasser]]

@@ -67,8 +67,10 @@ a.
 a.
  - 疲劳的
 
+#garage
 ** garage
 n.m.
+ - 车库
  - 汽车修理厂
 
 ** gras
@@ -232,6 +234,20 @@ a.
  - 家庭的
  - 家属的，家族的
 
+** professionnel
+professionnel, professionnelle
+a.
+ - 职业的，业务的
+ - 职业性的，专业的，非业余的
+
+n.
+ - 专业人员，职业运动员
+ - 熟练工人，熟手
+
+** équilibre
+n.m
+ - 平衡，均衡
+ - 匀称，相称
 
 * phrase
 

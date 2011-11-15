@@ -23,9 +23,10 @@ n.m.
 
 
 * couvert
+#tasse
 ** tasse
 n.f.
- - 杯子
+ - 带把儿的杯子
 
 * sofa
 ** chaise

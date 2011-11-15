@@ -93,9 +93,11 @@ v.t.
 *** quitter
 v.t.
  - 放开，松开
+
+
 *** bras
-n.m.
- - 臂，胳膊
+[[francais_reflets_1_1_6#bras][lien]]
+
 *** cœur
 n.m.
  - 心

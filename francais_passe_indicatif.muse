@@ -85,6 +85,7 @@ v.t.dir
 v.t.
  - 喝,饮
 
+#falloir
 ** falloir
 v.impers.
  - 必须
