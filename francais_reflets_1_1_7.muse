@@ -469,6 +469,176 @@ v.i.
 n.m.
  - 管弦乐队
 
+** nombre
+m.
+ - 数目
+
+** voyageur
+voyageur, voyageuse
+n.m
+ - 旅客，乘客
+
+** augmenter
+v.t.
+ - 增加，增大，增长
+ - 给...提价；加薪
+
+v.i.
+ - 增加，增大，增长
+ - 涨价
+
+** arrêt
+n.m
+ - 停止，停顿；中止
+ - 站
+
+** agrandir
+v.t.
+ - 增大，扩大，加大，放大
+
+*** s'agrandir
+v.pr.
+ - 变大，增大，扩大
+ - 变崇高，变强大，变伟大，变富有
+
+** déplacer
+v.t.
+ - 移动，挪动，移动，移位
+ - 调动（人员）
+ - 转移，迁移
+
+*** se déplacer
+v.pr.
+ - 移动，挪动
+ - 走出；出门，旅行，出差
+
+** déplacement
+n.m.
+ - 移动，挪动，搬动，移位
+ - 调任，调职
+ - 转移，迁移
+ - 走动；出门；旅行；出差；交通
+
+** vacance
+n.f.
+ - 假期，休假
+
+** montagne
+n.f.
+ - 山，山岳
+
+
+** fer
+n.m.
+ -  铁
+
+** assurer
+v.t.
+ - 保证，保障，确保
+ - 使固定，使稳，使牢固，使坚定
+
+** nombreux
+nombreux, nombreuse
+a.
+ - 大量的，为数众多的
+ - 许多
+
+** calculé
+adj.
+ - 计算的
+
+** automobile
+f.
+ - 汽车，轿车
+
+** voie
+n.f.
+ - 路，站台，途径，意图，铁路
+
+** divers
+a.(m)
+ - 多变的，多样的
+ - 各种各样的，不同的
+
+
+** développer
+v.t.
+ - 发展，使成长；使发育；培养
+
+*** se développer
+v.pr.
+ - 展开
+
+** plupart
+n.f
+ - 大多数，大部分
+
+pron.indéf
+ - 大多数人，大部分人
+
+** installer
+v.t.
+ - 使就职
+ - 安顿，安置
+ - 安放，放置；安装
+
+*** s'installer
+v.pr.
+ - 安家，定居；待在，坐定
+
+** devenir
+v.i.
+ - 变成，变得，成为
+
+n.m.
+ - 生成，变异
+ - 变化，发展
+ - 前途，未来
+
+** deviner
+v.t.
+ - 猜测，推测，猜中，猜到
+
+** réalisation
+f.
+ - 实现；成就；创造
+
+** existante
+adj.f
+ - 存在物
+
+** projet
+n.m
+ - 打算，设想，项目，计划，规划
+ - 草案，方案
+
+** estimation
+n.f
+ - 估价，评估
+
+** autoroute
+n.f
+ - 高速公路
+
+** porteur
+n.
+ - 搬运者，运输者，行李搬运工
+ - 持某物者，携带者
+ - 送信件等的人
+ - （证券）持有人，持票人
+
+** compartiment
+n.m
+ - （列车车厢的）分隔车室，包间
+
+** comprendre
+v.t.
+ - 包括，包含
+
+** generalement
+adv.
+ - 一般地，普遍地，通常
+
 * phrase
 ** robe de chambre
  - 睡裙
@@ -525,3 +695,18 @@ loc.prép de
 
 ** courrier
 [[francais_reflets_1_1_4.muse#courrier][repasser]]
+
+** rendre
+[[le_francais_1_16#rendre][repasser]]
+
+** construire
+[[le_francais_1_16#construire][repasser]]
+
+** circuler
+[[francais_reflets_1_1_4#circuler][repasser]]
+
+** quitter
+[[francais_poeme#quitter][repasser]]
+
+** départ
+[[francais_reflets_1_1_4#depart][repasser]]

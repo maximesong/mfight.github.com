@@ -236,9 +236,11 @@ adj.
 m.
  - 纸张
 
+#circuler
 ** circuler
 v.i.
  - 循环，流通
+ - 往来，通行
 
 
 ** officiel
@@ -399,6 +401,7 @@ adv.
 adv.
  - 晚
 
+#depart
 ** départ
 n.m.
  - 出发

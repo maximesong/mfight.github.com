@@ -90,9 +90,13 @@ v.t.
 
 **** ne jamais
  - 从未，永不
+
+#quitter
 *** quitter
 v.t.
  - 放开，松开
+ - 放弃
+ - 离开，走出
 
 
 *** bras

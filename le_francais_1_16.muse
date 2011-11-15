@@ -1,6 +1,7 @@
 #title leçon 16
 <contents>
 * mot 
+#construire
 ** construire
 v.t.
  - 建造
@@ -337,10 +338,17 @@ v.t.indir.
   - recommencer à chanter
     重新唱起来
 
+#rendre
 ** rendre
 v.t.
  - 发还，归还
 
+*** se rendre
+v.pr.
+ - 依从，听从，让步
+ - 到...去，赴
+ - 通向
+ - 被翻译
 ** tenir
 v.i.
  - 坚持
