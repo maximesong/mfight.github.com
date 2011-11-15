@@ -25,10 +25,16 @@ n.m.
 n.m.
  - 结婚
 
+#moyen
 ** moyen
 moyen, moyenne
+
 a.(f)
  - 中间的，平均的
+
+n.m.
+ - 方法，手段，办法
+ - 帮助，援助，介绍
 
 ** ménage
 n.m.
@@ -118,6 +124,7 @@ n.m.
 v.t.
  - 运输，搬运，运送，输送
 
+#egalement
 ** également
 adv.
  - 相等地，一样地，同等的。

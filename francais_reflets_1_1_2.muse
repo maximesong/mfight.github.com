@@ -293,4 +293,4 @@ synoyme ::
 
 * révision
 ** entendre
-[[francais_passe_indicatif.muse#entendre][repasser]]
+[[francais_passe_indicatif#entendre][repasser]]

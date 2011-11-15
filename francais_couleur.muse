@@ -13,3 +13,27 @@ a.(f)
 ** jaune
 a.
  - 黄色的
+
+** blanc
+blanc, blanche
+adj.
+ - 白色的
+
+** bleu
+bleu, bleue
+adj.
+ - 蓝色的
+
+** brun
+brun, brune
+adj.
+ - 棕色的，褐色的
+
+** noir
+noir, noire
+adj.
+ - 黑色的
+
+** rose
+adj.
+ - 玫瑰红的

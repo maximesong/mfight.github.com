@@ -68,6 +68,183 @@ m.
 v.t.
  - 整理，清理：
 
+** accent
+n.m.
+ - 口音
+
+** admirateur
+admirateur, admiratrice
+n.
+ - 赞赏者，钦佩者
+
+** admirer
+v.t.
+ - 赞赏，赞美
+
+** amitité
+n.f.
+ - 友谊
+
+** argent
+n.m.
+ - 钱
+
+** artiste
+n.
+ - 艺术家
+
+** atelier
+n.m.
+ - 工作室
+
+** bijou
+(pluriel bijoux)
+n.m.
+ - 首饰
+
+** ceinture
+n.f.
+ - 腰带
+
+** chance
+n.f.
+ - 运气
+
+*** avoir de la chance
+ - 有运气
+
+** chemisier
+n.m.
+ - 女式衬衫
+
+** commencer
+v.i.
+ - 开始
+
+** cravate
+n.f.
+ - 领带
+
+** créateur
+créateur, créatrice
+n.
+ - 设计者，设计师
+
+** création
+n.f.
+ - 创作，作品
+
+** créer
+v.t.
+ - 创作
+
+** cuir
+n.f.
+ - 皮革
+
+** de
+prép
+ - 从
+
+** discuter
+v.t.
+ - 讨论
+
+** fanroqier
+v.t.
+ - 制造
+
+** finir
+v.i.
+ - 结束，完成
+v.t.
+ - 结束，完成
+
+** foulard
+n.m.
+ - 方巾
+
+
+** important
+important, importante
+adj.
+ - 重要的
+
+** léger
+léger, légere
+adj.
+ - 轻微的
+
+** loin
+adv.
+ - 远
+
+** original
+original, orginale, orginaux
+adj.
+ - 独特的
+
+** Parisien
+Parisienne
+n.
+ - 巴黎人
+
+** parler
+v.t.ind. (+ de)
+ - 谈论
+
+** partir
+v.i.
+ - 出发，动身
+
+** œuvre
+n.f.
+ - 作品
+
+** sœur
+n.f.
+ - 姐妹
+
+** puelqu‘un
+pron.indéf
+ - 某人，其中之一
+
+** sac
+n.m.
+ - 包，袋
+
+** soie
+n.f.
+ - 丝绸
+
+** sortir
+v.i.
+ - 出去
+
+** sourire
+n.m.
+ - 微笑
+
+** super
+interj.
+ - 太棒了
+
+** vendre
+v.t.
+ - 卖，销售
+
+** venir
+v.i.
+ - 来
+
+** vente
+n.f.
+ - 销售
+
+** verre
+n.m.
+ - 玻璃杯
+
 * révision
 ** falloir
 [[francais_passe_indicatif#falloir][repasser]]
@@ -75,4 +252,16 @@ v.t.
 ** gagner
 [[francais_reflets_1_1_2#gagner][repasser]]
 
+
+** devoir
+[[le_francais_1_16#devoir][repasser]]
+
+** décorer
+[[francais_reflets_1_1_4#decorer][repasser]]
+
+** frère
+[[le_francais_1_16#frere][repasser]]
+
+** grave
+[[francais_reflets_1_1_4#grave][repasser]]
 

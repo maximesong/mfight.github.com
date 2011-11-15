@@ -317,7 +317,7 @@ diff ::
 
 * révision
 ** guerre
-[[francais_reflets_1_1_4.muse#guerre][repasser]]
+[[francais_reflets_1_1_4#guerre][repasser]]
 
 ** mondial
 [[francais_reflets_1_1_4#mondiale][repasser]]

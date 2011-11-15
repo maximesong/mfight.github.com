@@ -202,10 +202,10 @@ n.f
 
 * révision
 ** bouquet
-[[francais_reflets_1_1_4.muse#bouquet][repasser]]
+[[francais_reflets_1_1_4#bouquet][repasser]]
 
 ** prix
-[[le-role-de-l-euro-et-ses-avantages.muse#prix][repasser]]
+[[le-role-de-l-euro-et-ses-avantages#prix][repasser]]
 
 ** bureau
 [[francais_meubles#bureau][repasser]]

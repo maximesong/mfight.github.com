@@ -3,4 +3,4 @@
 <contents>
 
 ** tête
-[[francais_reflets_1_1_4.muse#tete][lien]]
+[[francais_reflets_1_1_4#tete][lien]]

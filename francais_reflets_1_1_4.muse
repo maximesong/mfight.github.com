@@ -111,6 +111,7 @@ n.f.
 (pluriel cadeaux)
  - 礼物，礼品
 
+#decorer
 ** décorer
 v.t.
  - 装饰，装潢 
@@ -349,6 +350,7 @@ v.i.
 v.i.
  - 希望
 
+#fache
 ** fâché
 fâché，fâchée
 adj.
@@ -442,7 +444,7 @@ adj.
 m.n.pl.
  - 人们
 
-
+#grave
 ** grave
 adj.
  - 严重的
@@ -572,7 +574,7 @@ n.f.
 [[le-cours-de-oral-lundi-6#mechant][repasser]]
 
 ** qualité
-[[le_francais_1_16.muse#qualite][repasser]]
+[[le_francais_1_16#qualite][repasser]]
 
 ** temps
 [[francais_temps][repasser]]
@@ -581,7 +583,7 @@ n.f.
 [[le-cours-de-oral-lundi-6#timide][repasser]]
 
 ** tous
-[[le_francais_1_16.muse#tous][repasser]]
+[[le_francais_1_16#tous][repasser]]
 
 ** gâteau
 [[francais_nourriture#gateau][repasser]]

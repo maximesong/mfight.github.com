@@ -271,21 +271,21 @@ n.m
 [[francais_animal#chien][repasser]]
 
 ** mal
-[[le_francais_1_15.muse#mal][repasser]]
+[[le_francais_1_15#mal][repasser]]
 
 
 ** ordinateur
-[[francais_reflets_1_1_4.muse#ordinateur][repasser]]
+[[francais_reflets_1_1_4#ordinateur][repasser]]
 
 ** prêt
-[[le-cours-de-oral-lundi-7.muse#pret][repasser]]
+[[le-cours-de-oral-lundi-7#pret][repasser]]
 
 ** colère
-[[le_francais_1_16.muse#colere][repasser]]
+[[le_francais_1_16#colere][repasser]]
 
 
 ** serviette
-[[francais_nourriture.muse#serviette][repasser]]
+[[francais_nourriture#serviette][repasser]]
 
 ** tête
-[[francais_reflets_1_1_4.muse#tete][repasser]]
+[[francais_reflets_1_1_4#tete][repasser]]

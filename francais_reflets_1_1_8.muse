@@ -1,0 +1,145 @@
+#title leçon 8
+
+<contents>
+
+* mot
+** navette
+f.
+ - 往返交通工具（班车）
+
+** rigoler
+v.i.
+ - 嬉笑，打趣；玩，嬉戏
+
+** tas
+m.
+ - 许多
+
+*** des tas de
+ - 许多
+
+** bête
+a.
+ - 愚蠢的，傻的
+ - 荒唐的；不幸的，可惜的
+
+** drôlement
+adv.
+ - 滑稽可笑地，有趣地
+ - 奇特地，古怪地
+ - 特别，异乎寻常地，出奇地
+
+** gentiment
+adv.
+ - 优雅地，可爱地，亲切地；
+ - 乖乖地；文静地
+
+** ballon
+n.m
+ - 球，皮球
+
+** plein
+a
+ - 满的
+ - 完全的，全部的，充分的
+
+** tomber
+v.i.
+ - 跌倒，摔跤
+ - 阵亡，战死；倒毙
+ - 减弱，减退，接近结束
+ - 坠落，跌下，掉下，落下
+
+** terrible
+a.
+ - 可怖的，可怕的，骇人的
+ - 叫人受不了的，令人讨厌的
+ - 非凡的，非常大的
+ - 极好的，非常棒的，了不起的
+
+** courant
+n.m
+ - 水流
+
+** stationner
+v.i.
+ - 停留；停车
+ - 驻扎，驻守
+
+** polluer
+v.t.
+ - 污染，玷污
+
+** contrôle
+n.m
+ - 检查，检验.
+ - 驾驶，操纵
+ - 控制
+
+** antipollution
+adj.in.
+ - 防止污染的，减轻污染的，保护环境的
+
+** efficace
+a.
+ - 有效的，灵验的
+
+** tramway
+(pluriel tramway)
+n.m
+ - 有轨电车
+
+** moderniser
+v.t.
+ - 使现代化
+
+** accueillant
+accueillant, accueillante
+
+adj.
+ - 殷勤的，好客的
+ - 招待周到的，令人感到舒适的
+
+** certains
+pron.pl.
+ - 某些事情，有些事情
+ - 某些人，有些人
+
+** fonctionner
+v.i.
+ - 发生作用
+ - 运转，运行，开动
+
+** méthane
+n.m.
+ - 甲烷，天然气
+
+** réduire
+v.t.
+ - 减少，减低
+
+
+* phrase
+** bain de soleil
+n.m.
+ - 日光浴
+
+* révision
+** huile
+[[francais_nourriture#huile][repasser]]
+
+** fâché
+[[francais_reflets_1_1_4#fache][repasser]]
+
+** retrouver
+[[le_francais_1_16#retrouver][repasser]]
+
+** grâce
+[[le-role-de-l-euro-et-ses-avantages#grace][repasser]]
+
+** moyen
+[[francais_reflets_1_1_5#moyen][repasser]]
+
+** également
+[[francais_reflets_1_1_5#egalement][repasser]]
+

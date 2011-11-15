@@ -658,22 +658,22 @@ loc.prép de
 
 * révision
 ** attention
-[[le_francais_1_16.muse#attention][repasser]]
+[[le_francais_1_16#attention][repasser]]
 
 ** bâtiment
-[[le_francais_1_16.muse#batiment][repasser]]
+[[le_francais_1_16#batiment][repasser]]
 
 ** devant
-[[le-cours-de-oral-jeudi_6.muse#devant][repasser]]
+[[le-cours-de-oral-jeudi_6#devant][repasser]]
 
 ** emploi
-[[francais_reflets_1_1_2.muse#emploi][repasser]]
+[[francais_reflets_1_1_2#emploi][repasser]]
 
 ** entendre
-[[francais_passe_indicatif.muse#entendre][repasser]]
+[[francais_passe_indicatif#entendre][repasser]]
 
 ** ligne
-[[le_francais_1_16.muse#ligne][repasser]]
+[[le_francais_1_16#ligne][repasser]]
 
 ** métro
 [[le_francais_1_17#metro][repasser]]
@@ -691,10 +691,10 @@ loc.prép de
 [[francais_reflets_1_1_4#sentir][repasser]]
 
 ** tête
-[[francais_reflets_1_1_4.muse#tete][repasser]]
+[[francais_reflets_1_1_4#tete][repasser]]
 
 ** courrier
-[[francais_reflets_1_1_4.muse#courrier][repasser]]
+[[francais_reflets_1_1_4#courrier][repasser]]
 
 ** rendre
 [[le_francais_1_16#rendre][repasser]]

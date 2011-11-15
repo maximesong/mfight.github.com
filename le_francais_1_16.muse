@@ -133,6 +133,7 @@ v.t.
     错过约会
  - 没有成功，没有搞好
 
+#frere
 ** frère
 n.m.
  - 兄弟
@@ -386,6 +387,7 @@ n.f.
 n.m.
  - 脸，面孔
 
+#retrouver
 ** retrouver
 v.t.
  - 重新获得，重新找到
@@ -463,4 +465,4 @@ synonyme ::
 [[francais_reflets_1_1_4#preparer][repasser]]
 
 ** emploi
-[[francais_reflets_1_1_2.muse#emploi][repasser]]
+[[francais_reflets_1_1_2#emploi][repasser]]

@@ -27,15 +27,6 @@
 当五月的雨下起时
 
 ** 单词
-*** venir
-来，来到。
-**** 变位
- - Je viens
- - Tu viens
- - Il vient
- - Nous venons
- - Vous venez
- - Ils viennent
 *** transforment
 改变，改造
 **** se transformer
@@ -80,8 +71,7 @@ avant
  - ils grossissent
 *** lorsque
 当...时；在...情况下
-*** tomber
-落下
+
 **** La pluie(La neige) tombe
 
 *** pouvoir
@@ -95,14 +85,6 @@ avant
  - ils peuvent
 
 
-*** tomber
-**** 动词变位
- - je tombai
- - tu tombas
- - il tomba
- - nous tombàmes
- - vous tombàtes
- - ils tombèrent
 *** vite
 快
 
@@ -113,7 +95,7 @@ nouvel, nouvelle, nouveaux
 a.
 新的
 antonyme ::
-[[le_francais_1_16.muse#vieux][vieux]]
+[[le_francais_1_16#vieux][vieux]]
 
 *** jouer
 v.i.
