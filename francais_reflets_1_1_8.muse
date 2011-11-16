@@ -11,6 +11,10 @@ f.
 v.i.
  - 嬉笑，打趣；玩，嬉戏
 
+** urbain
+a.(m)
+ - 城市的，都市的
+
 ** tas
 m.
  - 许多
@@ -118,6 +122,82 @@ n.m.
 v.t.
  - 减少，减低
 
+** solution
+n.f.
+ - 解答，答案
+ - 解决，解决办法
+
+** pointe
+f.
+ - 尖头
+
+** véritables
+a.
+ -真实的，确实的
+ -真的
+
+** musée
+n.m.
+ - 博物馆，陈列馆
+
+** utiliser
+v.t.
+ - 使用，利用，运用
+
+** carburant
+a.
+ - 含有碳氢化合物的
+
+n.m.
+ -  碳氢燃料
+
+** écologique
+a.
+ - 生态学的
+ - 环保的
+
+** obtenir
+v.t.
+ - 获得，取得，得到
+
+** usé
+a.(m)
+ - 用坏的，不能再用的，磨损的
+ - 用旧的
+
+** permettre
+v.t.
+ - 允许，准许，许可
+
+** oublier
+v.t.
+ - 忘记
+
+** reportage
+n.m
+ - 新闻报道
+
+** énergie
+n.f.
+ - 能量，能源
+
+** exposer
+v.t.
+ - 成列，展出
+
+
+** vedette
+n.f.
+ - 气艇，小艇
+
+** nommé
+a.(m)
+ - 名叫...的，叫做...的
+ - 任命的，指定的
+
+** célèbre
+a.
+ - 著名的，出名的，驰名的
 
 * phrase
 ** bain de soleil
@@ -143,3 +223,8 @@ n.m.
 ** également
 [[francais_reflets_1_1_5#egalement][repasser]]
 
+** toujours
+[[francais_poeme#toujours][repasser]]
+
+** contre
+[[francais_reflets_1_1_4#contre][repasser]]

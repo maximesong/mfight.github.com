@@ -317,9 +317,11 @@ charmant，charmante
 adj.
  - 充满魅力的
 
+#contre
 ** contre
 prép
  - 反对，冲着
+ - 抵抗，防备，预防
 
 #courrier
 ** courrier

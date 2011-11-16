@@ -52,7 +52,9 @@
 
 ** mot
 *** toujours
+adv.
  - 永远
+ - 总是，始终
 *** tristesse
 n.f
  - 悲伤
