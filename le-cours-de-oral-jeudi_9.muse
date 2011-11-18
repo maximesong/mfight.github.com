@@ -56,12 +56,15 @@ n.m
 *** faire du jogging
  - 慢跑
 
+#prier
 ** prier
 v.i.
  - 祈祷，做祷告
 
 v.t.
  - 向...祈祷
+ - 请
+  - Je vous en prie 请，别客气
 
 ** jusqu'a
 loc.prép

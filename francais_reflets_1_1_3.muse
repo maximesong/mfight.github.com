@@ -17,6 +17,8 @@ a.
 ** aider
 
 ** ajouter
+v.t.dir.
+ - 加，怎加
 
 ** assoir
 v.t.

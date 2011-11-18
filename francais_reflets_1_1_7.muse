@@ -97,6 +97,7 @@ prép
 n.m.
  - 楼层
 
+#fermer
 ** fermer
 v.t.
  - 关闭

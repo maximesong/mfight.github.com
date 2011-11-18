@@ -245,6 +245,27 @@ n.f.
 n.m.
  - 玻璃杯
 
+** envier
+v.t.
+ - 羡慕，嫉妒
+
+** emporter
+v.t.
+ - 带走，拿走
+ - 夺走，夺取，卷走
+
+** slip
+n.m.
+ - 三角裤，游泳库
+
+** lainage
+m.
+ - 羊毛
+ - 毛针织物，毛料衣服
+
+
+
+
 * révision
 ** falloir
 [[francais_passe_indicatif#falloir][repasser]]
