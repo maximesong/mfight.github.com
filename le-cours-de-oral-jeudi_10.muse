@@ -2,6 +2,7 @@
 <contents>
 
 * mot
+#usine
 ** usine
 n.f
  - 工厂，车间

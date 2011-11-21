@@ -101,6 +101,7 @@ n.m.
 a.
  - 主要的，首要的，基本的
 
+#avantage
 ** avantage
 n.m.
 好处，利益

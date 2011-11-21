@@ -237,6 +237,9 @@ v.t.
 v.i.
  - 来
 
+*** venir de inf.
+ - 刚做完某事
+
 ** vente
 n.f.
  - 销售

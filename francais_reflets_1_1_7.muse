@@ -577,6 +577,7 @@ n.f
 pron.indéf
  - 大多数人，大部分人
 
+#installer
 ** installer
 v.t.
  - 使就职

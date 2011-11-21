@@ -1,0 +1,53 @@
+#title cours 18
+<contents>
+* mot
+** accepter
+v.t.
+ - 接受
+
+** accompagner
+v.t.
+ - 陪伴
+
+** agréer
+v.t.
+ - 接受
+
+** amicalment
+adv.
+ - 友好地，亲切地
+
+** attente
+n.f.
+ - 期望，等待
+
+** château
+n.m.
+ - 城堡，宫殿
+
+** conforme
+a.
+ - 与...一致，与...相符(+ à)
+
+** considérer
+v.t.
+ - 认为
+
+** contraire
+a.
+ - 相反的
+
+** courriel
+n.m.
+ - 电子邮件
+
+
+
+* révision
+** avantage
+[[le-role-de-l-euro-et-ses-avantages#avantage][repasser]]
+
+** compter
+[[le-cours-de-oral-jeudi_6#compter][repasser]]
+
+** couvert

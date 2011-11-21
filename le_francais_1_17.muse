@@ -89,6 +89,7 @@ a.
 n.f.pl.
  - 数学
 
+#mauvais
 ** mauvais
 mauvais, mauvaise
 a.

@@ -49,11 +49,16 @@ adv.
 a.(m)
  - 剩余的，余留的
 
+#compter
 ** compter
 v.t.
  - 数，计算
+ - 打算，想要做某事(+ inf.)
 v.i.
  - 数，计数
+
+*** compter sur
+ - 信任
 
 ** district
 n.m.

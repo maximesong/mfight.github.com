@@ -63,6 +63,7 @@ n.m.
 n.f.
  - 壁炉，烟囱
 
+#autour
 ** autour
 adv.
  - 在周围，在四周，在附近
@@ -269,6 +270,7 @@ interj.
 n.m.
  - 生日
 
+#appareil
 ** appareil
 n.m.
  - 电话机
@@ -289,6 +291,11 @@ adj.
 ** beaucoup
 adv.
  - 很多，非常
+
+*** beaucoup de
+loc.adv.
+ - 很多
+
 
 ** bien
 adv.
@@ -383,9 +390,11 @@ n.
 n.m.
  - 部门
 
+#stage
 ** stage
 n.m.
  - 实习
+ - 培训，学习班
 
 *** maître de stage
  - 实习导师

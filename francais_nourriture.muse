@@ -195,6 +195,11 @@ n.m.
 * couvert
 n.m
  - 餐具
+
+a.
+ - 盖满的，布满的
+
+
 ** assiette
 n.f.
  - 盘子

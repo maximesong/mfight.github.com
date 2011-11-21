@@ -63,9 +63,12 @@ n.f
 *** joie
 n.f
  - 欢乐
+
+#rappeler
 *** rappeler
 v.t
  - 使想起
+ - 再打电话给某人
 
 **** se rappeler
  - 回想起，记得

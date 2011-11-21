@@ -216,7 +216,9 @@ v.t. indir.
  - 力图，尽力
   - essayer de le persuader
     力图说服他
-*** exagérer
+
+#exagerer
+** exagérer
 v.t.
   - 夸大
    - exagéré une nouvelle
