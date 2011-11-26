@@ -432,6 +432,27 @@ a.(m)
  - 独创的，创新的
  - 最初的，原始的
 
+** avis
+n.m
+ - 见解，意见，主意
+
+** fenêtre
+n.f
+ - 窗，窗子
+
+** pleurer
+v.i.
+ - 哭
+
+** procurer
+v.t.
+ - 为...谋得，使...获得
+
+*** se procurer
+v.pr.
+ - 谋得，弄到，获得
+
+
 * phrase
 ** bain de soleil
 n.m.
@@ -452,7 +473,6 @@ loc.adv.
 ** en plus
 loc.adv.
  - 而且
-
 
 ** être en train de + inf.
  - 正在做
@@ -503,3 +523,7 @@ loc.adv.
 
 ** stage
 [[francais_reflets_1_1_4#stage][repasser]]
+
+** débrouiller
+[[francais_reflets_1_1_6#debrouiller][repasser]]
+

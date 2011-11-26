@@ -208,7 +208,7 @@ n.f.
 n.m.
  - 代替，替换
 
-** rensigner
+** renseigner
 v.t.
  - 告诉，向...提供情况
 

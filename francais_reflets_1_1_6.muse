@@ -64,6 +64,7 @@ adv.如此，那么
 m.
  - 鹅卵石
 
+#debrouiller
 ** débrouiller
 v.t.
  - 整理，清理：
@@ -266,7 +267,14 @@ m.
  - 羊毛
  - 毛针织物，毛料衣服
 
+** entraîner
+v.t.
+ - 卷走，带走
+ - 训练，锻炼
 
+*** s'entraîner
+v.pr.
+ - 进行训练，锻炼，练习
 
 
 * révision

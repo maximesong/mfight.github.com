@@ -192,6 +192,7 @@ n.m.
  - 干酪，奶酪
 
 
+#couvert
 * couvert
 n.m
  - 餐具

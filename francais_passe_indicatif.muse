@@ -109,6 +109,10 @@ v.t.
  - 放置
  - 戴上，穿上；花（时间）
 
+*** se mettre à qch
+ - 开始做某事
+ - 专心于某事，对某事感兴趣
+
 * révision
 ** sentir
 [[francais_reflets_1_1_4#sentir][repasser]]

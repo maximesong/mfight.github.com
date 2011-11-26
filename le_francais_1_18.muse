@@ -41,7 +41,9 @@ a.
 n.m.
  - 电子邮件
 
-
+** cuisinière
+n.f.
+ - 炉灶
 
 * révision
 ** avantage
@@ -51,3 +53,4 @@ n.m.
 [[le-cours-de-oral-jeudi_6#compter][repasser]]
 
 ** couvert
+[[francais_nourriture#couvert][repasser]]
