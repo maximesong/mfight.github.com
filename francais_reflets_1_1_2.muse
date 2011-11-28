@@ -100,6 +100,9 @@ synoyme ::
  - 似乎，好像
   - vous paraissez vingt ans.
     你看上去二十岁。
+ - 出现，露出
+ - 显露，显现；表现出
+ - 出版，发行，发表
 
 synoyme ::
 [[#sembler][sembler]] 、 [[#avoir_lair][avoir l'air]]

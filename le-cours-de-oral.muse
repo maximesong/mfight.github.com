@@ -13,11 +13,15 @@ n.f.
  - 天气预报节目
  - 天气情况
 
+#souhaiter
 ** souhaiter
 v.t.
  - 祝，祝愿；希望
  - souhaiter le bonjour à qn
    向某人问好
+
+*** souhaiter qch. à qn.
+ - 祝某人...
 
 ** dépasser
 v.t.

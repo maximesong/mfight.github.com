@@ -90,6 +90,7 @@ v.t.
 v.impers.
  - 必须
 
+#recevoir
 ** recevoir
 v.t.
  - 收到

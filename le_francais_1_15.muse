@@ -20,10 +20,13 @@ v.t.
 ** assez
  - 足够
 
-** meilleure
-a.(f)
+#meilleur
+** meilleur
+meilleur, meilleure
+a.
  - bon的比较级，较好的，更好的
 
+#exprimer
 ** exprimer
 v.t.
  - 表达

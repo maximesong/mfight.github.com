@@ -17,6 +17,7 @@ n.f.
 n.f.
  - 洗衣机
 
+#refrigerateur
 ** réfrigérateur
 n.m.
  - 冰箱

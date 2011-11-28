@@ -406,14 +406,17 @@ n.f.
 n.m.
  - 见习期，学徒身份，学手艺
 
+#salutation
 ** salutation
 n.f.
  - 致意，敬礼
 
+#distingue
 ** distingué
 adj.
  - 卓越的，杰出的
  - 优雅的，雍容华贵的
+ - 崇高的
 
 ** version
 n.f.

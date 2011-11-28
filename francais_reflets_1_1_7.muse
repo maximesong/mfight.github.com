@@ -429,12 +429,6 @@ v.t.
 v.i.
  - 打毛线； 编织
 
-** paraître
-v.i.
- - 出现，露出
- - 显露，显现；表现出
- - 出版，发行，发表
- - 似乎好像，仿佛，显得
 
 ** fraîche
 n.f.
@@ -570,6 +564,7 @@ v.t.
 v.pr.
  - 展开
 
+#plupart
 ** plupart
 n.f
  - 大多数，大部分
@@ -712,3 +707,6 @@ loc.prép de
 
 ** départ
 [[francais_reflets_1_1_4#depart][repasser]]
+
+** paraître
+[[francais_reflets_1_1_2#paraitre][repasser]]

@@ -159,9 +159,6 @@ n.m
  - 利率
  - 税率
 
-** tirer
-v.t.
- - 拉，牵，拖
 
 ** stabilité
 n.f.
