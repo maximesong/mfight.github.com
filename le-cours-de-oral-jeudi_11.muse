@@ -76,6 +76,35 @@ n.f
 a.
  - 怀孕的
 
+** détendre
+v.t.
+ - 放开，松开
+
+** poussée
+n.f
+ - 压力
+
+** doigt
+n.m.
+ - 手指，脚趾
+
+** répondre
+v.t.dir.
+ - 回答，答复，应答
+
+** fameux
+fameux, fameuse
+a.
+ - 著名的，闻名的
+
+** bonté
+n.f.
+ - 善良，仁慈
+
+** terminus
+n.m
+ - 终点站
+
 
 * révision
 ** fermer

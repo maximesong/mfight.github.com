@@ -374,6 +374,11 @@ affectueux, affectueuse
 adj
  - 亲热的，热爱的，深情的
 
+** esprit
+n.m.
+ - 神明，神灵
+ - 精神灵魂
+ - 机智，才智
 
 * phrase
 ** en personne

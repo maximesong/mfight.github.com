@@ -262,13 +262,11 @@ adj.
 ** aimer
 v.t.
  - 爱，喜欢
+
 ** allô
 interj.
  - 喂
 
-** anniversaore
-n.m.
- - 生日
 
 #appareil
 ** appareil

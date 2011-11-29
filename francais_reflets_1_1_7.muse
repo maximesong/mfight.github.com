@@ -378,6 +378,29 @@ n.m.
  - 将来，未来
  - 将来时
 
+** lance
+n.f.
+ - 长枪，标枪，矛
+
+** révolutionner
+v.t.
+ - 震动，震惊
+ - 引起革命，使发生巨大变革
+
+** vitesse
+n.f.
+ - 快，迅速
+ - 速度，速率
+
+** supersonique
+a.
+ - 超音速的
+
+** modèle
+n.m.
+ - 模型
+
+
 #manteau
 ** manteau
 n.m.
