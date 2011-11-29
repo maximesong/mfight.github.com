@@ -352,14 +352,21 @@ v.pr.
  - 到...去，赴
  - 通向
  - 被翻译
+
+#tenir
 ** tenir
 v.i.
  - 坚持
 
+*** tenir à
+ - 坚持要，一心想要
+
+#retenir
 ** retenir
 v.t.
  - 记住
 
+#reussir
 ** réussir
 v.t.
  - 获得成功

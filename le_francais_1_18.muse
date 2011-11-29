@@ -355,6 +355,25 @@ v.i.
 v.t.indir.
  - 参与(+à)
 
+** réunion
+f.
+ - 集合
+ - 会议，集会
+ - 团聚
+
+** éloignement
+n.m
+ - 离开，远离，远隔
+
+** envoyer
+v.t.
+ - 寄，送
+
+** affectueux
+affectueux, affectueuse
+adj
+ - 亲热的，热爱的，深情的
+
 
 * phrase
 ** en personne
@@ -442,3 +461,9 @@ n.m.
 
 ** joyeux
 [[francais_reflets_1_1_4#joyeux][repasser]]
+
+** tenir
+[[le_francais_1_16#tenir][repasser]]
+
+** retenir
+[[le_francais_1_16#retenir][repasser]]

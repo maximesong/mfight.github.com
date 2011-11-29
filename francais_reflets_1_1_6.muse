@@ -276,6 +276,22 @@ v.t.
 v.pr.
  - 进行训练，锻炼，练习
 
+** dont
+pron.rel
+ - 一般有先行词，相当与de qui, de quoi, dequel, de laquelle, d'où
+
+** trou
+n.m
+ - 洞，孔，窟窿
+
+** assiette
+n.f.
+ - （稅等的）基数
+
+** ébréché
+adj.
+ - 碎片的
+
 
 * révision
 ** falloir

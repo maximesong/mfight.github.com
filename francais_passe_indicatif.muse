@@ -85,6 +85,10 @@ v.t.dir
 v.t.
  - 喝,饮
 
+** employé
+n.m
+ - 职员，雇员
+
 #falloir
 ** falloir
 v.impers.

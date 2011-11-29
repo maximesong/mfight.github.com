@@ -75,6 +75,7 @@ a.
 n.m.
  - 秘密，机密
 
+#estomac
 ** estomac
 n.m
  - 胃

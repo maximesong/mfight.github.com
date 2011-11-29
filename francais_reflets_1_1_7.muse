@@ -351,6 +351,7 @@ n.m
 n.f
  - 客栈，小旅馆
 
+#vivre
 ** vivre
 v.i.
  - 活着

@@ -9,12 +9,20 @@
 * mot
 ** adorable
 a.
+ - 值得崇拜的，令人爱慕的
 
 ** adorer
+v.t.
+ - 崇拜，崇敬
+ - 热爱，爱慕
 
 ** aide
+n.f
+ - 帮助，援助
 
 ** aider
+v.t.dir.
+ - 帮助
 
 ** ajouter
 v.t.dir.
@@ -37,27 +45,43 @@ prép
  - 在做某事之前
 
 ** bancaire
+a.
+ - 银行的
 
 ** banque
+n.f.
+ - 银行
 
 ** besoin
-*** avoir besoin de
+n.m.
+ - 需要，需求
 
-** bienvennue
+*** avoir besoin de
+ - 需要
+
+** bienvenue
+n.
+ - 欢迎
 
 ** billet
+n.m.
+ - 票，券，门票
 
+** aller
+v.i.
+ - 去，走
 
 
 * tournoure
 ** à propos
+ - 对啦，想起来了
 
 ** bien sûr
+ - 当然
 
 * révision
 ** avril
-
-** aller
+[[francais_temps#avril][repasser]]
 
 ** bureau
 [[francais_meubles#bureau][repasser]]

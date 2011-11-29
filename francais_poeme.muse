@@ -110,6 +110,8 @@ v.t.
 *** cœur
 n.m.
  - 心
+
+#taire
 *** taire
 v.t.
  - 不讲，不说
@@ -118,6 +120,13 @@ v.t.
  - 沉默不语
  - 保守秘密
   - se taire sur qch
+
+**** taisez-vous!
+ - 别说了
+
+**** taise-toi
+ - 别说了
+
 
 *** silence
 n.m.

@@ -110,6 +110,9 @@ n.f
 ** faire le numéro
  - 拨号
 
+** je vais rappeler plus tard
+ - 我会晚些时候回电话
+
 ** des cartes à jouer
  - 牌
 
