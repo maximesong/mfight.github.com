@@ -273,7 +273,7 @@ n.f.
 ** vol
 n.m.
  - 偷窃
-
+ - 航班
 
 ** véritable
 a.

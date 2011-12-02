@@ -309,6 +309,7 @@ n.m
 n.f.
  - 珍珠；十全十美的人
 
+#pourtant
 ** pourtant
 adv.
  - 然而，无论如何，可是

@@ -76,6 +76,11 @@ a.
 v.t.
  - 等
 
+*** s'attendre à
+v.pr.
+ - 料想，预计
+
+
 #entendre
 ** entendre
 v.t.dir

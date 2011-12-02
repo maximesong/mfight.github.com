@@ -63,6 +63,10 @@ v.i.
  - 减弱，减退，接近结束
  - 坠落，跌下，掉下，落下
 
+*** tomber du lit
+ - 比平时起得早
+
+
 ** terrible
 a.
  - 可怖的，可怕的，骇人的
@@ -418,6 +422,7 @@ adj.
  - 优雅的，雍容华贵的
  - 崇高的
 
+
 ** version
 n.f.
  - 版本
@@ -455,9 +460,20 @@ v.t.
 v.pr.
  - 谋得，弄到，获得
 
+** condition
+n.f
+ - 条件，条款，条文
+ - 状况，状态
+ - 地位，身份
+
 
 
 * phrase
+** par suite de
+loc.prép
+ - 在...之后，由于
+
+
 ** bain de soleil
 n.m.
  - 日光浴

@@ -37,7 +37,8 @@ n.m.
 n.m.
  - 葡萄牙
 
-** capital
+#capitale
+** capitale
 n.f.
  - 首都
 

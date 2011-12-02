@@ -349,6 +349,9 @@ n.m.
 n.m.
  - 晚饭
 
+v.i.
+ - 吃晚饭
+
 * faire cuire
 ** faire sauter
  - 炒菜

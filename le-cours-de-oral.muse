@@ -8,10 +8,6 @@ v.t.
 *** se cacher
  - 躲藏，隐藏，隐蔽
 
-** météo
-n.f.
- - 天气预报节目
- - 天气情况
 
 #souhaiter
 ** souhaiter

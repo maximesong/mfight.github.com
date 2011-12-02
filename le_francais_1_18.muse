@@ -4,6 +4,15 @@
 ** accepter
 v.t.
  - 接受
+ - 愿意(+de)
+
+** charger
+v.t.
+ - 充电
+
+*** se charger de
+v.pr.
+ - 负责
 
 ** accompagner
 v.t.
@@ -69,6 +78,16 @@ n.m.
 ** époque
 n.f.
  - 时代，时期
+
+** zone
+n.f.
+ - 区，地带，区域
+
+** occasion
+n.f
+ - 机会，时机
+ - 理由，原因，起因
+ - 时节，场合，情况
 
 ** éuipé
 éuipé, éuipée
@@ -380,6 +399,21 @@ n.m.
  - 精神灵魂
  - 机智，才智
 
+** intéresser
+v.t.
+ - 关系到
+ - 使感兴趣
+
+*** s'intéresser à
+v.pr.
+ - 关心，关怀；感兴趣
+
+** habitant
+n.m
+ - 居民，人口
+ - 居住者
+
+
 * phrase
 ** en personne
  - 亲自
@@ -418,6 +452,8 @@ n.m.
 ** Excuse-moi de...
  - 请原谅我...
 
+** l'Union Européen
+ - 欧盟
 
 * révision
 ** avantage

@@ -58,7 +58,8 @@ n.m
 n.m.
  - 成员，一分子，会员
 
-** européen, enne
+** européen
+européen, européenne
 a.(m)
  - 欧洲的
 
@@ -105,6 +106,9 @@ a.
 ** avantage
 n.m.
 好处，利益
+
+*** avoir avantage à
+ - 有优势
 
 ** transparence
 f.

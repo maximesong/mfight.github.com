@@ -28,6 +28,7 @@ v.t.
  - 搬走，运走
  - 获得，取得
 
+#aeroport
 ** aéroport
 n.m
  - 航空站，机场

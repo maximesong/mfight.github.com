@@ -1,0 +1,244 @@
+#title episode 9
+<contents>
+
+** pluvieux
+a.
+ - 下雨的，多雨的
+
+** température
+n.f.
+ - 温度，气温，体温
+
+** varier
+v.t.
+ - 使有变化，使多样化
+
+v.i.
+ - 变化，变动，改变
+
+** météo
+n.f.
+ - 天气预报节目
+ - 天气情况
+
+** orage
+n.m
+ - 雷雨，暴风雨
+
+** violent
+adj.
+ - 暴力的，粗暴的
+
+** mistral
+n.m.
+ - 法国南部及地中海上干旱寒而强烈的西北风或北风
+
+** aérogare
+n.m.
+ - 航站楼，侯机大楼
+
+** après-midi
+n.m.
+ - 下午
+
+** aussi
+adv.
+ - 如此，这样
+
+** avion
+n.m.
+ - 飞机
+
+** chargé
+chargé, chargée
+adj.
+ - 负责...的(+de)
+
+** connaissance
+n.f.
+ - 认识
+
+*** faire la connaisance de quelqu'un
+ - 认识某人
+
+** costume
+n.m.
+ - 男士西装
+
+** curieux
+curieux, curieuse
+adj.
+ - 好奇的
+
+** danser
+v.i.
+ - 跳舞
+
+** demoiselle
+n.f.
+ - 小姐
+
+** descendre
+v.i.
+ - 下来
+
+** dormir
+v.i.
+ - 睡觉
+
+** élégant
+adj.
+ - 优雅的，讲究的
+
+** essoufflé
+essoufflé, essoufflée
+adj.
+ - 气喘吁吁的
+
+** été
+n.m.
+ - 夏天的
+
+** garder
+v.t.
+ - 保持，保留
+
+** habiller
+v.pr.
+ - 为穿衣
+
+*** s'habiller
+v.pr.
+ - 穿衣
+
+** hier
+adv.
+ - 昨天
+
+** inquiet
+inquiet, inquietète
+adj.
+ - 担心的，担忧的
+
+** ironique
+adj.
+ - 讽刺的，嘲笑人的
+
+** jaloux
+jaloux, jalouse
+adj.
+ - 嫉妒的
+
+** majeur
+majeur, majeure
+adj.
+ - 成年的
+
+** nuit
+n.f.
+ - 夜晚
+
+** pancarte
+n.f.
+ - （硬纸板）布告牌
+
+** panneau
+n.m.
+ - 指示牌
+
+** parc
+n.m.
+ - 公园
+
+** parfait
+parfait, parfaite
+adj.
+ - 完美的
+
+** paysagiste
+n.
+ - 园林设计师
+
+
+** président
+président, présidente
+n.
+ - 总统，主席
+
+** programme
+n.m
+ - 行程计划
+
+** provenance
+n.f.
+ - 来源
+
+*** en provenance de
+loc.prép.
+ - 来自
+
+
+** ravissant
+ravissant, ravissante
+adj.
+ - 迷人的，可爱的
+
+** remplacer
+v.t.
+ - 代替
+
+** rentrer
+v.i.
+ - 回来，回家
+
+** république
+n.f.
+ - 共和国
+
+*** République populaire de la chine
+ - 中华人民共和国
+
+
+** réserver
+v.t.
+ - 预订
+
+** soirée
+n.f.
+ - 晚上，晚间
+
+** tôt
+adv.
+ - 早
+
+** imparfait
+adj.
+ - 不完美的
+
+** mineur
+adj.
+ - 未成年的
+
+** endormir
+v.
+ - 睡着
+
+
+
+* phrase
+** de bonne heure
+loc.adv.
+ - 很早
+
+* révision
+** aéroport
+[[le-cours-de-oral-jeudi_7#aeroport][repasser]]
+
+** capitale
+[[le-cours-de-oral-jeudi_10#capitale][repasser]]
+
+** pourtant
+[[le_francais_1_16#pourtant][repasser]]
+
+** ravi
+[[francais_reflets_1_1_2#ravi][repasser]]
