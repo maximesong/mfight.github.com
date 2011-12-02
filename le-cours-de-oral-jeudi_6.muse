@@ -51,6 +51,7 @@ a.(m)
 
 #compter
 ** compter
+(p不发音）
 v.t.
  - 数，计算
  - 打算，想要做某事(+ inf.)

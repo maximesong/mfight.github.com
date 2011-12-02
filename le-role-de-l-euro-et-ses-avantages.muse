@@ -37,10 +37,12 @@ v.t.
  - 带来
 
 
+#monnaie
 ** monnaie
 n.f.
  - 货币
  - 硬币
+ - 零钱，找头
 
 ** coordination
 n.f.
