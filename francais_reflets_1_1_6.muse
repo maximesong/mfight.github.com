@@ -251,6 +251,7 @@ n.f.
 
 ** verre
 n.m.
+ - 玻璃
  - 玻璃杯
 
 ** envier
