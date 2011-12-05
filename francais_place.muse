@@ -38,3 +38,14 @@
 ** Tokyo
 n.pr.
  - 东京
+
+** la Méditerranée
+f.
+ - 地中海
+
+** L'Atlantique
+n.
+ - 大西洋
+
+** La Mer du Nord
+ - 北海

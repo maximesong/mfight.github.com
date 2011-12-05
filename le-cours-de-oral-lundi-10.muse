@@ -113,6 +113,7 @@ n.f
 n.m
  - 羊毛套衫
 
+#declarer
 ** déclarer
 v.t.
  - 表示，表露，表明

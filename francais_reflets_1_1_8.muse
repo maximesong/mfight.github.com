@@ -27,6 +27,9 @@ a.
  - 愚蠢的，傻的
  - 荒唐的；不幸的，可惜的
 
+n.f
+ - 兽类，走兽；牲口，畜生；
+
 ** drôlement
 adv.
  - 滑稽可笑地，有趣地
@@ -198,9 +201,13 @@ a.(m)
  - 用坏的，不能再用的，磨损的
  - 用旧的
 
+#permettre
 ** permettre
 v.t.
  - 允许，准许，许可
+
+*** permettre à qn. de faire qch.
+ - 允许某人做某事
 
 ** oublier
 v.t.
@@ -377,6 +384,31 @@ v.t.
 ** trouver
 v.t.
  - 找到
+ - 觉得，感到，认为
+
+*** se trouver
+v.pr.
+ - 在，存在
+ - 处于
+ - 感受到，觉得
+
+** jambe
+f.
+ - 腿
+
+** profond
+a.
+ - 深的
+
+n.m
+ - 深处，深刻
+
+** marée
+n.f
+ - 潮，潮汐
+
+*** à marée haute
+ - 在涨潮时
 
 ** succès
 n.m.
@@ -414,6 +446,7 @@ n.m.
 ** salutation
 n.f.
  - 致意，敬礼
+
 
 #distingue
 ** distingué
@@ -469,6 +502,7 @@ n.f
 
 
 * phrase
+#par_suite_de
 ** par suite de
 loc.prép
  - 在...之后，由于

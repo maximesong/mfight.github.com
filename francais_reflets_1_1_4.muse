@@ -317,6 +317,9 @@ m.f.
 interj.
  - 好真棒
 
+n.m
+ - 喝彩声，拍手叫好声
+
 ** charmant
 charmant，charmante
 adj.

@@ -135,9 +135,11 @@ n.
 n.f.
  - 创作，作品
 
+#creer
 ** créer
 v.t.
  - 创作
+ - 创造，建立
 
 ** cuir
 n.f.
@@ -198,9 +200,11 @@ v.t.ind. (+ de)
 v.i.
  - 出发，动身
 
+#oeuvre
 ** œuvre
 n.f.
  - 作品
+ - 工作，劳动
 
 ** sœur
 n.f.

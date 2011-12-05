@@ -22,9 +22,6 @@ v.t.
 v.t.
  - 接受
 
-** amicalment
-adv.
- - 友好地，亲切地
 
 ** attente
 n.f.
@@ -89,8 +86,8 @@ n.f
  - 理由，原因，起因
  - 时节，场合，情况
 
-** éuipé
-éuipé, éuipée
+** équipé
+équipé, équipée
 a.
  - 装备齐全的
 
@@ -508,3 +505,6 @@ n.m.
 
 ** retenir
 [[le_francais_1_16#retenir][repasser]]
+
+** amicalement
+[[le_francais_1_15#amicalement][repasser]]

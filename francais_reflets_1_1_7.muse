@@ -108,7 +108,11 @@ adj.
  - 发疯的
 
 ** général
+m.
+ - 将军
+
 général, générale, généraux
+
 adj.
  - 总的，全面的
 
@@ -229,7 +233,10 @@ conj.
 
 ** signaler
 v.t.
- - 指出，示意
+ - （用信号）标明，指出，示意
+ - 使注意；指出
+
+
 
 ** spécial
 spécial, spéciale, spéciaux
@@ -657,7 +664,7 @@ n.m
 v.t.
  - 包括，包含
 
-** generalement
+** généralement
 adv.
  - 一般地，普遍地，通常
 

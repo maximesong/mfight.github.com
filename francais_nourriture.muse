@@ -132,6 +132,7 @@ n.m.
 **** le canard laqué
  - 烤鸭
 
+#cheval
 *** cheval
 n.m.
  - 马

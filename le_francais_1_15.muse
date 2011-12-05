@@ -35,9 +35,12 @@ v.t.
 n.m.
  - 命令
 
+#amicalement
 ** amicalement
 adv.
  - 友善地，友好得
+
+
 ** identique
 a.
  - 一致的

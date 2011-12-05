@@ -1,0 +1,53 @@
+#title leçon 1
+* mot
+** consulter
+v.t.
+ - 请教，求教，咨询
+
+** hirondelle
+n.f
+ - 燕子
+
+** cybercopain
+m.
+ - 网友
+
+** cybercafé
+n.m
+ - 网吧
+
+** chasseur
+n.
+ - 猎人
+
+** chasser
+v.t.
+ - 打猎
+
+** race
+n.f.
+ - 人种，种族
+ - 家族
+
+* phrase
+** une hirondelle ne fait pas du printemps
+ - 单燕不成春
+
+** il vaut mieux inf.
+ - 最好做...
+
+** manquer
+v.i.
+ - 缺少，缺乏
+ - 缺席
+
+** manquer à
+ - 不履行，违背
+ - 忘记，忽略
+
+* révision
+** par suite de
+[[francais_reflets_1_1_8#par_suite_de][repasser]]
+
+** à la suite de
+[[francais_reflets_1_1_7#a_la_suite_de][repasser]]

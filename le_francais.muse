@@ -7,3 +7,5 @@
  - [[le_francais_1_17][leçon 17]]
  - [[le_francais_1_18][leçon 18]]
 
+* 第二册
+ - [[le_francais_2_1][leçon 1]]
