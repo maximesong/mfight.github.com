@@ -78,6 +78,10 @@ v.t
 *** souvenir
 n.m
  - 记忆，回忆
+**** se souvenir
+v.pr.
+ - 想起，记得
+ - 记着，记住
 
 *** amour
 n.m.

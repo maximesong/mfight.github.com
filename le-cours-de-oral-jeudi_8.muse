@@ -72,6 +72,7 @@ n.f.
 *** avoir confiance en
  - 对...有信心
 
+#repasser
 ** tromper
 v.t.
  - 欺骗，使上当

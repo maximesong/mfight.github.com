@@ -105,6 +105,7 @@ court, courte
 a.
  - 短的
 
+#veste
 ** veste
 n.f
  - 上装， 外套；上衣
