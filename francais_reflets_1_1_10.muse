@@ -501,7 +501,7 @@ adj.
 
 ** pédaler
 v.i.
- - 汽车
+ - 骑车
 
 ** plan
 n.m.
@@ -590,6 +590,8 @@ n.m.
  - 车辆
 
 * révision
+
+** reçu
 [[le_francais_1_18#recu][repasser]]
 
 
