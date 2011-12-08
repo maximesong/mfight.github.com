@@ -225,6 +225,7 @@ n.f.
 ** sortir
 v.i.
  - 出去
+ - 拿出来
 
 ** sourire
 n.m.

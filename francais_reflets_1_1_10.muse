@@ -288,6 +288,7 @@ a.
 ** terrain
 n.m.
  - 地，地面，土地
+ - 场地
 
 ** dizaine
 n.f.
@@ -425,3 +426,172 @@ a.
 v.t.
  - 认不出，不认得
  - 不知道，不承认，不接受
+
+** allée
+n.f.
+ - 小路
+
+** bassin
+n.m.
+ - 盆地
+
+** bistrot
+n.m.
+ - 酒馆
+
+** chauffeur
+n.m.
+ - 司机
+
+** conforable
+adj.
+ - 舒适的
+
+** connaître
+v.t.
+ - 认识
+
+** conservateur
+n.
+ - 看护员
+
+** déranger
+v.t.
+ - 打扰
+
+** dimension
+n.f.
+ - 尺寸，体积
+
+** entier
+n.m.
+ - 整个，全部
+
+*** en entier
+loc.adv.
+ - 完整地
+
+*** tout entier
+ - 整个的，全部的
+
+** face
+n.f.
+ - 脸，面部
+
+*** en face de
+loc.prép
+ - 在...的对面
+
+** froncer
+v.t.
+ - 皱
+
+** hôte
+n.
+ - 客人
+
+** interdit
+interdit, interdite
+adj.
+ - 禁止的
+
+** libre
+adj.
+ - 空闲的
+
+** pédaler
+v.i.
+ - 汽车
+
+** plan
+n.m.
+ - 地图，计划
+
+** plante
+n.f.
+ - 植物
+
+** portefeuille
+n.m.
+ - 钱包
+
+** indication
+n.f.
+ - 指出，指示
+
+** prévoir
+v.t.
+ - 预料，准备，预备
+
+** quadricycle
+n.m.
+ - 四轮车
+
+** rare
+adj.
+ - 罕见的
+
+** planter
+v.t.
+ - 栽种，种植
+
+** prévenir
+v.t.
+ - 预防，防止
+ - 通知，告知
+
+** facture
+n.f
+ - 发票，收货单
+
+
+** sourcil
+n.m.
+ - 眉毛
+
+** serre
+n.f.
+ - 温室，暖房
+
+** saison
+n.f.
+ - 季节
+
+** rencontrer
+v.t.
+ - 遇见，遇到
+
+** retourner
+v.t.
+ - 翻转，使倒转
+v.i.
+ - 返回，回去
+
+*** se retourner
+v.pr.
+ - 翻身，转身，回头
+
+** conducteur
+n.
+ - 司机，驾驶员
+
+
+
+** tendre
+v.t.
+ - 伸出，张开
+
+** vallée
+n.f.
+ - 山谷
+
+** véhicule
+n.m.
+ - 车辆
+
+* révision
+[[le_francais_1_18#recu][repasser]]
+
+
+** reposer
+[[le-cours-de-oral-lundi-6#reposer][repasser]]

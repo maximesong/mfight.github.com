@@ -194,6 +194,7 @@ n.f.
 ** course
 n.f.
  - 购物
+ - 路程，行程
 
 *** etre admiratif devant/pour qn.
  - 对某人钦佩

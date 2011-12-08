@@ -160,6 +160,10 @@ n.f.
 a.(f)
  - 右的
 
+** à droite de
+loc.prép
+ - 在...右边
+
 ** cave
 adj.
  - 凹进的，凹入的

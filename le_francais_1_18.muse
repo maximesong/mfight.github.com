@@ -184,10 +184,14 @@ v.t.indir.
 n.m.
  - 饺子
 
+#recu
 ** reçu
 reçu, reçue
 a.
  - 收到的
+
+n.m.
+ - 收据
 
 ** renseignement
 n.m.

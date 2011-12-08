@@ -66,6 +66,7 @@ n.
 ** billet
 n.m.
  - 票，券，门票
+ - 纸币
 
 ** aller
 v.i.

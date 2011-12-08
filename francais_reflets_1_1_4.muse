@@ -519,6 +519,36 @@ adj.
 ** poser
 v.t.
  - 放
+ - 装置，安装
+
+** ennuyé
+a.
+ - 感到厌倦的，感到无聊的，烦恼的
+
+** bilingue
+a.
+ - 精通两国语言的
+
+** longueur
+f.
+ - 长度
+
+** hauteur
+n.f
+ - 高度
+
+** pourboire
+n.m
+ - 赏钱，小费，酒钱
+
+** con
+con, conne
+adj.
+ - 愚蠢的，可笑的，傻的，笨的
+
+** largeur
+n.f.
+ - 宽度，广度
 
 ** prendre
 v.t.
