@@ -1,7 +1,5 @@
 #title meubles
-
 <contents>
-
 
 * appareil électrique
 
@@ -34,6 +32,7 @@ n.f.
 n.f.
  - 椅子
 
+#fauteuil
 ** fauteuil
 n.m.
  - 扶手椅
