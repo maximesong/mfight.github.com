@@ -411,6 +411,7 @@ a.
 ** modèle
 n.m.
  - 模型
+ - 样品
 
 
 #manteau

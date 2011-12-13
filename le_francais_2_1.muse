@@ -175,14 +175,14 @@ a.
 loc.adv.
  - 历来，一向，一贯
 
-** pas du tout
+*** pas du tout
 ad.
  - 一点也不，一点也没有
 
 *** tout à coup
 [[francais_reflets_1_1_7#tout_a_coup][lien]]
 
-** tout à fait
+*** tout à fait
 loc.adv.
  - 完全地
 
@@ -194,10 +194,10 @@ loc.adv.
 loc.adv.
  - 立即
 
-** tout homme
+*** tout homme
  - 全人类
 
-** tout cœur
+*** tout cœur
  - 全心全意
 
 *** de toute façon
@@ -206,6 +206,9 @@ adv.
 
 *** à toute vitesse
  - 全速
+
+*** tout le monde
+ - 大家
 
 ** éternité
 n.f.

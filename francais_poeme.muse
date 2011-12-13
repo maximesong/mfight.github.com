@@ -136,6 +136,11 @@ v.t.
 n.m.
  - 沉默，缄默
  - 寂静
+
+**** en silence
+loc.adv.
+ - 不出声地，默默地
+
 *** ivresse
 n.f
  - 酒醉

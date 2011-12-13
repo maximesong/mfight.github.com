@@ -305,11 +305,255 @@ n.m.
  - 长处，优点，特长
 
 
+** appeler
+v.t.
+ - 给...打电话，叫某人
+
+** argumentation
+n.f.
+ - 论据，理由
+
+** boulanger
+n.
+ - 面包店师傅，面包商
+
+** chemin
+n.m.
+ - 路
+
+** debout
+adv.
+ - 站着
+
+** démarchage
+m.n.
+ - 推销
+
+** démonstration
+n.f.
+ - 示范表演
+
+*** faire une démonstration
+ - 做示范
+
+** douceur
+n.f.
+ - 温和
+
+*** en douceur
+loc.adv.
+ - 慢慢地，心平气和地
+
+** thèse
+f.
+ - 论文，论题（博士）
+
+** thésard
+n.m
+ - 【口】博士生
+
+** doctorant
+n.m
+ - 博士生
+
+** collégien
+a.
+ - 初中的
+
+n.
+ - 初中生
+
+** écolier
+n.m
+ - 小学生
+
+** artifice
+n.m
+ - 烟火
+
+*** feu d'artifice
+ - 焰火
+
+** alliance
+n.f.
+ - 同盟，联盟
+ - 协会
+
+
+
+** finalement
+adv.
+ - 总之，最后
+
+** intensif
+adj.
+ - 密集的，强化的
+
+*** cours intensif
+a.
+ - 集中的，强烈的
+
+** produire
+v.t.
+ - 出产
+ - 生产，制造
+
+** production
+f.
+ - 生产，出产
+
+** lent
+a.
+ - 慢的，缓慢的
+
+** roi
+m.
+ - 国王，王
+
+** prince
+n.m
+ - 王子
+
+** empereur
+n.m.
+ - 皇帝
+
+** méthode
+n.f.
+ - 方法；教学法
+
+** or
+n.m.
+ - 金子
+
+** persuader
+v.t.
+ - 说服， 使信服
+
+*** être persuadé de
+ - 对...深信
+
+** peut-être
+adv.
+ - 或许，可能
+
+** plus
+adv.
+ - 不再
+
+** possible
+adj.
+ - 可能的
+
+** précis
+adj.
+ - 明确的
+
+** près
+près
+ - 在...附近
+
+*** près de
+prép
+ - 靠近，临近
+
+** rapporter
+v.t.
+ - 带回
+
+** revoir
+n.f.
+ - 再看
+
+** reine
+n.f.
+ - 王后
+
+** rire
+v.i.
+ - 笑
+
+** seulement
+adv.
+ - 只是
+
+** spécialiste
+n.f.
+ - 专家
+
+** unique
+adj.
+ - 唯一的
+
+** vouloir
+v.t.
+ - 愿意，想要
+
+** pàtisserie
+n.f
+ - 糕点铺，茶点铺
+ - 糕点
+
+** oser
+v.t.
+ - 敢，敢于
+
+*** oser inf.
+ - 敢，敢于
+
+** refuser
+v.t.
+ - 拒绝
+
+** croire
+v.t.dir.
+ - 相信
+ - 信任，信赖
+ - 认为
+
+** détester
+v.t.
+ - 厌恶，憎恶
+
+** direction
+n.f.
+ - 领导，指挥
+
+** copier
+v.t.
+ - 抄写
+ - 抄袭
+
+** interdire
+v.t.
+ - 禁止，制止
+ - 阻止，阻挡
+
+*** interdire à qn de
+v.i.
+ - 禁止某人做某事
+
+** défendre
+v.t.
+ - 防止，防御
+ - 为...辩护
+ - 禁止
+
+** proposer
+v.t.
+ - 提出，建议，提议
+ - 推荐，推举，提名
 
 * phrase
 ** au moins
 loc.adv.
  - 至少
+
+** les baguettes
+n.f.
+ - 筷子
+
+
 
 * révision
 ** formation

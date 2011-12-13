@@ -89,7 +89,7 @@ n.m.
 ** pendant
 prép
  - 在...期间
-  - pendant trios hours
+  - pendant trios jours
     三天
 
 #defaut
@@ -111,7 +111,7 @@ v.t.
 -----------------------------
 
 n.m
- - 作业，练习
+ - pl. 作业，练习
 
 #faute
 ** faute
@@ -294,7 +294,7 @@ n.f.
 
 *** carte d'étudiant
  - 学生证
-*** carte d'indentité 
+*** carte d'identité 
  - 身份证
 
 ** Net 
