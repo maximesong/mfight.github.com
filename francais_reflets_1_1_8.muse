@@ -69,6 +69,8 @@ v.i.
 *** tomber du lit
  - 比平时起得早
 
+*** tomber en panne
+ - 发生故障
 
 ** terrible
 a.
@@ -155,6 +157,7 @@ n.m.
 pron.indéf
  - 没什么东西或事情
 
+#rever
 ** rêver
 v.i.
  - 做梦，幻想
@@ -206,8 +209,11 @@ a.(m)
 v.t.
  - 允许，准许，许可
 
-*** permettre à qn. de faire qch.
+*** permettre à qn. de inf.
  - 允许某人做某事
+
+*** se permettre de inf.
+ - 胆敢、冒昧做某事
 
 ** oublier
 v.t.
@@ -329,6 +335,10 @@ n.f.
 ** occuper
 v.t.
  - 占领，占据
+
+*** s'occuper à
+v.pr.
+ - 【旧】专心于，忙于
 
 *** s'occuper de
 v.pr.

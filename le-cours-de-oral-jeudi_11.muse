@@ -84,6 +84,7 @@ v.t.
 n.f
  - 压力
 
+#doigt
 ** doigt
 n.m.
  - 手指，脚趾

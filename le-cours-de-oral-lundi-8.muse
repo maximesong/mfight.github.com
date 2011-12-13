@@ -12,6 +12,7 @@ n.f.
 ** voler
 v.t.
  - 偷，盗窃，抢劫
+ - 飞翔
 
 ** voleur
 n.m

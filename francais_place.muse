@@ -49,3 +49,18 @@ n.
 
 ** La Mer du Nord
  - 北海
+
+** Alsace
+n.f.
+ - 阿尔萨斯
+
+** Brésil
+n.m
+ - 巴西
+
+** alpes
+n.
+ - 阿尔卑斯
+
+** canal de suez
+ - 苏伊士运河

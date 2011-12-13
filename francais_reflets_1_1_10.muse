@@ -281,9 +281,11 @@ n.m
  - 画家，画师
 
 
+#sauvage
 ** sauvage
 a.
  - 野的，野生的
+ - 荒野的，荒无人烟的
 
 ** terrain
 n.m.
@@ -581,6 +583,7 @@ n.
 v.t.
  - 伸出，张开
 
+#valllee
 ** vallée
 n.f.
  - 山谷

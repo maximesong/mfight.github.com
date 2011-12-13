@@ -471,6 +471,8 @@ v.i.
 ** heureusement
 adv.
  - 幸亏
+ - 完满地
+ - 完美地，幸运地
 
 ** idée
 n.f.

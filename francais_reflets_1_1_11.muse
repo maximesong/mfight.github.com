@@ -69,7 +69,7 @@ n.m
  - 市场
 
 ** ennuis
- - 问题，麻烦（待查）
+ - 困境
 
 ** fessée
 n.f.
@@ -115,7 +115,7 @@ n.m
 f.
  - 倾向，趋势
 
-** démographiue
+** démographique
 adj.
  - 人口学的，人口的
 

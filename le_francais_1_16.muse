@@ -335,6 +335,7 @@ n.f.
 ** recommencer
 v.t.dir.
  - 重新开始
+ - 重复
 
 *** recommencer à/de
 v.t.indir.

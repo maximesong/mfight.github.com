@@ -74,8 +74,22 @@ m.
 v.t.
  - 留下，遗留
 
+*** laisser qch. à qn.
+ - 把某物交付、托付给某人
+
+*** laisser qn. adj.
+ - 任凭某人...，让某人...
+
+** laisser qn. inf.
+ - 让...做...
+
 *** laisser un message
  - 留言
+
+*** je vous laisse
+ - 我先走了
+
+
 
 ** confirmer
 v.t.
@@ -142,6 +156,9 @@ n.f
 
 ** Qui est à l'appareil?
  - 请问你是？
+
+** C'est de la part de qui?
+ - （- 我找...)- 请问你是？
 
 ** Je vous le passe
  - 我让他听电话

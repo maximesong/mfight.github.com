@@ -66,6 +66,10 @@ v.t.
  - 请
   - Je vous en prie 请，别客气
 
+*** prier qn. de inf.
+ - 请求某人做某事
+
+
 ** jusqu'a
 loc.prép
  - 直到..., 直至...

@@ -305,6 +305,7 @@ a.
 n.m
  - 一次，一下子
 
+#tout_a_coup
 *** tout à coup
 loc.adv.
  - 突然的
@@ -568,10 +569,15 @@ n.f.
 n.m.
  -  铁
 
+#assurer
 ** assurer
 v.t.
  - 保证，保障，确保
  - 使固定，使稳，使牢固，使坚定
+ - 肯定，担保，保证（是事实）
+
+*** assurer à qn. que
+ - 向某人保证..., 向某人肯定...
 
 ** nombreux
 nombreux, nombreuse

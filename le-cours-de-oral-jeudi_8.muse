@@ -77,6 +77,11 @@ n.f.
 v.t.
  - 欺骗，使上当
 
+*** se tromper
+v.pr.
+ - 搞错，弄错
+
+
 ** erreur
 n.f.
  - 错误
@@ -84,7 +89,6 @@ n.f.
 ** contacter
 v.t.
  - 同...联系，同...接触，同...来往
-
 
 ** servir
 v.t.dir

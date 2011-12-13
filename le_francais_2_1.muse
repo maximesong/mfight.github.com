@@ -29,6 +29,385 @@ n.f.
  - 人种，种族
  - 家族
 
+** confiture
+n.f
+ - 果酱
+
+** alpinisme
+n.m.
+ - 登山运动
+
+*** faire de l'alpinisme
+ - 登山
+
+** au-delà de
+loc.prép
+ - 在...之上
+
+** façon
+n.f
+ - 方式，方法
+
+** câble
+n.m.
+ - 缆绳
+
+** canal
+n.m.
+ - 运河
+
+** absent
+adj.
+ - 不在，缺席
+
+n.
+ - 缺席者
+
+
+** canoë-kayak
+n.m.
+ - 皮划艇
+
+** conquérir
+v.t.
+ - 征服，赢得
+
+** coupe
+n.f.
+ - 奖杯
+  - la Coupe de Monde 世界杯
+
+** coûteux
+a.
+ - 昂贵的
+
+** dangereusement
+adv.
+ - 危险地
+
+** dominer
+v.t.
+ - 俯视
+
+** église
+n.f.
+ - 教堂
+
+** élastique
+a.
+ - 有弹性的，伸缩的
+
+** entraîné
+a.
+ - 训练有素的
+
+** finale
+n.f.
+ - 决赛
+
+** foot
+n.m.
+ - 足球（football）的缩写形式
+
+** golf
+n.m.
+ - 高尔夫球
+
+** grimper
+v.i.
+ - 攀爬，攀登
+
+v.t.
+ - 攀爬，攀登
+
+** humain
+a.
+ - 人的，人类的，人文的
+
+** impossible
+n.m.
+ - 不可能的事，办不到的事
+
+** intrépide
+a.
+ - 无畏的，勇敢的
+
+** jeter
+v.t.
+ - 投，抛，扔
+
+*** se jeter
+v.pr.
+ - 投入，投身于
+
+** cas
+n.m.
+ - 场合，情况
+
+** rôti
+n.m
+ - 烤肉
+
+** généreux
+a.
+ - 宽容的
+ - 慷慨的，大方的
+
+** déménager
+v.t.
+ - 搬运
+
+v.i.
+ - 迁居，搬家
+
+** discothèque
+n.f.
+ - 舞厅
+
+** tout
+a.
+ - 整个的
+
+*** après tout
+ - 毕竟
+
+*** de tout temps
+loc.adv.
+ - 历来，一向，一贯
+
+** pas du tout
+ad.
+ - 一点也不，一点也没有
+
+*** tout à coup
+[[francais_reflets_1_1_7#tout_a_coup][lien]]
+
+** tout à fait
+loc.adv.
+ - 完全地
+
+*** tout d'abord
+loc.adv.
+ - 首先
+
+*** tout de suite
+loc.adv.
+ - 立即
+
+** tout homme
+ - 全人类
+
+** tout cœur
+ - 全心全意
+
+*** de toute façon
+adv.
+ - 无论如何
+
+*** à toute vitesse
+ - 全速
+
+** éternité
+n.f.
+ - 永久，永恒，永远
+
+** doucement
+adv.
+ - 安静地，安宁地
+ - 小心地，细心地
+
+** simplement
+adv.
+ - 简单地
+ - 仅仅，只是
+
+** honteux
+a.
+ - 可耻的，不光彩的
+ - 羞耻的，羞愧的
+
+** coucher
+v.t.
+ - 使躺下，使卧倒
+
+*** se coucher
+v.pr.
+ - 躺在床上，睡觉
+
+*** coucher du soleil
+ - 日落
+
+** faite
+adj.
+ - 制造
+
+** dommage
+n.m.
+ - 损失
+ - 损害赔偿
+
+** couvrir
+v.t.
+ - 盖，覆盖
+
+** défaire
+v.t.
+ - 拆除，拆开，松开，解开
+
+** foule
+n.f.
+ - 人群
+ - 大众，群众
+
+** gloire
+f.
+ - 光荣
+
+** pont
+m.
+ - 桥
+
+** capacité
+n.f.
+ - 容量，容积
+ - 能力，才能，才干，本领
+
+** champ
+n.m.
+ - 田，耕地
+ - 范围，领域
+ - 视野
+ - pl. 耕地，田野，牧场
+
+** rivière
+f.
+ - 河，江，川
+
+** brave
+a.
+ - 勇敢的，英勇的
+
+n.m
+ - 勇敢的人，勇士
+
+** courageux
+a.
+ - 勇敢的，有勇气的，有胆量的
+
+** audacieux
+a.
+ - 大胆的，勇敢的，果敢的
+ - 鲁莽的，无理的
+
+n.
+ - 大胆的人，勇敢的人
+ - 鲁莽的人
+
+** manquer
+v.i.
+ - 缺少，缺乏
+ - 缺席
+  - Ses enfants lui manquent 他十分想念他的孩子们
+
+*** manquer à
+ - 不履行，违背
+ - 忘记，忽略
+
+** mode
+n.f.
+ - 时髦，时兴
+
+*** à la mode
+ - 风行一时
+
+** nature
+n.f.
+ - 自然，大自然
+
+** pardon
+n.m.
+ - 法国布列塔尼地区的朝圣节
+
+** piolet
+n.m.
+ - 冰镐
+
+** pique-niquer
+v.i.
+ - 野餐
+
+** pittoresque
+a.
+ - 风景如画的
+
+** plage
+n.f.
+ - 海滩
+
+** port
+n.m.
+ - 港口
+
+** préférence
+n.f.
+ - 喜爱
+
+*** de préférence
+loc.adv.
+ - 最好
+
+** proposition
+n.f.
+ - 建议
+
+** reprendre
+v.t.
+ - 再拿，再取
+
+** retenu
+a.
+ - 拽住的，拖住的
+
+** rêve
+n.m.
+ - 梦，梦想
+
+** rugby
+n.m.
+ - 橄榄球
+
+** sandwich
+n.f.
+ - 三明治
+
+** séance
+n.f.
+ - 场次
+ - 会议
+
+** sportif
+a.
+ - 运动的，体育的，从事体育运动的
+
+n.
+ - 体育运动员
+
+** tennis
+ -  网球
+
+** torrent
+n.m.
+ - 湍流，激流
+
+** volley-ball
+n.m.
+ - 排球
+
+** youpi
+interj.
+ - 哇！噢！（表示快乐、激动、得意）
+
+
 * phrase
 ** une hirondelle ne fait pas du printemps
  - 单燕不成春
@@ -36,14 +415,10 @@ n.f.
 ** il vaut mieux inf.
  - 最好做...
 
-** manquer
-v.i.
- - 缺少，缺乏
- - 缺席
+** au-dessous de
+adv.
+ - 在...下面，在...之下
 
-** manquer à
- - 不履行，违背
- - 忘记，忽略
 
 * révision
 ** par suite de
@@ -51,3 +426,21 @@ v.i.
 
 ** à la suite de
 [[francais_reflets_1_1_7#a_la_suite_de][repasser]]
+
+** doigt
+[[le-cours-de-oral-jeudi_11#doigt][repasser]]
+
+** assurer
+[[francais_reflets_1_1_7#assurer][repasser]]
+
+** rêrver
+[[francais_reflets_1_1_8#rever][repasser]]
+
+** sauvage
+[[francais_reflets_1_1_10#sauvage][repasser]]
+
+** songer
+[[le-cours-de-oral-lundi-10#songer][repasser]]
+
+** vallée
+[[francais_reflets_1_1_10#vallee][repasser]]
