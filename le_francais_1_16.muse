@@ -254,6 +254,9 @@ n.m.
 *** jeu vidéo
  - 电子游戏
 
+*** jeu de mot
+ - 文字游戏
+
 ** larme
 n.f.
  - 眼泪

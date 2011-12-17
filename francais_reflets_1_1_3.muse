@@ -24,6 +24,10 @@ n.f
 v.t.dir.
  - 帮助
 
+*** aider qn. à faire qch.
+ - 帮助某人做某事
+
+
 ** ajouter
 v.t.dir.
  - 加，怎加

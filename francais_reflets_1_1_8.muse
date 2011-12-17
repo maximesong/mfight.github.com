@@ -511,7 +511,8 @@ n.f
  - 状况，状态
  - 地位，身份
 
-
+*** à condition de
+ - 只要，只须
 
 * phrase
 #par_suite_de

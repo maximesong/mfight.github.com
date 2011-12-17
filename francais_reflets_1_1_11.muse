@@ -485,6 +485,73 @@ n.f.
 adj.
  - 唯一的
 
+*** enfant unique
+ - 独生子女
+
+** isolé
+a.
+ - 孤独的
+
+*** parent isolé
+ - 单身父母
+
+** boucle
+n.f.
+ - 环
+
+*** boucle de oreille
+ - 耳环
+
+** bogue
+n.m.
+ - 程序设计上的错误，故障
+
+** bague
+n.f.
+ - 戒指，指环
+
+** ficher
+v.t.
+ - 插入，打入，钉入
+ - 放置，投
+ - 给
+
+*** se ficher
+v.pr.
+ - 嘲笑，瞧不起，不在乎，不放在眼里
+  - Il s'est fichu de moi 他嘲笑了我
+  - Je m'en fiche. 我不在乎
+
+** aperçu
+n.m
+ - 一览
+ - 概况，估计
+
+** faim
+n.f
+ - 饥饿
+
+** brûlure
+n.f
+ - 烧伤，灼伤，烫伤
+
+** cri
+n.m
+ - 叫喊声
+
+** galette
+f.
+ - 饼
+
+** cassant
+a.
+ - 脆的，易碎的
+
+** soir
+n.m
+ - 傍晚
+ - 晚上，晚间
+
 ** vouloir
 v.t.
  - 愿意，想要
@@ -493,6 +560,14 @@ v.t.
 n.f
  - 糕点铺，茶点铺
  - 糕点
+
+** drapeau
+n.m.
+ - 旗，旗帜
+
+*** drapeau rouge
+ - 红旗
+
 
 ** oser
 v.t.
@@ -553,7 +628,9 @@ loc.adv.
 n.f.
  - 筷子
 
-
+** bon marché
+adj.
+ - 廉价的，价格便宜的
 
 * révision
 ** formation

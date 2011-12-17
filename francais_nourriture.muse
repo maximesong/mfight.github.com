@@ -60,7 +60,7 @@ n.m
 m.
  - 面包
 
-* place
+* lieu
 #cuisine
 ** cuisine
 n.f

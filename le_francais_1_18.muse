@@ -107,6 +107,9 @@ financier, financierère
 a.
  - 金融的
 
+n.m.
+ -金融家，理财家 
+
 ** fixer
 v.t.
  - 确定，使固定

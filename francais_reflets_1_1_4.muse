@@ -219,6 +219,7 @@ n.m.
 ** thème
 m.
  - 主题，题材
+ - 笔译
 
 ** couleur
 n.f.
@@ -276,6 +277,10 @@ n.m.
 ** après
 prép
  - 在...之后
+
+*** d'après
+prép
+ - 根据，按照
 
 ** arriver
 v.i.
