@@ -102,6 +102,18 @@ v.i.
  - 游戏，玩耍
  - 演奏
 
+**** jouer au football
+ - 踢足球
+
+**** jouer au cartes
+ - 打牌
+
+**** jouer avec le feu
+ - 玩火
+
+**** jouer du piano
+ - 弹钢琴
+
 **** 动词变位
 
  - je jouer

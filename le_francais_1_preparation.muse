@@ -435,3 +435,114 @@ devrai devras devra devrons devrez devront
 <不存在>
 <devais devais devait devions deviez devaient>
 
+dire
+dis dis dit <disons> <dites> disent
+dit
+dirai diras dira dirons direz diront
+dis disons dites
+disais disais disait disions disiez disaient
+
+écrire
+écris écris écrit écris <écrivons> écrivez écrivent>
+écrit
+écrirai écriras écrira écrions écriez écriont
+écris écrivon écrivez
+écrivais écrivais écrivait écrivions écriviez écrivaient
+
+faire
+fais fais fait <faisons faites font>
+fait
+ferai feras fera ferons ferez feront
+fais faisons faites
+faisais faisais faisait faisions faisiez faisaient
+
+falloir
+faut
+fallu
+faudra
+<不存在>
+fallait
+
+mettre
+<mets mets met> <mettons mettez mettent>
+mis
+mettrai mettras mettra mettrons mettrez mettront
+mets metons metez
+<mettais mettais mettait mettions mettiez mettaient>
+
+partir
+pars pars part <partons partez partent>
+parti
+partirai partiras partira partirons partirez partiront
+pars partons partez
+partais partais partait partions partiez partaient
+
+plaire
+plais <plais> <plaît> plaisons plaisez plaisent
+<plu>
+plairai plairas plaira plairons plairez plairont
+plais plaisons plaisez
+plaisais plaisait plaisait plaisions plaisiez plaisaient
+
+pleuvoir
+pleut
+plu
+pleuvra
+<不存在>
+<pleuvait>
+
+pouvoir
+peux <peux> <peut> pouvons pouvez <peuvent>
+pu
+<pourrai pourras pourra pouvrons pourrez pourront>
+<不存在>
+pouvais pouvais pouvait pouvions pouviez pouvaient
+
+prendre
+<prends prends prend> <prenons prenez prennent>
+pris
+prendrai prendras prendra prendrons prendrez prendront
+prends prenons prenez
+prenais prenait prenait prenions preniez prenaient
+
+savoir
+sais sais sait savons savez savent
+<su>
+<saurai sauras saura saurons saurez sauront>
+<sache sachons sachez>
+savais savait savait savion saviez savaient
+
+suivre
+suis suis suit suivons suivez suivent
+<suivi>
+suivrai suivras suivra suivrons suivrez suivront
+suis suivons suivez
+suivais suivais suivait suivions suiviez suivaient
+
+venir
+viens viens vient venons venez venent
+venu
+<viendrai viendras viendra viendrons viendrez viendront>
+viens venons venez
+venais venais venait venions veniez venaient
+
+voir
+vois vois voit <voyons> <voyez> <voient>
+vu
+<verrai verras verra verrons verrez verraient>
+vois voyons voyez
+voyais voyais voyait voyions voyiez voyaient
+
+vouloir
+veux veux veut voulons voulez voulent
+<voulu>
+<voudrai voudras voudra voudrons voudrez voudront>
+...
+voulais voulais voulait voulions vouliez vouslaient
+
+* prép
+jouer au football
+jouer sur les mots
+jouer avec le feu
+jouer du piano
+
