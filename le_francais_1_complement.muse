@@ -201,8 +201,245 @@ n.f
 
 ** hors-d'œuvre
 n.m.inv.
- - 冷菜
+ - 冷菜,拼盘
 
+** ingénieur
+n.m.
+ - 工程师
+
+** largement
+adv.
+ - 大量地，充分地
+ - 宽阔地，宽敞地
+ - 慷慨地，宽裕地
+
+** lavabo
+m.
+ - 梳装台
+
+** libre-service
+n.m
+ - 自助服务
+
+** marqué
+a.
+ - 加标记的
+
+** matin
+n.m.
+ - 早晨
+
+** matinal
+a.
+ - 早起的
+
+** type
+n.m.
+ - 类型
+ - 典型，典范
+
+** mesure
+n.f.
+ - 测量，测定
+
+** mesurer
+v.t.
+ - 测量，测定
+ - 衡量，估计
+
+** meublé
+a.
+ - 带家具的
+
+** mûrir
+v.t.
+ - 使成熟
+
+v.i.
+ - 成熟，长熟
+
+** natal
+a.
+ - 出生的，诞生的
+ - 故乡的，祖国的
+
+** neiger
+v.impers.
+ - 下雪
+
+** nostalgique
+a.
+ - 思乡的，想家的
+ - 怀念的，怀旧的，忧伤的
+
+** œil
+n.m.
+ - 眼镜
+
+*** à mes yeux
+ - 在我看来
+
+** oiseau
+n.m.
+ - 鸟
+
+** palais
+n.m
+ - 宫殿，王宫
+
+** paquet
+n.m.
+ - 包，盒
+
+
+** pas
+m.
+ - 脚步，步子
+
+*** pas ... du tout
+ - 一点也不
+
+** pétrolier
+a.
+ - 石油的
+
+n.m
+ - 油船
+ - 石油巨头
+
+** piscine
+f.
+ - 游泳池
+
+** plaisir
+n.m
+ - 愉快，高兴，快乐
+
+** plateau
+m.
+ - 托盘，盘子
+ - 高原
+
+** plutôt
+adv.
+ - 宁愿，宁可
+
+** poulet
+n.m
+ - 小鸡，鸡肉，童子鸡
+
+** presque
+adv.
+ - 将近
+
+** pressé
+a.
+ - 紧急的，急迫的
+ - 急急忙忙的，匆忙的
+
+** propos
+n.m
+ - 话，谈话
+ - 意图，打算，决心
+
+** province
+f.
+ - 省，省份
+
+** rangé
+a.
+ - 整洁的，规规矩矩的
+
+** rangement
+n.m
+ - 整理，布置
+
+** raser
+v.t.
+ - 剃，刮
+
+** réchaud
+m.
+ - 小炉子
+
+** rentrée
+f.
+ - 开学
+
+** retour
+m.
+ - 返回
+
+** réviser
+v.t.
+ - 修改，修正
+ - 温习，复习
+
+** revue
+n.f.
+ - 杂志，期刊，月刊
+
+** ruisseau
+n.m
+ - 溪流，小河
+
+** scolaire
+a.
+ - 学校的，学龄的
+
+** sigle
+n.m
+ - 首字母缩合词
+
+** soif
+n.f.
+ - 渴
+
+** souffler
+v.i.
+ - 喘气，喘息
+ - 吹气
+
+** styliste
+n.
+ - 服装设计师
+
+** suffire
+v.t.indir
+ - 足够，足以
+
+** technicien
+n.m.
+ - 技师
+
+** tempéré
+a.
+ - 气候温和的，温暖的
+
+** terrasse
+f.
+ - 平台，露天咖啡座
+
+** tiens
+n.f.pl.
+ - 喂，瞧，噢！
+
+** vérité
+n.f.
+ - 真理
+ - 事实，真相
+
+** vent
+n.m
+ - 风
+
+** titre
+n.m.
+ - 标题，题目，书名
+
+** distrait
+adj.
+ - 分心的
 
 
 * phrase
@@ -216,3 +453,8 @@ loc.prép
 
 ** être en train de inf.
  - 正在做某事
+
+** en ce moment
+loc.adv.
+ - 此时此刻
+

@@ -118,8 +118,6 @@ instituteur, trice
 n.m
  - 小学教员,小学教师（口语中缩写instit)
 
-** propre
- - 整齐
 
 ** nettoyer
  - 把...打扫干净
@@ -148,6 +146,7 @@ antonyme ::
 #propre
 ** propre
  - 清洁的
+ - 整洁的
 antonyme ::
 [[#sale][sale]]
 
