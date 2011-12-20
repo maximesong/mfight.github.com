@@ -70,7 +70,7 @@ n.f.
 ** la carte bancaire
  - 银行卡
 
-** une parc d'atrractions
+** une parc d'attractions
  - 游艺公园
 
 ** se tenir par la main
