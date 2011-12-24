@@ -1,0 +1,19 @@
+* Autonomous System(AS)
+  - 自主系统
+
+* Interface Message Processors (IMPs)
+
+* Taxonomy
+ - 分类
+
+* Nodal processing delay
+check errors & routing
+
+* Security 
+privacy of traffic
+
+* Quality of service 
+e.g., delay/bandwidth guarantee
+
+* Flow control 
+e.g., not to overwhelm network links or receiver

@@ -4,27 +4,37 @@
 * boisson
 n.f
  - 饮料
+
 ** café
 n.m
  - 咖啡
+
 *** café noir
  - 黑咖啡
+
 *** café au lait 
  - 奶咖
+
 ** thé
 n.m
  - 茶
+
 *** thé vert
  - 绿茶
+
 *** thé au jasmin
  - 茉莉花茶
+
 ** chocolat
 n.m
  - 巧克力饮料
+
 ** jus d'orange
  - 桔汁
+
 ** limonade
  - 汽水
+
 ** bière
  - 啤酒
 
@@ -34,8 +44,10 @@ n.m
 
 ** coca-cola
  - 可口可乐
+
 ** pepsi
  - 百事可乐
+
 ** glace
 f.
  - 冰激凌
@@ -44,28 +56,35 @@ f.
 * céréales
 f.pl
  - 谷物，粮食 
+
 ** tartine
 n.f
  - 面包片
+
 ** biscotte
 n.f
  - 面包干，干面包片
+
 ** toast
 n.m
  - 烤面包片，吐司
+
 ** croissant
 n.m
  - 羊角面包
+
 ** pain
 m.
  - 面包
 
 * lieu
+
 #cuisine
 ** cuisine
 n.f
  - 厨房
  - 烹饪
+
 *** faire la cuisine
  - 做饭，做菜
 
@@ -75,6 +94,7 @@ n.f
 * fruit
 n.m.
  - 水果
+
 ** mandarine
 n.f
  - 桔子
@@ -83,15 +103,19 @@ n.f
 * plat
 n.m
  - 一道菜
+
 ** légume
 m.
  - 蔬菜
+
 *** épinard
 n.m
  - 菠菜
+
 *** chou
 n.m
  - 白菜
+
 ** viande
 n.f
  - 肉
@@ -254,12 +278,13 @@ m.
 n.m.
  - 大蒜
 
-** oœf
+** œuf
 n.m.
  - 蛋；鸡蛋
-*** blanc d'oœf
+
+*** blanc d'œuf
  - 蛋白，蛋清
-*** jaune d'oœf
+*** jaune d'œuf
  - 蛋黄
 
 ** mélanger

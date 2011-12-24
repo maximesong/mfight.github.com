@@ -169,11 +169,11 @@ $ \frac{L}{R} \frac{1}{1-\rho} $
  - n flows.
  - each flow has an arrival rate of a/n.
  - each flow uses its own reserved (sub)link with rate R/n.
- - queueing delay + transimission delay: L/R * (1 / (1 - ρ))
+ - queueing delay + transimission delay: *n* * L/R * (1 / (1 - ρ))
 **** No reservation(aka packet switching)
  - all arrival into the single link with rate a.
  - the link has bandwidth R.
- - queueing delay + transimission delay: *n* * L/R * (1 / (1 - ρ))
+ - queueing delay + transimission delay: L/R * (1 / (1 - ρ))
 
 
  - On-demand time-division

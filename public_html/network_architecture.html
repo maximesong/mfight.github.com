@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,7 +6,7 @@
     <title>Layered Network Architecture</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
-          content="text/html; charset=iso-8859-1" />
+          content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
@@ -23,7 +23,7 @@
        </div>
      <div class="menub">       
 	<div class="menuitemb">
-          <a href=" francais.html">Fran�ais</a>
+          <a href=" francais.html">Français</a>
         </div>
 
         <div class="menuitemb">
@@ -63,12 +63,72 @@
 <a href="#sec7">concepts</a>
 </dt>
 <dt class="contents">
-<a href="#sec8">Key design issue: how do you divide functionalities among the layers?</a>
+<a href="#sec8">Protocol Layering and Data</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">Key design issue: how do you divide functionalities among the layers?</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec9">The End-to-End Arguments</a>
+<a href="#sec10">The End-to-End Arguments</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">Reasons for Implmenting Reliability at Higher Layer</a>
+</dt>
+<dt class="contents">
+<a href="#sec12">Reasons for implementing reliablility at lower layer</a>
+</dt>
+<dt class="contents">
+<a href="#sec13">Summary</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">Challenges</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec15">The Design Philosophy of the DARPA Internet</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec16">Questions</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">Goals</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec18">Connect different networks</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">Survivability in the face of failure</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">Support multiple types of services</a>
+</dt>
+<dt class="contents">
+<a href="#sec21">Support a variety of networks</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec22">Other goals</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec23">Be cost effective</a>
+</dt>
+<dt class="contents">
+<a href="#sec24">Permit host attachment with a low level of effort</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">Be accountable</a>
 </dt>
 </dl>
 </dd>
@@ -80,7 +140,8 @@
 
 <h2><a name="sec1" id="sec1"></a>layering</h2>
 
-<h3><a name="sec2" id="sec2"></a>definition</h3>
+<p class="first">Introducing an intermediate layer provides a common abstraction for various network technologies.
+<h3><a name="sec2" id="sec2"></a>definition</h3></p>
 
 <ul>
 <li>a technique to organize a networked system into a succession of logically distinct entities, such that the service provided by one entity is solely based on the service provided by the previous(lower entity).
@@ -130,8 +191,7 @@
 </dl>
 
 <ul>
-<li>Send messages to peer</li>
-<li>for example, helo, mail from, rcpt to are messages between two SMTP peers</li>
+<li>Send messages to peer, for example, helo, mail from, rcpt to are messages between two SMTP peers</li>
 </ul>
 
 
@@ -146,9 +206,7 @@
 </dl>
 
 <ul>
-<li>Add control info to form &quot;datagram&quot;</li>
-<li>send datagram to peer</li>
-<li>wait for peer to ack receipt;if no ack, retransmit</li>
+<li>Add control info to form &quot;datagram&quot;, end datagram to peer, wait for peer to ack receipt;if no ack, retransmit</li>
 </ul>
 
 
@@ -175,10 +233,19 @@ says how the service is inplemented</dd>
 </ul>
 
 
+<h3><a name="sec8" id="sec8"></a>Protocol Layering and Data</h3>
 
-<h3><a name="sec8" id="sec8"></a>Key design issue: how do you divide functionalities among the layers?</h3>
+<p class="first">Each layer takes data from above</p>
 
-<h4><a name="sec9" id="sec9"></a>The End-to-End Arguments</h4>
+<ul>
+<li>adds header information to create new data unit</li>
+<li>passes new data unit to layer below</li>
+</ul>
+
+
+<h3><a name="sec9" id="sec9"></a>Key design issue: how do you divide functionalities among the layers?</h3>
+
+<h4><a name="sec10" id="sec10"></a>The End-to-End Arguments</h4>
 
 <p class="first">The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the endpoints of the communication systems. Therefore, providing that questioned function as a feature of the communications systems iteself is not possible. &mdash;-J.Saltzer, D.Reed, and D.Clark, 1984</p>
 
@@ -188,13 +255,156 @@ says how the service is inplemented</dd>
 </ul>
 
 
+<h4><a name="sec11" id="sec11"></a>Reasons for Implmenting Reliability at Higher Layer</h4>
+
+<ul>
+<li>The lower layer cannot compeltely provide the functionality
+
+<ul>
+<li>The receiver has to do the check anyway(on reliability cases)</li>
+<li>The lower layer may ack and then crash, then the function fails(crash situations)</li>
+</ul></li>
+<li>Implementaing it at lower layer increases complexity, cost, and overhead at lower layer
+
+<ul>
+<li>Shared by all upper layer applications -&gt; everyone pays for it, even if you do not need it</li>
+</ul></li>
+<li>The upper layer knows the requirements better and thus may choose a better approach to implement it</li>
+</ul>
+
+
+<h4><a name="sec12" id="sec12"></a>Reasons for implementing reliablility at lower layer</h4>
+
+<ul>
+<li>Improve performance(e.g. if high cost/delay on a link local reliability)
+
+<ul>
+<li>imporve efficiency</li>
+<li>reduces delay</li>
+</ul></li>
+<li>Share common code(e.g. reliability is required by multiple applications)</li>
+</ul>
+
+
+<h4><a name="sec13" id="sec13"></a>Summary</h4>
+
+<ul>
+<li>If a higher layer can do it, don’t do it at a lower layer &mdash; the higher the layer, the more it knows about the best what it needs</li>
+<li>Add functionality in lower layers iff it
+
+<ul>
+<li>is used by and improves performance of a large</li>
+<li>number of (current and potential future) applications;</li>
+<li>does not hurt (too much) other applications, and does not increase (too much) complexity/overhead.</li>
+</ul></li>
+<li>Practical tradeoff
+
+<ul>
+<li>Allow multiple interfaces at a lower layer (one provides
+the function; one does not)</li>
+</ul></li>
+</ul>
+
+
+
+<h4><a name="sec14" id="sec14"></a>Challenges</h4>
+
+<p class="first">Performance VS 1. reuse, interoperability &amp;&amp; 2. implementation effort</p>
+
+
+
+
+<h2><a name="sec15" id="sec15"></a>The Design Philosophy of the DARPA Internet</h2>
+
+<h3><a name="sec16" id="sec16"></a>Questions</h3>
+
+<ul>
+<li>What does the goal mean?</li>
+<li>Why is the goal important?</li>
+<li>How does the Internet achieve this goal?</li>
+<li>Does the Internet achieve this goal (or in what degree does the Internet achieve this goal)?</li>
+</ul>
+
+
+<h3><a name="sec17" id="sec17"></a>Goals</h3>
+
+<h4><a name="sec18" id="sec18"></a>Connect different networks</h4>
+
+<p class="first">Most Important.</p>
+
+
+<h4><a name="sec19" id="sec19"></a>Survivability in the face of failure</h4>
+
+<ul>
+<li>Continue to operate even in the presence of network failures(e.g. link and router failures)</li>
+<li>Decision:maintain state only at end-points(fate-sharing)
+
+<ul>
+<li>Eliminate the problem of handling state inconsistency and perform state restoration when router fails</li>
+</ul></li>
+<li>Internet:stateless network architecture</li>
+</ul>
+
+
+<h4><a name="sec20" id="sec20"></a>Support multiple types of services</h4>
+
+<ul>
+<li>Add UDP to TCP to better support other types of applications
+
+<ul>
+<li>e.g. real-time applications</li>
+</ul></li>
+<li>This was arguably the main reason for separating TCP and IP</li>
+<li>Provide datagram abstraction:lower common denominator on which other services can be built:everything over IP
+
+<ul>
+<li>Service differentiation was considered(remember ToS?), but this has never happened on the large scale(Why?)</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec21" id="sec21"></a>Support a variety of networks</h4>
+
+<ul>
+<li>Very successful
+
+<ul>
+<li>Because the minimalist service;it requires from underlying network only to deliver a packet with a &quot;reasonable&quot; probability of success</li>
+</ul></li>
+<li>...does not require:
+
+<ul>
+<li>Reliability</li>
+<li>In-order delivery</li>
+</ul></li>
+<li>The mantra: IP over everything
+
+<ul>
+<li>Then: ARPANET, X.25, DARPA satellite network...</li>
+<li>Now: ATM, SONET, WDM...</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec22" id="sec22"></a>Other goals</h3>
+
+<h4><a name="sec23" id="sec23"></a>Be cost effective</h4>
+
+
+<h4><a name="sec24" id="sec24"></a>Permit host attachment with a low level of effort</h4>
+
+
+<h4><a name="sec25" id="sec25"></a>Be accountable</h4>
+
+
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: October  3, 2011  
+    Last Updated: December 24, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
