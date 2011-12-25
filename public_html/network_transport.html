@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Tranport</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script><script type="text/javascript"src="scripts/shCore.js"></script><script type="text/javascript"src="scripts/shBrushCpp.js"></script><link href="styles/shCore.css" rel="stylesheettype="text/css" /><link href="styles/shThemeEmacs.css" rel="stylesheet"type="text/css" />
+  </head>
+  <body>
+    <h1>Tranport</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Transport Layer</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">Transport vs. network layer services:</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">Transport Layer Services and Protocols</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec4">UDP(User Datagram Protocol)</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec5">Use</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">Message Format</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">Checksum</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">Example</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">Coverage</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+<h2><a name="sec1" id="sec1"></a>Transport Layer</h2>
+
+<ul>
+<li>Provide logical communication between app processes</li>
+<li>Transport protocols run in end systems
+
+<ul>
+<li>Sender: breaks app messages into segments, passes to network layer</li>
+<li>Receiver: reassembles segments into messages, passes to app layer</li>
+</ul></li>
+</ul>
+
+<h3><a name="sec2" id="sec2"></a>Transport vs. network layer services:</h3>
+
+<ul>
+<li>Network layer: data transfer between end systems</li>
+<li>Transport layer: data transfer between processes application
+
+<ul>
+<li>Relies on, enhances network layer services</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec3" id="sec3"></a>Transport Layer Services and Protocols</h3>
+
+<ul>
+<li>Reliable, in-order delivery (TCP)
+
+<ul>
+<li>Multiplexing</li>
+<li>Reliability and connection setup</li>
+<li>Congestion control</li>
+<li>Flow control</li>
+</ul></li>
+<li>Unreliable, unordered delivery: UDP
+
+<ul>
+<li>Multiplexing</li>
+</ul></li>
+<li>Services not available:
+
+<ul>
+<li>Delay guarantees</li>
+<li>Bandwidth guarantees</li>
+</ul></li>
+</ul>
+
+
+
+<h2><a name="sec4" id="sec4"></a>UDP(User Datagram Protocol)</h2>
+
+<h3><a name="sec5" id="sec5"></a>Use</h3>
+
+<ul>
+<li>Often used forstreaming multimedia apps
+
+<ul>
+<li>Loss tolerant</li>
+<li>Rate sensitive</li>
+</ul></li>
+<li>Other UDP usage
+
+<ul>
+<li>DNS</li>
+<li>SNMP</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec6" id="sec6"></a>Message Format</h3>
+
+<p class="image"><img src="udp_format.png" alt="" /></p>
+
+
+<h3><a name="sec7" id="sec7"></a>Checksum</h3>
+
+<p class="first">Goal: end-to-end detection of errors (e.g. flipped bits) in transmitted segment</p>
+
+<ul>
+<li>Sender:
+
+<ul>
+<li>Treat segment contents as sequence of 16-bit integers(represented in one s
+complement representation)</li>
+<li>Checksum: addition (1 s'complement sum) of segment contents to be 1111111111111111</li>
+<li>Sender puts checksum value into UDP checksum field</li>
+</ul></li>
+
+<li>Receiver:
+
+<ul>
+<li>Compute checksum of received segment</li>
+<li>Compute sum of segment and checksum; check if sum is 1111111111111111
+
+<ul>
+<li>NO - error detected</li>
+<li>YES - no error detected. But maybe errors nonetheless?</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h4><a name="sec8" id="sec8"></a>Example</h4>
+
+<p class="image"><img src="checksum_example.png" alt="" /></p>
+
+
+<h4><a name="sec9" id="sec9"></a>Coverage</h4>
+
+<ul>
+<li>A pseudo-header
+
+<ul>
+<li>IP Source Address(4 bytes)</li>
+<li>IP Destination Address(4 bytes)</li>
+<li>Protocol (2 bytes)</li>
+<li>UDP Length (2 bytes)</li>
+</ul></li>
+
+<li>UDP header</li>
+<li>UDP data</li>
+</ul>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: December 25, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+
+</div>
+	<script type="text/javascript">
+	     SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
+
