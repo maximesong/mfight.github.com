@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Network Programming</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script><script type="text/javascript"src="scripts/shCore.js"></script><script type="text/javascript"src="scripts/shBrushCpp.js"></script><link href="styles/shCore.css" rel="stylesheettype="text/css" /><link href="styles/shThemeEmacs.css" rel="stylesheet"type="text/css" />
+  </head>
+  <body>
+    <h1>Network Programming</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Connectionless UDP</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">server</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">client</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec4">Connection-oriented</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec5">server</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">client</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">TCP Connection-Oriented Demux</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec8">Socket API</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec9">int socket(int domain, int type, int protocol)</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">int bind(int sockfd, struct sockaddr* my_addr, socklen_t addrlen)</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec11">Network Byte Order</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec12">int listen(int s, int backlog)</a>
+</dt>
+<dt class="contents">
+<a href="#sec13">int accept(int s, struct sockaddr* addr, socklen_t* addrlen)</a>
+</dt>
+<dt class="contents">
+<a href="#sec14">int connect(int sockfd, const struct sockaddr* serv_addr, socklen_t addrlen)</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec15">Connecting with TCP/UDP</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec16">Read / Write to a Socket</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</div>
+
+
+<h2><a name="sec1" id="sec1"></a>Connectionless UDP</h2>
+
+<h3><a name="sec2" id="sec2"></a>server</h3>
+
+<ul>
+<li>sd = socket() : create socket</li>
+<li>bind(sd, ...) : specify socket local IP address and port number</li>
+<li>read() / recv() : receive packets</li>
+<li>close(): done</li>
+</ul>
+
+
+<h3><a name="sec3" id="sec3"></a>client</h3>
+
+<ul>
+<li>socket() : create socket</li>
+<li>write() / sendto(): send packets to server, by specifying receiver address and port number</li>
+<li>close(): done</li>
+</ul>
+
+
+
+<h2><a name="sec4" id="sec4"></a>Connection-oriented</h2>
+
+<h3><a name="sec5" id="sec5"></a>server</h3>
+
+<ul>
+<li>sd = socket() : create socket</li>
+<li>bind(sd, ...) : specify socket local IP address and port number</li>
+<li>listen(sd, ...) : specify that socket sd is a listening socket</li>
+<li>sd2 = accept(sd, ...) : get a connected connection from the queue for socket sd;create a new socket identified by sd2</li>
+<li>read() / write() : do IO on socket sd2</li>
+<li>close(sd2): done</li>
+</ul>
+
+
+<h3><a name="sec6" id="sec6"></a>client</h3>
+
+<ul>
+<li>socket() : create socket</li>
+<li>bind() : specify socket address (optional)</li>
+<li>connect() : initialize TCP handshake; return until TCP handshake is done</li>
+<li>read() / write() : do IO on the socket</li>
+<li>close(): done</li>
+</ul>
+
+
+<h3><a name="sec7" id="sec7"></a>TCP Connection-Oriented Demux</h3>
+
+<ul>
+<li>TCP socket identified by 4-tuple
+
+<ul>
+<li>source IP address</li>
+<li>source port number</li>
+<li>dest IP address</li>
+<li>dest port number</li>
+</ul></li>
+<li>Host uses all four values to direct segment to appropriate socket
+
+<ul>
+<li>Server can easily support many simultaneous TCP sockets: different connections/sessions are automatically separated into different sockets</li>
+</ul></li>
+</ul>
+
+
+
+<h2><a name="sec8" id="sec8"></a>Socket API</h2>
+
+<ul>
+<li>API used to access the network
+
+<ul>
+<li>A socket is an abstraction of a communication endpoint
+
+<ul>
+<li>Can be used to access different network protocols (not only TCP/IP)</li>
+</ul></li>
+<li>A socket’s characteristics are determined by calling specific functions</li>
+<li>A socket can be accessed as a file
+
+<ul>
+<li>Similar to some I/O APIs, e.g. read, write, close</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3><a name="sec9" id="sec9"></a>int socket(int domain, int type, int protocol)</h3>
+
+<ul>
+<li>domain: PF_UNIX, PF_INET, PF_INET6</li>
+<li>type: SOCK_STREAM(reliable), SOCK_DGRAM(not reliable)</li>
+<li>protocol: normally 0, can be other values if there are multiple protocols available (IPPROTO_TCP, IPPROTO_UDP)</li>
+</ul>
+
+
+<h3><a name="sec10" id="sec10"></a>int bind(int sockfd, struct sockaddr* my_addr, socklen_t addrlen)</h3>
+
+<ul>
+<li>sockfd: socket descriptor</li>
+<li>my_addr: socket address (usually of sockaddr_in type)</li>
+<li>addrlen: address structure length</li>
+<li>Return value: 0 for success, -1 in case of error</li>
+</ul>
+
+
+<pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
+
+struct sockaddr {
+u_short sa_family; /* family */
+char sa_data[14]; /* address data */
+};
+
+struct sockaddr_in { /* a TCP endpoint */
+u_int16_t sin_family; /* address family: AF_INET */
+u_int16_t sin_port; /* port in network byte order */
+struct in_addr sin_addr; /* internet address */
+};
+
+struct in_addr {
+u_int32_t s_addr; /* address in network byte order */
+};
+
+</pre>
+
+
+<ul>
+<li>sin_port
+
+<ul>
+<li>16 bits</li>
+<li>0-1024 reserved for system</li>
+<li>well-known ports are important</li>
+<li>If you specify 0, the OS picks a port</li>
+</ul></li>
+<li>s_addr
+
+<ul>
+<li>32 bits</li>
+<li>INADDR_ANY for any local interface address</li>
+</ul></li>
+</ul>
+
+<h4><a name="sec11" id="sec11"></a>Network Byte Order</h4>
+
+<ul>
+<li>unsigned long int htonl(unsigned long int hostlong);</li>
+<li>unsigned short int htons(unsigned short int hostshort);</li>
+<li>unsigned long int ntohl(unsigned long int networklong);</li>
+<li>unsigned short int ntohs(unsigned short int networkshort);</li>
+</ul>
+
+
+
+<h3><a name="sec12" id="sec12"></a>int listen(int s, int backlog)</h3>
+
+<p class="first">If a socket is used to receive TCP connections, it is necessary to bind it to an address and to specify that the socket is passive.</p>
+
+<ul>
+<li>s: socket descriptor</li>
+<li>backlog: maximum length of the queue of pending connections (used to be the number of open/half-open connections, now only the open ones that are ready to
+be accepted are counted)</li>
+<li>Return value: 0 in case of success, -1 in case of error</li>
+</ul>
+
+
+<h3><a name="sec13" id="sec13"></a>int accept(int s, struct sockaddr* addr, socklen_t* addrlen)</h3>
+
+<p class="first">A call to accept() blocks the caller until a request is sent.</p>
+
+<ul>
+<li>s: socket descriptor</li>
+<li>addr: structure that will be filled with the parameters of the client (maybe NULL)</li>
+<li>addrlen: length of the structure in input, it is filled with the actual size of the data returned</li>
+<li>Return value: a new socket file descriptor in case of success, -1 in case of errors</li>
+</ul>
+
+
+
+<h3><a name="sec14" id="sec14"></a>int connect(int sockfd, const struct sockaddr* serv_addr, socklen_t addrlen)</h3>
+
+<ul>
+<li>sockfd: socket descriptor</li>
+<li>serv_addr: destination address</li>
+<li>addrlen: size of the structure</li>
+<li>Return value: 0 in case of success, -1 in case of errors</li>
+</ul>
+
+<h4><a name="sec15" id="sec15"></a>Connecting with TCP/UDP</h4>
+
+<ul>
+<li>TCP
+
+<ul>
+<li>connect() starts the three-way handshake</li>
+</ul></li>
+<li>UDP
+
+<ul>
+<li>Nothing really happens, but the socket can only be used to send/receive datagrams to/from the specified address</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec16" id="sec16"></a>Read / Write to a Socket</h3>
+
+<p class="first">return value: -1 if an error occurs.</p>
+
+<ul>
+<li>for connected-oriented
+
+<ul>
+<li>ssize_t read(int sockfd, void *buf, size_t count);</li>
+<li>ssize_t write(int sockfd, const void *buf, size_t count);</li>
+</ul></li>
+
+<li>Socket specific system call
+
+<ul>
+<li>int send(int sd, const void *msg, size_t len, int flags);</li>
+<li>int sendto(int sd, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen);</li>
+<li>int sendmsg(int sd, const struct msghdr *msg, int flags)</li>
+<li>recv()/recvfrom()/recvmsg()</li>
+</ul></li>
+</ul>
+
+
+<pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
+struct msghdr {
+void *msg_name; // peer address
+socklen_t msg_namelen; // address length
+struct iovec *msg_iov; // io vector
+size_t msg_iovlen; // io vector length
+void *msg_control;
+socklen_t msg_controllen;
+int msg_flags;
+};
+
+struct iovec {
+void *iov_base;
+size_t iov_len;
+};
+
+</pre>
+
+
+
+<pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
+
+struct iovec {
+void *iov_base;
+size_t iov_len;
+};
+
+</pre>
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: December 25, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+
+</div>
+	<script type="text/javascript">
+	     SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
+
