@@ -101,6 +101,49 @@
 <dt class="contents">
 <a href="#sec16">Read / Write to a Socket</a>
 </dt>
+<dt class="contents">
+<a href="#sec17">int close(int fd)</a>
+</dt>
+<dt class="contents">
+<a href="#sec18">int shutdown(int s, int how)</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">Closing Semantics</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">Data Exchange in TCP/UDP</a>
+</dt>
+<dt class="contents">
+<a href="#sec21">Address from and to String Formats</a>
+</dt>
+<dt class="contents">
+<a href="#sec22">DNS Service</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec23">Asynchronous Network Programming</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec24">Method 1: Process and Thread</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">Method 2: Asynchronous I/O (Select)</a>
+</dt>
+<dt class="contents">
+<a href="#sec26">Method 3: Signal and Select</a>
+</dt>
+<dt class="contents">
+<a href="#sec27">Writing High Performance Servers: Major Issues</a>
+</dt>
+<dt class="contents">
+<a href="#sec28">Problems of Multi-Thread Server</a>
+</dt>
+<dt class="contents">
+<a href="#sec29">Problems of Event-Driven Server</a>
+</dt>
 </dl>
 </dd>
 </dl>
@@ -314,7 +357,8 @@ be accepted are counted)</li>
 
 <h3><a name="sec16" id="sec16"></a>Read / Write to a Socket</h3>
 
-<p class="first">return value: -1 if an error occurs.</p>
+<p class="first">return value: -1 if an error occurs and will block the process if there is no data to receive</p>
+
 
 <ul>
 <li>for connected-oriented
@@ -329,10 +373,13 @@ be accepted are counted)</li>
 <ul>
 <li>int send(int sd, const void *msg, size_t len, int flags);</li>
 <li>int sendto(int sd, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen);</li>
-<li>int sendmsg(int sd, const struct msghdr *msg, int flags)</li>
-<li>recv()/recvfrom()/recvmsg()</li>
+<li>int sendmsg(int sd, const struct msghdr *msg, int flags);</li>
+<li>int recv(int sd, void *buf, size_t len, int flags);</li>
+<li>int recvfrom(int sd, void *buf, size_t len, int flags, struct sockaddr *from, socklen_t fromlen);</li>
+<li>int recvmsg(int sd, struct msghdr *msg, int flags);</li>
 </ul></li>
 </ul>
+
 
 
 <pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
@@ -355,14 +402,192 @@ size_t iov_len;
 
 
 
+<h3><a name="sec17" id="sec17"></a>int close(int fd)</h3>
+
+<ul>
+<li>fd: socket descriptor</li>
+<li>Return value: 0 in case of success, -1 in case of errors</li>
+</ul>
+
+
+<h3><a name="sec18" id="sec18"></a>int shutdown(int s, int how)</h3>
+
+<p class="first">Can be used to close a socket partially</p>
+
+<ul>
+<li>s: connected socket</li>
+<li>how:
+
+<ul>
+<li>SHUT_RD, further receptions are disallowed</li>
+<li>SHUT_WR, further transmissions are disallowed</li>
+<li>SHUT_RDWR, further receptions and transmissions are disallowed</li>
+</ul></li>
+<li>Return value: 0 in case of success, -1 in case of errors</li>
+</ul>
+
+
+<h3><a name="sec19" id="sec19"></a>Closing Semantics</h3>
+
+<ul>
+<li>TCP
+
+<ul>
+<li>Close: FIN/ACK in both directions</li>
+<li>Shutdown: FIN/ACK in one direction</li>
+</ul></li>
+<li>UDP
+
+<ul>
+<li>Close: Don't send anything. Just deallocate structure</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec20" id="sec20"></a>Data Exchange in TCP/UDP</h3>
+
+<ul>
+<li>TCP
+
+<ul>
+<li>recv/read will return a chunk of data</li>
+<li>Not necessarily the data sent by means of a single send/write operation on the other side</li>
+</ul></li>
+<li>UDP
+
+<ul>
+<li>recv/read will always return a datagram</li>
+<li>If message size &gt; buffer, fills buffer, discards rest</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec21" id="sec21"></a>Address from and to String Formats</h3>
+
+<p class="first">presentation format to and from network format</p>
+
+<ul>
+<li>int inet_pton(int af, const char *src, void *dst);
+
+<ul>
+<li>return value: positive if successful</li>
+</ul></li>
+<li>const char *inet_ntop(int af, const void *src, char <em>dst, size_t cnt);
+
+<ul>
+<li>return value: NULL is error</li>
+</ul></li>
+</ul>
+
+</em>* <a name="sec22" id="sec22"></a>DNS Service
+
 <pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
 
-struct iovec {
-void *iov_base;
-size_t iov_len;
+struct hostent *gethostbyname(const char *name);
+
+struct hostent {
+char *h_name; // official name
+char **h_aliases; // a list of aliases
+int h_addrtype;
+int h_length;
+char **h_addr_list;
 };
 
 </pre>
+
+
+<ul>
+<li>return value: NULL if fails</li>
+</ul>
+
+
+
+<h2><a name="sec23" id="sec23"></a>Asynchronous Network Programming</h2>
+
+<h3><a name="sec24" id="sec24"></a>Method 1: Process and Thread</h3>
+
+<ul>
+<li>Process
+
+<ul>
+<li>fork()</li>
+<li>waitpid()</li>
+</ul></li>
+<li>Thread: light weight process
+
+<ul>
+<li>pthread_create()</li>
+<li>pthread_exit()</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec25" id="sec25"></a>Method 2: Asynchronous I/O (Select)</h3>
+
+<p class="first">select: deal with blocking system call</p>
+
+<ul>
+<li>int select(int n, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout)</li>
+<li>FD_CLR(int fd, fd_set *set);</li>
+<li>FD_ZERO(fd_set *set);</li>
+<li>FD_ISSET(int fd, fd_set *set);</li>
+<li>FD_SET(int fd, fd_set *set);</li>
+</ul>
+
+
+<h3><a name="sec26" id="sec26"></a>Method 3: Signal and Select</h3>
+
+<ul>
+<li>signal: events such as timeout</li>
+</ul>
+
+
+
+<h3><a name="sec27" id="sec27"></a>Writing High Performance Servers: Major Issues</h3>
+
+<ul>
+<li>Many socket/IO operations can cause a process to block, e.g.
+
+<ul>
+<li>accept: waiting for new connection;</li>
+<li>read a socket waiting for data or close;</li>
+<li>write a socket waiting for buffer space;</li>
+<li>I/O read/write for disk to finish</li>
+</ul></li>
+<li>Thus a crucial perspective of network server design is the concurrency design (non-blocking)
+
+<ul>
+<li>for high performance</li>
+<li>to avoid denial of service</li>
+</ul></li>
+<li>Concurrency is also important for clients!</li>
+</ul>
+
+
+<h3><a name="sec28" id="sec28"></a>Problems of Multi-Thread Server</h3>
+
+<ul>
+<li>High resource usage, context switch overhead, contended
+locks</li>
+<li>Too many threads → throughput meltdown, response time
+explosion</li>
+<li>In practice: bound total number of threads</li>
+</ul>
+
+
+<h3><a name="sec29" id="sec29"></a>Problems of Event-Driven Server</h3>
+
+<ul>
+<li>Difficult to engineer, modularize, and tune</li>
+<li>Little OS and tool support: &quot;roll your own&quot;</li>
+<li>No performance/failure isolation between FSMs</li>
+<li>FSM code can never block (but page faults,</li>
+<li>garbage collection may still force a block)
+
+<ul>
+<li>thus still need multiple threads</li>
+</ul></li>
+</ul>
 
 
 

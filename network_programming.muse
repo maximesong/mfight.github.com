@@ -122,7 +122,8 @@ A call to accept() blocks the caller until a request is sent.
   - Nothing really happens, but the socket can only be used to send/receive datagrams to/from the specified address
 
 ** Read / Write to a Socket
-return value: -1 if an error occurs.
+return value: -1 if an error occurs and will block the process if there is no data to receive
+
 
  - for connected-oriented
   - ssize_t read(int sockfd, void *buf, size_t count);
@@ -131,8 +132,11 @@ return value: -1 if an error occurs.
  - Socket specific system call
   - int send(int sd, const void *msg, size_t len, int flags);
   - int sendto(int sd, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen);
-  - int sendmsg(int sd, const struct msghdr *msg, int flags)
-  - recv()/recvfrom()/recvmsg()
+  - int sendmsg(int sd, const struct msghdr *msg, int flags);
+  - int recv(int sd, void *buf, size_t len, int flags);
+  - int recvfrom(int sd, void *buf, size_t len, int flags, struct sockaddr *from, socklen_t fromlen);
+  - int recvmsg(int sd, struct msghdr *msg, int flags);
+
 
 <literal>
 <pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
@@ -154,13 +158,107 @@ size_t iov_len;
 </pre>
 </literal>
 
+** int close(int fd)
+ - fd: socket descriptor
+ - Return value: 0 in case of success, -1 in case of errors
+
+** int shutdown(int s, int how)
+Can be used to close a socket partially
+ - s: connected socket
+ - how:
+  - SHUT_RD, further receptions are disallowed
+  - SHUT_WR, further transmissions are disallowed
+  - SHUT_RDWR, further receptions and transmissions are disallowed
+ - Return value: 0 in case of success, -1 in case of errors
+
+** Closing Semantics
+ - TCP
+  - Close: FIN/ACK in both directions
+  - Shutdown: FIN/ACK in one direction
+ - UDP
+  - Close: Don't send anything. Just deallocate structure
+
+** Data Exchange in TCP/UDP
+ - TCP
+  - recv/read will return a chunk of data
+  - Not necessarily the data sent by means of a single send/write operation on the other side
+ - UDP
+  - recv/read will always return a datagram
+  - If message size > buffer, fills buffer, discards rest
+
+** Address from and to String Formats
+presentation format to and from network format
+ - int inet_pton(int af, const char *src, void *dst);
+  - return value: positive if successful
+ - const char *inet_ntop(int af, const void *src, char *dst, size_t cnt);
+  - return value: NULL is error
+
+** DNS Service
 <literal>
 <pre class="brush:cpp; gutter:true; toolbar:false; ruler:false;">
 
-struct iovec {
-void *iov_base;
-size_t iov_len;
+struct hostent *gethostbyname(const char *name);
+
+struct hostent {
+char *h_name; // official name
+char **h_aliases; // a list of aliases
+int h_addrtype;
+int h_length;
+char **h_addr_list;
 };
 
 </pre>
 </literal>
+
+ - return value: NULL if fails
+
+* Asynchronous Network Programming
+** Method 1: Process and Thread
+ - Process
+  - fork()
+  - waitpid()
+ - Thread: light weight process
+  - pthread_create()
+  - pthread_exit()
+
+** Method 2: Asynchronous I/O (Select)
+select: deal with blocking system call
+ - int select(int n, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout)
+ - FD_CLR(int fd, fd_set *set);
+ - FD_ZERO(fd_set *set);
+ - FD_ISSET(int fd, fd_set *set);
+ - FD_SET(int fd, fd_set *set);
+
+** Method 3: Signal and Select
+ - signal: events such as timeout
+
+
+** Writing High Performance Servers: Major Issues
+ -  Many socket/IO operations can cause a process to block, e.g.
+  - accept: waiting for new connection;
+  - read a socket waiting for data or close;
+  - write a socket waiting for buffer space;
+  - I/O read/write for disk to finish
+ - Thus a crucial perspective of network server design is the concurrency design (non-blocking)
+  - for high performance
+  - to avoid denial of service
+ - Concurrency is also important for clients!
+
+** Problems of Multi-Thread Server
+ - High resource usage, context switch overhead, contended
+locks
+ - Too many threads → throughput meltdown, response time
+explosion
+ - In practice: bound total number of threads
+
+** Problems of Event-Driven Server
+ - Difficult to engineer, modularize, and tune
+ - Little OS and tool support: "roll your own"
+ - No performance/failure isolation between FSMs
+ - FSM code can never block (but page faults,
+ - garbage collection may still force a block)
+  - thus still need multiple threads
+
+
+
+
