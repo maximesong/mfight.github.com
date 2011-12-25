@@ -69,5 +69,4 @@ All standards of the Internet are published as RFC (Request for Comments), But n
  - The Internet is roughly hierarchical where ISPs interconnect at PoP and NAP
 
 
-
-[[../distributed-network-resource-allocation.png]]
+[[distributed-network-resource-allocation.png]]

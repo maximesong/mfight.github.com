@@ -5,7 +5,31 @@
 Introducing an intermediate layer provides a common abstraction for various network technologies.
 ** definition
  - a technique to organize a networked system into a succession of logically distinct entities, such that the service provided by one entity is solely based on the service provided by the previous(lower entity).
-[[../layered_network.png]]
+[[layered_network.png]]
+
+ - Lower three layers are hop-by-hop
+ - Next two layers are end-to-end
+
+** Five layers
+*** Application
+supporting network Applications
+ - FTP, SMTP, HTTP, P2P, IP telephony
+
+*** Transport
+host-host data transfer
+ - TCP, UDP
+
+*** Network 
+routing of datagram from source to destination
+ - IP
+
+*** Link
+data transfer between neighboring network Elements
+ - Ethernet, 802.11, cable,DSL
+
+*** Physical
+bits "on the wire"
+ - Cable, optical fiber, wireless
 
 ** why
 *** Networks are complex

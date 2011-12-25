@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Network Applications:Overview, Email, Ftp</title>
+    <meta name="generator" content="muse.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
+  </head>
+  <body>
+    <h1>Network Applications:Overview, Email, Ftp</h1>
+<!-- menu start here -->
+     <div class="menu">
+        <div class="menuitem">
+          <a href=" ../index.html">Home</a>
+        </div>
+
+        <div class="menuitem">
+          <a href=" index.html">Computer</a>
+        </div>
+       </div>
+     <div class="menub">       
+	<div class="menuitemb">
+          <a href=" francais.html">Français</a>
+        </div>
+
+        <div class="menuitemb">
+          <a href=" word_list.html">Wordlist</a>
+        </div>
+      </div>
+    <!-- menu ends here -->
+    <!-- Page published by Emacs Muse begins here -->
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Secure Socket Layer: Services</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">Public-Key Algorithmsn</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec3">Properties</a>
+</dt>
+<dt class="contents">
+<a href="#sec4">Examples</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">Certification Authorities</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec6">Application layer overview</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec7">Killer Applications</a>
+</dt>
+<dt class="contents">
+<a href="#sec8">Conceptual + implementation aspects of network application protocols</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec9">Client server paradigm</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">Peer to peer paradigm</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec11">Common application-layer protocols</a>
+</dt>
+<dt class="contents">
+<a href="#sec12">What Transport Service Does an App Need?</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec13">Examples</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec14">Electronic Mail</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec15">Three major components</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">workflow</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">Mail Message Format</a>
+</dt>
+<dt class="contents">
+<a href="#sec18">POP3 Protocol: Mail Access</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">Positive</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">Negative</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec21">FTP: the File Transfer Protocol</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec22">Sample commands</a>
+</dt>
+<dt class="contents">
+<a href="#sec23">Sample return codes</a>
+</dt>
+<dt class="contents">
+<a href="#sec24">Active Mode</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">Passive Mode</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec26">HTTP: hypertex transfer protocol</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec27">Message flow</a>
+</dt>
+<dt class="contents">
+<a href="#sec28">HTTP Request Message: General Format</a>
+</dt>
+<dt class="contents">
+<a href="#sec29">Http Response Message</a>
+</dt>
+<dt class="contents">
+<a href="#sec30">HTTP/1.0 Delay</a>
+</dt>
+<dt class="contents">
+<a href="#sec31">Persistent HTTP</a>
+</dt>
+<dt class="contents">
+<a href="#sec32">Browser Cache and Conditional GET</a>
+</dt>
+<dt class="contents">
+<a href="#sec33">Keeping State: Cookies</a>
+</dt>
+<dt class="contents">
+<a href="#sec34">Authentication(401: authorization req.)</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec35">DNS: Domain Name System(port 53)</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec36">Translate Machine Names to IPs</a>
+</dt>
+<dt class="contents">
+<a href="#sec37">How it works</a>
+</dt>
+<dt class="contents">
+<a href="#sec38">Types of Queries</a>
+</dt>
+<dt class="contents">
+<a href="#sec39">DNS Records</a>
+</dt>
+<dt class="contents">
+<a href="#sec40">DNS Protocol, Messages</a>
+</dt>
+<dt class="contents">
+<a href="#sec41">Observing DNS</a>
+</dt>
+<dt class="contents">
+<a href="#sec42">What DNS did Right?</a>
+</dt>
+<dt class="contents">
+<a href="#sec43">Problems of DNS</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+
+<h2><a name="sec1" id="sec1"></a>Secure Socket Layer: Services</h2>
+
+<ul>
+<li>Server authentication
+
+<ul>
+<li>Authentication through trusted certificate authority(CA):server obtains a certificate from one of the trusted CAs</li>
+</ul></li>
+<li>Data encryption and integrity</li>
+<li>Client authentication(optional)</li>
+</ul>
+
+<h3><a name="sec2" id="sec2"></a>Public-Key Algorithmsn</h3>
+
+<ul>
+<li>Both public key and private key can be used to encode and decode</li>
+<li>One can generate public key from private key, but not in the other direction.
+<h4><a name="sec3" id="sec3"></a>Properties</h4></li>
+
+<li>D(E(P)) = P</li>
+<li>It is exceedingly difficult to deduce D from E</li>
+<li>E cannot be broken by a chosen plaintext attack</li>
+</ul>
+
+
+<h4><a name="sec4" id="sec4"></a>Examples</h4>
+
+<ul>
+<li>Knapsack</li>
+<li>RSA</li>
+<li>Elliptic curves</li>
+</ul>
+
+
+<h4><a name="sec5" id="sec5"></a>Certification Authorities</h4>
+
+<ul>
+<li>Certification authority(CA): binds public key to particular entity, E</li>
+<li>E(person, router) registers its public key with CA.
+
+<ul>
+<li>E provides &quot;proof of identity&quot; to CA</li>
+<li>CA creates certificate binding E to its public key.</li>
+<li>Certificate contains E's public key digitally signed by CA &mdash; CA says &quot;this is E's public key&quot;</li>
+</ul></li>
+<li>When Alice wants Bob's public key
+
+<ul>
+<li>Gets Bob's certificate</li>
+<li>Apply CA's public key to Bob's certificate, get Bob's public key.</li>
+</ul></li>
+</ul>
+
+<h5>A Certificate Contains</h5>
+
+<ul>
+<li>Serial number(unique to issuer)</li>
+<li>Info about certificate owner, including algorithm and key value itself</li>
+<li>Info about certificate issuer</li>
+<li>valid dates
+
+<ul>
+<li>digital signature by issuer</li>
+</ul></li>
+</ul>
+
+<p class="image"><img src="ssl_architecture.png" alt="" /></p>
+
+<p class="image"><img src="ssl_format.png" alt="" /></p>
+
+
+
+
+
+<h2><a name="sec6" id="sec6"></a>Application layer overview</h2>
+
+<h3><a name="sec7" id="sec7"></a>Killer Applications</h3>
+
+<ul>
+<li>70s and 80s
+
+<ul>
+<li>Text email, remote access, file transfers, newsgroups, text chat</li>
+</ul></li>
+<li>90s
+
+<ul>
+<li>WWW - surfing, search, e-commenrce</li>
+<li>At the end of millennium -IM, P2P file sharing</li>
+</ul></li>
+<li>New century</li>
+<li>Multimedia(YouTube, Flickr, Youku)</li>
+<li>Social networking(Facebook, Twitter, Weibo)</li>
+</ul>
+
+
+
+<h3><a name="sec8" id="sec8"></a>Conceptual + implementation aspects of network application protocols</h3>
+
+<h4><a name="sec9" id="sec9"></a>Client server paradigm</h4>
+
+<h5>Client</h5>
+
+<ul>
+<li>Initiates contact with server(&quot;speaks first&quot;)</li>
+<li>Typically reuests service from server</li>
+<li>For Web, client is implemented in browser; for email, in mail reader</li>
+</ul>
+
+
+<h5>Server</h5>
+
+<ul>
+<li>Provides reuested service to client, e.g. Web server sends requested Web page; mail server delivers e-mail.</li>
+</ul>
+
+
+<h5>Two questions to ask about a C-S application</h5>
+
+<p>- How does a client locate a server process?
+- Is the application scalable, extensible,robust?</p>
+
+
+
+<h4><a name="sec10" id="sec10"></a>Peer to peer paradigm</h4>
+
+
+
+<h3><a name="sec11" id="sec11"></a>Common application-layer protocols</h3>
+
+<ul>
+<li>SMTP/POP</li>
+<li>HTTP</li>
+<li>FTP</li>
+<li>DNS</li>
+<li>P2P</li>
+</ul>
+
+
+<h3><a name="sec12" id="sec12"></a>What Transport Service Does an App Need?</h3>
+
+<ul>
+<li>Data loss
+
+<ul>
+<li>Some apps can to tolerate some packet losses</li>
+<li>Other apps require 100% reliable data transfer</li>
+</ul></li>
+<li>Bandwidth
+
+<ul>
+<li>Some apps require minimum amount of bandwidth to be &quot;effective&quot;</li>
+<li>Other apps make use of whatever bandwidth they get</li>
+</ul></li>
+<li>Timing
+
+<ul>
+<li>Some apps require low delay to be &quot;effective&quot;</li>
+</ul></li>
+</ul>
+
+<p class="image"><img src="applications_transport_protocal.png" alt="" /></p>
+
+
+<p class="image"><img src="applications_transport_requirements.png" alt="" /></p>
+
+
+
+<h2><a name="sec13" id="sec13"></a>Examples</h2>
+
+<h3><a name="sec14" id="sec14"></a>Electronic Mail</h3>
+
+<h4><a name="sec15" id="sec15"></a>Three major components</h4>
+
+<ul>
+<li>User agents</li>
+<li>Mail servers</li>
+<li>Protocols
+
+<ul>
+<li>Between mail servers: STMP</li>
+<li>Between mail server and user agent
+
+<ul>
+<li>POP3:Post Office Protocol</li>
+<li>IMAP:Internet Mail Access Protocol</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec16" id="sec16"></a>workflow</h4>
+
+<ul>
+<li>HELO</li>
+<li>MAIL FROM</li>
+<li>RCPT TO</li>
+<li>DATA</li>
+<li>QUIT</li>
+</ul>
+
+
+<h4><a name="sec17" id="sec17"></a>Mail Message Format</h4>
+
+<p class="first">SMTP: protocol for exchanging email msgs</p>
+
+<p>RFC 822: standard for text message format</p>
+
+<ul>
+<li>Header line
+
+<ul>
+<li>To:</li>
+<li>From:</li>
+<li>Subject:</li>
+</ul></li>
+<li>Body
+
+<ul>
+<li>the &quot;message&quot;, ASCII characters only</li>
+</ul></li>
+</ul>
+
+<p>MIME: multimedia mail extention, RFC 2045, 2056</p>
+
+<ul>
+<li>Addictional lines in smg header declare MIMI content type</li>
+</ul>
+
+
+<h4><a name="sec18" id="sec18"></a>POP3 Protocol: Mail Access</h4>
+
+<h5>Authorization phase</h5>
+
+<ul>
+<li>Client commands:
+
+<ul>
+<li>user: declare username</li>
+<li>pass: password</li>
+</ul></li>
+<li>Server responses
+
+<ul>
+<li>+OK</li>
+<li>-ERR</li>
+</ul></li>
+</ul>
+
+
+<h5>Transaction phase</h5>
+
+<ul>
+<li>list: list message numbers</li>
+<li>retr: retrive message by number</li>
+<li>dele: delete</li>
+<li>quit</li>
+</ul>
+
+
+
+<h4><a name="sec19" id="sec19"></a>Positive</h4>
+
+<ul>
+<li>Separate protocols for different functions
+
+<ul>
+<li>Email retrieval(e.g. POP3, IMAP)</li>
+<li>Mail transmission(SMTP)</li>
+</ul></li>
+<li>Simple/basic request to implement basic control; fine-grain control through ASCII header and message body
+
+<ul>
+<li>Make the protocol easy to read/debug/extend(analogy with end-to-end layered design)</li>
+<li>Status code in response makes message easy to parse</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec20" id="sec20"></a>Negative</h4>
+
+<ul>
+<li>Some design features which are missing
+
+<ul>
+<li>Handling spam</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec21" id="sec21"></a>FTP: the File Transfer Protocol</h3>
+
+<p class="first">Transfer files to/from remote host
+FTP: RFC 959, server port 21(smtp 25, http 80)</p>
+
+<ul>
+<li>Two Parallel TCP connections opened
+
+<ul>
+<li>Control: exchange commands, responses between client, server
+
+<ul>
+<li>out of band control</li>
+<li>port 21 at server</li>
+</ul></li>
+<li>Data: file data to/from server
+
+<ul>
+<li>port 20 at server</li>
+</ul></li>
+</ul></li>
+<li>FTP server maintains &quot;state&quot;, e.g.
+
+<ul>
+<li>Current directory</li>
+<li>Earlier authentication</li>
+</ul></li>
+</ul>
+
+<h4><a name="sec22" id="sec22"></a>Sample commands</h4>
+
+<ul>
+<li>sent as ASCII text over control</li>
+<li>USER: username</li>
+<li>PASS: password</li>
+<li>PORT h1,h2,h3,h4,p1,p2: specifies the IP address and port the client receives its data</li>
+<li>LIST: return list of file in current</li>
+<li>RETR filename: retrieves(get) file</li>
+<li>STOR filename: stores file</li>
+</ul>
+
+
+<h4><a name="sec23" id="sec23"></a>Sample return codes</h4>
+
+<ul>
+<li>331 Username OK, password required</li>
+<li>125 data connection already open; transfer</li>
+<li>425 Can’t open data connection</li>
+<li>452 Error writing file</li>
+</ul>
+
+
+<h4><a name="sec24" id="sec24"></a>Active Mode</h4>
+
+<ul>
+<li>Server initiates data connection to the client's port</li>
+</ul>
+
+<p class="image"><img src="ftp_active_mode.png" alt="" /></p>
+
+
+<h4><a name="sec25" id="sec25"></a>Passive Mode</h4>
+
+<ul>
+<li>Server acks with a port number</li>
+<li>Client connects to server's data port</li>
+</ul>
+
+<p class="image"><img src="ftp_passive_mode.png" alt="" /></p>
+
+
+
+<h3><a name="sec26" id="sec26"></a>HTTP: hypertex transfer protocol</h3>
+
+<p class="first">Web's application layer protocol</p>
+
+<ul>
+<li>HTTP uses TCP as transport service</li>
+<li>Client/server model
+
+<ul>
+<li>Client: browser that requests, receives, &quot;display&quot; Web objects</li>
+<li>Server: Web server sends objects in response to requests</li>
+</ul></li>
+<li>Http 1.0: RFC 1945, HTTP 1.1: RFC 2068</li>
+</ul>
+
+<h4><a name="sec27" id="sec27"></a>Message flow</h4>
+
+<ul>
+<li>Web server waiting for TCP connection at port 80(default)</li>
+<li>Client initiates TCP connection(creates socket) to server, port 80</li>
+<li>Server &quot;accepts&quot; connection, ack client and waits for request from clients</li>
+<li>Client sends request message(containing URL) into TCP connection socket for a document</li>
+<li>Web server receives request message, forms response message containing the document, and sends message into socket(slow-start).</li>
+<li>Web server closes TCP connection closed</li>
+<li>Client parses the document to find embedded objects(images)
+
+<ul>
+<li>Repeat above for each image</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec28" id="sec28"></a>HTTP Request Message: General Format</h4>
+
+<p class="image"><img src="http_request_format.png" alt="" /></p>
+
+<p class="image"><img src="http_request_message.png" alt="" /></p>
+
+
+<h4><a name="sec29" id="sec29"></a>Http Response Message</h4>
+
+<p class="image"><img src="http_response_message.png" alt="" /></p>
+
+<h5>Status Codes</h5>
+
+<p>In the first line of the response message.</p>
+
+<ul>
+<li>200 OK
+
+<ul>
+<li>request succeeded, requested object later in this message</li>
+</ul></li>
+<li>301 Moved Permanently
+
+<ul>
+<li>requested object moved, new location specified later in this message(Location:)</li>
+</ul></li>
+<li>400 Bad Request
+
+<ul>
+<li>request message not understood by server</li>
+</ul></li>
+<li>404 Not Found
+
+<ul>
+<li>requested document not found on this server</li>
+</ul></li>
+<li>505 HTTP Version Not Supported</li>
+</ul>
+
+
+
+<h4><a name="sec30" id="sec30"></a>HTTP/1.0 Delay</h4>
+
+<ul>
+<li>For each object
+
+<ul>
+<li>TCP handshake &mdash; 1 RTT</li>
+<li>Client request and server responds &mdash; at least 1 RTT</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec31" id="sec31"></a>Persistent HTTP</h4>
+
+<ul>
+<li>Default to HTTP/1.1</li>
+<li>On same TCP connection: server parse request, responds, parse new request, ...</li>
+<li>Client sends requests for all referenced objects as soon as it receives base HTML</li>
+<li>Fewer RTTs</li>
+</ul>
+
+
+<h4><a name="sec32" id="sec32"></a>Browser Cache and Conditional GET</h4>
+
+<p class="first">Goals: don't send object if client has up-to-date stored(cached) version</p>
+
+<ul>
+<li>client: specify date of cached copy in http request
+
+<ul>
+<li>If-modified-since:&lt;date&gt;</li>
+</ul></li>
+<li>server: response contains no object if cached copy up-to-date
+
+<ul>
+<li>HTTP/1.0 304 Not Modified</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec33" id="sec33"></a>Keeping State: Cookies</h4>
+
+<p class="first">Goal: no explicit application level session</p>
+
+<ul>
+<li>Server sends &quot;cookie&quot; to client in response msg
+
+<ul>
+<li>Set-cookie: 1678353</li>
+</ul></li>
+<li>Client presents cookie in later requests
+
+<ul>
+<li>Cookie: 1678453</li>
+</ul></li>
+<li>Server matches presented-cookie with server-stored info
+
+<ul>
+<li>Authentication</li>
+<li>Remebering user preferences, previous choices</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec34" id="sec34"></a>Authentication(401: authorization req.)</h4>
+
+<p class="first">Goal: control access to server documents</p>
+
+<ul>
+<li>Stateless:client must present authorization in each request</li>
+<li>Authorization: typically name, password
+
+<ul>
+<li>Authorization: header line in request</li>
+<li>If no authorization presented, server refuses access, sends WWW-authenticate: header line in response</li>
+</ul></li>
+<li>Browser caches name &amp; password so that user does not have to repeatedly enter it.</li>
+</ul>
+
+
+
+
+<h3><a name="sec35" id="sec35"></a>DNS: Domain Name System(port 53)</h3>
+
+<ul>
+<li>gethostbyname()</li>
+</ul>
+
+<h4><a name="sec36" id="sec36"></a>Translate Machine Names to IPs</h4>
+
+<ul>
+<li>etc/hosts
+
+<ul>
+<li>OK for small networks</li>
+<li>Not scalable, up-to-date</li>
+<li>Conflicts</li>
+</ul></li>
+<li>DNS
+
+<ul>
+<li>Solve the above problems</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec37" id="sec37"></a>How it works</h4>
+
+<ul>
+<li>A distributed database managed by authoritative name servers
+
+<ul>
+<li>Each zone has its own authoritative name servers</li>
+<li>An authoritative name server of a zone may delegate a subset (i.e. a sub-tree) of its zone to another name server</li>
+</ul></li>
+<li>The root zone is managed by the root name servers
+
+<ul>
+<li>13 root name servers worldwide</li>
+</ul></li>
+<li>Each name server knows the address of the root servers</li>
+<li>Each name server knows the address of its immediate children</li>
+</ul>
+
+
+<h4><a name="sec38" id="sec38"></a>Types of Queries</h4>
+
+<ul>
+<li>Recursive query
+
+<ul>
+<li>Put burden of name resolution on contacted names server, the contacted name server resolves the name completely</li>
+</ul></li>
+<li>Iterated query
+
+<ul>
+<li>Contacted server relies with name of server to contact</li>
+</ul></li>
+<li>The hybrid case</li>
+</ul>
+
+
+<h4><a name="sec39" id="sec39"></a>DNS Records</h4>
+
+<p class="first">DNS distributed db storing resource recors(RR)</p>
+
+<ul>
+<li>RR format: (name, type, value, ttl)</li>
+<li>Type = A
+
+<ul>
+<li>name is hostname</li>
+<li>value is IP address</li>
+</ul></li>
+<li>Type = NS
+
+<ul>
+<li>name is domain(e.g. yale.edu)</li>
+<li>value is the name of the authoritative name server for this domain</li>
+</ul></li>
+<li>Type = CNAME
+
+<ul>
+<li>name is an alias name for some &quot;canonical&quot;(the real) name</li>
+<li>value is canonical name</li>
+</ul></li>
+<li>Type = MX
+
+<ul>
+<li>value is hostname of mail server associated with name</li>
+</ul></li>
+<li>Type = SRV
+
+<ul>
+<li>general extension</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec40" id="sec40"></a>DNS Protocol, Messages</h4>
+
+<p class="first">Over UDP/TCP; query and reply messages,both with the same message format.</p>
+
+<p class="image"><img src="dns_message_format.png" alt="" /></p>
+
+<ul>
+<li>identification: 16 bit # for query, the reply to a query uses the same #</li>
+<li>flags:</li>
+<li>Query or reply</li>
+<li>Recursion desired</li>
+<li>Recursion available</li>
+<li>Reply is authoritative</li>
+</ul>
+
+
+<h4><a name="sec41" id="sec41"></a>Observing DNS</h4>
+
+<p class="first">dig +trace www.cnn.com</p>
+
+
+<h4><a name="sec42" id="sec42"></a>What DNS did Right?</h4>
+
+<ul>
+<li>Hierachical delegation avoids central control, improve manageability and scalability</li>
+<li>Redundant servers improve robustness</li>
+<li>Caching reduces workload and improve robustness</li>
+</ul>
+
+
+<h4><a name="sec43" id="sec43"></a>Problems of DNS</h4>
+
+<ul>
+<li>Domain names may not be the best way to name other resources, e.g. files</li>
+<li>Relatively static resource types make it hard to introduce new services or handle mobility</li>
+<li>Although theoretically you can update the values of the records, it is rarely enabled</li>
+<li>Simple query model make it hard to implement advanced query</li>
+<li>Early binding (separation of DNS query from application query) does not work well in mobile, dynamic environments</li>
+<li>e.g. load balancing, locate the nearest printer</li>
+</ul>
+
+
+
+
+<!-- Emacs Muse Footer -->
+
+<div id="footer" align="center">
+	<hr>
+    Last Updated: December 25, 2011  
+<span>  &nbsp &nbsp;    </span>       
+   <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
+	<span>  &nbsp &nbsp;    </span>    
+  <script language="javascript" type="text/javascript" src="http://js.users.51.la/5290848.js"></script>
+<noscript><a href="http://www.51.la/?5290848" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/5290848.asp" style="border:none" /></a></noscript>
+
+</div>
+      
+</body>
+</html>
+

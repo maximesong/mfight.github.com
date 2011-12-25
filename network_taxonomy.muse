@@ -2,7 +2,7 @@
 <contents>
 
 * Overview
-[[../network_texonomy.png]]
+[[network_taxonomy.png]]
 
 * Broadcast Networks
 definition ::
@@ -30,13 +30,13 @@ feature ::
 
  - an end-to-end connection reserves one "circuit" at each link
 
-[[../circuit_switch_link.png]]
+[[circuit_switch_link.png]]
 
 multiplexing for sharing resources ::
 
  - TDM(Time-Division Multiplexing)
 
-[[../time_division_multiplexing.png]]
+[[time_division_multiplexing.png]]
  - FDM(Frequency-Division Multiplexing)
  - Others,e.g., CDM(Code-Division Multiplexing), color/lambda division
 
@@ -46,9 +46,9 @@ multiplexing for sharing resources ::
 3. circuit termination
 
 *** circuit switch delay
-[[../circuit_switch_delay.png]]
+[[circuit_switch_delay.png]]
 
-[[../circuit_switch_data_delay.png]]
+[[circuit_switch_data_delay.png]]
 
 **** propagation delay
 delay for the first bit to go from a source to a destination
@@ -89,15 +89,15 @@ feature ::
 
  - Each end-to-end data *flow* (ie., a sender-receiver pair) divided into *packets*.
 *** packet structure
-[[../packet_switch_structure.png]]
+[[packet_switch_structure.png]]
   - header and trailer carry control information(eg., destination address, check sum)
 
  - At each node the entire packet is received, processed(e.g.,routing), stored briefly, and then forwarded to the next node; thus packet-switched networks are also callled *store-and-forward networks*.
 
-[[../packet_switching.png]]
+[[packet_switching.png]]
 
 *** packet switching router
-[[../packet_switching_router.png]]
+[[packet_switching_router.png]]
 
 *** resources
  - resources used as needed
@@ -158,7 +158,7 @@ $ \frac{L}{R} $
 Queueing + transmission:
 $ \frac{L}{R} \frac{1}{1-\rho} $
 
-[[../queue_delay.svg]]
+[[queue_delay.svg]]
 
  - ρ ~ 0 : average queueing delay small
  - ρ -> 1 : delay becomes large
@@ -190,7 +190,7 @@ $ \frac{L}{R} \frac{1}{1-\rho} $
   - e.g. IP networks
  - analogy:postal mail system 
 *** time delay
-[[../datagram_delay.png]]
+[[datagram_delay.png]]
 
 ** Virtual circuit network
  - all packets from one flow are sent along a pre-established path(= virtual circuit)
@@ -205,7 +205,7 @@ $ \frac{L}{R} \frac{1}{1-\rho} $
  - VC disconnect
 
 **** time delay
-[[../vc_delay.png]]
+[[vc_delay.png]]
 
 ** Packet Switching vs. Circuit Switching
 *** Advantages

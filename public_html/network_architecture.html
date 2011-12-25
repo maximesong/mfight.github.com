@@ -44,91 +44,113 @@
 <a href="#sec2">definition</a>
 </dt>
 <dt class="contents">
-<a href="#sec3">why</a>
+<a href="#sec3">Five layers</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec4">Networks are complex</a>
+<a href="#sec4">Application</a>
 </dt>
 <dt class="contents">
-<a href="#sec5">Effect</a>
+<a href="#sec5">Transport</a>
 </dt>
 <dt class="contents">
-<a href="#sec6">Example</a>
+<a href="#sec6">Network</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">Link</a>
+</dt>
+<dt class="contents">
+<a href="#sec8">Physical</a>
 </dt>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec7">concepts</a>
-</dt>
-<dt class="contents">
-<a href="#sec8">Protocol Layering and Data</a>
-</dt>
-<dt class="contents">
-<a href="#sec9">Key design issue: how do you divide functionalities among the layers?</a>
+<a href="#sec9">why</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec10">The End-to-End Arguments</a>
+<a href="#sec10">Networks are complex</a>
 </dt>
 <dt class="contents">
-<a href="#sec11">Reasons for Implmenting Reliability at Higher Layer</a>
+<a href="#sec11">Effect</a>
 </dt>
 <dt class="contents">
-<a href="#sec12">Reasons for implementing reliablility at lower layer</a>
+<a href="#sec12">Example</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec13">concepts</a>
 </dt>
 <dt class="contents">
-<a href="#sec13">Summary</a>
+<a href="#sec14">Protocol Layering and Data</a>
 </dt>
 <dt class="contents">
-<a href="#sec14">Challenges</a>
+<a href="#sec15">Key design issue: how do you divide functionalities among the layers?</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec16">The End-to-End Arguments</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">Reasons for Implmenting Reliability at Higher Layer</a>
+</dt>
+<dt class="contents">
+<a href="#sec18">Reasons for implementing reliablility at lower layer</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">Summary</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">Challenges</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec15">The Design Philosophy of the DARPA Internet</a>
+<a href="#sec21">The Design Philosophy of the DARPA Internet</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec16">Questions</a>
+<a href="#sec22">Questions</a>
 </dt>
 <dt class="contents">
-<a href="#sec17">Goals</a>
+<a href="#sec23">Goals</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec18">Connect different networks</a>
+<a href="#sec24">Connect different networks</a>
 </dt>
 <dt class="contents">
-<a href="#sec19">Survivability in the face of failure</a>
+<a href="#sec25">Survivability in the face of failure</a>
 </dt>
 <dt class="contents">
-<a href="#sec20">Support multiple types of services</a>
+<a href="#sec26">Support multiple types of services</a>
 </dt>
 <dt class="contents">
-<a href="#sec21">Support a variety of networks</a>
+<a href="#sec27">Support a variety of networks</a>
 </dt>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec22">Other goals</a>
+<a href="#sec28">Other goals</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec23">Be cost effective</a>
+<a href="#sec29">Be cost effective</a>
 </dt>
 <dt class="contents">
-<a href="#sec24">Permit host attachment with a low level of effort</a>
+<a href="#sec30">Permit host attachment with a low level of effort</a>
 </dt>
 <dt class="contents">
-<a href="#sec25">Be accountable</a>
+<a href="#sec31">Be accountable</a>
 </dt>
 </dl>
 </dd>
@@ -145,13 +167,64 @@
 
 <ul>
 <li>a technique to organize a networked system into a succession of logically distinct entities, such that the service provided by one entity is solely based on the service provided by the previous(lower entity).
-<img src="../layered_network.png" alt="" /></li>
+<img src="layered_network.png" alt="" /></li>
+
+<li>Lower three layers are hop-by-hop</li>
+<li>Next two layers are end-to-end</li>
 </ul>
 
 
-<h3><a name="sec3" id="sec3"></a>why</h3>
+<h3><a name="sec3" id="sec3"></a>Five layers</h3>
 
-<h4><a name="sec4" id="sec4"></a>Networks are complex</h4>
+<h4><a name="sec4" id="sec4"></a>Application</h4>
+
+<p class="first">supporting network Applications</p>
+
+<ul>
+<li>FTP, SMTP, HTTP, P2P, IP telephony</li>
+</ul>
+
+
+<h4><a name="sec5" id="sec5"></a>Transport</h4>
+
+<p class="first">host-host data transfer</p>
+
+<ul>
+<li>TCP, UDP</li>
+</ul>
+
+
+<h4><a name="sec6" id="sec6"></a>Network</h4>
+
+<p class="first">routing of datagram from source to destination</p>
+
+<ul>
+<li>IP</li>
+</ul>
+
+
+<h4><a name="sec7" id="sec7"></a>Link</h4>
+
+<p class="first">data transfer between neighboring network Elements</p>
+
+<ul>
+<li>Ethernet, 802.11, cable,DSL</li>
+</ul>
+
+
+<h4><a name="sec8" id="sec8"></a>Physical</h4>
+
+<p class="first">bits &quot;on the wire&quot;</p>
+
+<ul>
+<li>Cable, optical fiber, wireless</li>
+</ul>
+
+
+
+<h3><a name="sec9" id="sec9"></a>why</h3>
+
+<h4><a name="sec10" id="sec10"></a>Networks are complex</h4>
 
 <ul>
 <li>Hardware
@@ -170,7 +243,7 @@
 </ul>
 
 
-<h4><a name="sec5" id="sec5"></a>Effect</h4>
+<h4><a name="sec11" id="sec11"></a>Effect</h4>
 
 <ul>
 <li>explicit structure allows identification of the relationship among complex system's pieces</li>
@@ -178,7 +251,7 @@
 </ul>
 
 
-<h4><a name="sec6" id="sec6"></a>Example</h4>
+<h4><a name="sec12" id="sec12"></a>Example</h4>
 
 <h5>application</h5>
 
@@ -212,7 +285,7 @@
 
 
 
-<h3><a name="sec7" id="sec7"></a>concepts</h3>
+<h3><a name="sec13" id="sec13"></a>concepts</h3>
 
 <dl>
 <dt><strong>ISO</strong></dt><dd>
@@ -233,7 +306,7 @@ says how the service is inplemented</dd>
 </ul>
 
 
-<h3><a name="sec8" id="sec8"></a>Protocol Layering and Data</h3>
+<h3><a name="sec14" id="sec14"></a>Protocol Layering and Data</h3>
 
 <p class="first">Each layer takes data from above</p>
 
@@ -243,9 +316,9 @@ says how the service is inplemented</dd>
 </ul>
 
 
-<h3><a name="sec9" id="sec9"></a>Key design issue: how do you divide functionalities among the layers?</h3>
+<h3><a name="sec15" id="sec15"></a>Key design issue: how do you divide functionalities among the layers?</h3>
 
-<h4><a name="sec10" id="sec10"></a>The End-to-End Arguments</h4>
+<h4><a name="sec16" id="sec16"></a>The End-to-End Arguments</h4>
 
 <p class="first">The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the endpoints of the communication systems. Therefore, providing that questioned function as a feature of the communications systems iteself is not possible. &mdash;-J.Saltzer, D.Reed, and D.Clark, 1984</p>
 
@@ -255,7 +328,7 @@ says how the service is inplemented</dd>
 </ul>
 
 
-<h4><a name="sec11" id="sec11"></a>Reasons for Implmenting Reliability at Higher Layer</h4>
+<h4><a name="sec17" id="sec17"></a>Reasons for Implmenting Reliability at Higher Layer</h4>
 
 <ul>
 <li>The lower layer cannot compeltely provide the functionality
@@ -273,7 +346,7 @@ says how the service is inplemented</dd>
 </ul>
 
 
-<h4><a name="sec12" id="sec12"></a>Reasons for implementing reliablility at lower layer</h4>
+<h4><a name="sec18" id="sec18"></a>Reasons for implementing reliablility at lower layer</h4>
 
 <ul>
 <li>Improve performance(e.g. if high cost/delay on a link local reliability)
@@ -286,7 +359,7 @@ says how the service is inplemented</dd>
 </ul>
 
 
-<h4><a name="sec13" id="sec13"></a>Summary</h4>
+<h4><a name="sec19" id="sec19"></a>Summary</h4>
 
 <ul>
 <li>If a higher layer can do it, don’t do it at a lower layer &mdash; the higher the layer, the more it knows about the best what it needs</li>
@@ -307,16 +380,16 @@ the function; one does not)</li>
 
 
 
-<h4><a name="sec14" id="sec14"></a>Challenges</h4>
+<h4><a name="sec20" id="sec20"></a>Challenges</h4>
 
 <p class="first">Performance VS 1. reuse, interoperability &amp;&amp; 2. implementation effort</p>
 
 
 
 
-<h2><a name="sec15" id="sec15"></a>The Design Philosophy of the DARPA Internet</h2>
+<h2><a name="sec21" id="sec21"></a>The Design Philosophy of the DARPA Internet</h2>
 
-<h3><a name="sec16" id="sec16"></a>Questions</h3>
+<h3><a name="sec22" id="sec22"></a>Questions</h3>
 
 <ul>
 <li>What does the goal mean?</li>
@@ -326,14 +399,14 @@ the function; one does not)</li>
 </ul>
 
 
-<h3><a name="sec17" id="sec17"></a>Goals</h3>
+<h3><a name="sec23" id="sec23"></a>Goals</h3>
 
-<h4><a name="sec18" id="sec18"></a>Connect different networks</h4>
+<h4><a name="sec24" id="sec24"></a>Connect different networks</h4>
 
 <p class="first">Most Important.</p>
 
 
-<h4><a name="sec19" id="sec19"></a>Survivability in the face of failure</h4>
+<h4><a name="sec25" id="sec25"></a>Survivability in the face of failure</h4>
 
 <ul>
 <li>Continue to operate even in the presence of network failures(e.g. link and router failures)</li>
@@ -346,7 +419,7 @@ the function; one does not)</li>
 </ul>
 
 
-<h4><a name="sec20" id="sec20"></a>Support multiple types of services</h4>
+<h4><a name="sec26" id="sec26"></a>Support multiple types of services</h4>
 
 <ul>
 <li>Add UDP to TCP to better support other types of applications
@@ -363,7 +436,7 @@ the function; one does not)</li>
 </ul>
 
 
-<h4><a name="sec21" id="sec21"></a>Support a variety of networks</h4>
+<h4><a name="sec27" id="sec27"></a>Support a variety of networks</h4>
 
 <ul>
 <li>Very successful
@@ -387,15 +460,15 @@ the function; one does not)</li>
 
 
 
-<h3><a name="sec22" id="sec22"></a>Other goals</h3>
+<h3><a name="sec28" id="sec28"></a>Other goals</h3>
 
-<h4><a name="sec23" id="sec23"></a>Be cost effective</h4>
-
-
-<h4><a name="sec24" id="sec24"></a>Permit host attachment with a low level of effort</h4>
+<h4><a name="sec29" id="sec29"></a>Be cost effective</h4>
 
 
-<h4><a name="sec25" id="sec25"></a>Be accountable</h4>
+<h4><a name="sec30" id="sec30"></a>Permit host attachment with a low level of effort</h4>
+
+
+<h4><a name="sec31" id="sec31"></a>Be accountable</h4>
 
 
 
@@ -404,7 +477,7 @@ the function; one does not)</li>
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: December 24, 2011  
+    Last Updated: December 25, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
