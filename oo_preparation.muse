@@ -1,0 +1,288 @@
+#title OO Preparation
+<contents>
+* OO Concepts
+** Why not Procedural Programming
+ - Transformation of concepts between (analysis/design) and implementation.
+ - Hard to reuse, extend, and maintain
+
+** Class
+A class is a description of a set of objects that share the same properties and behavior.
+
+** Abstraction
+ - Emphasizes relevant characteristics.
+ - Suppresses other characteristics.
+
+** Abstract class and operation
+ - In the UML, you specify them by writing its name in italics.
+
+** Object-Oriented Analysis
+ - emphasizes on identifying objects in the problem domain and the relationship between objects. (concepts, attributes, and associations)
+
+
+** Object-Oriented Design
+ - emphasize on defining software objects and how they collaborate to fulfill the requirements.
+
+** Four kinds of things in the UML:
+ - Structural things
+  - logic view
+   - class
+   - Interface
+   - collaboration 
+  - requirement view
+   - use case
+  - process view
+   - active class
+  - implementation view
+   - component
+   - artifact 
+   - node
+ - Behavioral things
+  - Among a set of objects
+   - interaction
+  - For an object
+   - state machine
+  - The sequence of steps
+   - activity
+ - Grouping things
+  - Package
+ - Annotational things
+  - Note
+
+** Diagram
+*** Class Diagram
+ - Classes, interfaces, collaborations
+ - Dependency, generalization, and association relationships
+***** Purpose
+ - Name and model concepts in the system
+ - Specify collaborations
+ - Specify logical database schemas
+
+[[class_diagram.png]]
+
+*** Object Diagram
+ - Shows a set of objects and their relationships.
+ - Represents static snapshots of instances of the things found in class diagrams.
+ - Addresses the static design view or static process view of a system as do class diagrams, but from the perspective of real or prototypical cases.
+
+[[object_diagram.png]]
+
+*** Package Diagram
+ - Shows the decomposition of the model itself into organization units and their dependencies
+
+[[package_diagram.png]]
+
+*** Component Diagram
+ - Shows an encapsulated class and its interfaces, ports, and internal structure consisting of nested components and connectors.
+
+[[component_diagram.png]]
+
+*** Composite Structure Diagram
+ - A diagram that shows the internal structure of a classifier, including its interaction points to other parts of the system.
+ - It shows the configuration and relationship of parts, that together, perform the behavior of the containing classifier.
+
+[[composite_structure_diagram.png]]
+
+*** Deployment Diagram
+ - Models the run-time architecture of a system
+ - A diagram that shows the configuration of run time processing nodes and the artifacts that live on them.
+
+[[deployment_diagram.png]]
+
+*** Interaction diagrams
+
+**** sequence diagram
+ - A sequence diagram emphasizes the time ordering of messages.
+
+[[sequence_diagram.png]]
+
+
+**** communication  diagram
+ - A collaboration / communication diagram emphasizes the organization of the objects that participate in an interaction.
+
+[[collaboration_diagram.png]]
+
+**** interaction overview diagram
+ - Focuses on the overview of the flow of control of the interactions.
+ - It is a variant of the Activity Diagram where the nodes are the interactions or interaction occurrences.
+
+[[interaction_overview_diagram.png]]
+
+**** Timing diagram
+ - Timing diagrams are used to display the change in state or value
+of one or more elements over time.
+ - It can also show the interaction between timed events and the time and duration constraints that govern them.
+
+[[timing_diagram.png]]
+
+*** State machine diagram
+ - Shows a state machine, consisting of states, transitions, events,
+and activities.
+ - State diagrams emphasize the event-ordered behavior of an
+object, which is especially useful in modeling reactive systems.
+
+[[state_machine_diagram.png]]
+
+*** Activity diagram
+ - An activity diagram is essentially a flow chart showing the flow from activity to activity within a system.
+
+[[activity_diagram.png]]
+
+**** nodes
+
+[[control_nodes.png]]
+
+**** partition
+
+[[activity_partition.png]]
+
+**** object flow
+
+[[object_flow.png]]
+
+**** datastore
+
+[[data_store.png]]
+
+**** Accept Event Action
+[[accept_event_action.png]]
+
+**** Send Signal Action
+[[send_signal_action.png]]
+
+**** Exception Handling
+[[exception_handling.png]]
+
+**** Expansion Region
+ - An expansion region is a structured activity region that executes multiple times corresponding to elements of an input collection.
+ - You can use the keywords «parallel», «iterative» or «stream» to indicate if the executions of the expansion region can occur concurrently (parallel), sequentially (iterative), or continuously (stream).
+
+[[expansion_region.png]]
+
+**** Interruptible Activity Region
+ - It is an activity group that supports termination of tokens flowing in the portions of an activity.
+
+[[interruptible_activity_region.png]]
+
+[[interruptible_activity_region_example.png]]
+
+
+*** Use case diagram
+ - Describes a system‘s functional requirements in terms of use
+cases
+ - A model of the system‘s intended functionality (use cases) and
+its environment (actors)
+
+[[use_case_diagram.png]]
+*** Extension mechanism of the UML
+ - Profiles
+ - Stereotype
+ - Tagged value
+ - Constraint
+
+[[extension_uml.png]]
+
+** Software Component
+ - A non-trivial, nearly independent, and replaceable part of a system that fulfills a clear function in the context of a well-defined architecture.
+ - A component conforms to and provides the physical realization of a set of interfaces.
+ - A physical, replaceable part of a system that packages implementation and conforms to and provides the realization of a set of interfaces.
+ - A component represents a physical piece of implementation of a system, including software code (source, binary or executable) or equivalents such as scripts or command files.
+
+** Patterns and Framework
+*** Pattern
+ - Provides a common solution to a common problem in a context
+
+*** Analysis/Design pattern
+ - Provides a solution to a narrowly-scoped technical problem
+ - Provides a fragment of a solution, or a piece of the Puzzle
+
+*** Framework
+ - Defines the general approach to solving the problem
+ - Provides a skeletal solution, whose details may be Analysis/Design patterns
+
+** Architecture
+Software architecture encompasses a set of significant decisions about the organization of a software system.
+ - Selection of the structural elements and their interfaces by which a
+system is composed
+ - Behavior as specified in collaborations among those elements
+ - Composition of these structural and behavioral elements into larger subsystems
+ - Architectural style that guides this organization
+
+*** Software architecture also involves
+ - Usage
+ - Functionality
+ - Performance
+ - Resilience
+ - Reuse
+ - Comprehensibility
+ - Economic and technology constraints and tradeoffs
+ - Aesthetic concerns
+
+* Requirement Analysis
+** What are Requirements 
+Requirements are capabilities and conditions to which the system (and more broadly, the project) must conform.
+
+** Purpose
+ - To provide system developers with a better understanding of the system
+requirements.
+ - To define the boundaries of (delimit) the system.
+ - To provide a basis for planning the technical contents of iterations.
+ - To provide a basis for estimating cost and time to develop the system.
+ - To define a user-interface for the system, focusing on the needs and goals of the users.
+
+** Use case
+*** Concepts
+ - An actor represents anything that interacts with the system.
+ - A use case is a sequence of actions a system performs that yields an observable result of value to a particular actor.
+ - A scenario is a specific sequence of actions and interactions between actors and the system; it is also called a use case instance.
+
+*** Fully Dressed Use Case
+ - Use Case Name: Start with a verb.
+ - Scope: The system under design.
+ - Level
+  - user-goal" or "sub-function”
+ - Primary Actor
+  - Calls on the system to deliver its services.
+ - Stakeholders and Interests
+  - Who cares about this use case, and what do they want?
+ - Preconditions
+  - What must be true on start, and worth telling the reader?
+ - Success Guarantee
+  - What must be true on successful completion, and worth telling the reader.
+ - Main Success Scenario
+  - A typical, unconditional happy path scenario of success.
+ - Extensions
+  - Alternate scenarios of success or failure.
+ - Special Requirements
+  - Related non-functional requirements.
+ - Technology and Data Variations List
+  - Varying I/O methods and data formats.
+ - Frequency of Occurrence
+  - Influences investigation, testing, and timing of implementation.
+ - Miscellaneous
+  - Such as open issues.
+
+*** Relationship
+**** include
+ - Use include when you are repeating yourself in two or more separate use cases and you want to avoid repetition
+
+**** extend
+ - the idea is to create an extending or addition use case, and within it, describe where and under what condition it extends the behavior of some base use case
+ - Extension points are labels in the base use case which the extending use case references as the point of extension
+  - The use of an extension point, and that the extending use case is triggered by some condition
+
+**** generalization
+ - A generalization from use case A to use case B indicates that A is a specialization of B.
+
+** Software Requirements Specification
+*** Supplementary Specification
+ - Functionality
+ - Usability
+ - Reliability
+ - Performance
+ - Supportability
+ - Security
+ - Availiability
+ - Design constraints
+
+
+*** Glossary

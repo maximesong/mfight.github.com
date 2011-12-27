@@ -46,8 +46,6 @@ multiplexing for sharing resources ::
 3. circuit termination
 
 *** circuit switch delay
-[[circuit_switch_delay.png]]
-
 [[circuit_switch_data_delay.png]]
 
 **** propagation delay
@@ -74,7 +72,7 @@ Then the transmission delay of using one reserved slot for a message of 1 kbits:
 1kbits / 14kbps = 70ms
 </example>
 
-[[../circuit_switch_example.png]]
+[[circuit_switch_example.png]]
 
 ** Packet switching
 definition ::
