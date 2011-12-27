@@ -20,7 +20,7 @@ A class is a description of a set of objects that share the same properties and 
 
 
 ** Object-Oriented Design
- - emphasize on defining software objects and how they collaborate to fulfill the requirements.
+ - emphasize on defining software objects and how they collaborate to fulfill the requirements.(classes, attributes, methods, and collaborations)
 
 ** Four kinds of things in the UML:
  - Structural things
@@ -147,17 +147,75 @@ system is composed
 
 [[component_diagram.png]]
 
+**** Component
+
+[[component.png]]
+
+**** Component Interface
+
+[[component_interface.png]]
+
+
+**** Port
+
+[[component_port.png]]
+
+**** Dependencies
+ - A usage dependency is relationship which one element requires another element for its full implementation
+
+[[component_dependency.png]]
+
+**** Part
+ - a unit of the implementation of a component
+
+[[component_part.png]]
+
+**** Connector
+ - Two kinds of Connectors: Assembly and Delegation
+ - Assembly Connector
+  - A connector between two components defines that one component provides the services that another component requires
+ - Delegation Connector
+  - Links the external contract of a component to the internal realization
+
+[[component_connector.png]]
+
+
 *** Composite Structure Diagram
  - A diagram that shows the internal structure of a classifier, including its interaction points to other parts of the system.
  - It shows the configuration and relationship of parts, that together, perform the behavior of the containing classifier.
 
 [[composite_structure_diagram.png]]
 
+**** Collaboration
+ - Role Binding
+  - A role binding connector is drawn from a collaboration to the classifier that fulfills the role.
+ - Represents
+  - A represents connector may be drawn from a collaboration to a classifier to show that a collaboration is used in the classifier
+ - Occurrence
+  - An occurrence connector may be drawn from a collaboration to a classifier to show that a collaboration represents the classifier
+
 *** Deployment Diagram
  - Models the run-time architecture of a system
  - A diagram that shows the configuration of run time processing nodes and the artifacts that live on them.
 
 [[deployment_diagram.png]]
+
+**** Purpose
+ - Specify the distribution of components
+ - Identify performance bottlenecks
+
+**** Node
+A node is a physical element that exists at run time and represents a computational resource, generally having at least some memory and, often, processing capability.
+
+**** Connection
+ - Communication mechanism
+  - Physical medium
+  - Software protocol
+
+**** Artifact
+ - A physical part of a system that exists at the level of the implementation
+platform.
+ - Graphically, an artifact is rendered as a rectangle with the keyword «artifact»
 
 *** Sequence Diagram
  - A sequence diagram emphasizes the time ordering of messages.
@@ -166,6 +224,7 @@ system is composed
 **** lifeline
  - A lifeline represents an individual participant in the Interaction.
  - Singleton is marked with a '1' in the upper right corner of the lifeline box
+
 [[lifeline.png]]
 
 [[singleton.png]]
@@ -226,6 +285,8 @@ system is composed
 
 [[collaboration_diagram.png]]
 
+**** Creation of Instances
+[[creation_of_instance.png]]
 
 **** Conditional message
 [[conditional_message.png]]
@@ -401,7 +462,390 @@ requirements.
  - If we do not think of some conceptual class X as a number or text in the real world, X is probably a conceptual class, not an attribute.
 
 
-** Central distinction between object-oriented and structured analysis
+*** Central distinction between object-oriented and structured analysis
   - Division by conceptual classes (objects) rather than division by functions.
+
+
+** Communication Diagrams vs. Sequence Diagrams
+ - Communication Diagrams
+  - Show relationships in addition to  interactions
+  - Better for visualizing patterns of collaboration
+  - Better for visualizing all of the effects on a given object 
+  - Easier to use for brainstorming sessions 
+ - Sequence Diagrams
+  - Show the explicit sequence of messages
+  - Better for visualizing overall flow
+  - Better for real-time specifications and for complex scenarios
+
+** System Sequence Diagram (SSD)
+  - A system sequence diagram (SSD) is a picture that shows, for a particular scenario of a use case, the events that external actors generate, their order, and inter-system events.
+  - All systems are treated as a black box; the emphasis of the diagram is events that cross the system boundary from actors to systems.
+
+[[ssd.png]]
+
+*** Collaborations
+[[ssd_collaborations.png]]
+*** Guideline
+ - Draw an SSD for a main success scenario of each use case, and frequent or complex alternative scenarios.
+ - System events should be expressed at the abstract level of intention rather than in terms of the physical input device.
+
+** Operation Constract
+ - Operation contracts use a pre-and post-condition form to describe detailed changes to objects in a domain model, as the result of a system operation.
+
+*** Format
+ - Operation
+ - Cross Reference
+ - Precondition
+  - The state of objects in the Domain Model after completion of the operation.
+ - Postcondition(the critical element of operation constract)
+  - Noteworthy assumptions about the state of the system or objects in the Domain Model before execution of the operation.
+
+*** How
+To describe the postconditions, use the following categories:
+ - instance creation and deletion
+ - attribute modification
+ - associations formed and broken
+
+** Analysis Class
+ - Analysis classes represent an early conceptual model for things in the system which have responsibilities and behavior‘.
+ - In an effort to isolate the parts of the system that will change, different types of analysis classes are identified with a "canned" set of responsibilities:
+  - boundary
+  - entity 
+  - control classes.
+
+*** Boundary Class
+ - Intermediates between the interface and something outside the system
+ - Several Types
+  - User interface classes
+  - System interface classes
+  - Device interface classes
+ - One boundary class per actor/use case pair
+
+[[boundary_class.png]]
+
+*** Entity Class
+ - Key abstractions of the system
+
+[[entity_class.png]]
+
+*** Control Class
+ - One control class per usecase
+
+[[control_class.png]]
+
+*** Distribute Use-Case Behavior to Classes
+For each use-case flow of events:
+ - Identify analysis classes
+ - Allocate use-case responsibilities to analysis classes
+ - Model analysis class interactions in Interaction diagrams
+
+** Architecture Analysis
+ - Architecture analysis is concerned with the identification and resolution of the system's non-functional (for example, quality) requirements, in the context of the functional requirements
+ - In the UP, the term encompasses both architectural investigation(identification) and architectural design(resolution)
+
+
+*** Purpose
+ - To define a candidate architecture for the system, based on experience gained from similar systems or in similar problem domains.
+ - To define the architectural patterns, key mechanisms and modeling conventions for the system.
+ - To define the reuse strategy
+ - To provide input to the planning process
+
+*** How
+ - Identify and analyze the non-functional requirements that have
+an impacton the architecture.
+  - Functional requirements are also relevant (especially in terms of variability or change), but the non-functional are given thorough attention.
+  - In general, all these may be called architectural factors(also known as the architectural drivers)
+ - For those requirements with a significant architectural impact, analyze alternatives and create solutions that resolve the impact.
+  - These are architectural decisions.
+
+* System Design
+** Principles
+*** SRP,Single Responsibility Principle(单一职责原则)
+ - A Class should have only one reason to change
+  - In the context of the SRP, we define a responsibility to be “a reason for change”
+
+**** Example
+  - Rectangle for geometric and graphics violates the principle
+
+*** LSP, Liskov Substitution Principle(里氏替换原则)
+ - subtypes must be substitutable for their base types
+
+**** Example
+ - penguim "is-a" bird may violates the principle
+
+*** DIP,Dependence Inversion Principle(依赖倒置原则)
+ - High-level modules should not depend on low-level modules.
+  - Both should depend on abstractions
+ - Abstraction should not depend on details
+  - Details should depend on abstractions
+
+**** Example
+ - Should NOT Button -> Lamp
+ - But Buton -> Interface, Lamp *realize* Interface
+
+*** ISP,The Interface Segregation Principle(接口隔离原则)
+ - Clients should not forced to depend on methods that they do not use
+
+**** Example
+ - Door should not necessarily depend on Timer Client
+
+*** OCP,Open-Closed Principle(开-闭原则)
+ - Modules should be both open (for extension; adaptable) and closed (the module is closed to modification in ways that affect clients).
+
+**** Example
+ - Should NOT Client -> Server
+ - But Client -> Interface, Server *realize* Interface
+
+** Package
+*** Principles of Package Design
+ - Granularity: The Principles of Package Cohesion
+  - REP: The Release-Reuse Equivalency Principle
+   - The granule of reuse is the granule of release
+  - CRP: The Common Reuse Principle
+   - The classes in a package are reused together.
+  - CCP: The Common Closure Principle
+   - The classes in a package should be closed together against the same kinds of changes.
+   - maintainability is more important
+
+
+ - Stability: The Principles of Package Coupling
+  - ADP: The Acyclic Dependencies Principle
+   - Allow no cycles in the package-dependency graph
+    - Factor out the types participating in the cycle into a new smaller package.
+    - Break the cycle with an interface.
+
+  - SDP: The Stable Dependencies Principle
+   - Depend in the direction of stabilit
+  - SAP: The Stable Abstractions Principle
+   - A package should be as abstract as it is stable
+
+
+** Software Architecture
+*** "4 + 1" View Model
+[[four_plus_one_view.png]]
+
+*** Patterns
+**** Layers
+ - Context
+  - A large system that requires decomposition.
+ - Problem
+  - A system which must handle issues at different levels of abstraction.
+ - Forces
+  - Parts of the system should be replaceable
+  - Changes in components should not ripple
+  - Similar responsibilities should be grouped together
+  - Size of components – complex components may have to be decomposed
+ - Solution
+  - Structure the systems into groups of components that form layers on top of each other.
+  - Make upper layers use services of the layers below only (never above).
+  - Try not to use services other than those of the layer directly below (don‘t skip layers unless intermediate layers would only add pass through components).
+
+***** Upward Collaboration with Observer
+ - When the lower Application or Domain layer needs to communicate upward with the Presentation layer, it is usually via the Observer pattern
+
+***** Terminology: Tiers, Layers, and Partitions
+
+ - The original notion of a tier in architecture was a logical layer, not a physical node, but the word has become widely used to mean a physical processing node (or cluster of nodes)
+  - such as the "client tier" (the client computer).
+ - The layers of an architecture are said to represent the vertical slices
+ - The partitions represent a horizontal division of relatively parallel subsystems of a layer.
+
+**** Model-view-controller (M-V-C)
+ - Context and forces
+  - We want to modularize the system
+  - ata representation must be kept up to date
+ - Problem
+  - how to modularize the system
+ - Solution
+  - the model holds the data (and does data modification), the view represents the data, the controller handles user input
+
+**** Blackboard
+ - Context
+  - A domain in which no closed (algorithmic) approach to solving a problem is known or feasible. Examples are AI systems, voice recognition, and surveillance systems.
+ - Problem
+  - Multiple problem-solving agents (knowledge agents) must cooperate to solve a problem that cannot be solved by any of the individual agents. The results of the work of the individual agents must be accessible to all the other agents so they can evaluate whether they can contribute to finding a solution and post results of their work.
+ - Forces
+  - Sequence in which knowledge agents can contribute to solving the problem is not deterministic and may depend on problem solving strategies. 
+  - Input from different agents (results or partial solutions) may have different representations.
+  - Agents do not know of each other's existence directly but can evaluate each other's posted contributions
+ - Solution
+ - A number of Knowledge Agents have access to a shared data store called the Blackboard.
+ - The blackboard provides an interface to inspect and update its content.
+ - The Control module/object activates the agents following some strategy.
+ - Upon activation an agent inspects that blackboard to see if it can contribute to solving the problem.
+ - If the agent determines that it can contribute, the control object can allow the agents to put its partial (or final) solution on the board.
+
+** Design Model
+
+
+
+*** Software Architecture Document
+The architectural decisions are recorded in the SAD(Software Architecture Document).
+ - This includes the technical memos and descriptions of the architectural views.
+
+**** Technical Memo
+ - All architectural methods recommend keeping a record of alternative solutions, decisions, influential factors, and motivations for the noteworthy issues and decisions.
+ - In the UP, the memos should be recorded in the SAD. 
+ - An important aspect of the technical memo is the motivation or rationale. 
+ - Explaining the rationale of rejecting the alternatives is important.
+
+**** Sample Structure
+ - Architectural Representation
+  - Summary of how the architecture will be described in this document, such as using by technical memos and the architectural views. This is useful for someone unfamiliar with the idea of technical memos or views. Note that not all views are necessary.
+ - Architectural Factors and Decisions
+  - Reference to the Supplementary Specification to view the Factor Table. Also, the set of technical memos the summarize the decisions.
+ - Logical View
+  - UML package diagrams, and class diagrams of major elements. Commentary on the large scale structure and functionality of major components.
+ - Process View
+  - UML class and interaction diagrams illustrating the processes and threads of the system. Group this by threads and processes that interact. Comment on how the interprocess communication works 
+ - Use-Case View
+  - Brief summary of the most architecturally significant use cases. UML interaction diagrams for some architectural significant use-case realizations, or scenarios, with commentary on the diagrams explaining how they illustrate the major architectural elements.
+ - Deployment View
+  - UML deployment diagrams showing the nodes and allocation of processes and components. Commentary on the networking.
+ - Data View
+  - Overview of the persistent data schema, the schema mapping from objects to persistent data (usually in a relational database), the mechanism of mapping from objects to a database, database stored procedures and triggers.
+  - A view onto the UP Data Model, visualized with UML class diagrams used to describe a data model.
+
+*** Design Elements
+ - classes
+  - to represent a set of rather fine-grained responsibilities;
+ - subsystems
+  - to represent a set of coarse-grained responsibilities, perhaps composed of a further set of subsystems, but ultimately a set of classes;
+ - active classes
+  - to represent threads of control in the system;
+ - interfaces
+  - to represent abstract declarations of responsibilities provided by a class or subsystem.
+ - events
+  - which are specifications of interesting occurrences in time and space that usually (if they are noteworthy) require some response from the system;
+ - signals
+  - to represent asynchronous mechanisms used to communicate certain types of events within the system.
+
+**** Packages vs. Subsystems
+ - Subsystems
+  - Provide behavior 
+  - Completely encapsulate their contents
+  - Are easily replaced
+ - Packages
+  - Don‘t provide behavior
+  - Don‘t completely encapsulate their contents
+  - May not be easily replaced
+
+**** Facade in subsystem
+ - For subsystems, the most common pattern of access is Facade, a GoF design pattern.
+  - a public facade object defines the services for the subsystem, and clients collaborate with the facade, not internal subsystem components
+
+** Subsystem Design
+ - Is a "cross between" a package and a class
+ - Realizes one or more interfaces which define its behavior
+
+*** Purpose
+ - To define the behaviors specified in the subsystem's interfaces in terms of collaborations of contained classes
+ - To document the internal structure of the subsystem
+ - To define realizations between the subsystem's interfaces and contained classes
+ - To determine the dependencies upon other subsystems
+
+*** Guideline
+ - Goals
+  - Loose coupling
+  - Portability, plug-and-play compatibility
+  - Insulation from change
+  - Independent 
+ - Strong Suggestions
+  - Don‘t expose details, only interfaces
+  - Only depend on other interfaces
+
+
+** Class Design
+*** Class stereotype
+ - Boundary
+ - Entity
+ - Control
+
+*** Operation Visibility
+ - *+* Public access
+ - *#* Protected access
+ - *-* Private access
+
+*** Scope
+ - Instance: one instance for each class instance
+ - Classifier: one instance for all class instances(underlined)
+
+
+*** Dependencies vs. Associations
+ - Associations are structural relationships
+ - Dependencies are non-structural relationships
+ - In order for objects to "know each other" they must be visible
+
+* From Design to Implementation
+** Deployment View
+ - The Deployment View is an “architecturally significant” slice of the Deployment Model.
+
+** Forward Engineering
+ - Forward engineering means the generation of code from UML diagrams
+
+** Reverse Engineering
+ - Reverse engineering means generation of UML diagrams from code
+
+** Round-Trip Engineering
+ - the tool supports generation in either direction and can synchronize between UML diagrams and code, ideally automatically and immediately as either is changed.
+
+** Test-Driven Development
+ - An excellent practice promoted by the iterative and agile XP method, and applicable to the UP, is test-driven development(TDD).
+ - In OO unit testing TDD-style, test code is written before the class to be tested and the developer writes unit testing code for nearly all production code.
+
+** Refactoring
+ - Refactoring is a structured, disciplined method to rewrite or restructure existing code without changing its external behavior
+ - Continuously refactoring code is another XP practice and applicable to all iterative methods
+
+* Design Pattern
+ - A design pattern is a solution to a common design problem.
+  - Describes a common design problem
+  - Describes the solution to the problem
+  - Discusses the results and trade-offs of applying the pattern
+ - Design patterns provide the capability to reuse successful designs.
+
+** Comparation
+*** Architectural Pattern
+ - An architectural pattern expresses a fundamental structural organization schema for software systems.
+  - Layers
+  - Model-view-controller (M-V-C)
+  - Pipes and filters
+  - Blackboard
+
+***  Analysis/Design pattern
+ - Provides a solution to a narrowly-scoped technical problem
+ - Provides a fragment of a solution, or a piece of the puzzle
+
+*** Framework
+ - Defines the general approach to solving the problem
+ - Provides a skeletal solution, whose details may be Analysis/Design patterns
+
+** Categories
+[[design_patterns_categories.png]]
+
+** Creational Patterns
+*** Abstract Factory
+**** Intent
+ - Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+**** Structure
+[[abstract_factory.png]]
+
+**** Applicability
+ - a system should be independent of how its products are created, composed, and represented.
+ - a system should be configured with one of multiple families of products.
+ - a family of related product objects is designed to be used together, and you need to enforce this constraint.
+ - you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
+
+**** Consequences
+ - It isolates concrete classes.
+ - It makes exchanging product families easy.
+ - It promotes consistency among products.
+ - Supporting new kinds of products is difficult.
+
+**** Related Patterns
+ - AbstractFactory classes are often implemented with factory methods (Factory Method(121)), but they can also be implemented using Prototype (133).
+ - A concrete factory is often a singleton (Singleton (144)).
+
 
 
