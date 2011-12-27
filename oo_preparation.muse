@@ -48,16 +48,87 @@ A class is a description of a set of objects that share the same properties and 
  - Annotational things
   - Note
 
-** Diagram
+
+** Software Component
+ - A non-trivial, nearly independent, and replaceable part of a system that fulfills a clear function in the context of a well-defined architecture.
+ - A component conforms to and provides the physical realization of a set of interfaces.
+ - A physical, replaceable part of a system that packages implementation and conforms to and provides the realization of a set of interfaces.
+ - A component represents a physical piece of implementation of a system, including software code (source, binary or executable) or equivalents such as scripts or command files.
+
+** Patterns and Framework
+*** Pattern
+ - Provides a common solution to a common problem in a context
+
+*** Analysis/Design pattern
+ - Provides a solution to a narrowly-scoped technical problem
+ - Provides a fragment of a solution, or a piece of the Puzzle
+
+*** Framework
+ - Defines the general approach to solving the problem
+ - Provides a skeletal solution, whose details may be Analysis/Design patterns
+
+** Architecture
+Software architecture encompasses a set of significant decisions about the organization of a software system.
+ - Selection of the structural elements and their interfaces by which a
+system is composed
+ - Behavior as specified in collaborations among those elements
+ - Composition of these structural and behavioral elements into larger subsystems
+ - Architectural style that guides this organization
+
+*** Software architecture also involves
+ - Usage
+ - Functionality
+ - Performance
+ - Resilience
+ - Reuse
+ - Comprehensibility
+ - Economic and technology constraints and tradeoffs
+ - Aesthetic concerns
+
+* Diagram
+** Overview
+ - Structural Diagrams
+  - Class Diagram
+  - Object Diagram
+  - Package Diagram
+  - Component Diagram
+  - Composite Structure Diagram
+  - Deployment Diagram
+ - Behavior Diagrams
+  - Interaction Diagrams
+   - Sequence Diagram
+   - Communication Diagram
+   - Interaction Overview Diagram
+   - Timing Diagram
+  - State Machine Diagram
+  - Activity Diagram
+  - Use Case Diagram
+ - Extension Mechanism of the UML
+
+
+** Diagrams
 *** Class Diagram
  - Classes, interfaces, collaborations
  - Dependency, generalization, and association relationships
-***** Purpose
+**** Purpose
  - Name and model concepts in the system
  - Specify collaborations
  - Specify logical database schemas
 
 [[class_diagram.png]]
+
+**** Association
+[[association.png]]
+
+**** Aggregation
+ - A special form of association that models a whole-part relationship between an aggregate (the whole) and its parts
+
+[[aggregation.png]]
+
+**** Composition
+ - A form of aggregation with strong ownership and coincident lifetimes
+
+[[composition.png]]
 
 *** Object Diagram
  - Shows a set of objects and their relationships.
@@ -88,26 +159,88 @@ A class is a description of a set of objects that share the same properties and 
 
 [[deployment_diagram.png]]
 
-*** Interaction diagrams
-
-**** sequence diagram
+*** Sequence Diagram
  - A sequence diagram emphasizes the time ordering of messages.
 
 [[sequence_diagram.png]]
+**** lifeline
+ - A lifeline represents an individual participant in the Interaction.
+ - Singleton is marked with a '1' in the upper right corner of the lifeline box
+[[lifeline.png]]
+
+[[singleton.png]]
+
+**** Messages
+ - Found messages
+  - messages with known receiver, but the sending of the message is not described within the specification.
+ - Lost messages
+  - messages with known sender, but the reception of the message does not happen.
+
+[[found_message.png]]  [[lost_message.png]]
+
+**** Return Value
+[[return_message.png]]
+
+**** Creation of instance
+[[creation_of_instance.png]]
+
+**** Object Destruction
+[[object_destruction.png]]
+
+**** Asynchronous and Synchronous Calls
+ - A stick arrow in UML implies an asynchronous call
+ - A filled arrow is the more common synchronous call
+
+[[asynchronous_and_synchronous_calls.png]]
+**** Combined Fragement
+ - alt
+  - if...then...else
+ - opt
+  - switch
+ - par
+  - concurrent processing
+ - loop
+  - repeated
+ - critical
+  - atomic
+
+[[alt_fragement.png]]
+
+[[fragements.png]]
 
 
-**** communication  diagram
+**** Interaction Occurrence
+[[interaction_occurence.png]]
+
+**** State Invariant
+ - A state invariant is a constraint placed on a lifeline that must be true at run-time.
+
+[[state_invariant.png]]
+
+**** Continuation
+
+[[continuation.png]]
+
+*** Communication  Diagram
  - A collaboration / communication diagram emphasizes the organization of the objects that participate in an interaction.
 
 [[collaboration_diagram.png]]
 
-**** interaction overview diagram
+
+**** Conditional message
+[[conditional_message.png]]
+
+**** Iteration or Loop
+[[iteration_message.png]]
+
+
+*** Interaction Overview Diagram
  - Focuses on the overview of the flow of control of the interactions.
  - It is a variant of the Activity Diagram where the nodes are the interactions or interaction occurrences.
 
 [[interaction_overview_diagram.png]]
 
-**** Timing diagram
+*** Timing diagram
  - Timing diagrams are used to display the change in state or value
 of one or more elements over time.
  - It can also show the interaction between timed events and the time and duration constraints that govern them.
@@ -181,41 +314,6 @@ its environment (actors)
 
 [[extension_uml.png]]
 
-** Software Component
- - A non-trivial, nearly independent, and replaceable part of a system that fulfills a clear function in the context of a well-defined architecture.
- - A component conforms to and provides the physical realization of a set of interfaces.
- - A physical, replaceable part of a system that packages implementation and conforms to and provides the realization of a set of interfaces.
- - A component represents a physical piece of implementation of a system, including software code (source, binary or executable) or equivalents such as scripts or command files.
-
-** Patterns and Framework
-*** Pattern
- - Provides a common solution to a common problem in a context
-
-*** Analysis/Design pattern
- - Provides a solution to a narrowly-scoped technical problem
- - Provides a fragment of a solution, or a piece of the Puzzle
-
-*** Framework
- - Defines the general approach to solving the problem
- - Provides a skeletal solution, whose details may be Analysis/Design patterns
-
-** Architecture
-Software architecture encompasses a set of significant decisions about the organization of a software system.
- - Selection of the structural elements and their interfaces by which a
-system is composed
- - Behavior as specified in collaborations among those elements
- - Composition of these structural and behavioral elements into larger subsystems
- - Architectural style that guides this organization
-
-*** Software architecture also involves
- - Usage
- - Functionality
- - Performance
- - Resilience
- - Reuse
- - Comprehensibility
- - Economic and technology constraints and tradeoffs
- - Aesthetic concerns
 
 * Requirement Analysis
 ** What are Requirements 
@@ -286,3 +384,24 @@ requirements.
 
 
 *** Glossary
+
+* System Analysis
+** Domain Models
+ - A domain model is a representation of real-world conceptual classes
+ - Using UML notation, a domain model is illustrated with a set of class diagrams in which no operations are defined.
+
+*** Guideline
+**** How to Make a Domain Model
+ - List the candidate conceptual classes using the Conceptual Class Category List and noun phrase identification techniques related to the current requirements under consideration.
+ - Draw them in a domain model.
+ - Add the associations necessary to record relationships for which there is a need to preserve some memory.
+ - Add the attributes necessary to fulfill the information requirements.
+
+**** Class or Attribute?
+ - If we do not think of some conceptual class X as a number or text in the real world, X is probably a conceptual class, not an attribute.
+
+
+** Central distinction between object-oriented and structured analysis
+  - Division by conceptual classes (objects) rather than division by functions.
+
+
