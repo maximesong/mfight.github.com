@@ -59,7 +59,7 @@
 <a href="#sec7">Object-Oriented Design</a>
 </dt>
 <dt class="contents">
-<a href="#sec8">Four kinds of things in the UML:</a>
+<a href="#sec8">Four kinds of things in the UML</a>
 </dt>
 <dt class="contents">
 <a href="#sec9">Software Component</a>
@@ -428,6 +428,82 @@
 <dt class="contents">
 <a href="#sec99">Abstract Factory</a>
 </dt>
+<dt class="contents">
+<a href="#sec100">Builder</a>
+</dt>
+<dt class="contents">
+<a href="#sec101">Factory Method</a>
+</dt>
+<dt class="contents">
+<a href="#sec102">Prototype</a>
+</dt>
+<dt class="contents">
+<a href="#sec103">**** Intent</a>
+</dt>
+<dt class="contents">
+<a href="#sec104">Singleton</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec105">Structural Patterns</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec106">Adapter</a>
+</dt>
+<dt class="contents">
+<a href="#sec107">Bridge</a>
+</dt>
+<dt class="contents">
+<a href="#sec108">Composite</a>
+</dt>
+<dt class="contents">
+<a href="#sec109">Decorator</a>
+</dt>
+<dt class="contents">
+<a href="#sec110">Façade</a>
+</dt>
+<dt class="contents">
+<a href="#sec111">Flyweight</a>
+</dt>
+<dt class="contents">
+<a href="#sec112">Proxy</a>
+</dt>
+<dt class="contents">
+<a href="#sec113">Chain of Responsibility</a>
+</dt>
+<dt class="contents">
+<a href="#sec114">Command</a>
+</dt>
+<dt class="contents">
+<a href="#sec115">Interpreter</a>
+</dt>
+<dt class="contents">
+<a href="#sec116">Iterator</a>
+</dt>
+<dt class="contents">
+<a href="#sec117">Mediator</a>
+</dt>
+<dt class="contents">
+<a href="#sec118">Memnto</a>
+</dt>
+<dt class="contents">
+<a href="#sec119">Observer</a>
+</dt>
+<dt class="contents">
+<a href="#sec120">State</a>
+</dt>
+<dt class="contents">
+<a href="#sec121">Strategy</a>
+</dt>
+<dt class="contents">
+<a href="#sec122">Template Method</a>
+</dt>
+<dt class="contents">
+<a href="#sec123">Vistor</a>
+</dt>
 </dl>
 </dd>
 </dl>
@@ -480,7 +556,7 @@
 </ul>
 
 
-<h3><a name="sec8" id="sec8"></a>Four kinds of things in the UML:</h3>
+<h3><a name="sec8" id="sec8"></a>Four kinds of things in the UML</h3>
 
 <ul>
 <li>Structural things
@@ -2090,13 +2166,1056 @@ an impacton the architecture.
 
 
 
+<h4><a name="sec100" id="sec100"></a>Builder</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Separate the construction of a complex object from its representation so that the same construction process can create different representations.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="builder.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled.</li>
+<li>the construction process must allow different representations for the object that's constructed.</li>
+</ul>
+
+
+<h5>Collaborations</h5>
+
+<p class="image"><img src="builder_collaborations.png" alt="" /></p>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It lets you vary a product's internal representation.</li>
+<li>It isolates code for construction and representation.</li>
+<li>It gives you finer control over the construction process.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Abstract Factory (99) is similar to Builder in that it too may construct complex objects. The primary difference is that the Builder pattern focuses on constructing a complex object step by step. Abstract Factory's emphasis is on families of product objects (either simple or complex). Builder returns the product as a final step, but as far as the Abstract Factory pattern is concerned, the product gets returned immediately.</li>
+<li>A Composite (183) is what the builder often builds.</li>
+</ul>
+
+
+
+
+
+<h4><a name="sec101" id="sec101"></a>Factory Method</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.</li>
+</ul>
+
+
+
+<h5>Structure</h5>
+
+<ul>
+<li>May also use parameterized factory methods
+<img src="factory_method.png" alt="" /></li>
+</ul>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>a class can't anticipate the class of objects it must create.</li>
+<li>a class wants its subclasses to specify the objects it creates.</li>
+<li>classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Factory methods eliminate the need to bind application-specific classes
+into your code.</li>
+<li>A potential disadvantage of factory methods is that clients might have to subclass the Creator class just to create a particular ConcreteProduct object.</li>
+<li>Factory methods eliminate the need to bind application-specific classes into your code.</li>
+<li>A potential disadvantage of factory methods is that clients might have to subclass the Creator class just to create a particular ConcreteProduct object.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Abstract Factory (99) is often implemented with factory methods. The Motivation example in the Abstract Factory pattern illustrates Factory Method as well. Factory methods are usually called within Template Methods (360). In the document example above, NewDocument is a template method.</li>
+<li>Prototypes (133) don't require subclassing Creator. However, they often require an Initialize operation on the Product class. Creator uses Initialize to initialize the object. Factory Method doesn't require such an operation</li>
+</ul>
+
+
+
+
+<h4><a name="sec102" id="sec102"></a>Prototype</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="prototype.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>Use the Prototype pattern when a system should be independent of how its products are created, composed, and represented; and
+
+<ul>
+<li>when the classes to instantiate are specified at run-time, for example, by dynamic loading; or</li>
+<li>to avoid building a class hierarchy of factories that parallels the class
+hierarchy of products; or</li>
+<li>when instances of a class can have one of only a few different combinations of state. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state.</li>
+</ul></li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It hides the concrete product classes from the client, thereby reducing the number of names clients know about. Moreover, these patterns let a client work with application-specific classes without modification.</li>
+<li>Adding and removing products at run-time.</li>
+<li>Specifying new objects by varying values.</li>
+<li>Specifying new objects by varying structure.</li>
+<li>Reduced subclassing.</li>
+<li>Configuring an application with classes dynamically.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Prototype and Abstract Factory (99) are competing patterns in some ways, as we discuss at the end of this chapter. They can also be used together, however. An Abstract Factory might store a set of prototypes from which to clone and return product objects.</li>
+<li>Designs that make heavy use of the Composite (183) and Decorator (196) patterns often can benefit from Prototype as well.</li>
+</ul>
+
+<h4><a name="sec103" id="sec103"></a>**** Intent</h4>
+
+<ul>
+<li>
+<h5>Structure</h5></li>
+</ul>
+
+<p>[[.png]</p>
+
+
+<h5>Applicability</h5>
+
+
+<h5>Consequences</h5>
+
+
+<h5>Related Patterns</h5>
+
+
+
+<h4><a name="sec104" id="sec104"></a>Singleton</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Ensure a class only has one instance, and provide a global point of access to it</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="singleton_structure.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point.</li>
+<li>when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Controlled access to sole instance.</li>
+<li>Reduced name space.</li>
+<li>Permits refinement of operations and representation.</li>
+<li>Permits a variable number of instances.</li>
+<li>More flexible than class operations.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Many patterns can be implemented using the Singleton pattern. See Abstract Factory (99), Builder (110), and Prototype (133).</li>
+</ul>
+
+
+
+
+
+<h3><a name="sec105" id="sec105"></a>Structural Patterns</h3>
+
+<h4><a name="sec106" id="sec106"></a>Adapter</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<ul>
+<li>Class Adapter</li>
+<li>Object Adapter</li>
+</ul>
+
+<p class="image"><img src="class_adapter.png" alt="" /></p>
+
+<p class="image"><img src="object_adapter.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>you want to use an existing class, and its interface does not match the one
+you need.</li>
+<li>you want to create a reusable class that cooperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces.</li>
+<li>(object adapter only) you need to use several existing subclasses, but it's impractical to adapt their interface by subclassing every one. An object adapter can adapt the interface of its parent class.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>A class adapter
+
+<ul>
+<li>adapts Adaptee to Target by committing to a concrete Adapter class. As a consequence, a class adapter won't work when we want to adapt a class and all its subclasses.</li>
+<li>lets Adapter override some of Adaptee's behavior, since Adapter is a subclass of Adaptee.</li>
+<li>introduces only one object, and no additional pointer indirection is needed to get to the adaptee.</li>
+</ul></li>
+<li>An object adapter
+
+<ul>
+<li>lets a single Adapter work with many Adaptees—that is, the Adaptee itself and all of its subclasses (if any). The Adapter can also add functionality to all Adaptees at once.</li>
+<li>makes it harder to override Adaptee behavior. It will require subclassing Adaptee and making Adapter refer to the subclass rather than the Adaptee itself.</li>
+</ul></li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<p>Bridge (171) has a structure similar to an object adapter, but Bridge has a different intent: It is meant to separate an interface from its implementation so that they can be varied easily and independently. An adapter is meant to change the interface of an existing object.</p>
+
+<ul>
+<li>Decorator (196) enhances another object without changing its interface. A decorator is thus more transparent to the application than an adapter is. As a consequence, Decorator supports recursive composition, which isn't possible with pure adapters.</li>
+<li>Proxy (233) defines a representative or surrogate for another object and does not change its interface.</li>
+</ul>
+
+
+
+
+<h4><a name="sec107" id="sec107"></a>Bridge</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Decouple an abstraction from its implementation so that the two can vary independently.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="bridge.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>you want to avoid a permanent binding between an abstraction and its
+implementation.</li>
+<li>both the abstractions and their implementations should be extensible by subclassing.</li>
+<li>changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled.</li>
+<li>(C++) you want to hide the implementation of an abstraction completely from clients.</li>
+<li>indicates the need for splitting an object into two parts.</li>
+<li>you want to share an implementation among multiple objects (perhaps using reference counting), and this fact should be hidden from the client.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Decoupling interface and implementation</li>
+<li>Improved extensibility.</li>
+<li>Hiding implementation details from clients</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>An Abstract Factory (99) can create and configure a particular Bridge.</li>
+<li>The Adapter (157) pattern is geared toward making unrelated classes work together. It is usually applied to systems after they're designed. Bridge, on the other hand, is used up-front in a design to let abstractions and implementations vary independently.</li>
+</ul>
+
+
+
+
+<h4><a name="sec108" id="sec108"></a>Composite</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="composite.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>you want to represent part-whole hierarchies of objects.</li>
+<li>you want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>defines class hierarchies consisting of primitive objects and composite objects.</li>
+<li>makes the client simple.</li>
+<li>makes it easier to add new kinds of components.</li>
+<li>can make your design overly general.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Often the component-parent link is used for a Chain of Responsibility (251).</li>
+<li>Decorator (196) is often used with Composite. When decorators and composites are used together, they will usually have a common parent class. So decorators will have to support the Component interface with operations like Add, Remove, and GetChild.</li>
+<li>Flyweight (218) lets you share components, but they can no longer refer to their parents.</li>
+<li>Iterator (289) can be used to traverse composites.</li>
+<li>Visitor (366) localizes operations and behavior that would otherwise be distributed across Composite and Leaf classes.</li>
+</ul>
+
+
+
+<h4><a name="sec109" id="sec109"></a>Decorator</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="decorator.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>to add responsibilities to individual objects dynamically and transparently, that is, without affecting other objects.</li>
+<li>for responsibilities that can be withdrawn.</li>
+<li>when extension by subclassing is impractical.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>More flexibility than static inheritance</li>
+<li>Avoids feature-laden classes high up in the hierarchy</li>
+<li>A decorator and its component aren't identical.</li>
+<li>Lots of little objects.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Adapter (157): A decorator is different from an adapter in that a decorator only changes an object's responsibilities, not its interface; an adapter will give an object a completely new interface.</li>
+<li>Composite (183): A decorator can be viewed as a degenerate composite with only one component. However, a decorator adds additional responsibilities—it isn't intended for object aggregation.</li>
+<li>Strategy (349): A decorator lets you change the skin of an object; a strategy lets you change the guts. These are two alternative ways of changing an object.</li>
+</ul>
+
+
+
+<h4><a name="sec110" id="sec110"></a>Façade</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.</li>
+</ul>
+
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="facade.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>you want to provide a simple interface to a complex subsystem.</li>
+<li>there are many dependencies between clients and the implementation classes of an abstraction. Introduce a facade to decouple the subsystem from clients and other subsystems, thereby promoting subsystem independence and portability.</li>
+<li>you want to layer your subsystems. Use a facade to define an entry point
+to each subsystem level.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It shields clients from subsystem components, thereby reducing the number of objects that clients deal with and making the subsystem easier to use.</li>
+<li>It promotes weak coupling between the subsystem and its clients.</li>
+<li>It doesn't prevent applications from using subsystem classes if they need to. Thus you can choose between ease of use and generality.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Abstract Factory (99) can be used with Facade to provide an interface for creating subsystem objects in a subsystem-independent way. Abstract Factory can also be used as an alternative to Facade to hide platform-specific classes.</li>
+<li>Mediator (305) is similar to Facade in that it abstracts functionality of existing classes. However, Mediator's purpose is to abstract arbitrary communication between colleague objects, often centralizing functionality that doesn't belong in any one of them. A mediator's colleagues are aware of and communicate with the mediator instead of communicating with each other directly. In contrast, a facade merely abstracts the interface to subsystem objects to make them easier to use; it doesn't define new functionality, and subsystem classes don't know about it.</li>
+<li>Usually only one Facade object is required. Thus Facade objects are often Singletons (144).</li>
+</ul>
+
+
+
+<h4><a name="sec111" id="sec111"></a>Flyweight</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Use sharing to support large numbers of fine-grained objects efficiently.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="flyweight.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>Apply the Flyweight pattern when all of the following are true:
+
+<ul>
+<li>An application uses a large number of objects.</li>
+<li>Storage costs are high because of the sheer quantity of objects.</li>
+<li>Most object state can be made extrinsic.</li>
+<li>Many groups of objects may be replaced by relatively few shared objects once extrinsic state is removed.</li>
+<li>The application doesn't depend on object identity. Since flyweight objects may be shared, identity tests will return true for conceptually distinct objects.</li>
+</ul></li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Flyweights may introduce run-time costs associated with transferring, finding, and/or computing extrinsic state, especially if it was formerly stored as intrinsic state.
+
+<ul>
+<li>However, such costs are offset by space savings, which increase as more flyweights are shared.</li>
+<li>Storage savings are a function of several factors:</li>
+<li>the reduction in the total number of instances that comes from sharing</li>
+<li>the amount of intrinsic state per object</li>
+<li>whether extrinsic state is computed or stored.</li>
+</ul></li>
+<li>The more flyweights are shared, the greater the storage savings.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>The Flyweight pattern is often combined with the Composite (183) pattern to implement a logically hierarchical structure in terms of a directed-acyclic graph with shared leaf nodes.</li>
+<li>It's often best to implement State (338) and Strategy (349) objects as flyweights.</li>
+</ul>
+
+
+
+<h4><a name="sec112" id="sec112"></a>Proxy</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Provide a surrogate or placeholder for another object to control access to
+it.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="proxy.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>A remote proxy provides a local representative for an object in a different address space.</li>
+<li>A virtual proxy creates expensive objects on demand.</li>
+<li>A protection proxy controls access to the original object.</li>
+<li>A smart reference is a replacement for a bare pointer that performs additional actions when an object is accessed.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>The Proxy pattern introduces a level of indirection when accessing an object. The additional indirection has many uses, depending on the kind of proxy:
+
+<ul>
+<li>A remote proxy can hide the fact that an object resides in a different address space.</li>
+<li>A virtual proxy can perform optimizations such as creating an object on demand.</li>
+<li>Both protection proxies and smart references allow additional housekeeping tasks when an object is accessed.</li>
+</ul></li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Adapter (157): An adapter provides a different interface to the object it adapts. In contrast, a proxy provides the same interface as its subject. However, a proxy used for access protection might refuse to perform an operation that the subject will perform, so its interface may be effectively a subset of the subject's.</li>
+<li>Decorator (196): Although decorators can have similar implementations as proxies, decorators have a different purpose. A decorator adds one or more responsibilities to an object, whereas a proxy controls access to an object.</li>
+<li>Proxies vary in the degree to which they are implemented like a decorator. A protection proxy might be implemented exactly like a decorator. On the other hand, a remote proxy will not contain a direct reference to its real subject but only an indirect reference, such as &quot;host ID and local address on host.&quot; A virtual proxy will start off with an indirect reference such as a file name but will eventually obtain and use a direct reference.</li>
+</ul>
+
+
+
+<h4><a name="sec113" id="sec113"></a>Chain of Responsibility</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="chain_of_responsibility.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>more than one object may handle a request, and the handler isn't known a priori. The handler should be ascertained automatically.</li>
+<li>you want to issue a request to one of several objects without specifying the receiver explicitly.</li>
+<li>the set of objects that can handle a request should be specified dynamically.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Reduced coupling.</li>
+<li>Added flexibility in assigning responsibilities to objects.</li>
+<li>Receipt isn't guaranteed.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<p>Chain of Responsibility is often applied in conjunction with Composite (183). There, a component's parent can act as its successor.</p>
+
+
+
+<h4><a name="sec114" id="sec114"></a>Command</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="command.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>parameterize objects by an action to perform.</li>
+<li>specify, queue, and execute requests at different times.</li>
+<li>support undo.</li>
+<li>support logging changes so that they can be reapplied in case of a system crash.</li>
+<li>structure a system around high-level operations built on primitives operations.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Command decouples the object that invokes the operation from the one that knows how to perform it.</li>
+<li>Commands are first-class objects. They can be manipulated and extended like any other object.</li>
+<li>You can assemble commands into a composite command. An example is the MacroCommand class described earlier. In general, composite commands are an instance of the Composite pattern.</li>
+<li>It's easy to add new Commands, because you don't have to change existing classes.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>A Composite (183)can be used to implement MacroCommands.</li>
+<li>A Memento (316)can keep state the command requires to undo its effect.</li>
+<li>A command that must be copied before being placed on the historylist acts as a Prototype (133).</li>
+</ul>
+
+
+
+<h4><a name="sec115" id="sec115"></a>Interpreter</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="interpreter.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>Use the Interpreter pattern when there is a language to interpret, and you can represent statements in the language as abstract syntax trees.</li>
+<li>The Interpreter pattern works best when
+
+<ul>
+<li>the grammar is simple.</li>
+<li>efficiency is not a critical concern.</li>
+</ul></li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It's easy to change and extend the grammar.</li>
+<li>Implementing the grammar is easy, too.</li>
+<li>Complex grammars are hard to maintain.</li>
+<li>Adding new ways to interpret expressions.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Composite (183):The abstract syntax tree is an instance of the Composite pattern.</li>
+<li>Flyweight (218) shows how to share terminal symbols within the abstract syntaxtree.</li>
+<li>Iterator (289):The interpreter can use an Iterator to traverse the structure.</li>
+<li>Visitor (366) can be used to maintain the behavior in each node in the abstract syntaxtree in one class.</li>
+</ul>
+
+
+
+<h4><a name="sec116" id="sec116"></a>Iterator</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="iterator.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>to access an aggregate object's contents without exposing its internal representation.</li>
+<li>to support multiple traversals of aggregate objects.</li>
+<li>to provide a uniform interface for traversing different aggregate structures (that is, to support polymorphic iteration).</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It supports variations in the traversal of an aggregate.</li>
+<li>Iterators simplify the Aggregate interface.</li>
+<li>More than one traversal can be pending on an aggregate.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Composite (183):Iterators are often applied to recursive structures such as Composites.</li>
+<li>Factory Method (121):Polymorphic iterators rely on factory methods to instantiate the appropriate Iterator subclass.</li>
+<li>Memento (316) is often used in conjunction with the Iterator pattern. An iteratorcan use a memento to capture the state of an iteration. The iteratorstores the memento internally.</li>
+</ul>
+
+
+
+<h4><a name="sec117" id="sec117"></a>Mediator</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="mediator.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>a set of objects communicate in well-defined but complex ways. The resulting interdependencies are unstructured and difficult to understand.</li>
+<li>reusing an object is difficult because it refers to and communicates with many other objects.</li>
+<li>a behavior that's distributed between several classes should be customizable without a lot of subclassing.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It limits subclassing.</li>
+<li>It decouples colleagues.</li>
+<li>It simplifies object protocols.</li>
+<li>It abstracts how objects cooperate.</li>
+<li>It centralizes control.The Mediator pattern trades complexity of interaction for complexity in the mediator. Because a mediator encapsulates protocols, it can become more complex than any individual colleague. This can make the mediator itself a monolith that's hard to maintain.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Facade (208) differs from Mediator in that it abstracts a subsystem of objects to providea more convenient interface. Its protocol is unidirectional; that is, Facade objects make requests of the subsystem classes but not vice versa. In contrast, Mediator enables cooperative behavior that colleague objects don't or can't provide, and the protocol is multidirectional.</li>
+<li>Colleagues can communicate with the mediator using the Observer (326) pattern.</li>
+</ul>
+
+
+
+
+<h4><a name="sec118" id="sec118"></a>Memnto</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Without violating encapsulation, capture and externalize an object‘s internal state so that the object can be restored to this state later.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="memento.png" alt="" /></p>
+
+
+<h5>Collaborations</h5>
+
+<p class="image"><img src="memento_collaborations.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>a snapshot of (some portion of) an object's state must be saved so that it can be restored to that state later, and</li>
+<li>a direct interface to obtaining the state would expose implementation details and break the object's encapsulation.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Preserving encapsulation boundaries.</li>
+<li>It simplifies Originator.</li>
+<li>Using mementos might be expensive.Mementos might incur considerable overhead if Originator must copy large amounts of information to store in the memento or if clients create and return mementos to the originator often enough. Unless encapsulating and restoring Originator state is cheap, the patternmight not be appropriate.</li>
+<li>Defining narrow and wide interfaces. It may be difficult in some languages to ensure that only the originator can access the memento's state.</li>
+<li>Hidden costs in caring for mementos. A caretaker is responsible for deleting the mementos it cares for. However, the caretaker has no idea how much state is in the memento.Hence an otherwise lightweight caretaker might incur large storage costs when it stores mementos.</li>
+</ul>
+
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Command (263): Commands can use mementos to maintainstate for undoable operations.</li>
+<li>Iterator (289): Mementoscan be used for iteration as described earlier.</li>
+</ul>
+
+
+
+
+<h4><a name="sec119" id="sec119"></a>Observer</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="observer.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>When an abstraction has two aspects, one dependent on the other. Encapsulating these aspects in separate objects lets you vary and reuse them independently.</li>
+<li>When a change to one object requires changing others, and you don't know how many objects need to be changed.</li>
+<li>When an object should be able to notify other objects without making assumptions about who these objects are. In other words, you don't want these objects tightly coupled.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>The Observer pattern lets you vary subjects and observers independently.
+
+<ul>
+<li>You can reuse subjects without reusing their observers, and vice versa. It lets you add observers without modifying the subject or other observers.</li>
+</ul></li>
+<li>Abstract coupling between Subject and Observer.</li>
+<li>Support for broadcast communication.</li>
+<li>Unexpected updates.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Mediator (305): Byencapsulating complex update semantics, the ChangeManager acts asmediator between subjects and observers.</li>
+<li>Singleton (144):The ChangeManager may use the Singleton pattern to make it uniqueand globally accessible.</li>
+</ul>
+
+
+
+<h4><a name="sec120" id="sec120"></a>State</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Allow an object to alter its behavior when its internal state changes.The object will appear to change its class.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="state.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>An object's behavior depends on its state, and it must change its behavior at run-time depending on that state.</li>
+<li>Operations have large, multipart conditional statements that depend on the object's state.
+
+<ul>
+<li>This state is usually represented by one or more enumerated constants.</li>
+<li>Often, several operations will contain this same conditional structure.</li>
+<li>State pattern puts each branch of the conditional in a separate class.</li>
+<li>This lets you treat the object's state as an object in its own right that can vary independently from other objects.</li>
+</ul></li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>It localizes state-specific behavior and partitions behavior for different states.</li>
+<li>It makes state transitions explicit.</li>
+<li>State objects can be shared.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>The Flyweight (218) pattern explains when and how State objects can be shared.</li>
+<li>State objects are often Singletons (144).</li>
+</ul>
+
+
+
+
+<h4><a name="sec121" id="sec121"></a>Strategy</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="strategy.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>many related classes differ only in their behavior. Strategies provide a way to configure a class with one of many behaviors.</li>
+<li>you need different variants of an algorithm.</li>
+<li>an algorithm uses data that clients shouldn't know about. Use the Strategy pattern to avoid exposing complex, algorithm-specific data structures.</li>
+<li>a class defines many behaviors, and these appear as multiple conditional statements in its operations. Instead of many conditionals, move related conditional branches into their own Strategy class.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Families of related algorithms.</li>
+<li>An alternative to subclassing.</li>
+<li>Strategies eliminate conditional statements.</li>
+<li>A choice of implementations.</li>
+<li>Clients must be aware of different Strategies.</li>
+<li>Communication overhead between Strategy and Context.</li>
+<li>Increased number of objects.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<p>Flyweight (218): Strategy objects often make good flyweights.</p>
+
+
+
+<h4><a name="sec122" id="sec122"></a>Template Method</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="template_method.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>to implement the invariant parts of an algorithm once and leave it up to subclasses to implement the behavior that can vary.</li>
+<li>when common behavior among subclasses should be factored and localized in a common class to avoid code duplication.</li>
+<li>to control subclasses extensions. You can define a template method that calls &quot;hook&quot; operations at specific points, thereby permitting extensions only at those points.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Template methods are a fundamental technique for code reuse.
+
+<ul>
+<li>They are particularly important in class libraries, because they are the means for factoring out common behavior in library classes.</li>
+</ul></li>
+<li>Template methods lead to an inverted control structure
+
+<ul>
+<li>that's sometimes referred to as &quot;the Hollywood principle,&quot; that is, &quot;Don't call us, we'll call you&quot;. This refers to how a parent class calls the operations of a subclass and not the other way around.</li>
+</ul></li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Factory Methods (121) are often called by template methods. In the Motivation example,the factory method DoCreateDocument is called by the template method OpenDocument.</li>
+<li>Strategy (349): Template methods use inheritance to vary part of an algorithm.Strategies use delegation to vary the entire algorithm.</li>
+</ul>
+
+
+
+<h4><a name="sec123" id="sec123"></a>Vistor</h4>
+
+<h5>Intent</h5>
+
+<ul>
+<li>Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</li>
+</ul>
+
+
+<h5>Structure</h5>
+
+<p class="image"><img src="visitor.png" alt="" /></p>
+
+
+<h5>Applicability</h5>
+
+<ul>
+<li>an object structure contains many classes of objects with differing interfaces, and you want to perform operations on these objects that depend on their concrete classes.</li>
+<li>many distinct and unrelated operations need to be performed on objects in an object structure, and you want to avoid &quot;polluting&quot; their classes with these operations.</li>
+<li>the classes defining the object structure rarely change, but you often want to define new operations over the structure.</li>
+</ul>
+
+
+<h5>Consequences</h5>
+
+<ul>
+<li>Visitor makes adding new operations easy.</li>
+<li>A visitor gathers related operations and separates unrelated ones.</li>
+<li>Adding new ConcreteElement classes is hard.</li>
+<li>Visiting across class hierarchies.</li>
+<li>Accumulating state.</li>
+<li>Breaking encapsulation.</li>
+</ul>
+
+
+<h5>Related Patterns</h5>
+
+<ul>
+<li>Composite (183):Visitors can be used to apply an operation over an object structuredefined by the Composite pattern.</li>
+<li>Interpreter (274):Visitor may be applied to do the interpretation.</li>
+</ul>
+
+
+
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: December 27, 2011  
+    Last Updated: December 28, 2011  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
