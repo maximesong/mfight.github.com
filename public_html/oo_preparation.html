@@ -508,6 +508,143 @@
 </dd>
 </dl>
 </dd>
+<dt class="contents">
+<a href="#sec124">Presentation Framework & User Interface Design</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec125">Framework</a>
+</dt>
+<dt class="contents">
+<a href="#sec126">Framework vs. Design Patterns</a>
+</dt>
+<dt class="contents">
+<a href="#sec127">Framework vs. Applications</a>
+</dt>
+<dt class="contents">
+<a href="#sec128">Frameworks vs. Libraries</a>
+</dt>
+<dt class="contents">
+<a href="#sec129">Framework Issues</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec130">Development or Using</a>
+</dt>
+<dt class="contents">
+<a href="#sec131">Design</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec132">Frozen spots</a>
+</dt>
+<dt class="contents">
+<a href="#sec133">Hot spots</a>
+</dt>
+<dt class="contents">
+<a href="#sec134">Inverse of Control</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec135">Problem</a>
+</dt>
+<dt class="contents">
+<a href="#sec136">What aspect of control are they inverting?</a>
+</dt>
+<dt class="contents">
+<a href="#sec137">Dependency Injection</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec138">Struts 1 disadvantage</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec139">Persistence Framework and Database Design</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec140">Relational Data Model</a>
+</dt>
+<dt class="contents">
+<a href="#sec141">O-R Mapping</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec142">The Problem</a>
+</dt>
+<dt class="contents">
+<a href="#sec143">The Solution</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec144">Database Design</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec145">Modeling Associations in the Data Model</a>
+</dt>
+<dt class="contents">
+<a href="#sec146">Foreign Key Embedding(外键嵌入)</a>
+</dt>
+<dt class="contents">
+<a href="#sec147">Modeling Inheritance in the Data Model</a>
+</dt>
+<dt class="contents">
+<a href="#sec148">Stored Procedures</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec149">Persistence Framework</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec150">Instance States</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec151">Functional Programming</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec152">How to see a program in a functional manner?</a>
+</dt>
+<dt class="contents">
+<a href="#sec153">What is function?</a>
+</dt>
+<dt class="contents">
+<a href="#sec154">What is function application?</a>
+</dt>
+<dt class="contents">
+<a href="#sec155">Evaluator never changes any data</a>
+</dt>
+<dt class="contents">
+<a href="#sec156">A turning machine allow and encourage data mutation</a>
+</dt>
+<dt class="contents">
+<a href="#sec157">Side Effect</a>
+</dt>
+<dt class="contents">
+<a href="#sec158">Good things in functional programming</a>
+</dt>
+</dl>
+</dd>
 </dl>
 </div>
 
@@ -3195,8 +3332,9 @@ it.</li>
 <li>A visitor gathers related operations and separates unrelated ones.</li>
 <li>Adding new ConcreteElement classes is hard.</li>
 <li>Visiting across class hierarchies.</li>
-<li>Accumulating state.</li>
-<li>Breaking encapsulation.</li>
+<li>Accumulating state.Visitors can accumulate state as they visit each element in the objectstructure. Without a visitor, this state would be passed as extraarguments to the operations that perform the traversal, or they might appear as global variables.</li>
+
+<li>Breaking encapsulation.Visitor's approach assumes that the Concrete Element interface is powerful enough to let visitors do their job. As a result, the pattern oftenforces you to provide public operations that access an element'sinternal state, which may compromise its encapsulation.</li>
 </ul>
 
 
@@ -3208,6 +3346,397 @@ it.</li>
 </ul>
 
 
+
+
+
+<h2><a name="sec124" id="sec124"></a>Presentation Framework &amp; User Interface Design</h2>
+
+<h3><a name="sec125" id="sec125"></a>Framework</h3>
+
+<ul>
+<li>A set of classes that embodies an abstract design for solutions to a family of problems (Brian Foote)</li>
+<li>A reusable design that describes how system in decomposed into objects.</li>
+<li>A class library that captures interaction patterns between objects.</li>
+<li>A set of abstract and concrete class</li>
+<li>A skeleton application that can be fleshed out by developers</li>
+</ul>
+
+
+<h3><a name="sec126" id="sec126"></a>Framework vs. Design Patterns</h3>
+
+<ul>
+<li>Both let you reuse design, but frameworks:
+
+<ul>
+<li>include code</li>
+<li>include many more classes</li>
+<li>are not as widely reusable</li>
+<li>are more pragmatic, less abstract</li>
+<li>may be made up of many design patterns</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec127" id="sec127"></a>Framework vs. Applications</h3>
+
+<ul>
+<li>Both include code, but frameworks:
+
+<ul>
+<li>Have loose ends that need instantiating</li>
+<li>Are MUCH more expensive to develop</li>
+<li>But are reusable within application domains</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec128" id="sec128"></a>Frameworks vs. Libraries</h3>
+
+<ul>
+<li>Frameworks are like libraries except:
+
+<ul>
+<li>They use inheritance more heavily</li>
+<li>They evolve more quickly</li>
+<li>They are often modified on the spot if they are not quite right</li>
+<li>They have a more “plug-in” feel</li>
+<li>They include dynamic flow rather than simply reusable classes</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec129" id="sec129"></a>Framework Issues</h3>
+
+<h4><a name="sec130" id="sec130"></a>Development or Using</h4>
+
+<ul>
+<li>Development Complexity (Build vs. Buy)</li>
+<li>Learning Curve (Usability)</li>
+<li>Extensibility</li>
+<li>Maintainability</li>
+<li>Validation</li>
+<li>Efficiency</li>
+<li>Composition</li>
+</ul>
+
+
+<h4><a name="sec131" id="sec131"></a>Design</h4>
+
+<ul>
+<li>Keep it simple</li>
+<li>Help user be productive quickly</li>
+<li>Identify tools for task (Internal vs. External)</li>
+<li>Use real-world knowledge to speed understanding</li>
+<li>Be consistent</li>
+<li>Don’t make things almost the same</li>
+<li>Design to prevent user errors</li>
+<li>Have default behavior</li>
+<li>Be modeless</li>
+<li>Provide immediate and reversible results</li>
+<li>Have documentation
+
+<ul>
+<li>Especially interactions</li>
+<li>Framework not equal to Class Library</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec132" id="sec132"></a>Frozen spots</h3>
+
+<ul>
+<li>the implemented architecture components and connections</li>
+</ul>
+
+
+<h3><a name="sec133" id="sec133"></a>Hot spots</h3>
+
+<ul>
+<li>the locations where users are expected to extend and modify framework.</li>
+</ul>
+
+
+<h3><a name="sec134" id="sec134"></a>Inverse of Control</h3>
+
+<h4><a name="sec135" id="sec135"></a>Problem</h4>
+
+<ul>
+<li>Implemented class of MovieFinder needn’t connect to program during compiling the program.
+
+<ul>
+<li>Hope to plug-in concrete implemented class during run-time.</li>
+</ul></li>
+<li>How to make MovieLister class to cooperate with other instances while they don’t know the details of the implemented class?</li>
+</ul>
+
+
+<h4><a name="sec136" id="sec136"></a>What aspect of control are they inverting?</h4>
+
+<ul>
+<li>In naive example the lister looked up the finder implementation by directly instantiating it
+
+<ul>
+<li>This stops the finder from being a plugin.</li>
+</ul></li>
+<li>The inversion is about how they lookup a plugin implementation.
+
+<ul>
+<li>Any user of a plugin follows some convention that allows a separate assembler module to inject the implementation into the lister.</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec137" id="sec137"></a>Dependency Injection</h4>
+
+<h5>The basic idea</h5>
+
+<ul>
+<li>Have a separate object, an assembler, that populates a field in the lister class with an appropriate implementation for the finder interface</li>
+</ul>
+
+
+<h5>Three main styles</h5>
+
+<ul>
+<li>Constructor Injection</li>
+<li>Setter Injection</li>
+<li>Interface Injection</li>
+</ul>
+
+
+
+
+<h3><a name="sec138" id="sec138"></a>Struts 1 disadvantage</h3>
+
+<ul>
+<li>Struts uses the JavaServer Pages technology and thus inherits it’s disadvantages</li>
+<li>the developer must learn the Struts tag libraries, this maybe can take a long time</li>
+<li>unnecessary functionalities</li>
+<li>lack of support</li>
+<li>few releases</li>
+</ul>
+
+
+
+
+
+<h2><a name="sec139" id="sec139"></a>Persistence Framework and Database Design</h2>
+
+<ul>
+<li>Persistent objects are those that require persistent storage
+
+<ul>
+<li>such as ProductDescription instances.</li>
+</ul></li>
+<li>Storage Mechanisms
+
+<ul>
+<li>Object databases</li>
+<li>Relational databases</li>
+<li>Other
+
+<ul>
+<li>flat files</li>
+<li>XML structures</li>
+<li>Palm OS PDB files</li>
+<li>hierarchical databases</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3><a name="sec140" id="sec140"></a>Relational Data Model</h3>
+
+<ul>
+<li>The relational model is composed of entities and relations. An entity may be a physical table or a logical projection of several tables also known as a view.</li>
+</ul>
+
+
+<h3><a name="sec141" id="sec141"></a>O-R Mapping</h3>
+
+<h4><a name="sec142" id="sec142"></a>The Problem</h4>
+
+<ul>
+<li>As with relational databases, a representation mismatch exists between objects and these non-object-oriented formats.</li>
+</ul>
+
+
+<h4><a name="sec143" id="sec143"></a>The Solution</h4>
+
+<ul>
+<li>O-R Mapping service
+
+<ul>
+<li>a persistence service</li>
+<li>translate objects into records and save them in a database,</li>
+<li>and translate records into objects when retrieving from a database</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec144" id="sec144"></a>Database Design</h3>
+
+<h4><a name="sec145" id="sec145"></a>Modeling Associations in the Data Model</h4>
+
+<ul>
+<li>Associations between two persistent objects are realized as foreign keys to the associated objects.
+
+<ul>
+<li>A foreign key is a column in one table which contains the primary key value of associated object</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec146" id="sec146"></a>Foreign Key Embedding(外键嵌入)</h4>
+
+<ul>
+<li>Advantage
+
+<ul>
+<li>减少一个表,性能提高</li>
+</ul></li>
+<li>Disadvantage
+
+<ul>
+<li>虽然没违反第三范式,但背离“一类一表”的映射原则</li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec147" id="sec147"></a>Modeling Inheritance in the Data Model</h4>
+
+<ul>
+<li>Three Strategies
+
+<ul>
+<li>table per subclass(using additonal table for additional attributes)</li>
+<li>table per concrete class(each table for the corresponding class)</li>
+<li>table per class hierarchy(using column for type)
+
+<ul>
+<li>优点:性能全面优化</li>
+<li>缺点:违背第三范式</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<h4><a name="sec148" id="sec148"></a>Stored Procedures</h4>
+
+<ul>
+<li>A stored procedure is executable code which runs under the RDBMS</li>
+<li>Two types of stored procedures
+
+<ul>
+<li>Procedures: Executed explicitly by an application</li>
+<li>Triggers: Invoked implicitly when some database event occurs</li>
+</ul></li>
+</ul>
+
+
+
+<h3><a name="sec149" id="sec149"></a>Persistence Framework</h3>
+
+<ul>
+<li>A persistence framework is a general-purpose, reusable, and extendable set of types that provides functionality to support persistent objects</li>
+<li>The framework should provide functions such as:
+
+<ul>
+<li>store and retrieve objects in a persistent storage mechanism</li>
+<li>commit and rollback transactions</li>
+</ul></li>
+</ul>
+
+<h4><a name="sec150" id="sec150"></a>Instance States</h4>
+
+<p class="first">An instance of a persistent classes may be in one of three different states</p>
+
+<ul>
+<li>Transient (瞬态)
+
+<ul>
+<li>The instance is not, and has never been associated with any persistence context.</li>
+<li>It has no persistent identity (primary key value).</li>
+</ul></li>
+<li>Persistent (持久化)
+
+<ul>
+<li>The instance is currently associated with a persistence context.</li>
+<li>It has a persistent identity (primary key value) and, perhaps, a corresponding row in the database.</li>
+<li>Detached(脱管)</li>
+<li>The instance was once associated with a persistence context, but that context was closed, or the instance was serialized to another process.</li>
+<li>It has a persistent identity and, perhaps, a corresponding row in the database.</li>
+</ul></li>
+</ul>
+
+
+
+
+
+<h2><a name="sec151" id="sec151"></a>Functional Programming</h2>
+
+<h3><a name="sec152" id="sec152"></a>How to see a program in a functional manner?</h3>
+
+<ul>
+<li>Program = Function Application</li>
+</ul>
+
+
+<h3><a name="sec153" id="sec153"></a>What is function?</h3>
+
+<ul>
+<li>A Map from input to output</li>
+</ul>
+
+
+<h3><a name="sec154" id="sec154"></a>What is function application?</h3>
+
+<ul>
+<li>Supply a function with its argument(s)</li>
+</ul>
+
+
+<h3><a name="sec155" id="sec155"></a>Evaluator never changes any data</h3>
+
+<ul>
+<li>In functional programs, all its functions are pure!</li>
+</ul>
+
+
+<h3><a name="sec156" id="sec156"></a>A turning machine allow and encourage data mutation</h3>
+
+<ul>
+<li>Leaving its functions impure!</li>
+</ul>
+
+
+<h3><a name="sec157" id="sec157"></a>Side Effect</h3>
+
+<ul>
+<li>Side effect refers to effect that goes beyond the scope of the function itself.</li>
+<li>No side effect means stateless idempotent functions
+
+<ul>
+<li>which is also the core ideal of RESTful services</li>
+</ul></li>
+<li>Stateless programs lead to systems that are
+
+<ul>
+<li>easier to achieve high scalability, availability and simplicity!</li>
+</ul></li>
+</ul>
+
+
+<h3><a name="sec158" id="sec158"></a>Good things in functional programming</h3>
+
+<ul>
+<li>a different way to view programs</li>
+<li>greater expressiveness and more readable source code</li>
+<li>more elegant and beautiful with no side effects</li>
+<li>FL such as Haskell ensure type safety</li>
+<li>a common language among the greatest programmers</li>
+</ul>
 
 
 

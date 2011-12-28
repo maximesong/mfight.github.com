@@ -1393,9 +1393,194 @@ Flyweight (218): Strategy objects often make good flyweights.
  - A visitor gathers related operations and separates unrelated ones.
  - Adding new ConcreteElement classes is hard.
  - Visiting across class hierarchies.
- - Accumulating state.
- - Breaking encapsulation.
+ - Accumulating state.Visitors can accumulate state as they visit each element in the objectstructure. Without a visitor, this state would be passed as extraarguments to the operations that perform the traversal, or they might appear as global variables.
+
+ - Breaking encapsulation.Visitor's approach assumes that the Concrete Element interface is powerful enough to let visitors do their job. As a result, the pattern oftenforces you to provide public operations that access an element'sinternal state, which may compromise its encapsulation.
 
 **** Related Patterns
  - Composite (183):Visitors can be used to apply an operation over an object structuredefined by the Composite pattern.
  - Interpreter (274):Visitor may be applied to do the interpretation.
+
+* Presentation Framework & User Interface Design
+** Framework
+ - A set of classes that embodies an abstract design for solutions to a family of problems (Brian Foote)
+ - A reusable design that describes how system in decomposed into objects.
+ - A class library that captures interaction patterns between objects.
+ - A set of abstract and concrete class
+ - A skeleton application that can be fleshed out by developers
+
+** Framework vs. Design Patterns
+ - Both let you reuse design, but frameworks:
+  - include code
+  - include many more classes
+  - are not as widely reusable
+  - are more pragmatic, less abstract
+  - may be made up of many design patterns
+
+** Framework vs. Applications
+ - Both include code, but frameworks:
+  - Have loose ends that need instantiating
+  - Are MUCH more expensive to develop
+  - But are reusable within application domains
+
+** Frameworks vs. Libraries
+ - Frameworks are like libraries except:
+  - They use inheritance more heavily
+  - They evolve more quickly
+  - They are often modified on the spot if they are not quite right
+  - They have a more “plug-in” feel
+  - They include dynamic flow rather than simply reusable classes
+
+** Framework Issues
+*** Development or Using
+ - Development Complexity (Build vs. Buy)
+ - Learning Curve (Usability)
+ - Extensibility
+ - Maintainability
+ - Validation
+ - Efficiency
+ - Composition
+
+*** Design
+ - Keep it simple
+ - Help user be productive quickly
+ - Identify tools for task (Internal vs. External)
+ - Use real-world knowledge to speed understanding
+ - Be consistent
+ - Don’t make things almost the same
+ - Design to prevent user errors
+ - Have default behavior
+ - Be modeless
+ - Provide immediate and reversible results
+ - Have documentation
+  - Especially interactions
+  - Framework not equal to Class Library
+
+** Frozen spots
+ - the implemented architecture components and connections
+** Hot spots
+ - the locations where users are expected to extend and modify framework.
+
+** Inverse of Control
+*** Problem
+ - Implemented class of MovieFinder needn’t connect to program during compiling the program.
+  - Hope to plug-in concrete implemented class during run-time.
+ - How to make MovieLister class to cooperate with other instances while they don’t know the details of the implemented class?
+*** What aspect of control are they inverting?
+ - In naive example the lister looked up the finder implementation by directly instantiating it
+  - This stops the finder from being a plugin.
+ - The inversion is about how they lookup a plugin implementation.
+  - Any user of a plugin follows some convention that allows a separate assembler module to inject the implementation into the lister.
+
+*** Dependency Injection
+**** The basic idea
+ - Have a separate object, an assembler, that populates a field in the lister class with an appropriate implementation for the finder interface
+**** Three main styles
+ - Constructor Injection
+ - Setter Injection
+ - Interface Injection
+
+** Struts 1 disadvantage
+ - Struts uses the JavaServer Pages technology and thus inherits it’s disadvantages
+ - the developer must learn the Struts tag libraries, this maybe can take a long time
+ - unnecessary functionalities
+ - lack of support
+ - few releases
+
+
+
+* Persistence Framework and Database Design
+ - Persistent objects are those that require persistent storage
+  - such as ProductDescription instances.
+ -  Storage Mechanisms
+  -  Object databases
+  -  Relational databases
+  -  Other
+   -  flat files
+   -  XML structures
+   -  Palm OS PDB files
+   -  hierarchical databases
+
+** Relational Data Model
+  -  The relational model is composed of entities and relations. An entity may be a physical table or a logical projection of several tables also known as a view.
+
+** O-R Mapping
+*** The Problem
+ - As with relational databases, a representation mismatch exists between objects and these non-object-oriented formats.
+
+*** The Solution
+ - O-R Mapping service
+  - a persistence service
+  - translate objects into records and save them in a database,
+  - and translate records into objects when retrieving from a database
+
+** Database Design
+*** Modeling Associations in the Data Model
+ - Associations between two persistent objects are realized as foreign keys to the associated objects.
+  - A foreign key is a column in one table which contains the primary key value of associated object
+
+*** Foreign Key Embedding(外键嵌入)
+ - Advantage
+  - 减少一个表,性能提高
+ - Disadvantage
+  - 虽然没违反第三范式,但背离“一类一表”的映射原则
+
+*** Modeling Inheritance in the Data Model
+ - Three Strategies
+  - table per subclass(using additonal table for additional attributes)
+  - table per concrete class(each table for the corresponding class)
+  - table per class hierarchy(using column for type)
+   - 优点:性能全面优化
+   - 缺点:违背第三范式
+
+*** Stored Procedures
+ - A stored procedure is executable code which runs under the RDBMS
+ - Two types of stored procedures
+  - Procedures: Executed explicitly by an application
+  - Triggers: Invoked implicitly when some database event occurs
+
+** Persistence Framework
+ - A persistence framework is a general-purpose, reusable, and extendable set of types that provides functionality to support persistent objects
+ -  The framework should provide functions such as:
+  - store and retrieve objects in a persistent storage mechanism
+  - commit and rollback transactions
+
+*** Instance States
+An instance of a persistent classes may be in one of three different states
+ - Transient (瞬态)
+  - The instance is not, and has never been associated with any persistence context.
+  - It has no persistent identity (primary key value).
+ - Persistent (持久化)
+  - The instance is currently associated with a persistence context.
+  - It has a persistent identity (primary key value) and, perhaps, a corresponding row in the database.
+  - Detached(脱管)
+  - The instance was once associated with a persistence context, but that context was closed, or the instance was serialized to another process.
+  - It has a persistent identity and, perhaps, a corresponding row in the database.
+
+
+* Functional Programming
+** How to see a program in a functional manner?
+ - Program = Function Application
+** What is function?
+ - A Map from input to output
+** What is function application?
+ - Supply a function with its argument(s)
+** Evaluator never changes any data
+ - In functional programs, all its functions are pure!
+** A turning machine allow and encourage data mutation
+ - Leaving its functions impure!
+
+** Side Effect
+ - Side effect refers to effect that goes beyond the scope of the function itself.
+ - No side effect means stateless idempotent functions
+  - which is also the core ideal of RESTful services
+ - Stateless programs lead to systems that are
+  - easier to achieve high scalability, availability and simplicity!
+
+** Good things in functional programming
+ - a different way to view programs
+ - greater expressiveness and more readable source code
+ - more elegant and beautiful with no side effects
+ - FL such as Haskell ensure type safety
+ - a common language among the greatest programmers
+
