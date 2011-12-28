@@ -926,14 +926,6 @@ hierarchy of products; or
  - Prototype and Abstract Factory (99) are competing patterns in some ways, as we discuss at the end of this chapter. They can also be used together, however. An Abstract Factory might store a set of prototypes from which to clone and return product objects.
  - Designs that make heavy use of the Composite (183) and Decorator (196) patterns often can benefit from Prototype as well.
 
-*** 
-**** Intent
- - 
-**** Structure
-[[.png]
-**** Applicability
-**** Consequences
-**** Related Patterns
 
 *** Singleton
 **** Intent
@@ -1480,6 +1472,32 @@ Flyweight (218): Strategy objects often make good flyweights.
  - Constructor Injection
  - Setter Injection
  - Interface Injection
+
+*** XML vs. Annotation
+**** Advantages of XML
+ - xml 作为可扩展标记语言最大的优势在于开发者能够为软件量身定制适用的标记，使代码更加通俗易懂。
+ - 利用 xml 配置能使软件更具扩展性。例如 Spring 将 class 间的依赖配置在 xml 中，最大限度地提升应用的可扩展性。
+ - 具有成熟的验证机制确保程序正确性。利用 Schema 或 DTD 可以对 xml 的正确性进行验证，避免了非法的配置导致应用程序出错。
+ - 修改配置而无需变动现有程序。
+
+**** Disadvantages of XML 
+ - 需要解析工具或类库的支持。
+ - 解析 xml 势必会影响应用程序性能，占用系统资源。
+ - 配置文件过多导致管理变得困难。
+ - 编译期无法对其配置项的正确性进行验证，或要查错只能在运行期。
+ - IDE 无法验证配置项的正确性无能为力。
+ - 查错变得困难。往往配置的一个手误导致莫名其妙的错误。
+ - 开发人员不得不同时维护代码和配置文件，开发效率变得低下。
+ - 配置项与代码间存在潜规则。改变了任何一方都有可能影响另外一方。
+
+**** Advantages of Annotation
+ - 保存在 class 文件中，降低维护成本。
+ - 无需工具支持，无需解析。
+ - 编译期即可验证正确性，查错变得容易。
+ - 提升开发效率。
+**** Disadvantages of Annotation
+ - 若要对配置项进行修改，不得不修改 Java 文件，重新编译打包应用。
+ - 配置项编码在 Java 文件中，可扩展性差。
 
 ** Struts 1 disadvantage
  - Struts uses the JavaServer Pages technology and thus inherits it’s disadvantages
