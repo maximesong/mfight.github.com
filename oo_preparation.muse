@@ -879,6 +879,7 @@ The architectural decisions are recorded in the SAD(Software Architecture Docume
 
 **** Structure
  - May also use parameterized factory methods
+
 [[factory_method.png]]
 
 **** Applicability
