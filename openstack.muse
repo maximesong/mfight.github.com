@@ -80,3 +80,46 @@ w3m http://10.0.2.15
 
 **** 登录后
 [[openstack_logged.png]]
+
+* 脚本学习
+** 相关bash命令与变量
+*** . <filename>
+ - 相当于source <filename>，执行filename文件种的脚本
+
+*** $EUID
+ - 用户权限, 0为特权用户
+
+*** var=${str:-expr}
+ - 如果str未赋值或为空，var=expr
+ - 否则，var=$str
+
+*** getent database [key ...]
+ - 从一些文本数据库中获取我们需要的信息，如getent passwd joe
+
+*** tee [OPTION]... [FILE]..
+ - 从标准输入读入，写入到标准输出和文件
+
+*** mktemp
+ - 创建临时文件或临时目录
+
+*** /sbin/ifconfig eth0 | grep -m 1 'inet addr:'| cut -d: -f2 | awk '{print $1}'
+
+**** grep -m 1 "inet addr:"
+ - 第一次匹配成功就结束
+
+**** cut -d: -f2
+ - 以“：”来划分块，保留2个块
+
+*** read -e $var
+ - 读行
+
+*** tr -cd [SET]
+ - 从标准输入读入，对<SET>取反，从输入中删除取反后<SET>中的字符，输出到标准输出》
+
+*** trap [[arg] sigspec ...]
+ - 当收到sigspec信号时，读取和执行arg命令
+
+** 待确定命令
+
+*** =～
+

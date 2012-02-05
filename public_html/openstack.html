@@ -169,11 +169,73 @@ w3m http://10.0.2.15
 
 
 
+<h2>脚本学习</h2>
+
+<h3>相关bash命令与变量</h3>
+
+<h4>. &lt;filename&gt;</h4>
+
+<ul>
+<li>相当于source &lt;filename&gt;，执行filename文件种的脚本</li>
+</ul>
+
+
+<h4>{str:-expr}</h4>
+
+<ul>
+<li>如果str未赋值或为空，var=expr</li>
+<li>否则，var=1}'</li>
+</ul>
+
+<h5>grep -m 1 &quot;inet addr:&quot;</h5>
+
+<ul>
+<li>第一次匹配成功就结束</li>
+</ul>
+
+
+<h5>cut -d: -f2</h5>
+
+<ul>
+<li>以“：”来划分块，保留2个块</li>
+</ul>
+
+
+
+<h4>read -e $var</h4>
+
+<ul>
+<li>读行</li>
+</ul>
+
+
+<h4>tr -cd [SET]</h4>
+
+<ul>
+<li>从标准输入读入，对&lt;SET&gt;取反，从输入中删除取反后&lt;SET&gt;中的字符，输出到标准输出》</li>
+</ul>
+
+
+<h4>trap [[arg] sigspec ...]</h4>
+
+<ul>
+<li>当收到sigspec信号时，读取和执行arg命令</li>
+</ul>
+
+
+
+<h3>待确定命令</h3>
+
+<h4>=～</h4>
+
+
+
+
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: January 11, 2012  
+    Last Updated: février  5, 2012  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
