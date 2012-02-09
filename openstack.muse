@@ -82,16 +82,17 @@ w3m http://10.0.2.15
 [[openstack_logged.png]]
 
 * 脚本学习
+注意，下面￥的地方其实都是￥。
 ** 相关bash命令与变量
 *** . <filename>
  - 相当于source <filename>，执行filename文件种的脚本
 
-*** $EUID
+*** ￥EUID
  - 用户权限, 0为特权用户
 
-*** var=${str:-expr}
+*** var=￥{str:-expr}
  - 如果str未赋值或为空，var=expr
- - 否则，var=$str
+ - 否则，var=￥str
 
 *** getent database [key ...]
  - 从一些文本数据库中获取我们需要的信息，如getent passwd joe
@@ -102,7 +103,7 @@ w3m http://10.0.2.15
 *** mktemp
  - 创建临时文件或临时目录
 
-*** /sbin/ifconfig eth0 | grep -m 1 'inet addr:'| cut -d: -f2 | awk '{print $1}'
+*** /sbin/ifconfig eth0 |grep -m 1 'inet addr:' |cut -d: -f2 |awk '{print ￥1}'
 
 **** grep -m 1 "inet addr:"
  - 第一次匹配成功就结束
@@ -110,7 +111,7 @@ w3m http://10.0.2.15
 **** cut -d: -f2
  - 以“：”来划分块，保留2个块
 
-*** read -e $var
+*** read -e ￥var
  - 读行
 
 *** tr -cd [SET]
@@ -119,7 +120,116 @@ w3m http://10.0.2.15
 *** trap [[arg] sigspec ...]
  - 当收到sigspec信号时，读取和执行arg命令
 
+*** dpkg -l <package>
+ - dpkg是debian的包管理工具，这条命令列出匹配的包
+
+*** useradd -U -G <group> -s <shell> -d <home_dir> -m <create_home>
+ - 增加用户，-U，-G增加用户组，-s确定使用的shell，-d为登录目录，-m为创建的用户目录
+
+
+*** grep -q <pattern> <file>
+ - grep结果不输出到标准输出（quietly）
+
+*** chown -R <user> <dir>
+ - 改变目录和其子目录、文件的拥有者
+
+*** whoami
+ - 输出当前用户名
+
 ** 待确定命令
 
-*** =～
+*** ~=
+ - 怀疑是smart operator，含有多种功能
+
+*** set -o xtrace / set +o xtrace
+ - 疑似-o在标准输出时再次输出命令，+o则不重复输出命令
+
+*** STACK_DIR="￥DEST/￥{PWD##*/}"
+ - 未知
+
+
+
+* 脚本拆解手动安装
+安装环境为 ubuntu 11.10 server 64bits，语言选择英语。由于手动安装加入了“人工智能”，相对脚本有所简化，不过通用性不如脚本来得好。
+** 目录结构
+ - functions 常用函数
+ - stackrc 大部分为默认的git clone地址，并读取localrc的内容
+ - files（D） 安装依赖、配置模板等
+
+** 安装步骤
+假设用户名为openstack，密码为opensecret
+
+*** 查看本机ip
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+ifconfig eth0
+</pre></literal>
+记录结果中的<code>inet addr:</code>后的ip地址，如<code>10.0.2.15</code>我们记为<code><host_ip></code>，稍后使用。
+
+*** 安装包
+**** 更新
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get update
+</pre></literal>
+
+**** 安装通用包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install pep8 pylint python-pip screen unzip wget psmisc git-core \
+     lsof openssh-server vim-nox locate python-virtualenv python-unittest2 \
+     iputils-ping wget curl tcpdump euca2ools
+</pre></literal>
+
+**** 安装nova包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install dnsmasq-base dnsmasq-utils kpartx parted iputils-arping \
+     python-mysqldb python-xattr python-lxml kvm gawk iptables ebtables \
+     sqlite3 kvm vlan curl socat python-mox python-paste python-migrate \
+     python-gflags python-greenlet python-libvirt python-libxml2 \
+     python-routes python-netaddr python-pastedeploy python-eventlet \
+     python-cheetah
+</pre></literal>
+
+**** 安装swift包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install curl gcc python-configobj python-coverage python-dev \
+     python-eventlet python-greenlet python-netifaces python-nose \
+     python-pastedeploy python-setuptools python-simplejson python-webob \
+     python-xattr sqlite3 xfsprogs
+</pre></literal>
+
+**** 安装glance包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-eventlet python-routes python-greenlet \
+     python-argparse python-sqlalchemy python-wsgiref python-pastedeploy \
+     python-xattr
+</pre></literal>
+
+**** 安装keystone包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-setuptools python-dev python-lxml \
+     python-pastescript python-pastedeploy python-paste sqlite3 \
+     python-pysqlite2 python-sqlalchemy python-webob python-greenlet \
+     python-routes libldap2-dev libsasl2-dev
+</pre></literal>
+
+**** 安装horizon包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-dateutil python-paste python-pastedeploy \
+     python-anyjson python-routes python-xattr python-sqlalchemy python-webob \
+     python-kombu pylint pep8 python-evenlet python-nose python-mox \ 
+     python-coverage python-cherrypy3 python-django python-django-mailer \
+     python-django-nose python-django-registration python-cloudfiles \
+     python-migrate
+</pre></literal>
+
+**** 安装其他nova包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-dateutil lvm2 open-iscsi open-iscsi-utils \
+     python-numpy tgt
+</pre></literal>
+
+* ISO 安装
+精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考
+ - [[http://www.linuxso.com/linuxrumen/17399.html][介绍]]、[[http://sourceforge.net/projects/stackops/files/][下载]]、 [[http://docs.stackops.org.][文档]]、 [[http://getsatisfaction.com/stackops][支持]]
+
+
 

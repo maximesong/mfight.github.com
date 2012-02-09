@@ -171,7 +171,8 @@ w3m http://10.0.2.15
 
 <h2>脚本学习</h2>
 
-<h3>相关bash命令与变量</h3>
+<p class="first">注意，下面￥的地方其实都是￥。
+<h3>相关bash命令与变量</h3></p>
 
 <h4>. &lt;filename&gt;</h4>
 
@@ -180,12 +181,43 @@ w3m http://10.0.2.15
 </ul>
 
 
-<h4>{str:-expr}</h4>
+<h4>￥EUID</h4>
+
+<ul>
+<li>用户权限, 0为特权用户</li>
+</ul>
+
+
+<h4>var=￥{str:-expr}</h4>
 
 <ul>
 <li>如果str未赋值或为空，var=expr</li>
-<li>否则，var=1}'</li>
+<li>否则，var=￥str</li>
 </ul>
+
+
+<h4>getent database [key ...]</h4>
+
+<ul>
+<li>从一些文本数据库中获取我们需要的信息，如getent passwd joe</li>
+</ul>
+
+
+<h4>tee [OPTION]... [FILE]..</h4>
+
+<ul>
+<li>从标准输入读入，写入到标准输出和文件</li>
+</ul>
+
+
+<h4>mktemp</h4>
+
+<ul>
+<li>创建临时文件或临时目录</li>
+</ul>
+
+
+<h4>/sbin/ifconfig eth0 |grep -m 1 'inet addr:' |cut -d: -f2 |awk '{print ￥1}'</h4>
 
 <h5>grep -m 1 &quot;inet addr:&quot;</h5>
 
@@ -202,7 +234,7 @@ w3m http://10.0.2.15
 
 
 
-<h4>read -e $var</h4>
+<h4>read -e ￥var</h4>
 
 <ul>
 <li>读行</li>
@@ -223,19 +255,190 @@ w3m http://10.0.2.15
 </ul>
 
 
+<h4>dpkg -l &lt;package&gt;</h4>
+
+<ul>
+<li>dpkg是debian的包管理工具，这条命令列出匹配的包</li>
+</ul>
+
+
+<h4>useradd -U -G &lt;group&gt; -s &lt;shell&gt; -d &lt;home_dir&gt; -m &lt;create_home&gt;</h4>
+
+<ul>
+<li>增加用户，-U，-G增加用户组，-s确定使用的shell，-d为登录目录，-m为创建的用户目录</li>
+</ul>
+
+
+
+<h4>grep -q &lt;pattern&gt; &lt;file&gt;</h4>
+
+<ul>
+<li>grep结果不输出到标准输出（quietly）</li>
+</ul>
+
+
+<h4>chown -R &lt;user&gt; &lt;dir&gt;</h4>
+
+<ul>
+<li>改变目录和其子目录、文件的拥有者</li>
+</ul>
+
+
+<h4>whoami</h4>
+
+<ul>
+<li>输出当前用户名</li>
+</ul>
+
+
 
 <h3>待确定命令</h3>
 
-<h4>=～</h4>
+<h4>~=</h4>
+
+<ul>
+<li>怀疑是smart operator，含有多种功能</li>
+</ul>
 
 
+<h4>set -o xtrace / set +o xtrace</h4>
+
+<ul>
+<li>疑似-o在标准输出时再次输出命令，+o则不重复输出命令</li>
+</ul>
+
+
+<h4>STACK_DIR=&quot;￥DEST/￥{PWD##*/}&quot;</h4>
+
+<ul>
+<li>未知</li>
+</ul>
+
+
+
+
+
+
+<h2>脚本拆解手动安装</h2>
+
+<p class="first">安装环境为 ubuntu 11.10 server 64bits，语言选择英语。由于手动安装加入了“人工智能”，相对脚本有所简化，不过通用性不如脚本来得好。
+<h3>目录结构</h3></p>
+
+<ul>
+<li>functions 常用函数</li>
+<li>stackrc 大部分为默认的git clone地址，并读取localrc的内容</li>
+<li>files（D） 安装依赖、配置模板等</li>
+</ul>
+
+
+<h3>安装步骤</h3>
+
+<p class="first">假设用户名为openstack，密码为opensecret</p>
+
+<h4>查看本机ip</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+ifconfig eth0
+</pre>
+记录结果中的<code>inet addr:</code>后的ip地址，如<code>10.0.2.15</code>我们记为<code>&lt;host_ip&gt;</code>，稍后使用。
+
+
+<h4>安装包</h4>
+
+<h5>更新</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get update
+</pre>
+
+
+<h5>安装通用包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install pep8 pylint python-pip screen unzip wget psmisc git-core \
+     lsof openssh-server vim-nox locate python-virtualenv python-unittest2 \
+     iputils-ping wget curl tcpdump euca2ools
+</pre>
+
+
+<h5>安装nova包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install dnsmasq-base dnsmasq-utils kpartx parted iputils-arping \
+     python-mysqldb python-xattr python-lxml kvm gawk iptables ebtables \
+     sqlite3 kvm vlan curl socat python-mox python-paste python-migrate \
+     python-gflags python-greenlet python-libvirt python-libxml2 \
+     python-routes python-netaddr python-pastedeploy python-eventlet \
+     python-cheetah
+</pre>
+
+
+<h5>安装swift包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install curl gcc python-configobj python-coverage python-dev \
+     python-eventlet python-greenlet python-netifaces python-nose \
+     python-pastedeploy python-setuptools python-simplejson python-webob \
+     python-xattr sqlite3 xfsprogs
+</pre>
+
+
+<h5>安装glance包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-eventlet python-routes python-greenlet \
+     python-argparse python-sqlalchemy python-wsgiref python-pastedeploy \
+     python-xattr
+</pre>
+
+
+<h5>安装keystone包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-setuptools python-dev python-lxml \
+     python-pastescript python-pastedeploy python-paste sqlite3 \
+     python-pysqlite2 python-sqlalchemy python-webob python-greenlet \
+     python-routes libldap2-dev libsasl2-dev
+</pre>
+
+
+<h5>安装horizon包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-dateutil python-paste python-pastedeploy \
+     python-anyjson python-routes python-xattr python-sqlalchemy python-webob \
+     python-kombu pylint pep8 python-evenlet python-nose python-mox \
+     python-coverage python-cherrypy3 python-django python-django-mailer \
+     python-django-nose python-django-registration python-cloudfiles \
+     python-migrate
+</pre>
+
+
+<h5>安装其他nova包</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install python-dateutil lvm2 open-iscsi open-iscsi-utils \
+     python-numpy tgt
+</pre>
+
+
+
+
+
+<h2>ISO 安装</h2>
+
+<p class="first">精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考</p>
+
+<ul>
+<li><a href="http://www.linuxso.com/linuxrumen/17399.html">介绍</a>、<a href="http://sourceforge.net/projects/stackops/files/">下载</a>、 <a href="http://docs.stackops.org.">文档</a>、 <a href="http://getsatisfaction.com/stackops">支持</a></li>
+</ul>
 
 
 <!-- Emacs Muse Footer -->
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: février  5, 2012  
+    Last Updated: février  9, 2012  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
