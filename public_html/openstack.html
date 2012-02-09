@@ -32,17 +32,200 @@
       </div>
     <!-- menu ends here -->
     <!-- Page published by Emacs Muse begins here -->
-<h2>脚本安装</h2>
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">脚本安装</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">安装Ubtuntu 11.10(Oneiric)</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">下载DevStack脚本</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec4">安装git</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">下载脚本</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec6">运行脚本</a>
+</dt>
+<dt class="contents">
+<a href="#sec7">安装期间</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec8">可能遇到的错误</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec9">安装完成</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec10">访问Dashboard</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec11">Virtualbox</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec12">脚本学习</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec13">相关bash命令与变量</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec14">. </a>
+</dt>
+<dt class="contents">
+<a href="#sec15">￥EUID</a>
+</dt>
+<dt class="contents">
+<a href="#sec16">￥USER</a>
+</dt>
+<dt class="contents">
+<a href="#sec17">var=￥{str:-expr}</a>
+</dt>
+<dt class="contents">
+<a href="#sec18">getent database [key ...]</a>
+</dt>
+<dt class="contents">
+<a href="#sec19">tee [OPTION]... [FILE]..</a>
+</dt>
+<dt class="contents">
+<a href="#sec20">mktemp</a>
+</dt>
+<dt class="contents">
+<a href="#sec21">/sbin/ifconfig eth0 |grep -m 1 'inet addr:' |cut -d: -f2 |awk '{print ￥1}'</a>
+</dt>
+<dt class="contents">
+<a href="#sec22">read -e ￥var</a>
+</dt>
+<dt class="contents">
+<a href="#sec23">tr -cd [SET]</a>
+</dt>
+<dt class="contents">
+<a href="#sec24">trap [[arg] sigspec ...]</a>
+</dt>
+<dt class="contents">
+<a href="#sec25">dpkg -l </a>
+</dt>
+<dt class="contents">
+<a href="#sec26">useradd -U -G  -s  -d  -m </a>
+</dt>
+<dt class="contents">
+<a href="#sec27">grep -q  </a>
+</dt>
+<dt class="contents">
+<a href="#sec28">chown -R  </a>
+</dt>
+<dt class="contents">
+<a href="#sec29">whoami</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec30">待确定命令</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec31">~=</a>
+</dt>
+<dt class="contents">
+<a href="#sec32">set -o xtrace / set +o xtrace</a>
+</dt>
+<dt class="contents">
+<a href="#sec33">STACK_DIR="￥DEST/￥{PWD##*/}"</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec34">脚本拆解手动安装</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec35">目录结构</a>
+</dt>
+<dt class="contents">
+<a href="#sec36">安装步骤</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec37">查看本机ip</a>
+</dt>
+<dt class="contents">
+<a href="#sec38">安装apt包</a>
+</dt>
+<dt class="contents">
+<a href="#sec39">安装python依赖</a>
+</dt>
+<dt class="contents">
+<a href="#sec40">git库下载</a>
+</dt>
+<dt class="contents">
+<a href="#sec41">安装git库</a>
+</dt>
+<dt class="contents">
+<a href="#sec42">安装syslog</a>
+</dt>
+<dt class="contents">
+<a href="#sec43">安装rabbitmq</a>
+</dt>
+<dt class="contents">
+<a href="#sec44">安装mysql</a>
+</dt>
+<dt class="contents">
+<a href="#sec45">安装horizon服务器</a>
+</dt>
+<dt class="contents">
+<a href="#sec46">未完待续。。。</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec47">ISO 安装</a>
+</dt>
+</dl>
+</div>
+
+<h2><a name="sec1" id="sec1"></a>脚本安装</h2>
 
 <p class="first">通过devstack.org提供的shell脚本来安装和配置openstack。
-<h3>安装Ubtuntu 11.10(Oneiric)</h3></p>
+<h3><a name="sec2" id="sec2"></a>安装Ubtuntu 11.10(Oneiric)</h3></p>
 
 <p>最稳妥的是安装Ubuntu Server 11.10 64bits。我在Unbuntu Desktop Edition上也试过运行脚本，但是会出现Host Ip没有指定的情况，应该另外配置一下就可以了，但我没有继续研究下去。</p>
 
 
-<h3>下载DevStack脚本</h3>
+<h3><a name="sec3" id="sec3"></a>下载DevStack脚本</h3>
 
-<h4>安装git</h4>
+<h4><a name="sec4" id="sec4"></a>安装git</h4>
 
 <p class="first">下载脚本需要用到git，如果你的系统还没有安装过git，可以在控制台中用下面的命令安装。
 
@@ -52,7 +235,7 @@ sudo apt-get install git
 </p>
 
 
-<h4>下载脚本</h4>
+<h4><a name="sec5" id="sec5"></a>下载脚本</h4>
 
 <p class="first">cd到准备存放脚本的文件夹下，然后在控制台执行下面的命令。
 
@@ -63,7 +246,7 @@ git clone git://github.com/cloudbuilders/devstack.git
 
 
 
-<h3>运行脚本</h3>
+<h3><a name="sec6" id="sec6"></a>运行脚本</h3>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 cd devstack # The folder you just cloned
@@ -72,7 +255,7 @@ cd devstack # The folder you just cloned
 
 
 
-<h3>安装期间</h3>
+<h3><a name="sec7" id="sec7"></a>安装期间</h3>
 
 <ul>
 <li>第一次安装时，脚本可能会提示你设置几个密码，不要嫌烦哦。</li>
@@ -80,7 +263,7 @@ cd devstack # The folder you just cloned
 <li>安装时间可能会比较长，趁次机会，不妨看一看<a href="http://devstack.org/stack.sh.html">脚本</a>究竟干了些什么，注释还是很详细的。</li>
 </ul>
 
-<h4>可能遇到的错误</h4>
+<h4><a name="sec8" id="sec8"></a>可能遇到的错误</h4>
 
 <ul>
 <li>卡在某个地方
@@ -112,11 +295,11 @@ pip install django-nose-selenium
 
 
 
-<h3>安装完成</h3>
+<h3><a name="sec9" id="sec9"></a>安装完成</h3>
 
 <p class="first">安装完成后会提示你各个配置信息,包括默认的用户名和密码。
 比如访问Dashboard的地址<code>horizon is now available at http://10.0.2.15/</code>
-<h4>访问Dashboard</h4></p>
+<h4><a name="sec10" id="sec10"></a>访问Dashboard</h4></p>
 
 <p>即使Ubuntu Server默认没有安装桌面环境，一样可以通过控制台中的浏览器访问Dashboard
 
@@ -136,7 +319,7 @@ w3m http://10.0.2.15
 
 
 
-<h3>Virtualbox</h3>
+<h3><a name="sec11" id="sec11"></a>Virtualbox</h3>
 
 <p class="first">如果是在Virtualbox中安装openstack，可以通过NAT和Port Forwarding在原来的系统(Host)内访问虚拟机中系统(Guest)的服务。其原理是将发向Host的某个Ip地址和端口的请求转发给Guest的某个Ip地址和端口，达到在Host上访问Guest的目的，具体设置步骤如下</p>
 
@@ -169,26 +352,33 @@ w3m http://10.0.2.15
 
 
 
-<h2>脚本学习</h2>
+<h2><a name="sec12" id="sec12"></a>脚本学习</h2>
 
 <p class="first">注意，下面￥的地方其实都是￥。
-<h3>相关bash命令与变量</h3></p>
+<h3><a name="sec13" id="sec13"></a>相关bash命令与变量</h3></p>
 
-<h4>. &lt;filename&gt;</h4>
+<h4><a name="sec14" id="sec14"></a>. &lt;filename&gt;</h4>
 
 <ul>
 <li>相当于source &lt;filename&gt;，执行filename文件种的脚本</li>
 </ul>
 
 
-<h4>￥EUID</h4>
+<h4><a name="sec15" id="sec15"></a>￥EUID</h4>
 
 <ul>
 <li>用户权限, 0为特权用户</li>
 </ul>
 
 
-<h4>var=￥{str:-expr}</h4>
+<h4><a name="sec16" id="sec16"></a>￥USER</h4>
+
+<ul>
+<li>当前用户</li>
+</ul>
+
+
+<h4><a name="sec17" id="sec17"></a>var=￥{str:-expr}</h4>
 
 <ul>
 <li>如果str未赋值或为空，var=expr</li>
@@ -196,28 +386,28 @@ w3m http://10.0.2.15
 </ul>
 
 
-<h4>getent database [key ...]</h4>
+<h4><a name="sec18" id="sec18"></a>getent database [key ...]</h4>
 
 <ul>
 <li>从一些文本数据库中获取我们需要的信息，如getent passwd joe</li>
 </ul>
 
 
-<h4>tee [OPTION]... [FILE]..</h4>
+<h4><a name="sec19" id="sec19"></a>tee [OPTION]... [FILE]..</h4>
 
 <ul>
 <li>从标准输入读入，写入到标准输出和文件</li>
 </ul>
 
 
-<h4>mktemp</h4>
+<h4><a name="sec20" id="sec20"></a>mktemp</h4>
 
 <ul>
 <li>创建临时文件或临时目录</li>
 </ul>
 
 
-<h4>/sbin/ifconfig eth0 |grep -m 1 'inet addr:' |cut -d: -f2 |awk '{print ￥1}'</h4>
+<h4><a name="sec21" id="sec21"></a>/sbin/ifconfig eth0 |grep -m 1 'inet addr:' |cut -d: -f2 |awk '{print ￥1}'</h4>
 
 <h5>grep -m 1 &quot;inet addr:&quot;</h5>
 
@@ -234,35 +424,35 @@ w3m http://10.0.2.15
 
 
 
-<h4>read -e ￥var</h4>
+<h4><a name="sec22" id="sec22"></a>read -e ￥var</h4>
 
 <ul>
 <li>读行</li>
 </ul>
 
 
-<h4>tr -cd [SET]</h4>
+<h4><a name="sec23" id="sec23"></a>tr -cd [SET]</h4>
 
 <ul>
 <li>从标准输入读入，对&lt;SET&gt;取反，从输入中删除取反后&lt;SET&gt;中的字符，输出到标准输出》</li>
 </ul>
 
 
-<h4>trap [[arg] sigspec ...]</h4>
+<h4><a name="sec24" id="sec24"></a>trap [[arg] sigspec ...]</h4>
 
 <ul>
 <li>当收到sigspec信号时，读取和执行arg命令</li>
 </ul>
 
 
-<h4>dpkg -l &lt;package&gt;</h4>
+<h4><a name="sec25" id="sec25"></a>dpkg -l &lt;package&gt;</h4>
 
 <ul>
 <li>dpkg是debian的包管理工具，这条命令列出匹配的包</li>
 </ul>
 
 
-<h4>useradd -U -G &lt;group&gt; -s &lt;shell&gt; -d &lt;home_dir&gt; -m &lt;create_home&gt;</h4>
+<h4><a name="sec26" id="sec26"></a>useradd -U -G &lt;group&gt; -s &lt;shell&gt; -d &lt;home_dir&gt; -m &lt;create_home&gt;</h4>
 
 <ul>
 <li>增加用户，-U，-G增加用户组，-s确定使用的shell，-d为登录目录，-m为创建的用户目录</li>
@@ -270,21 +460,21 @@ w3m http://10.0.2.15
 
 
 
-<h4>grep -q &lt;pattern&gt; &lt;file&gt;</h4>
+<h4><a name="sec27" id="sec27"></a>grep -q &lt;pattern&gt; &lt;file&gt;</h4>
 
 <ul>
 <li>grep结果不输出到标准输出（quietly）</li>
 </ul>
 
 
-<h4>chown -R &lt;user&gt; &lt;dir&gt;</h4>
+<h4><a name="sec28" id="sec28"></a>chown -R &lt;user&gt; &lt;dir&gt;</h4>
 
 <ul>
 <li>改变目录和其子目录、文件的拥有者</li>
 </ul>
 
 
-<h4>whoami</h4>
+<h4><a name="sec29" id="sec29"></a>whoami</h4>
 
 <ul>
 <li>输出当前用户名</li>
@@ -292,23 +482,23 @@ w3m http://10.0.2.15
 
 
 
-<h3>待确定命令</h3>
+<h3><a name="sec30" id="sec30"></a>待确定命令</h3>
 
-<h4>~=</h4>
+<h4><a name="sec31" id="sec31"></a>~=</h4>
 
 <ul>
 <li>怀疑是smart operator，含有多种功能</li>
 </ul>
 
 
-<h4>set -o xtrace / set +o xtrace</h4>
+<h4><a name="sec32" id="sec32"></a>set -o xtrace / set +o xtrace</h4>
 
 <ul>
 <li>疑似-o在标准输出时再次输出命令，+o则不重复输出命令</li>
 </ul>
 
 
-<h4>STACK_DIR=&quot;￥DEST/￥{PWD##*/}&quot;</h4>
+<h4><a name="sec33" id="sec33"></a>STACK_DIR=&quot;￥DEST/￥{PWD##*/}&quot;</h4>
 
 <ul>
 <li>未知</li>
@@ -319,10 +509,10 @@ w3m http://10.0.2.15
 
 
 
-<h2>脚本拆解手动安装</h2>
+<h2><a name="sec34" id="sec34"></a>脚本拆解手动安装</h2>
 
 <p class="first">安装环境为 ubuntu 11.10 server 64bits，语言选择英语。由于手动安装加入了“人工智能”，相对脚本有所简化，不过通用性不如脚本来得好。
-<h3>目录结构</h3></p>
+<h3><a name="sec35" id="sec35"></a>目录结构</h3></p>
 
 <ul>
 <li>functions 常用函数</li>
@@ -331,11 +521,11 @@ w3m http://10.0.2.15
 </ul>
 
 
-<h3>安装步骤</h3>
+<h3><a name="sec36" id="sec36"></a>安装步骤</h3>
 
 <p class="first">假设用户名为openstack，密码为opensecret</p>
 
-<h4>查看本机ip</h4>
+<h4><a name="sec37" id="sec37"></a>查看本机ip</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 ifconfig eth0
@@ -343,7 +533,7 @@ ifconfig eth0
 记录结果中的<code>inet addr:</code>后的ip地址，如<code>10.0.2.15</code>我们记为<code>&lt;host_ip&gt;</code>，稍后使用。
 
 
-<h4>安装包</h4>
+<h4><a name="sec38" id="sec38"></a>安装apt包</h4>
 
 <h5>更新</h5>
 
@@ -423,9 +613,211 @@ sudo apt-get install python-dateutil lvm2 open-iscsi open-iscsi-utils \
 
 
 
+<h4><a name="sec39" id="sec39"></a>安装python依赖</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo pip install django-nose-selenium pycrypto==2.3 PassLib pika
+</pre>
 
 
-<h2>ISO 安装</h2>
+<h4><a name="sec40" id="sec40"></a>git库下载</h4>
+
+<h5>下载nova&amp;nova-client</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/nova.git
+git clone https://github.com/openstack/python-novaclient.git
+</pre>
+
+
+<h5>下载novnc</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/cloudbuilders/noVNC.git
+</pre>
+
+
+<h5>下载swift</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/swift.git
+</pre>
+
+
+<h5>下载glance</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/glance.git
+</pre>
+
+
+<h5>下载keystone&amp;keystone-client&amp;swift-keystone</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/keystone
+git clone https://github.com/cloudbuilders/swift-keystone2.git
+git clone https://github.com/openstack/python-keystoneclient
+</pre>
+
+
+<h5>下载horizon</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/horizon.git
+</pre>
+
+
+<h5>下载quantum&amp;quantum-client</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/quantum
+git clone https://github.com/openstack/python-quantumclient
+</pre>
+
+
+<h5>下载melange&amp;melange-client</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/melange.git
+git clone https://github.com/openstack/python-melangeclient.git
+</pre>
+
+
+
+<h4><a name="sec41" id="sec41"></a>安装git库</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cd keystone
+sudo python setup develop
+cd ../swift
+sudo python setup develop
+cd ../swift-keystone2
+sudo python setup develop
+
+cd ../glance
+sudo python setup develop
+
+cd ../python-novaclient
+sudo python setup develop
+
+cd ../nova
+sudo python setup develop
+
+cd ../python-keystoneclient
+sudo python setup develop
+
+cd ../horizen/horizen
+sudo python setup develop
+
+cd ../openstack-dashboard
+sudo python setup develop
+
+cd ../../quantum
+sudo python setup develop
+
+cd ../melange
+sudo python setup develop
+cd ../python-melangeclient
+sudo python setup develop
+
+</pre>
+
+
+<h4><a name="sec42" id="sec42"></a>安装syslog</h4>
+
+<p class="first">略</p>
+
+
+<h4><a name="sec43" id="sec43"></a>安装rabbitmq</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install rabbitmq-server
+sudo rabbitmqctl change_password guest <rabbit_password> #密码从guest改为<rabbit_password>
+</pre>
+
+
+<h4><a name="sec44" id="sec44"></a>安装mysql</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install mysql-server
+</pre>
+
+<ul>
+<li>期间设置mysql密码，记为&lt;mysql_root_passwd&gt;</li>
+</ul>
+
+<h5>配置mysql用户</h5>
+
+<p>新建~/.my.conf,并及加入下面几行的内容</p>
+
+<pre class="example">
+[client]
+user=root
+password=&lt;mysql_root_passwd&gt;
+host=localhost
+</pre>
+运行下面命令设置文件的权限
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+chmod 0600 ~/.my.cnf
+</pre>
+修改配置，使得mysql绑定到任意的ip地址，然后重启mysql服务
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
+sudo service mysql restart
+</pre>
+
+
+
+<h4><a name="sec45" id="sec45"></a>安装horizon服务器</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install apache2 libapache2-mod-wsgi
+</pre>
+链接到quantum
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -fr horizon/openstack-dashboard/quantum
+ln -s python-quantumclient/quantum horizon/openstack-dashboard/quantum
+</pre>
+删除没用的数据库
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -f horizon/openstack-dashboard/local/dashboard_openstack.sqlite3
+</pre>
+复制horizon的设置
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/horizon_settings.py horizon/openstack-dashboard/local/local_settings.py
+</pre>
+在设置文件中启用quantum
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo sed -e "s,QUANTUM_ENABLED = False,QUANTUM_ENABLED = True,g" -i horizon/openstack-dashboard/local/local_settings.py
+</pre>
+初始化数据库
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cd horizon/openstack-dashboard/
+python manage.py syncdb
+</pre>
+创建apache使用的目录
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo mkdir -p horizon/.blackhole
+</pre>
+配置apache，运行horizon，记当前用户为&lt;user&gt;
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo cp $FILES/000-default.template /etc/apache2/sites-enabled/000-default
+sudo sed -e "
+     s,%USER%,<user>,g;
+     s,%GROUP%,<user>,g;
+     s,%HORIZON_DIR%,/home/<user>/devstack/horizon,g;
+     " -i /etc/apache2/sites-enabled/000-default
+sudo service apache2 restart
+</pre>
+
+
+
+<h4><a name="sec46" id="sec46"></a>未完待续。。。</h4>
+
+
+
+
+<h2><a name="sec47" id="sec47"></a>ISO 安装</h2>
 
 <p class="first">精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考</p>
 

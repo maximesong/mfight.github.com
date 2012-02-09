@@ -1,4 +1,5 @@
 #title openstack
+<contents>
 * 脚本安装
 通过devstack.org提供的shell脚本来安装和配置openstack。
 ** 安装Ubtuntu 11.10(Oneiric)
@@ -90,6 +91,9 @@ w3m http://10.0.2.15
 *** ￥EUID
  - 用户权限, 0为特权用户
 
+*** ￥USER
+ - 当前用户
+
 *** var=￥{str:-expr}
  - 如果str未赋值或为空，var=expr
  - 否则，var=￥str
@@ -165,7 +169,7 @@ ifconfig eth0
 </pre></literal>
 记录结果中的<code>inet addr:</code>后的ip地址，如<code>10.0.2.15</code>我们记为<code><host_ip></code>，稍后使用。
 
-*** 安装包
+*** 安装apt包
 **** 更新
 <literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get update
@@ -227,9 +231,173 @@ sudo apt-get install python-dateutil lvm2 open-iscsi open-iscsi-utils \
      python-numpy tgt
 </pre></literal>
 
+*** 安装python依赖
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo pip install django-nose-selenium pycrypto==2.3 PassLib pika
+</pre></literal>
+
+*** git库下载
+**** 下载nova&nova-client
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/nova.git
+git clone https://github.com/openstack/python-novaclient.git
+</pre></literal>
+
+**** 下载novnc
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/cloudbuilders/noVNC.git
+</pre></literal>
+
+**** 下载swift
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/swift.git
+</pre></literal>
+
+**** 下载glance
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/glance.git
+</pre></literal>
+
+**** 下载keystone&keystone-client&swift-keystone
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/keystone
+git clone https://github.com/cloudbuilders/swift-keystone2.git
+git clone https://github.com/openstack/python-keystoneclient
+</pre></literal>
+
+**** 下载horizon
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/horizon.git
+</pre></literal>
+
+**** 下载quantum&quantum-client
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/quantum
+git clone https://github.com/openstack/python-quantumclient
+</pre></literal>
+
+**** 下载melange&melange-client
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+git clone https://github.com/openstack/melange.git
+git clone https://github.com/openstack/python-melangeclient.git
+</pre></literal>
+
+*** 安装git库
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cd keystone
+sudo python setup develop
+cd ../swift
+sudo python setup develop
+cd ../swift-keystone2
+sudo python setup develop
+
+cd ../glance
+sudo python setup develop
+
+cd ../python-novaclient
+sudo python setup develop
+
+cd ../nova
+sudo python setup develop
+
+cd ../python-keystoneclient
+sudo python setup develop
+
+cd ../horizen/horizen
+sudo python setup develop
+
+cd ../openstack-dashboard
+sudo python setup develop
+
+cd ../../quantum
+sudo python setup develop
+
+cd ../melange
+sudo python setup develop
+cd ../python-melangeclient
+sudo python setup develop
+
+</pre></literal>
+
+*** 安装syslog
+略
+
+*** 安装rabbitmq
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install rabbitmq-server
+sudo rabbitmqctl change_password guest <rabbit_password> #密码从guest改为<rabbit_password>
+</pre></literal>
+
+*** 安装mysql
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install mysql-server
+</pre></literal>
+ - 期间设置mysql密码，记为<mysql_root_passwd>
+
+**** 配置mysql用户
+新建~/.my.conf,并及加入下面几行的内容
+<example>
+[client]
+user=root
+password=<mysql_root_passwd>
+host=localhost
+</example>
+运行下面命令设置文件的权限
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+chmod 0600 ~/.my.cnf
+</pre></literal>
+修改配置，使得mysql绑定到任意的ip地址，然后重启mysql服务
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
+sudo service mysql restart
+</pre></literal>
+
+*** 安装horizon服务器
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install apache2 libapache2-mod-wsgi
+</pre></literal>
+链接到quantum
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -fr horizon/openstack-dashboard/quantum
+ln -s python-quantumclient/quantum horizon/openstack-dashboard/quantum
+</pre></literal>
+删除没用的数据库
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -f horizon/openstack-dashboard/local/dashboard_openstack.sqlite3
+</pre></literal>
+复制horizon的设置
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/horizon_settings.py horizon/openstack-dashboard/local/local_settings.py
+</pre></literal>
+在设置文件中启用quantum
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo sed -e "s,QUANTUM_ENABLED = False,QUANTUM_ENABLED = True,g" -i horizon/openstack-dashboard/local/local_settings.py
+</pre></literal>
+初始化数据库
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cd horizon/openstack-dashboard/
+python manage.py syncdb
+</pre></literal>
+创建apache使用的目录
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo mkdir -p horizon/.blackhole
+</pre></literal>
+配置apache，运行horizon，记当前用户为<user>
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo cp $FILES/000-default.template /etc/apache2/sites-enabled/000-default
+sudo sed -e "
+     s,%USER%,<user>,g;
+     s,%GROUP%,<user>,g;
+     s,%HORIZON_DIR%,/home/<user>/devstack/horizon,g;
+     " -i /etc/apache2/sites-enabled/000-default
+sudo service apache2 restart
+</pre></literal>
+
+
+*** 未完待续。。。
+
 * ISO 安装
 精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考
  - [[http://www.linuxso.com/linuxrumen/17399.html][介绍]]、[[http://sourceforge.net/projects/stackops/files/][下载]]、 [[http://docs.stackops.org.][文档]]、 [[http://getsatisfaction.com/stackops][支持]]
-
 
 
