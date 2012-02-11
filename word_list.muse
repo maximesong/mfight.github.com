@@ -4,7 +4,7 @@ a raft of something
 a large number of things
 
 abeyance
-something such as a custom, rule, or system that is in abeyance is not being used at the present time.
+something such as a custom, rule, or system that is in abeyance is not BEING USEd at the present time.
 
 ad hoc
 not planned, but arranged or done only when necessary
@@ -1399,3 +1399,4 @@ to give support to an opinion, idea, or feeling, and make it stronger
 
 suffocated
 to feel as if you are not free or do not have enough space
+

@@ -140,6 +140,9 @@ w3m http://10.0.2.15
 *** whoami
  - 输出当前用户名
 
+*** id -g
+ - 输出用户组（数字）
+
 ** 待确定命令
 
 *** ~=
@@ -393,11 +396,119 @@ sudo sed -e "
 sudo service apache2 restart
 </pre></literal>
 
+*** 配置glance
+建立images目录
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p glance/images
+</pre></literal>
+配置glance的mysql
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE glance;'
+</pre></literal>
+复制glance-registry配置模板
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-registry.conf glance/etc/glance-registry.conf
+</pre></literal>
+修改glance/etc/glance-registry.conf，将内容按照如下替换,其中<service_token>为自己设定的口令
+ - %KEYSTONE_AUTH_HOST% -> <host_ip>
+ - %KEYSTONE_AUTH_PORT% -> 35357
+ - %KEYSTONE_AUTH_PROTOCOL% -> http
+ - %KEYSTONE_SERVICE_HOST% -> <host_ip>
+ - %KEYSTONE_SERVICE_PORT% -> 5000
+ - %KEYSTONE_SERVICE_PROTOCOL% -> http
+ - %SERVICE_TOKEN -> <service_token>
+ - %SQL_CONN% -> mysql://root:<mysql_passwd>@localhost/glance
+ - %DEST% -> /home/<user>/devstack/
+ - %SYSLOG% -> False
 
+复制glance-registry初始化配置
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-registry-paste.ini glance/etc/glance-registry-paste.ini
+</pre></literal>
+
+对glance/etc/glance-registry-paste.ini的内容做和上面相同的替换。
+
+将glance-registry初始化配置文件的内容加入到配置文件中
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cat glance/etc/glance-registry-paste.ini >> glance/etc/glance-registry.conf
+</pre></literal>
+
+复制glance-api配置
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-api.conf glance/etc/glance-api.conf
+</pre></literal>
+对glance/etc/glance-api.conf做用同样的替换处理
+
+复制glance-api初始化配置
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-api-paste.ini glance/etc/glance-api-paste.ini
+</pre></literal>
+
+对glance-api-paste.ini做同样的替换处理
+
+将glance-api初始化配置加入到配置文件中
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cat glance/etc/glance-api-paste.ini >> glance/etc/glance-api.conf
+</pre></literal>
+
+*** 配置nova
+复制nova的初始化文件
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp nova/etc/nova/api-paste.ini nova/bin/nova-api-paste.ini
+</pre></literal>
+替换nova/bin/nova-api-paste.ini的内容
+ - %SERVICE_TOKEN% -> <service_token>
+ - ec2cloud -> ec2faultwrap logrequest totoken authtoken keystonecontext cloudrequest authorizer validator ec2executor
+ - ec2admin -> ec2faultwrap logrequest totoken authtoken keystonecontext adminrequest authorizer ec2executor
+ - openstack_compute_api_v2 -> faultwrap authtoken keystonecontext ratelimit osapi_compute_app_v2
+ - openstack_volume_api_v1 -> faultwrap authtoken keystonecontext ratelimit osapi_volume_app_v1
+
+*** 安装libvirt-bin
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install libvirt-bin
+</pre></literal>
+尝试载入网络块设备模块和kvm模块
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo modprobe ndb
+sudo modprobe kvm
+</pre></literal>
+测试一下kvm是否可用
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+file /dev/kvm # maybe other better command for test
+</pre></literal>
+将用户加入libvirtd中，并且重启libvirt服务
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo usermod -a -G libvirtd <user>
+sudo /etc/init.d/libvirt-bin restart
+</pre></literal>
+创建nova instances目录
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p nova/instances
+</pre></literal>
+
+*** 清除iptables规则
+略
+
+*** 删除旧的instances
+略
+
+*** 建立nova-network文件夹
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -rf nova/networks
+mkdir -p nova/networks
+</pre></literal>
+
+*** 配置储存服务
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo mkdir -p swift/data/drives
+sudo chown
+</pre></literal>
 *** 未完待续。。。
 
 * ISO 安装
 精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考
  - [[http://www.linuxso.com/linuxrumen/17399.html][介绍]]、[[http://sourceforge.net/projects/stackops/files/][下载]]、 [[http://docs.stackops.org.][文档]]、 [[http://getsatisfaction.com/stackops][支持]]
+
+
 
 

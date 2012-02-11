@@ -142,75 +142,99 @@
 <dt class="contents">
 <a href="#sec29">whoami</a>
 </dt>
+<dt class="contents">
+<a href="#sec30">id -g</a>
+</dt>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec30">待确定命令</a>
+<a href="#sec31">待确定命令</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec31">~=</a>
+<a href="#sec32">~=</a>
 </dt>
 <dt class="contents">
-<a href="#sec32">set -o xtrace / set +o xtrace</a>
+<a href="#sec33">set -o xtrace / set +o xtrace</a>
 </dt>
 <dt class="contents">
-<a href="#sec33">STACK_DIR="￥DEST/￥{PWD##*/}"</a>
+<a href="#sec34">STACK_DIR="￥DEST/￥{PWD##*/}"</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec34">脚本拆解手动安装</a>
+<a href="#sec35">脚本拆解手动安装</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec35">目录结构</a>
+<a href="#sec36">目录结构</a>
 </dt>
 <dt class="contents">
-<a href="#sec36">安装步骤</a>
+<a href="#sec37">安装步骤</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec37">查看本机ip</a>
+<a href="#sec38">查看本机ip</a>
 </dt>
 <dt class="contents">
-<a href="#sec38">安装apt包</a>
+<a href="#sec39">安装apt包</a>
 </dt>
 <dt class="contents">
-<a href="#sec39">安装python依赖</a>
+<a href="#sec40">安装python依赖</a>
 </dt>
 <dt class="contents">
-<a href="#sec40">git库下载</a>
+<a href="#sec41">git库下载</a>
 </dt>
 <dt class="contents">
-<a href="#sec41">安装git库</a>
+<a href="#sec42">安装git库</a>
 </dt>
 <dt class="contents">
-<a href="#sec42">安装syslog</a>
+<a href="#sec43">安装syslog</a>
 </dt>
 <dt class="contents">
-<a href="#sec43">安装rabbitmq</a>
+<a href="#sec44">安装rabbitmq</a>
 </dt>
 <dt class="contents">
-<a href="#sec44">安装mysql</a>
+<a href="#sec45">安装mysql</a>
 </dt>
 <dt class="contents">
-<a href="#sec45">安装horizon服务器</a>
+<a href="#sec46">安装horizon服务器</a>
 </dt>
 <dt class="contents">
-<a href="#sec46">未完待续。。。</a>
+<a href="#sec47">配置glance</a>
+</dt>
+<dt class="contents">
+<a href="#sec48">配置nova</a>
+</dt>
+<dt class="contents">
+<a href="#sec49">安装libvirt-bin</a>
+</dt>
+<dt class="contents">
+<a href="#sec50">清除iptables规则</a>
+</dt>
+<dt class="contents">
+<a href="#sec51">删除旧的instances</a>
+</dt>
+<dt class="contents">
+<a href="#sec52">建立nova-network文件夹</a>
+</dt>
+<dt class="contents">
+<a href="#sec53">配置储存服务</a>
+</dt>
+<dt class="contents">
+<a href="#sec54">未完待续。。。</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec47">ISO 安装</a>
+<a href="#sec55">ISO 安装</a>
 </dt>
 </dl>
 </div>
@@ -481,24 +505,31 @@ w3m http://10.0.2.15
 </ul>
 
 
+<h4><a name="sec30" id="sec30"></a>id -g</h4>
 
-<h3><a name="sec30" id="sec30"></a>待确定命令</h3>
+<ul>
+<li>输出用户组（数字）</li>
+</ul>
 
-<h4><a name="sec31" id="sec31"></a>~=</h4>
+
+
+<h3><a name="sec31" id="sec31"></a>待确定命令</h3>
+
+<h4><a name="sec32" id="sec32"></a>~=</h4>
 
 <ul>
 <li>怀疑是smart operator，含有多种功能</li>
 </ul>
 
 
-<h4><a name="sec32" id="sec32"></a>set -o xtrace / set +o xtrace</h4>
+<h4><a name="sec33" id="sec33"></a>set -o xtrace / set +o xtrace</h4>
 
 <ul>
 <li>疑似-o在标准输出时再次输出命令，+o则不重复输出命令</li>
 </ul>
 
 
-<h4><a name="sec33" id="sec33"></a>STACK_DIR=&quot;￥DEST/￥{PWD##*/}&quot;</h4>
+<h4><a name="sec34" id="sec34"></a>STACK_DIR=&quot;￥DEST/￥{PWD##*/}&quot;</h4>
 
 <ul>
 <li>未知</li>
@@ -509,10 +540,10 @@ w3m http://10.0.2.15
 
 
 
-<h2><a name="sec34" id="sec34"></a>脚本拆解手动安装</h2>
+<h2><a name="sec35" id="sec35"></a>脚本拆解手动安装</h2>
 
 <p class="first">安装环境为 ubuntu 11.10 server 64bits，语言选择英语。由于手动安装加入了“人工智能”，相对脚本有所简化，不过通用性不如脚本来得好。
-<h3><a name="sec35" id="sec35"></a>目录结构</h3></p>
+<h3><a name="sec36" id="sec36"></a>目录结构</h3></p>
 
 <ul>
 <li>functions 常用函数</li>
@@ -521,11 +552,11 @@ w3m http://10.0.2.15
 </ul>
 
 
-<h3><a name="sec36" id="sec36"></a>安装步骤</h3>
+<h3><a name="sec37" id="sec37"></a>安装步骤</h3>
 
 <p class="first">假设用户名为openstack，密码为opensecret</p>
 
-<h4><a name="sec37" id="sec37"></a>查看本机ip</h4>
+<h4><a name="sec38" id="sec38"></a>查看本机ip</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 ifconfig eth0
@@ -533,7 +564,7 @@ ifconfig eth0
 记录结果中的<code>inet addr:</code>后的ip地址，如<code>10.0.2.15</code>我们记为<code>&lt;host_ip&gt;</code>，稍后使用。
 
 
-<h4><a name="sec38" id="sec38"></a>安装apt包</h4>
+<h4><a name="sec39" id="sec39"></a>安装apt包</h4>
 
 <h5>更新</h5>
 
@@ -613,14 +644,14 @@ sudo apt-get install python-dateutil lvm2 open-iscsi open-iscsi-utils \
 
 
 
-<h4><a name="sec39" id="sec39"></a>安装python依赖</h4>
+<h4><a name="sec40" id="sec40"></a>安装python依赖</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo pip install django-nose-selenium pycrypto==2.3 PassLib pika
 </pre>
 
 
-<h4><a name="sec40" id="sec40"></a>git库下载</h4>
+<h4><a name="sec41" id="sec41"></a>git库下载</h4>
 
 <h5>下载nova&amp;nova-client</h5>
 
@@ -684,7 +715,7 @@ git clone https://github.com/openstack/python-melangeclient.git
 
 
 
-<h4><a name="sec41" id="sec41"></a>安装git库</h4>
+<h4><a name="sec42" id="sec42"></a>安装git库</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 cd keystone
@@ -723,12 +754,12 @@ sudo python setup develop
 </pre>
 
 
-<h4><a name="sec42" id="sec42"></a>安装syslog</h4>
+<h4><a name="sec43" id="sec43"></a>安装syslog</h4>
 
 <p class="first">略</p>
 
 
-<h4><a name="sec43" id="sec43"></a>安装rabbitmq</h4>
+<h4><a name="sec44" id="sec44"></a>安装rabbitmq</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get install rabbitmq-server
@@ -736,7 +767,7 @@ sudo rabbitmqctl change_password guest <rabbit_password> #密码从guest改为<r
 </pre>
 
 
-<h4><a name="sec44" id="sec44"></a>安装mysql</h4>
+<h4><a name="sec45" id="sec45"></a>安装mysql</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get install mysql-server
@@ -768,7 +799,7 @@ sudo service mysql restart
 
 
 
-<h4><a name="sec45" id="sec45"></a>安装horizon服务器</h4>
+<h4><a name="sec46" id="sec46"></a>安装horizon服务器</h4>
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get install apache2 libapache2-mod-wsgi
@@ -811,13 +842,140 @@ sudo service apache2 restart
 </pre>
 
 
+<h4><a name="sec47" id="sec47"></a>配置glance</h4>
 
-<h4><a name="sec46" id="sec46"></a>未完待续。。。</h4>
+<p class="first">建立images目录
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p glance/images
+</pre>
+配置glance的mysql
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE glance;'
+</pre>
+复制glance-registry配置模板
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-registry.conf glance/etc/glance-registry.conf
+</pre>
+修改glance/etc/glance-registry.conf，将内容按照如下替换,其中&lt;service_token&gt;为自己设定的口令</p>
+
+<ul>
+<li>%KEYSTONE_AUTH_HOST% -&gt; &lt;host_ip&gt;</li>
+<li>%KEYSTONE_AUTH_PORT% -&gt; 35357</li>
+<li>%KEYSTONE_AUTH_PROTOCOL% -&gt; http</li>
+<li>%KEYSTONE_SERVICE_HOST% -&gt; &lt;host_ip&gt;</li>
+<li>%KEYSTONE_SERVICE_PORT% -&gt; 5000</li>
+<li>%KEYSTONE_SERVICE_PROTOCOL% -&gt; http</li>
+<li>%SERVICE_TOKEN -&gt; &lt;service_token&gt;</li>
+<li>%SQL_CONN% -&gt; mysql://root:&lt;mysql_passwd&gt;@localhost/glance</li>
+<li>%DEST% -&gt; /home/&lt;user&gt;/devstack/</li>
+<li>%SYSLOG% -&gt; False</li>
+</ul>
+
+<p>复制glance-registry初始化配置
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-registry-paste.ini glance/etc/glance-registry-paste.ini
+</pre></p>
+
+<p>对glance/etc/glance-registry-paste.ini的内容做和上面相同的替换。</p>
+
+<p>将glance-registry初始化配置文件的内容加入到配置文件中
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cat glance/etc/glance-registry-paste.ini >> glance/etc/glance-registry.conf
+</pre></p>
+
+<p>复制glance-api配置
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-api.conf glance/etc/glance-api.conf
+</pre>
+对glance/etc/glance-api.conf做用同样的替换处理</p>
+
+<p>复制glance-api初始化配置
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp files/glance-api-paste.ini glance/etc/glance-api-paste.ini
+</pre></p>
+
+<p>对glance-api-paste.ini做同样的替换处理</p>
+
+<p>将glance-api初始化配置加入到配置文件中
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cat glance/etc/glance-api-paste.ini >> glance/etc/glance-api.conf
+</pre></p>
+
+
+<h4><a name="sec48" id="sec48"></a>配置nova</h4>
+
+<p class="first">复制nova的初始化文件
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+cp nova/etc/nova/api-paste.ini nova/bin/nova-api-paste.ini
+</pre>
+替换nova/bin/nova-api-paste.ini的内容</p>
+
+<ul>
+<li>%SERVICE_TOKEN% -&gt; &lt;service_token&gt;</li>
+<li>ec2cloud -&gt; ec2faultwrap logrequest totoken authtoken keystonecontext cloudrequest authorizer validator ec2executor</li>
+<li>ec2admin -&gt; ec2faultwrap logrequest totoken authtoken keystonecontext adminrequest authorizer ec2executor</li>
+<li>openstack_compute_api_v2 -&gt; faultwrap authtoken keystonecontext ratelimit osapi_compute_app_v2</li>
+<li>openstack_volume_api_v1 -&gt; faultwrap authtoken keystonecontext ratelimit osapi_volume_app_v1</li>
+</ul>
+
+
+<h4><a name="sec49" id="sec49"></a>安装libvirt-bin</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install libvirt-bin
+</pre>
+尝试载入网络块设备模块和kvm模块
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo modprobe ndb
+sudo modprobe kvm
+</pre>
+测试一下kvm是否可用
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+file /dev/kvm # maybe other better command for test
+</pre>
+将用户加入libvirtd中，并且重启libvirt服务
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo usermod -a -G libvirtd <user>
+sudo /etc/init.d/libvirt-bin restart
+</pre>
+创建nova instances目录
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p nova/instances
+</pre>
+
+
+<h4><a name="sec50" id="sec50"></a>清除iptables规则</h4>
+
+<p class="first">略</p>
+
+
+<h4><a name="sec51" id="sec51"></a>删除旧的instances</h4>
+
+<p class="first">略</p>
+
+
+<h4><a name="sec52" id="sec52"></a>建立nova-network文件夹</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -rf nova/networks
+mkdir -p nova/networks
+</pre>
+
+
+<h4><a name="sec53" id="sec53"></a>配置储存服务</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo mkdir -p swift/data/drives
+sudo chown
+</pre>
+
+
+<h4><a name="sec54" id="sec54"></a>未完待续。。。</h4>
 
 
 
 
-<h2><a name="sec47" id="sec47"></a>ISO 安装</h2>
+<h2><a name="sec55" id="sec55"></a>ISO 安装</h2>
 
 <p class="first">精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考</p>
 
@@ -830,7 +988,7 @@ sudo service apache2 restart
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: février  9, 2012  
+    Last Updated: February 11, 2012  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    
