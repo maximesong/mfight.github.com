@@ -227,14 +227,29 @@
 <a href="#sec53">配置储存服务</a>
 </dt>
 <dt class="contents">
-<a href="#sec54">未完待续。。。</a>
+<a href="#sec54">配置volume service</a>
+</dt>
+<dt class="contents">
+<a href="#sec55">配置nova</a>
+</dt>
+<dt class="contents">
+<a href="#sec56">配置nova数据库</a>
+</dt>
+<dt class="contents">
+<a href="#sec57">配置keystone</a>
+</dt>
+<dt class="contents">
+<a href="#sec58">开启服务</a>
+</dt>
+<dt class="contents">
+<a href="#sec59">未完待续。。。</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec55">ISO 安装</a>
+<a href="#sec60">ISO 安装</a>
 </dt>
 </dl>
 </div>
@@ -763,7 +778,7 @@ sudo python setup develop
 
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get install rabbitmq-server
-sudo rabbitmqctl change_password guest <rabbit_password> #密码从guest改为<rabbit_password>
+sudo rabbitmqctl change_password guest <rabbit_passwd> #密码从guest改为<rabbit_passwd>
 </pre>
 
 
@@ -964,18 +979,401 @@ mkdir -p nova/networks
 
 <h4><a name="sec53" id="sec53"></a>配置储存服务</h4>
 
+<p class="first">新建swift.img，初始化写入1G大小的0,然后格式化成xfs格式，并挂载。
 <pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo mkdir -p swift/data/drives
-sudo chown
+sudo chown -R <user>:1000 swift/data
+mkdir -p swift/data/drives/images
+sudo touch swift/data/drives/images/swift.img
+sudo chown <user>: swift/data/drives/images/swift.img
+dd if=/dev/zero of=swift/data/drives/images/swift.img bs=1024 count=0 seek=1000000
+mkfs.xfs -f -i size=1024 swift/data/drives/images/swift.img
+sudo mount -t xfs -o loop, noatime, nodiratime, nobarrier, logbufs=8 swift/data/drives/sdb1
+</pre>
+创建链接
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo ln -sf swift/data/drives/sdb1/1 swift/data/1
+sudo ln -sf swift/data/drives/sdb1/2 swift/data/2
+sudo ln -sf swift/data/drives/sdb1/3 swift/data/3
+sudo ln -sf swift/data/drives/sdb1/4 swift/data/4
+sudo install -o <user> -g 1000 -d <directory> # <directory>以下内容替代,如果文件夹存在
+# swift/data/drives/sdb1/1
+# swift/data/drives/sdb1/2
+# swift/data/drives/sdb1/3
+# swift/data/drives/sdb1/4
+# swift/data/1/node/sdb1
+# swift/data/2/node/sdb1
+# swift/data/3/node/sdb1
+# swift/data/4/node/sdb1
+# swift/config/object-server
+# swift/config/container-server
+# swift/config/account-server
+# /var/run/swift
+</pre>
+改变权限
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo chown -R <user>: swift/data/1/node
+sudo chown -R <user>: swift/data/2/node
+sudo chown -R <user>: swift/data/3/node
+sudo chown -R <user>: swift/data/4/node
+sudo chown -R <user>: swift/config
+</pre>
+创建swift-init需要的/etc/swift(这是一个bug)
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo ln -sf swift/config /etc/swift
+</pre></p>
+
+<p>替换files/swift/rsyncd.conf的内容，然后写入/etc/rsyncd.conf</p>
+
+<ul>
+<li>%GROUP% -&gt; 1000</li>
+<li>%USER% -&gt; user</li>
+<li>%SWIFT_DATA_LOCATION% -&gt; /home/&lt;user&gt;/devstack/swift/data</li>
+</ul>
+
+<p>将/etc/default/rsync中RSYNC_ENABLE=false中的false改为true</p>
+
+<p>安装memcached
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install memcached
+</pre></p>
+
+<p>安装特别版的bin/swift来支持openstack api 2.0
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo curl -s -o/usr/local/bin/swift 'https://review.openstack.org/gitweb?p=openstack/swift.git;a=blob_plain;f=bin/swift;hb=48bfda6e2fdf3886c98bd15649887d54b9a2574e'
+</pre></p>
+
+<p>替换files/swift/proxy-srever.conf的内容，然后写入swift/config/proxy-server.conf</p>
+
+<ul>
+<li>%SWIFT_CONFIG_LOCATION% -&gt; /home/&lt;user&gt;/devstack/swift/config</li>
+<li>%USER% -&gt; &lt;user&gt;</li>
+<li>%SREVICE_TOKEN% -&gt; &lt;service_token&gt;</li>
+<li>%AUTH_SERVER% -&gt; keystone</li>
+</ul>
+
+<p>替换files/swift/swift.conf的内容，然后写入swift/config/swift.conf</p>
+
+<ul>
+<li>%SWIFT_HASH% -&gt; &lt;random_hash&gt;,&lt;random_hash&gt;为一个随机值</li>
+</ul>
+
+&lt;num&gt;依次取1-4
+将files/swift/object-server.conf的内容替换，写入swift/config/object-server.conf
+
+<ul>
+<li>%SWIFT_CONFIG_LOCATION% -&gt; /home/&lt;user&gt;/devstack/swift/config</li>
+<li>%USER% -&gt; &lt;user&gt;</li>
+<li>%NODE_PATH% -&gt; swift/data/&lt;num&gt;</li>
+<li>%BIND_PORT% -&gt; 6010</li>
+<li>%LOG_FACILITY% -&gt; 2</li>
+</ul>
+
+<p>将files/swift/container-server.conf的内容替换，写入swift/config/object-server.conf</p>
+
+<ul>
+<li>%SWIFT_CONFIG_LOCATION% -&gt; /home/&lt;user&gt;/devstack/swift/config</li>
+<li>%USER% -&gt; &lt;user&gt;</li>
+<li>%NODE_PATH% -&gt; swift/data/&lt;num&gt;</li>
+<li>%BIND_PORT% -&gt; 6011</li>
+<li>%LOG_FACILITY% -&gt; 2</li>
+</ul>
+
+<p>将files/swift/account-server.conf的内容替换，写入swift/config/object-server.conf</p>
+
+<ul>
+<li>%SWIFT_CONFIG_LOCATION% -&gt; /home/&lt;user&gt;/devstack/swift/config</li>
+<li>%USER% -&gt; &lt;user&gt;</li>
+<li>%NODE_PATH% -&gt; swift/data/&lt;num&gt;</li>
+<li>%BIND_PORT% -&gt; 6012</li>
+<li>%LOG_FACILITY% -&gt; 2</li>
+</ul>
+
+
+<p>创建swift的日志目录
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p swift/data/logs/hourly
+chown -R syslog:adm swift/data/logs/hourly
+</pre></p>
+
+<p>将files/swift/rsyslog.conf的内容替换，写入/etc/rsyslog.d/10-swift.conf</p>
+
+<ul>
+<li>%SWIFT_LOGDIR% swift/data/logs</li>
+</ul>
+
+<p>重启rsyslog
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo restart rsyslog
+</pre></p>
+
+<h5>创建帮助脚本</h5>
+
+<p>略</p>
+
+
+
+<h4><a name="sec54" id="sec54"></a>配置volume service</h4>
+
+<p class="first">安装包
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install tgt
+</pre></p>
+
+<h5>配置</h5>
+
+<p>略</p>
+
+
+<h5>重新启动</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo stop tgt
+sudo start tgt
 </pre>
 
 
-<h4><a name="sec54" id="sec54"></a>未完待续。。。</h4>
+
+<h4><a name="sec55" id="sec55"></a>配置nova</h4>
+
+<h5>重写nova.conf</h5>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -f nova/bin/nova.conf
+</pre>
+在nova/bin/nova.conf中加入下面几行内容
+<blockquote>
+<p class="quoted">- &mdash;verbose</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;allow_admin_api</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;scheduler_driver=nova.scheduler.simple.SimpleScheduler</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;dhcpbridge_flagfile=/home/&lt;user&gt;/bin/nova.conf</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;fixed_rage=10.0.0.0/24</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;s3_host=&lt;host_ip&gt;</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;network_manager=nova.network.quantum.manager.QuantumManager</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;quantum_connection_host=localhost</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;quantum_connection_port=9696</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;quantum_ipam_lib=nova.network.quantum.melange_ipam_lib</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;use_melange_mac_generation</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;melange_host=localhost</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;melange_port=9898</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;libvirt_vif_type=ethernet</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;libvirt_vif_driver=nova.virt.libvirt.vif.LibvirtOpenVswitchDriver</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;linuxnet_interface_driver=nova.network.linux_net.LinuxOVSInterfaceDriver</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;quantum_use_dhcp</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;volume_group=nova-volumes</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;volume_name_template=volume-%08x</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;iscsi_helper=tgtadm</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;osapi_compute_extension=nova.api.oopenstack.compute.contrib.standard_extensions</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;my_ip=&lt;host_ip&gt;</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;public_interface=eth0</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;vlan_interface=eth0</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;sql_connection=mysql://root:&lt;mysql_passwd&gt;@localhost/nova</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;libvirt_type=kvm</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;instance_name_template=instace-%08x</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;novncproxy_base_url=&quot;http:/&lt;host_ip&gt;:6080/vnc_auto.html&quot;</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;xvpvncproxy_base_url=&quot;http://&lt;host_ip&gt;:6081/console</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;vncserver_listten=127.0.0.1</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;vncserver_proxyclient_client=127.0.0.1</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;api_paste_config=nova/bin/nova-api-paste.ini</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;image_service=nova.image.glance.GlanceImageService</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;ec2_dmz_host=eth0</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;rabbit_host=localhost</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;rabbit_password=&lt;rabbit_passwd&gt;</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;glance_api_servers=9292</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;force_dhcp_release</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;connection_type=libvirt</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;firewall_driver=nova.virt.libvirt.firewall.IptablesFirewallDriver</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;flat_network_bridge=br100</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">- &mdash;flat_interface=eth0</p>
+</blockquote>
 
 
 
 
-<h2><a name="sec55" id="sec55"></a>ISO 安装</h2>
+<h4><a name="sec56" id="sec56"></a>配置nova数据库</h4>
+
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE nova;'
+nova/bin/nova-manage db sync
+</pre>
+
+
+<h4><a name="sec57" id="sec57"></a>配置keystone</h4>
+
+<p class="first">创建数据库
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE keystone;'
+nova/bin/nova-manage db sync
+</pre>
+替换files/keystone.conf，并写入到keystone/etc/keystone.conf</p>
+
+<ul>
+<li>%SQL_CON% -&gt; mysql://root:&lt;mysql_passwd&gt;@localhost/keystone</li>
+<li>%DEST% -&gt; /home/&lt;user&gt;/devstack/keystone.conf</li>
+</ul>
+
+<p>替换files/keystone_data.sh，并写入到keystone/bin/keystone_data.sh</p>
+
+<ul>
+<li>%KEYSTONE_AUTH_HOST% -&gt; &lt;host_ip&gt;</li>
+<li>%KEYSTONE_AUTH_PORT% -&gt; 35357</li>
+<li>%KEYSTONE_AUTH_PROTOCOL% -&gt; http</li>
+<li>%KEYSTONE_SERVICE_HOST% -&gt; &lt;host_ip&gt;</li>
+<li>%KEYSTONE_SERVICE_PORT% -&gt; 5000</li>
+<li>%KEYSTONE_SERVICE_PROTOCOL% -&gt; http</li>
+<li>%SERVICE_HOST% -&gt; &lt;host_ip&gt;</li>
+<li>%SERVICE_TOKEN -&gt; &lt;service_token&gt;</li>
+<li>%ADMIN_PASSWORD%, &lt;admin_passwd&gt;</li>
+</ul>
+
+<p>让数据库准备就绪
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+keystone/bin/keystone-manage db sync_database
+</pre></p>
+
+<p>运行脚本
+<pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+ENABLED_SERVICE=g-api,g-reg,key,n-api,n-crt,n-obj,n-cpu,n-net,n-sch,n-novnc,n-xvnc,n-cauth,horizon,mysql,rabbit \
+BIN_DIR=/home/<user>/bin \
+bash keystone/bin/keystone_data.sh
+</pre></p>
+
+
+<h4><a name="sec58" id="sec58"></a>开启服务</h4>
+
+<p class="first">略</p>
+
+
+
+<h4><a name="sec59" id="sec59"></a>未完待续。。。</h4>
+
+
+
+
+<h2><a name="sec60" id="sec60"></a>ISO 安装</h2>
 
 <p class="first">精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考</p>
 

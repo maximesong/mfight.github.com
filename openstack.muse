@@ -328,7 +328,7 @@ sudo python setup develop
 *** 安装rabbitmq
 <literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo apt-get install rabbitmq-server
-sudo rabbitmqctl change_password guest <rabbit_password> #密码从guest改为<rabbit_password>
+sudo rabbitmqctl change_password guest <rabbit_passwd> #密码从guest改为<rabbit_passwd>
 </pre></literal>
 
 *** 安装mysql
@@ -499,15 +499,271 @@ mkdir -p nova/networks
 </pre></literal>
 
 *** 配置储存服务
+新建swift.img，初始化写入1G大小的0,然后格式化成xfs格式，并挂载。
 <literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
 sudo mkdir -p swift/data/drives
-sudo chown
+sudo chown -R <user>:1000 swift/data
+mkdir -p swift/data/drives/images
+sudo touch swift/data/drives/images/swift.img
+sudo chown <user>: swift/data/drives/images/swift.img
+dd if=/dev/zero of=swift/data/drives/images/swift.img bs=1024 count=0 seek=1000000
+mkfs.xfs -f -i size=1024 swift/data/drives/images/swift.img
+sudo mount -t xfs -o loop, noatime, nodiratime, nobarrier, logbufs=8 swift/data/drives/sdb1
 </pre></literal>
+创建链接
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo ln -sf swift/data/drives/sdb1/1 swift/data/1
+sudo ln -sf swift/data/drives/sdb1/2 swift/data/2
+sudo ln -sf swift/data/drives/sdb1/3 swift/data/3
+sudo ln -sf swift/data/drives/sdb1/4 swift/data/4
+sudo install -o <user> -g 1000 -d <directory> # <directory>以下内容替代,如果文件夹存在
+# swift/data/drives/sdb1/1
+# swift/data/drives/sdb1/2
+# swift/data/drives/sdb1/3
+# swift/data/drives/sdb1/4
+# swift/data/1/node/sdb1
+# swift/data/2/node/sdb1
+# swift/data/3/node/sdb1
+# swift/data/4/node/sdb1
+# swift/config/object-server
+# swift/config/container-server
+# swift/config/account-server
+# /var/run/swift
+</pre></literal>
+改变权限
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo chown -R <user>: swift/data/1/node
+sudo chown -R <user>: swift/data/2/node
+sudo chown -R <user>: swift/data/3/node
+sudo chown -R <user>: swift/data/4/node
+sudo chown -R <user>: swift/config
+</pre></literal>
+创建swift-init需要的/etc/swift(这是一个bug)
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo ln -sf swift/config /etc/swift
+</pre></literal>
+
+替换files/swift/rsyncd.conf的内容，然后写入/etc/rsyncd.conf
+ - %GROUP% -> 1000
+ - %USER% -> user
+ - %SWIFT_DATA_LOCATION% -> /home/<user>/devstack/swift/data
+
+将/etc/default/rsync中RSYNC_ENABLE=false中的false改为true
+
+安装memcached
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install memcached
+</pre></literal>
+
+安装特别版的bin/swift来支持openstack api 2.0
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo curl -s -o/usr/local/bin/swift 'https://review.openstack.org/gitweb?p=openstack/swift.git;a=blob_plain;f=bin/swift;hb=48bfda6e2fdf3886c98bd15649887d54b9a2574e'
+</pre></literal>
+
+替换files/swift/proxy-srever.conf的内容，然后写入swift/config/proxy-server.conf
+ - %SWIFT_CONFIG_LOCATION% -> /home/<user>/devstack/swift/config
+ - %USER% -> <user>
+ - %SREVICE_TOKEN% -> <service_token>
+ - %AUTH_SERVER% -> keystone
+
+替换files/swift/swift.conf的内容，然后写入swift/config/swift.conf
+ - %SWIFT_HASH% -> <random_hash>,<random_hash>为一个随机值
+
+<num>依次取1-4
+将files/swift/object-server.conf的内容替换，写入swift/config/object-server.conf
+ - %SWIFT_CONFIG_LOCATION% -> /home/<user>/devstack/swift/config
+ - %USER% -> <user>
+ - %NODE_PATH% -> swift/data/<num>
+ - %BIND_PORT% -> 6010
+ - %LOG_FACILITY% -> 2
+
+将files/swift/container-server.conf的内容替换，写入swift/config/object-server.conf
+ - %SWIFT_CONFIG_LOCATION% -> /home/<user>/devstack/swift/config
+ - %USER% -> <user>
+ - %NODE_PATH% -> swift/data/<num>
+ - %BIND_PORT% -> 6011
+ - %LOG_FACILITY% -> 2
+
+将files/swift/account-server.conf的内容替换，写入swift/config/object-server.conf
+ - %SWIFT_CONFIG_LOCATION% -> /home/<user>/devstack/swift/config
+ - %USER% -> <user>
+ - %NODE_PATH% -> swift/data/<num>
+ - %BIND_PORT% -> 6012
+ - %LOG_FACILITY% -> 2
+
+
+创建swift的日志目录
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mkdir -p swift/data/logs/hourly
+chown -R syslog:adm swift/data/logs/hourly
+</pre></literal>
+
+将files/swift/rsyslog.conf的内容替换，写入/etc/rsyslog.d/10-swift.conf
+ - %SWIFT_LOGDIR% swift/data/logs
+
+重启rsyslog
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo restart rsyslog
+</pre></literal>
+
+**** 创建帮助脚本
+略
+
+*** 配置volume service
+安装包
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo apt-get install tgt
+</pre></literal>
+
+**** 配置
+略
+
+**** 重新启动
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+sudo stop tgt
+sudo start tgt
+</pre></literal>
+
+*** 配置nova
+**** 重写nova.conf
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+rm -f nova/bin/nova.conf
+</pre></literal>
+在nova/bin/nova.conf中加入下面几行内容
+ - --verbose
+
+ - --allow_admin_api
+
+ - --scheduler_driver=nova.scheduler.simple.SimpleScheduler
+
+ - --dhcpbridge_flagfile=/home/<user>/bin/nova.conf
+
+ - --fixed_rage=10.0.0.0/24
+
+ - --s3_host=<host_ip>
+
+ - --network_manager=nova.network.quantum.manager.QuantumManager
+
+ - --quantum_connection_host=localhost
+
+ - --quantum_connection_port=9696
+
+ - --quantum_ipam_lib=nova.network.quantum.melange_ipam_lib
+
+ - --use_melange_mac_generation
+
+ - --melange_host=localhost
+
+ - --melange_port=9898
+
+ - --libvirt_vif_type=ethernet
+
+ - --libvirt_vif_driver=nova.virt.libvirt.vif.LibvirtOpenVswitchDriver
+
+ - --linuxnet_interface_driver=nova.network.linux_net.LinuxOVSInterfaceDriver
+
+ - --quantum_use_dhcp
+
+ - --volume_group=nova-volumes
+
+ - --volume_name_template=volume-%08x
+
+ - --iscsi_helper=tgtadm
+
+ - --osapi_compute_extension=nova.api.oopenstack.compute.contrib.standard_extensions
+
+ - --my_ip=<host_ip>
+
+ - --public_interface=eth0
+
+ - --vlan_interface=eth0
+
+ - --sql_connection=mysql://root:<mysql_passwd>@localhost/nova
+
+ - --libvirt_type=kvm
+
+ - --instance_name_template=instace-%08x
+
+ - --novncproxy_base_url="http:/<host_ip>:6080/vnc_auto.html"
+
+ - --xvpvncproxy_base_url="http://<host_ip>:6081/console
+
+ - --vncserver_listten=127.0.0.1
+
+ - --vncserver_proxyclient_client=127.0.0.1
+
+ - --api_paste_config=nova/bin/nova-api-paste.ini
+
+ - --image_service=nova.image.glance.GlanceImageService
+
+ - --ec2_dmz_host=eth0
+
+ - --rabbit_host=localhost
+
+ - --rabbit_password=<rabbit_passwd>
+
+ - --glance_api_servers=9292
+
+ - --force_dhcp_release
+
+ - --connection_type=libvirt
+
+ - --firewall_driver=nova.virt.libvirt.firewall.IptablesFirewallDriver
+
+ - --flat_network_bridge=br100
+
+ - --flat_interface=eth0
+
+
+*** 配置nova数据库
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE nova;'
+nova/bin/nova-manage db sync
+</pre></literal>
+
+*** 配置keystone
+创建数据库 
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+mysql -uroot -p<mysql_passwd> -e 'CREATE DATABASE keystone;'
+nova/bin/nova-manage db sync
+</pre></literal>
+替换files/keystone.conf，并写入到keystone/etc/keystone.conf
+ - %SQL_CON% -> mysql://root:<mysql_passwd>@localhost/keystone
+ - %DEST% -> /home/<user>/devstack/keystone.conf
+
+替换files/keystone_data.sh，并写入到keystone/bin/keystone_data.sh
+ - %KEYSTONE_AUTH_HOST% -> <host_ip>
+ - %KEYSTONE_AUTH_PORT% -> 35357
+ - %KEYSTONE_AUTH_PROTOCOL% -> http
+ - %KEYSTONE_SERVICE_HOST% -> <host_ip>
+ - %KEYSTONE_SERVICE_PORT% -> 5000
+ - %KEYSTONE_SERVICE_PROTOCOL% -> http
+ - %SERVICE_HOST% -> <host_ip>
+ - %SERVICE_TOKEN -> <service_token>
+ - %ADMIN_PASSWORD%, <admin_passwd>
+
+让数据库准备就绪
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+keystone/bin/keystone-manage db sync_database
+</pre></literal>
+
+运行脚本
+<literal><pre class="brush:bash; gutter:true; toolbar:false; ruler:false;">
+ENABLED_SERVICE=g-api,g-reg,key,n-api,n-crt,n-obj,n-cpu,n-net,n-sch,n-novnc,n-xvnc,n-cauth,horizon,mysql,rabbit \
+BIN_DIR=/home/<user>/bin \
+bash keystone/bin/keystone_data.sh
+</pre></literal>
+
+*** 开启服务
+略
+
+
 *** 未完待续。。。
 
 * ISO 安装
 精简了的ubuntu linux server 10.04，并剔除了openstack不需要的包，所以大小只有300M左右。但是安装完之后还要到网站注册，收集机器信息，然后部署，比较麻烦，放在这里仅供参考
  - [[http://www.linuxso.com/linuxrumen/17399.html][介绍]]、[[http://sourceforge.net/projects/stackops/files/][下载]]、 [[http://docs.stackops.org.][文档]]、 [[http://getsatisfaction.com/stackops][支持]]
+
 
 
 
