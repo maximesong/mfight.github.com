@@ -143,6 +143,7 @@ v.t.
 ** system d'exploitention
  - 操作系统
 
+#au_lieu_de
 ** au lieu de
 loc.prép
  - 不...而...

@@ -442,6 +442,7 @@ n.m
 n.m.
  - 标题，题目，书名
 
+#distrait
 ** distrait
 adj.
  - 分心的

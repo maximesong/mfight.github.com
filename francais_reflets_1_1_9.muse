@@ -188,6 +188,8 @@ adj.
 v.t.
  - 代替
 
+
+#rentrer
 ** rentrer
 v.i.
  - 回来，回家

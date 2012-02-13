@@ -1,4 +1,5 @@
 #title leçon 1
+<contents>
 * mot
 ** consulter
 v.t.
@@ -410,6 +411,43 @@ n.m.
 interj.
  - 哇！噢！（表示快乐、激动、得意）
 
+** catastropher
+vt.
+ - <口>使吓呆，使丧胆
+
+** dot
+n.f.
+ - 嫁妆，聘礼，财产
+
+** panne
+f.
+ - 故障，抛锚
+
+** extraordinaire
+adj.
+ - 特别的，非常的，离奇的
+
+** marrant
+a.
+ - 有趣的，有意思的，滑稽的
+ - 奇怪的，叫人想不通的
+
+** remarque
+f.
+ - 注意，察觉，发觉
+ - 意见，评注
+
+** mien
+a.
+ - 我的【和定冠词连用，指前面已提到的事物或人】
+
+** exotisme
+n.m.
+ - 异国趣味，异国情调
+
+** conseil
+n.m
+ - 劝告，忠告
 
 * phrase
 ** une hirondelle ne fait pas du printemps
@@ -447,3 +485,18 @@ adv.
 
 ** vallée
 [[francais_reflets_1_1_10#vallee][repasser]]
+
+** avis
+[[francais_reflets_1_1_8#avis][repasser]]
+
+** distrait
+[[le_francais_1_complement#distrait][repasser]]
+
+** autoroute
+[[francais_reflets_1_1_7#autoroute][repasser]]
+
+** au lieu de
+[[le-cours-de-oral-jeudi_12#au_lieu_de][repasser]]
+
+** rentrer
+[[francais_reflets_1_1_9#rentrer][repasser]]
