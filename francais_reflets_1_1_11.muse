@@ -206,6 +206,7 @@ n.f.
 ** sécurité
 n.f.
  - 安全感，安心
+ - 安全
 
 ** déficit
 n.m.

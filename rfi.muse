@@ -1,0 +1,340 @@
+#title RFI
+<contents>
+
+* mot
+** universel
+adj.
+ - 全球的，全世界的
+ - 通用的，万能的
+
+** actualité
+n.f
+ - 时事
+ - 现实性
+ - pl. 新闻
+
+** élection
+n.f.
+ - 选举
+
+** présidentiel
+a.
+ - 主席的，总统的，大学校长的
+
+
+** prononcer
+v.t.
+ - 宣告
+
+** discours
+n.m.
+ - 话
+ - 演说，讲话
+
+** candidature
+n.f
+ - 候选人资格
+
+** poursuite
+f.
+ - 追逐，追踪，追击
+ - 起诉
+
+** répression
+f.
+ - 镇压
+ - 制止，抑制
+
+** mort
+a.
+ - 死的，死亡的
+n.
+ - 死人，死者，尸体
+
+n.f.
+ - 死亡
+
+
+** opposant
+a.
+ - 反对的，对立的
+
+n.
+ - 反对者
+ - 反对派
+
+** journaliste
+n.
+ - 新闻工作者，新闻记者
+
+** notamment
+adv.
+ - 特别是，尤其
+
+** sommaire
+a.
+ - 简短的
+
+n.m
+ - 摘要，简介
+ - 目录
+
+** marre
+adv.
+ - en avoir marre <口> 腻了，烦死了
+ - C'est marre <俗>行了，别再烦了
+
+** interpeller
+v.t.
+ - （为询问而）招呼，呼喊
+  - interpeller un passant
+ - 质询，询问身份
+
+** ministre
+n.m.
+ - 部长，大臣
+
+** britannique
+a.
+ - 英国的
+
+** éventuelle
+adj.f
+ - 可能
+
+** indépendance
+n.f.
+ - 独立
+ - 自主
+
+** contrer
+v.t.
+ - 反对，阻碍
+
+** massacre
+n.m.
+ - 大屠杀，残杀
+
+** observatoire
+n.m.
+ - 天文台，气象台
+
+** attaque
+n.f.
+ - 袭击，进攻
+
+** millitant
+a.
+ - 战斗的，奋斗的
+n.
+ - 战士
+
+** opposition
+n.f.
+ - 反对党，反对派
+
+** frontiére
+a.
+ - 边境的
+
+n.f.
+ - 边境，边界
+
+** reporter
+n.m
+ - <英> 记者，通讯员
+
+** résolution
+f.
+ - 决心
+ - 决定，决议
+
+** crise
+n.f.
+ - 危机
+
+** condamner
+v.t.
+ - 判决，定罪
+
+** rassembler
+v.t.
+ - 聚集，集中，集结
+
+** négociation
+n.f
+ - 谈判，协商
+
+** taliban
+n.m.
+ - 学习穆斯林教的阿富汗学生【塔利班成员】
+
+** démentir
+v.t.
+ - 揭穿（某人的）谎言
+ - 违背，与...相反
+
+** rebelle
+n.
+ - 造反者
+
+a.
+ - 造反的，反叛的
+ - 反抗的
+
+** islamiste
+a.
+ - 伊斯兰教的
+
+n.
+ - 伊斯兰运动拥护者
+
+** affirmer
+v.t.
+ - 断言，肯定
+
+** gouvernement
+n.m
+ - 政府
+ - 统治，管理
+
+** Afghan
+adj.
+ - 阿富汗的
+
+** contestataire
+n.
+ - 抗议者
+
+** manifester
+v.t.
+ - 表示，表达
+ - 显示，显露
+
+v.i.
+ - 举行示威
+
+** Etat
+ - 国
+
+** Nigérian
+n.
+ - 尼日利亚人
+
+** exploser
+v.i.
+ - 爆炸
+
+** relier
+v.t.
+ - 连接；接通
+
+** terroriste
+a.
+ - 恐怖主义的
+
+n.
+ - 恐怖主义者，恐怖分子
+
+** procès
+m.
+ - 案件
+
+** fait
+ - 行为，行动
+
+** combattre
+v.t.
+ - 与...打仗
+ - 反对，制止
+
+** ceux
+pron.
+ - celui的阳性复数
+
+** hausse
+n.f.
+ - 提高，增高
+ - 上升
+
+** référendum
+n.m
+ - 全民公决
+
+** explosif
+n.m.
+ - 爆炸物，炸药
+
+** compagne
+n.f.
+ - 女伴，同居的女友
+
+** téléspectateur
+n.m
+ - 电视观众
+
+** UMP
+ - 人民运动联盟【法国政党】
+
+** garantir
+v.t.
+ - 担保，保证
+
+** volonté
+n.f.
+ - 意志，愿望，毅力
+
+** blocage
+n.m.
+ - 阻止，制止
+
+** accuser
+vt.
+ - 控诉
+
+** socialiste
+n.
+ - 社会主义者
+ - 社会党人
+
+** sursis
+n.m
+ - 缓期，延期
+ - 缓刑期
+
+** prison
+f.
+ - 监狱，牢房
+
+** appel
+n.m.
+ - 【法】申诉
+  - cour d'appel 申诉法庭
+
+** honneur
+n.m
+ - 荣誉
+
+** nazi
+n.m
+ - 纳粹分子
+
+** estimer
+v.t.
+ - 评估，评价
+ - 估计，估算
+ - 认为，以为
+
+** particulièrement
+adv.
+ - 特别，尤其，特殊地
+ - 亲密地
+
+* phrase
+** autrement dit
+loc.adv.
+ - 换言之
+
+** assemblée générale
+n.f.
+ - 大会

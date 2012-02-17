@@ -381,6 +381,9 @@ v.t.
   - je te remercie!谢谢你！
 
 ** responsable
+a.
+ - 负责的，承担责任的
+
 n.
  - 负责人
 

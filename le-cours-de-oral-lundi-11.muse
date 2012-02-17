@@ -141,6 +141,9 @@ collectif, collective
 adj.
  - 集体的，共同的
 
+n.
+ - 团体
+
 ** immeuble
 a.
  - 不动的

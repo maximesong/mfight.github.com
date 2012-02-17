@@ -54,3 +54,5 @@ v.i.
 [[le-cours-de-oral-lundi][le cours de oral lundi]]
 
 [[le-cours-de-oral-jeudi][le cours de oral jeudi]]
+
+[[le-cours-de-oral-mercredi][le cours de oral mercredi]]

@@ -1,0 +1,11 @@
+#title cours de oral mercredi
+
+* Prof
+** prénom et nom
+Laurent
+** e-mail
+jiaotong@hotmail.fr
+
+* cours
+ - [[le-cours-de-oral-mercredi_1][cours 1]]
+
