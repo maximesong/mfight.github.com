@@ -19,6 +19,7 @@ m.
 v.t.
  - 实现；认识，领会
 
+
 ** enfer
 n.m.
  - 地狱
@@ -58,6 +59,10 @@ n.m.
 ** songer
 v.t.indir.
  - 想到，考虑到
+
+*** songer à
+ - 想到
+
 
 ** nettoyer
 v.t.

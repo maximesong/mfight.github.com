@@ -17,6 +17,9 @@ m.
 v.t.
  - 宁愿，宁可，更喜欢
 
+*** préférer A que B
+ - 喜欢A超过B
+
 ** assez
  - 足够
 

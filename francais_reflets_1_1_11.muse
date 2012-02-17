@@ -619,6 +619,8 @@ v.t.
  - 提出，建议，提议
  - 推荐，推举，提名
 
+*** proposer qch. à qn.
+ - 向某人提议某事
 
 * phrase
 ** au moins

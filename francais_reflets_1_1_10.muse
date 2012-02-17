@@ -287,10 +287,15 @@ a.
  - 野的，野生的
  - 荒野的，荒无人烟的
 
+#terrain
 ** terrain
 n.m.
  - 地，地面，土地
  - 场地
+
+*** terrain de tennis
+ - 网球场
+
 
 ** dizaine
 n.f.

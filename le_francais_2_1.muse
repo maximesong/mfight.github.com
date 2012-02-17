@@ -364,6 +364,9 @@ loc.adv.
 n.f.
  - 建议
 
+*** faire une proposition
+ - 做一个提议
+
 ** reprendre
 v.t.
  - 再拿，再取
@@ -449,6 +452,27 @@ n.m.
 n.m
  - 劝告，忠告
 
+*** donner conseil à qn.
+ - 对某人提出劝告
+
+** concrétiser
+v.t.
+ - 使具体化
+
+** recommandation
+f.
+ - 推荐，介绍
+ - 劝告，嘱咐
+
+** niveau
+m.
+ - 水平
+
+** réalisateur
+n.
+ - 导演
+
+
 * phrase
 ** une hirondelle ne fait pas du printemps
  - 单燕不成春
@@ -459,6 +483,7 @@ n.m
 ** au-dessous de
 adv.
  - 在...下面，在...之下
+
 
 
 * révision
@@ -500,3 +525,8 @@ adv.
 
 ** rentrer
 [[francais_reflets_1_1_9#rentrer][repasser]]
+
+** terrain
+[[francais_reflets_1_1_10#terrain][repasser]]
+
+

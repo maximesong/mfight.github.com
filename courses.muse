@@ -7,3 +7,6 @@
  - [[oo_preparation][面向对象分析与设计]]
 
  - [[fiction_course][英美短篇小说]]
+
+* 大三下
+ - [[public_speaking][英语公众演讲]]

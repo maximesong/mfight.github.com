@@ -1,4 +1,5 @@
 #title Cours 6
+<contents>
 
 * mot
 ** endroit
