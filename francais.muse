@@ -34,6 +34,12 @@
 ** littérature
  - [[francais_poeme][poéme]]
 
+* S
+** Supplément
+ - [[le_petit_nicolas][le petit nicolas]]
+ - [[rfi.muse][rfi]]
+
+
 * T
 ** Text
 
@@ -42,3 +48,4 @@
  - [[francais_reflets][reflets]]
 
  - [[le-cours-de-oral][le cours de oral]]
+

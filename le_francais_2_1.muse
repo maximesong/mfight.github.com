@@ -472,6 +472,18 @@ m.
 n.
  - 导演
 
+** sincèrement
+adv.
+ - 真诚地，由衷地
+ - 直率地
+
+** historique
+a.
+ - 历史的
+ - 历史上的
+
+
+
 
 * phrase
 ** une hirondelle ne fait pas du printemps
@@ -529,4 +541,8 @@ adv.
 ** terrain
 [[francais_reflets_1_1_10#terrain][repasser]]
 
+** paysage
+[[francais_reflets_1_1_10#paysage][repasser]]
 
+** bassin
+[[francais_reflets_1_1_10#bassin][repasser]]

@@ -182,6 +182,7 @@ v.t.dir.
 v.t.indir.
  - 利用，自...得益(+ de)
 
+#ravioli
 ** ravioli
 (pluriel raviolis)
 n.m.

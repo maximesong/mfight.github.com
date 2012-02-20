@@ -328,6 +328,7 @@ v.t.
  - 试图，尝试
  - 引诱，诱惑
 
+#dur
 ** dur
 dur，dure
 a.

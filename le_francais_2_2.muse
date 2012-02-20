@@ -1,0 +1,45 @@
+#title leçon 2
+<contents>
+
+* mot
+** coiffeur
+n.
+ - 理发师
+
+** ensuite
+adv.
+ - 然后
+
+** poche
+n.f
+ - 口袋，衣袋
+
+** cabine
+n.f.
+ - 船舱
+
+** mairie
+n.f
+ - 市长的职位或任期
+ - 市政府，区政府
+
+** environ
+prép.
+ - 大约在，左右
+
+adv.
+ - 大约，差不多
+
+** parmi
+prép.
+ - 在...中间
+
+
+
+** sociologique
+a.
+ - 社会学的，社会学上的
+
+* révision
+** dur
+[[francais_reflets_1_1_9#dur][repasser]]
