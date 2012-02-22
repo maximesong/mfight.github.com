@@ -5,6 +5,7 @@
 adv.
  - 现在，目前
 
+#ailleurs
 ** ailleurs
 adv.
  - 在别处，在其他地方
@@ -438,6 +439,7 @@ n.f.
 n.m
  - 风
 
+#titre
 ** titre
 n.m.
  - 标题，题目，书名

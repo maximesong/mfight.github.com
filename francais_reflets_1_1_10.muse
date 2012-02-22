@@ -175,10 +175,13 @@ n.m
  - 选择，选定
  - 选择权，选择的余地
 
+#syndicat
 ** syndicat
 n.m.
  - 工会
  - （同行业的）联合会
+
+
 
 ** mixte
 a.

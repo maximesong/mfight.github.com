@@ -310,6 +310,7 @@ f.
 n.m.
  - 【法】申诉
   - cour d'appel 申诉法庭
+ - 号召，呼吁
 
 ** honneur
 n.m
@@ -330,6 +331,215 @@ adv.
  - 特别，尤其，特殊地
  - 亲密地
 
+** manifestation
+n.f.
+ - 示威运动
+
+** rassemblement
+m.
+ - 集合，收集，联合
+
+** dénoncer
+v.t.
+ - 通知，通告废除
+
+** réforme
+f.
+ - 改良，改革
+
+** millier
+n.m.
+ - 千数，约千数
+
+** austérité
+n.f
+ - 紧缩
+
+** meeting
+n.m.
+ - 【英】集会
+
+** défenseur
+n.m.
+ - 辩护人
+ - 后卫
+
+** pétrole
+n.m
+ - 石油
+
+** royaume-uni
+m.
+ - 联合王国
+
+** affrontement
+n.m.
+ - 对抗，对峙，冲突
+
+** classement
+n.m.
+ - 分类，分级
+ - 类别，等级
+
+** mi-temps
+n.f.
+ - （球赛的）半场
+
+** équipe
+n.f
+ - （体育运动的）队
+
+** logique
+a.
+ - 合乎逻辑的
+
+n.f
+ - 逻辑，逻辑学
+
+** battu
+adj.
+ - 挨打的，被打的
+
+** militant
+n.
+ - 战士，（工会，政党等的）活动分子
+
+** pasteur
+a.
+ - 游牧的
+
+n.m
+ - 牧师
+
+** cancelière
+n.f
+ - （德、奥帝国的）首相夫人
+
+** défiler
+vi.
+ - 行游
+
+** mobilisation
+n.f.
+ - 动产化
+ - 【财】流通
+
+** Parlement
+n.m
+ - 国会，议会
+
+** rigueur
+n.f
+ - 严厉，严峻
+
+** pension
+f.
+ - 退休金
+ - 寄宿生
+
+** succéder
+v.t.
+ - 接替，继任
+ - 继承遗产
+
+** avant-hier
+adv.
+ - 前天
+
+n.
+ - 前天
+
+
+** démissionnner
+v.i.
+ - 辞职
+
+** impliquer
+v.t.
+ - 牵连
+
+** corruption
+n.f
+ - 贪污
+
+** pneu
+n.m
+ - 轮胎
+
+** vitre
+n.f
+ - 车窗玻璃
+
+** précédent
+a.
+ - 前面的，上次的
+
+** policier
+n.m
+ - 警察，公安人员
+ - 侦探
+
+** riposter
+v.i.
+ - 反驳，回击，反击
+
+** manifestant
+n.m
+ - 示威运动参加者，示威游行者
+
+** blesser
+v.t.
+ - 使受伤口；打伤
+
+** déployer
+v.t.
+ - 展开，铺开
+
+** sensible
+a.
+ - 敏感的
+
+** bombardement
+n.m
+ - 轰炸，炮击
+
+** sanction
+n.f.
+ - 制裁
+
+** symbolique
+a.
+ - 象征性的
+
+** vivement
+adv.
+ - 急速地，迅速地
+
+** réagir
+v.
+ - 抵抗，反抗
+
+** agressivité
+n.f.
+ - 侵略性, 好斗性
+
+** violence
+n.f
+ - 暴力
+
+** doute
+n.m
+ - 疑问，迟疑，怀疑
+
+*** sans doute
+adv.
+ - 一定
+
+** civile
+adj.f
+ - 民事的
+
+
 * phrase
 ** autrement dit
 loc.adv.
@@ -338,3 +548,35 @@ loc.adv.
 ** assemblée générale
 n.f.
  - 大会
+
+** faveur
+n.f
+ - 好意，优惠，照顾
+ - 恩惠，恩典
+
+*** en faveur de
+prép.
+ - 考虑到，对...有利，为了...的利益
+
+
+* révision
+** titre
+[[le_francais_1_complement#titre][repasser]]
+
+** recevoir
+[[francais_passe_indicatif#recevoir][repasser]]
+
+** syndicat
+[[francais_reflets_1_1_10#syndicat][repasser]]
+
+** baisse
+[[francais_reflets_1_1_9#baisse][repasser]]
+
+** retraite
+[[francais_reflets_1_1_11#retraite][repasser]]
+
+** collégien
+[[francais_reflets_1_1_11#collegien][repasser]]
+
+** ailleurs
+[[le_francais_1_complement#ailleurs][repasser]]

@@ -85,3 +85,27 @@ n.
 ** Marseille
  - 马赛
 
+** Athènes
+n.
+ - 雅典
+
+** Allemagne
+n.f.
+ - 德国
+
+** Montpellier
+ - 蒙彼利埃
+
+** Bordeaux
+ - 波尔多
+
+** Rennes
+ - 雷恩
+
+** Dakar
+ - 达喀尔
+
+** Yémen
+ - 也门
+
+

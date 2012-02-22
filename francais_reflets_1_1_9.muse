@@ -375,6 +375,7 @@ n.f
 *** tempête de neige
  - 暴风雪
 
+#baisse
 ** baisse
 n.f
  - 下降，降低，低落

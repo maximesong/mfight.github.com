@@ -38,6 +38,7 @@ m.
 adj.
  - 心理的，精神的，智力的
 
+#retraite
 ** retraite
 f.
  - 退休
@@ -360,6 +361,7 @@ n.m
 n.m
  - 博士生
 
+#collegien
 ** collégien
 a.
  - 初中的
