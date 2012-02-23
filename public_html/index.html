@@ -56,74 +56,53 @@
 <a href="#sec6">Vi && Vim</a>
 </dt>
 <dt class="contents">
-<a href="#sec7">课程</a>
+<a href="#sec7">Qt</a>
 </dt>
 <dt class="contents">
-<a href="#sec8">Qt</a>
+<a href="#sec8">课程</a>
+</dt>
+<dt class="contents">
+<a href="#sec9">CSS</a>
+</dt>
+<dt class="contents">
+<a href="#sec10">git</a>
+</dt>
+<dt class="contents">
+<a href="#sec11">书单</a>
+</dt>
+</dl>
+</dd>
+<dt class="contents">
+<a href="#sec12">生活点滴</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec9">QExplicitlySharedDataPointer</a>
+<a href="#sec13">悲剧的暑假大作业</a>
 </dt>
 <dt class="contents">
-<a href="#sec10">Qt Marcos</a>
-</dt>
-</dl>
-</dd>
-<dt class="contents">
-<a href="#sec11">CSS</a>
+<a href="#sec14">Virtues of a programmer</a>
 </dt>
 <dd>
 <dl class="contents">
 <dt class="contents">
-<a href="#sec12">在html中引用css</a>
+<a href="#sec15">Laziness</a>
 </dt>
-</dl>
-</dd>
 <dt class="contents">
-<a href="#sec13">git</a>
+<a href="#sec16">Impatience</a>
 </dt>
-<dd>
-<dl class="contents">
 <dt class="contents">
-<a href="#sec14">更新已经删除的文件</a>
+<a href="#sec17">Hubris</a>
 </dt>
 </dl>
 </dd>
 </dl>
 </dd>
 <dt class="contents">
-<a href="#sec15">生活点滴</a>
-</dt>
-<dd>
-<dl class="contents">
-<dt class="contents">
-<a href="#sec16">悲剧的暑假大作业</a>
+<a href="#sec18">关于</a>
 </dt>
 <dt class="contents">
-<a href="#sec17">Virtues of a programmer</a>
-</dt>
-<dd>
-<dl class="contents">
-<dt class="contents">
-<a href="#sec18">Laziness</a>
-</dt>
-<dt class="contents">
-<a href="#sec19">Impatience</a>
-</dt>
-<dt class="contents">
-<a href="#sec20">Hubris</a>
-</dt>
-</dl>
-</dd>
-</dl>
-</dd>
-<dt class="contents">
-<a href="#sec21">关于</a>
-</dt>
-<dt class="contents">
-<a href="#sec22">友情链接</a>
+<a href="#sec19">友情链接</a>
 </dt>
 </dl>
 </div>
@@ -182,122 +161,76 @@
 </ul>
 
 
-<h3><a name="sec7" id="sec7"></a>课程</h3>
+<h3><a name="sec7" id="sec7"></a>Qt</h3>
+
+<p><a href="qt.html">qt</a></p>
+
+
+<h3><a name="sec8" id="sec8"></a>课程</h3>
 
 <p><a href="courses.html">courses</a></p>
 
 
-<h3><a name="sec8" id="sec8"></a>Qt</h3>
+<h3><a name="sec9" id="sec9"></a>CSS</h3>
 
-<h4><a name="sec9" id="sec9"></a>QExplicitlySharedDataPointer</h4>
-
-<p class="first">在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：</p>
-
-<blockquote>
-<p class="quoted">
-This means that QExplicitlySharedDataPointers behave like regular C++ pointers, except that by doing reference counting and not deleting the shared data object until the reference count is 0, they avoid the dangling pointer problem.</p>
-
-</blockquote>
-
-<p>原来，这就是一个对动态申请对象的指针的计数器，当计数器到0时， 共享的数据对象所申请的空间就被释放了。</p>
-
-<p>那么，<code>QExplicitlySharedDataPointer</code>与<code>_QSharedDataPointer</code>有什么不同呢？在对某个共享数据指针进行写操作的时候，这个写操作应该作用到所有指针上，还是那个进行了操作的指针呢？对QExplicitlySharedDataPointer对象的写操作，将作用到所有的指针上。而QSharedDataPointer在计数器多余1的情况下，将自动生成一个副本。如果QExplicitlySharedDataPointer在某次操作时也想达到这个效果，可以在写操作前调用<code>detach()</code>方法。</p>
+<p><a href="css.html">css</a></p>
 
 
-<h4><a name="sec10" id="sec10"></a>Qt Marcos</h4>
+<h3><a name="sec10" id="sec10"></a>git</h3>
 
-<dl>
-<dt><strong>Q_UNUSED</strong></dt><dd>
-在定义有关Model的函数rowCount()时用到过，作用是让编译器对于没有使用的变量不要产生警告。</dd>
-</dl>
+<p><a href="git.html">git</a></p>
+
+
+<h3><a name="sec11" id="sec11"></a>书单</h3>
+
+<p><a href="booklist.html">我的书单</a></p>
 
 
 
-<h3><a name="sec11" id="sec11"></a>CSS</h3>
-
-<h4><a name="sec12" id="sec12"></a>在html中引用css</h4>
-
-<p class="first">如：</p>
-
-<pre class="example">
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;sheet.css&quot; title=&quot;default&quot;&gt;
-</pre>
-其中<code>rel</code>是relationship的缩写，指的是链接与html文档本身的关系，<code>“stylesheet”</code>说明这是一个stylesheet。<code>type</code>指的是stylesheet的类型。作为一个菜鸟，我只知道css。现在使用的可能有别的风格类型，当然以后可能也会产生和流行新的风格类型。<code>href</code>指的是具体链接的文件，我们这里用的是相对路径。
-对于<code>title</code>属性，可能并不常用。我们可以为html页面增加不同的stylesheet，让用户选择页面的风格。比如：
-
-<pre class="example">
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
-   href=&quot;sheet1.css&quot; title=&quot;Default&quot; /&gt;
-&lt;link rel = &quot;alternate stylesheet&quot; type=&quot;text/css&quot;
-   href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;
-&lt;link rel = &quot;alternate stylesheet&quot; type=&quot;text/css&quot;
-   href=&quot;tinytext.css&quot; title=&quot;Tiny Text&quot; /&gt;
-</pre>
-注意到，除了默认的风格，其余两个风格的类型应写为<code>&quot;alternate stylesheet&quot;</code>。
-我们来看看在浏览器中的效果。
-<img src="alternate-style.png" alt="" />
-还不错哦。
-
-
-
-<h3><a name="sec13" id="sec13"></a>git</h3>
-
-<h4><a name="sec14" id="sec14"></a>更新已经删除的文件</h4>
-
-<p class="first">一般来说，用git rm就能把文件从目录中删除，同时从git的object tree中删除。但是，如果之前已经通过窗口或是别的方法，删除了文件，还需要用git rm来把文件一个个删除吗？完全不用，可以用这条命令。</p>
-
-<pre class="example">
-git add -u
-</pre>
-这条命令的作用是更新已经在object tree里的内容，而不会加入新的文件。同时那些被删除的文件也会从object tree中删除，是不是很好用呢？
-
-
-
-
-<h2><a name="sec15" id="sec15"></a>生活点滴</h2>
+<h2><a name="sec12" id="sec12"></a>生活点滴</h2>
 
 <blockquote>
 <p class="quoted">到现在我已经彻底意识到电脑完全成为了一个工具，使用电脑做些什么才是正经，Windows也好，Ubuntu也罢，不必在意操作系统究竟是什么，而需要在意的是你用电脑做了些什么，不要过度的舍本逐末，让大量的时间用在修理”工具“上。
 &mdash;<a href="http://www.bentutu.com/2011/08/ubuntu-11-04-install-config-experience-with-imobile365/">笨笨兔</a></p>
 </blockquote>
 
-<h3><a name="sec16" id="sec16"></a>悲剧的暑假大作业</h3>
+<h3><a name="sec13" id="sec13"></a>悲剧的暑假大作业</h3>
 
 <p class="first">真不容易，这个暑假做了有史以来最差的一次团队项目。想了想原因，多半还是要怪自己。以前总是跟着大神做，报大腿嘛，一切都是那么轻松愉快加惬意。这次自己做组长，才知道有那么一种情况叫“人不齐”，才知道有那么一种情况叫“做不出”。事后再分析，我觉得最大的问题，出在团队的凝聚力上。我本来想着，既然是自己选的题目，大家应该对项目很有兴趣和热情，大家都有同一个目标，一切就很容易了。而实际上，每个人当然都可能会有自己更感兴趣的事情，不是吗？当太阳不再对行星有吸引力时，如何还能维持这个银河系呢，于是一切都崩塌了。现在回想起来，最大的败笔就在这里。我甚至从来都没有想过，要搞出个“人造太阳”，或者弄个绳子什么的把乱七八糟的东西都绑在一起。以至于最后，连自己都失去了把项目做下去的兴趣。</p>
 
 <p>如果除去这个项目关系到6学分的成绩，项目的失败也未必不是一件好事。至少，我学到了很多，也知道了还有很多要去学。</p>
 
 
-<h3><a name="sec17" id="sec17"></a>Virtues of a programmer</h3>
+<h3><a name="sec14" id="sec14"></a>Virtues of a programmer</h3>
 
 <p class="first">In the second edition of Programming Perl, Wall (along with coauthors Randal L. Schwartz and Tom Christiansen) outlined the Three Virtues of a Programmer:
-<h4><a name="sec18" id="sec18"></a>Laziness</h4></p>
+<h4><a name="sec15" id="sec15"></a>Laziness</h4></p>
 
 <ul>
 <li>The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful, and document what you wrote so you don't have to answer so many questions about it. Hence, the first great virtue of a programmer. Also hence, this book.</li>
 </ul>
 
 
-<h4><a name="sec19" id="sec19"></a>Impatience</h4>
+<h4><a name="sec16" id="sec16"></a>Impatience</h4>
 
 <ul>
 <li>The anger you feel when the computer is being lazy. This makes you write programs that don't just react to your needs, but actually anticipate them. Or at least pretend to. Hence, the second great virtue of a programmer.</li>
 </ul>
 
 
-<h4><a name="sec20" id="sec20"></a>Hubris</h4>
+<h4><a name="sec17" id="sec17"></a>Hubris</h4>
 
 <p class="first">- Excessive pride, the sort of thing Zeus zaps you for. Also the quality that makes you write (and maintain) programs that other people won't want to say bad things about. Hence, the third great virtue of a programmer. See also laziness and impatience.</p>
 
 
 
 
-<h2><a name="sec21" id="sec21"></a>关于</h2>
+<h2><a name="sec18" id="sec18"></a>关于</h2>
 
 <p class="first">由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我<a href="wenhao.sng@gmail.com">wenhao.sng@gmail.com</a>， 也可以加我qq：570660586。</p>
 
 
-<h2><a name="sec22" id="sec22"></a>友情链接</h2>
+<h2><a name="sec19" id="sec19"></a>友情链接</h2>
 
 <p><a href="http://www.emacswiki.org/">EmacsWiki</a> 学习Emacs很好的wiki网站</p>
 
@@ -313,7 +246,7 @@ git add -u
 
 <div id="footer" align="center">
 	<hr>
-    Last Updated: January 14, 2012  
+    Last Updated: février 23, 2012  
 <span>  &nbsp &nbsp;    </span>       
    <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3007311&c=9022246" alt="Hit Counter">
 	<span>  &nbsp &nbsp;    </span>    

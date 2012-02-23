@@ -790,6 +790,27 @@ a.
 n.f
  - 性观念，性行为
 
+** sexuel
+a.
+ - 性的
+ - 性感的
+
+** prostituée
+n.f
+ - 娼妓，妓女，荡妇
+
+** nul
+a.
+ - 无一的，没有的，不分胜负的，无价值的
+
+** moscovite
+a.
+ - 莫斯科的
+
+n.
+ - Moscovite 莫斯科人
+
+
 
 * phrase
 ** autrement dit
@@ -830,3 +851,6 @@ n.f.
 
 ** diriger
 [[francais_reflets_1_1_7#diriger][repasser]]
+
+** durer
+[[francais_reflets_1_1_4#durer][repasser]]

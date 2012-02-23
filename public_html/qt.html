@@ -3,14 +3,14 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>cours de oral mercredi</title>
+    <title>qt</title>
     <meta name="generator" content="muse.el" />
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="style.css" /><script type="text/javascript"src="scripts/shCore.js"></script><script type="text/javascript"src="scripts/shBrushCpp.js"></script><script type="text/javascript"src="scripts/shBrushBash.js"></script><link href="styles/shCore.css" rel="stylesheettype="text/css" /><link href="styles/shThemeEmacs.css" rel="stylesheet"type="text/css" /> <script type="text/javascript"> var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-25182468-1']);_gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
-    <h1>cours de oral mercredi</h1>
+    <h1>qt</h1>
 <!-- menu start here -->
      <div class="menu">
         <div class="menuitem">
@@ -32,26 +32,40 @@
       </div>
     <!-- menu ends here -->
     <!-- Page published by Emacs Muse begins here -->
-<h2>Prof</h2>
+<div class="mulu">
+<h6 class="mulu">Contents</h6>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">QExplicitlySharedDataPointer</a>
+</dt>
+<dt class="contents">
+<a href="#sec2">Qt Marcos</a>
+</dt>
+</dl>
+</div>
 
-<h3>prénom et nom</h3>
 
-<p class="first">Laurent</p>
+<h4><a name="sec1" id="sec1"></a>QExplicitlySharedDataPointer</h4>
+
+<p class="first">在学习<code>meego-app-tasks</code>时看到有使用<code>QExplicitlySharedDataPointer</code>，很长的名字啊。查了一下它的作用。<code>Qt</code>的文档这样写：</p>
+
+<blockquote>
+<p class="quoted">
+This means that QExplicitlySharedDataPointers behave like regular C++ pointers, except that by doing reference counting and not deleting the shared data object until the reference count is 0, they avoid the dangling pointer problem.</p>
+
+</blockquote>
+
+<p>原来，这就是一个对动态申请对象的指针的计数器，当计数器到0时， 共享的数据对象所申请的空间就被释放了。</p>
+
+<p>那么，<code>QExplicitlySharedDataPointer</code>与<code>_QSharedDataPointer</code>有什么不同呢？在对某个共享数据指针进行写操作的时候，这个写操作应该作用到所有指针上，还是那个进行了操作的指针呢？对QExplicitlySharedDataPointer对象的写操作，将作用到所有的指针上。而QSharedDataPointer在计数器多余1的情况下，将自动生成一个副本。如果QExplicitlySharedDataPointer在某次操作时也想达到这个效果，可以在写操作前调用<code>detach()</code>方法。</p>
 
 
-<h3>e-mail</h3>
+<h4><a name="sec2" id="sec2"></a>Qt Marcos</h4>
 
-<p><a href="mailto:jiaotong@hotmail.fr">jiaotong@hotmail.fr</a></p>
-
-
-
-<h2>cours</h2>
-
-<ul>
-<li><a href="le-cours-de-oral-mercredi_1.html">cours 1</a></li>
-
-<li><a href="le-cours-de-oral-mercredi_2.html">cours 2</a></li>
-</ul>
+<dl>
+<dt><strong>Q_UNUSED</strong></dt><dd>
+在定义有关Model的函数rowCount()时用到过，作用是让编译器对于没有使用的变量不要产生警告。</dd>
+</dl>
 
 
 <!-- Emacs Muse Footer -->
