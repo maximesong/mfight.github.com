@@ -37,7 +37,7 @@
 * S
 ** Supplément
  - [[le_petit_nicolas][le petit nicolas]]
- - [[rfi.muse][rfi]]
+ - [[rfi][rfi]]
 
 
 * T

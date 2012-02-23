@@ -540,15 +540,6 @@ adj.f
  - 民事的
 
 
-* phrase
-** autrement dit
-loc.adv.
- - 换言之
-
-** assemblée générale
-n.f.
- - 大会
-
 ** faveur
 n.f
  - 好意，优惠，照顾
@@ -558,6 +549,256 @@ n.f
 prép.
  - 考虑到，对...有利，为了...的利益
 
+** humanitaire
+a.
+ - 人道的，人道主义的
+
+** combat
+n.m
+ - 战斗
+
+** population
+f.
+ - 人口，居民
+
+** somme
+n.f.
+ - 总和
+
+** énorme
+a.
+ - 极大的，巨大的
+ - 骇人听闻的
+
+** rembourser
+v.t.
+ - 偿还
+
+** dette
+n.f
+ - 债，欠款
+
+** douter
+v.t.
+ - 怀疑，疑惑
+
+** reformer
+v.t.
+ - 重新组成
+
+** opération
+n.f.
+ - 作用，活动
+ - 操作，工序
+ - 业务，营业
+
+** commission
+n.f
+ - 委员会
+
+** comité
+n.m
+ - 委员会
+
+** consultatif
+adj.
+ - 咨询的，商议的，协商的
+
+** institut
+n.m.
+ - 学会，协会
+ - 研究所，研究院
+ - 专科学校，学院
+
+** recuelillir
+v.t.
+ - 采集，收集，汇集
+
+** étape
+n.f
+ - 步骤，阶段
+
+** transition
+n.f
+ - 过渡，转变，变迁，改革
+
+** chiffre
+n.m.
+ - 数字，数目，总数
+ - 密码数字
+
+** participation
+n.f
+ - 参加，参与
+ - 分担，分享
+
+** enseignant
+a.
+ - 从事教育的
+
+n.m
+ - 教师
+
+** rattacher
+v.t.
+ - 连接，连结
+
+** chercheur
+n.
+ - 寻找者，探寻者
+ - 研究员，研究者
+
+** paricularité
+n.f
+ - 特点，特色，特性
+
+** régime
+m.
+ - 政体，社会制度
+
+** éclter
+v.i.
+ - 爆裂，爆炸
+ - 爆发，突然发生，突然出现
+ - 显露，显出，表现出
+
+** tribu
+f.
+ - 部落，一帮，一伙
+
+** centaine
+n.f
+ - 百个，百来个，近百个
+
+** battre
+v.t.
+ - 打，揍
+ - 战胜，打跨，击败
+
+** contrebande
+n.f.
+ - 走私，水货，违禁品
+
+** trafic
+n.m
+ - 非法买卖，不正当交易，非法得利
+ - 运输，运输量，交通
+
+** encercler
+v.t.
+ - 包围
+
+** soigner
+v.t.
+ - 照顾，照料，保养
+ - 治疗
+
+** témoignage
+n.m
+ - 证据，见证，证明
+ - 证词
+ - 表示，表现，表明，显示
+
+** factuel
+a.
+ - 只叙事实不加评论的
+
+** partisan
+n.m
+ - 拥护者，支持者，赞成者
+ - 游击队员
+
+** scrutin
+n.m
+ - 投票，选举
+
+** rejeter
+v.t.
+ - 拒绝，不接受，否决，驳回
+
+** empêcher
+v.t.
+ - 阻止，阻挡，阻碍，妨碍，防止
+
+** autorité
+n.f.
+ - 权威人士，权利机关，当权者
+ - pl. 官方，当局
+
+** africain
+adj.
+ - 非洲的
+
+n.
+ - Africain 非洲黑人，非洲人
+
+** force
+n.f.
+ - 实力，势力
+ - pl. 军队，部队，军队，兵力
+
+** pression
+f.
+ - 压力，压制
+
+** éthiopien
+a.
+ - 埃赛俄比亚的
+
+** soutenu
+a.
+ - 高尚优雅的，典雅 的
+ - 持久的，经久的，经常的
+ - 突出的，鲜明的，强烈的
+
+** objectif
+n.m.
+ - 摄影机
+ - 目标，目的
+
+a.
+ - 客观的，物体的
+
+** garde
+n.m
+ - 保管者，看管者
+ - 看守，哨兵，卫兵
+ - 侍卫，警卫员
+
+** signifier
+v.t.
+ - 表示，意味着
+ - 告知，通知，宣告，声明
+
+** interroger
+v.t.
+ - 讯问，提问，审问
+
+** cadre
+n.m.
+ - 范围，界限
+
+*** dans le cadre de
+ - 在...范围内
+
+** érotique
+a.
+ - 爱情的
+ - 色情的，淫荡的
+ - 挑逗的
+
+n.f
+ - 性观念，性行为
+
+
+* phrase
+** autrement dit
+loc.adv.
+ - 换言之
+
+** assemblée générale
+n.f.
+ - 大会
 
 * révision
 ** titre
@@ -580,3 +821,12 @@ prép.
 
 ** ailleurs
 [[le_francais_1_complement#ailleurs][repasser]]
+
+** pourtant
+[[le_francais_1_16#pourtant][repasser]]
+
+** enseigner
+[[le_francais_1_complement#enseigner][repasser]]
+
+** diriger
+[[francais_reflets_1_1_7#diriger][repasser]]

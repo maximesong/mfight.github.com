@@ -108,4 +108,12 @@ n.f.
 ** Yémen
  - 也门
 
+** Bruxelles
+n.
+ - 布鲁塞尔
 
+** Soudan
+ - 苏丹
+
+** Somalie
+ - 索马里
