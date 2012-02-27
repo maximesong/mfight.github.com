@@ -399,6 +399,10 @@ n.
 ** service
 n.m.
  - 部门
+ - 帮助，帮忙
+
+*** à votre service
+ - 乐意为您效劳
 
 #stage
 ** stage

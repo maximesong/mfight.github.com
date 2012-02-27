@@ -83,9 +83,13 @@ n.f.
 n.f.
  - 玻璃橱
 
+#commode
 ** commode
 n.f.
  - 五斗橱
+
+a.
+ - 方便的，便利的，容易的
 
 * couverture
 n.f.

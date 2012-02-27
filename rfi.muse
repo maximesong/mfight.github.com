@@ -810,6 +810,76 @@ a.
 n.
  - Moscovite 莫斯科人
 
+** brûler
+v.t.
+ - 烧，焚烧，点燃
+
+** exemplaire
+adj.
+ - 作为榜样的，作为模范的，典型的
+
+n.m
+ - 样品，标本，样本
+ - 类似的事物
+
+
+** sacrer
+v.t.
+ - 【宗】祝圣，加冕
+
+v.i.
+ - 【俗】咒骂
+
+** photographe
+n.
+ - 摄影者，摄影师
+
+** abriter
+vt.
+ - 掩护，遮蔽，保护
+ - 供...住
+
+** cadet
+a.
+ - 较年幼的，年龄较小的
+
+n.
+ - 弟弟，妹妹；最小的子女
+ - 高尔夫球童
+
+** communauté
+n.f.
+ - 社团，团体，共同体
+ - 社群，群体
+
+** réclamer
+v.t.
+ - 要求，请求
+ - 需要
+
+v.i.
+ - 抗议
+
+** trêve
+n.f
+ - 休战
+
+** amener
+v.t.
+ - 带来，领来，引来
+
+** justice
+n.f
+ - 公正，公平
+ - 正义，公道
+ - 司法机关，司法部门，法庭，法院
+
+** verdict
+n.m.
+ - （陪审团的）裁决，判决
+
+*** rendre un verdict
+ - 判决
 
 
 * phrase

@@ -85,7 +85,7 @@ n.m
 
 ** quartier
 m.
- - 区，地区，居住区
+ - 区，地区，居住区,街区
 
 ** Cantonais
 a.(m)

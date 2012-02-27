@@ -52,6 +52,9 @@ prép
 a.
  - 银行的
 
+*** compte bancaire
+ - 银行账户
+
 ** banque
 n.f.
  - 银行
