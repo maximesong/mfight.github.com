@@ -284,6 +284,7 @@ adj.
 n.
  - 孩子
 
+#enquete
 ** enquête
 n.f.
  - 调查

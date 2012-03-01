@@ -37,6 +37,7 @@ m.
 *** le pôle sud
  - 南极
 
+#mouchoir
 ** mouchoir
 n.m.
  - 手帕，手绢

@@ -72,17 +72,6 @@ avant
 
 **** La pluie(La neige) tombe
 
-*** pouvoir
-能够
-**** 动词变位
- - je peux
- - tu peux
- - il peut
- - nous pouvons
- - vous pouvez
- - ils peuvent
-
-
 *** vite
 快
 

@@ -65,6 +65,11 @@ In the second edition of Programming Perl, Wall (along with coauthors Randal L. 
 *** Hubris 
 - Excessive pride, the sort of thing Zeus zaps you for. Also the quality that makes you write (and maintain) programs that other people won't want to say bad things about. Hence, the third great virtue of a programmer. See also laziness and impatience.
 
+** First Law of Programmer Creativity
+Caveat Emptor: The cost of software maintenance increases with the square of the programmer's creativity.
+                                                     — Robert D. Bliss, 1992
+
+
 * 关于
 由于wiki架设在github的repository上，只能够是静态的，没有办法加入回复的功能。如果有什么疑问或者建议，欢迎和我交流。可以发邮件给我[[wenhao.sng@gmail.com]]， 也可以加我qq：570660586。
 

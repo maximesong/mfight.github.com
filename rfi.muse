@@ -881,6 +881,135 @@ n.m.
 *** rendre un verdict
  - 判决
 
+** révolte
+n.f
+ - 反抗，造反，起义
+
+** poursuivre
+v.t.
+ - 追逐，追赶，追捕
+ - 追求
+ - 继续
+
+*** se poursuivre
+v.pr.
+ - 继续进行，继续从事
+
+** accusation
+n.f.
+ - 控诉，职责，指控
+ - 谴责
+
+** pouvoir
+v.aux.
+ - 能，能够，会
+
+n.m
+ - 能力，力量
+
+** élevé
+a.
+ - 高的
+ - 高贵的，崇高的，高雅的
+
+** renforcer
+v.t.
+ - 加固
+ - 增援，支援
+ - 加强，强化
+
+** agir
+v.i.
+ - 行动，干，做事
+
+*** s'agir
+v.pr.impers.
+ - 关系到，涉及
+ - 问题在于，重要的是
+
+** prévu
+a.
+ - 预料到的，事先估计到的
+
+n.m
+ - 预料之内
+
+** musulman
+a.
+ - 伊斯兰教的，穆斯林的
+
+n.
+ - 伊斯兰教徒，穆斯林
+
+** calmer
+v.t.
+ - 使平静，平息，缓和
+ - 安慰，抚慰，使冷静
+
+** insurrection
+n.f
+ - 起义，暴动，造反
+ - 反抗，反对
+
+** fragilité
+n.f.
+ - 易碎，脆
+ - （体质）虚弱，（精神）脆弱
+
+** ligue
+n.f.
+ - 联盟，同盟
+ - 社团，协会
+
+** tension
+f.
+ - 紧张，压力，血压
+
+** observation
+n.f.
+ - 遵守
+ - 观察，观测，监视
+
+** observateur
+n.
+ - 观察员
+ - 旁观者，目击者
+
+** bilan
+n.m
+ - 遭受的损失，伤亡人数
+
+** ralentir
+v.t.
+ - 放慢，减慢
+
+v.i.
+ - 放慢速度，减速行驶
+
+** foncer
+v.i.
+ - 猛冲，猛攻
+
+** heurtoir
+m.
+ - 【火车】止冲器
+
+** coincé
+a.
+ - 被固定住的，被卡住而动弹不得的
+
+** wagon
+n.m.
+ - 车厢，车皮
+
+** passager
+n.m
+ - 旅客，游客
+
+** exactement
+adv.
+ - 准时地，守约地
+ - 准确地，确切地
 
 * phrase
 ** autrement dit
@@ -924,3 +1053,6 @@ n.f.
 
 ** durer
 [[francais_reflets_1_1_4#durer][repasser]]
+
+** enquête
+[[francais_reflets_1_1_5#enquete][repasser]]

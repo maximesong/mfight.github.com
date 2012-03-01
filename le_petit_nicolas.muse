@@ -88,7 +88,77 @@ n.m
 n.m
  - 灯罩
 
+** bof
+interj.
+ - 哼，啵【嘲笑性质的怀疑，讥讽】
 
+** écarter
+v.t.
+ - 分开，隔开
+ - 移开，搬走
+
+** colin-maillard
+n.m
+ - 捉迷藏
+
+** coller
+v.t.dir.
+ - 贴，粘
+
+*** se coller
+v.pr.
+ - 贴紧，紧靠，贴近
+ - 符合，吻合
+
+** bande
+n.f.
+ - 集团，帮，伙
+ - 群，队
+
+** bander
+v.t.
+ - 用绷带包扎
+ - 用一条布蒙住（眼睛）
+ - 拉紧，绷紧
+
+** sien
+a.poss.
+ - 他的
+
+** attraper
+v.t.
+ - （用陷阱）捕捉
+ - 逮住，捉住
+ - 欺骗，愚弄，戏弄，做弄
+
+** puisque
+conj.
+ - 既然
+
+** malin
+a.
+ - 恶毒的，凶恶的，不吉的
+ - 狡猾的，诡计多端的，机灵的，聪明的
+
+** pion
+m.
+ - 棋子
+ - 卒
+ - 学监
+
+** trembler
+v.t.
+ - 发抖，颤抖
+
+** bulle
+n.f.
+ - 水泡，气泡
+
+
+** pipe
+n.f
+ - 烟斗
+ - 管子，导管
 
 * phrase
 ** hors piste
@@ -103,3 +173,6 @@ n.m
 
 ** ravioli
 [[le_francais_1_18#ravioli][repasser]]
+
+** mouchoir
+[[le-cours-de-oral-lundi-8#mouchoir][repasser]]
