@@ -33,6 +33,7 @@
 * L
 ** littérature
  - [[francais_poeme][poéme]]
+ - [[francais_chanson][chanson]]
 
 * S
 ** Supplément

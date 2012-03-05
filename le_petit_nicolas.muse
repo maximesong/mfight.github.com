@@ -160,9 +160,114 @@ n.f
  - 烟斗
  - 管子，导管
 
+** concierge
+n.
+ - 看门人，守门人
+
+** gymnastique
+n.f
+ - 体操
+
+** apparition
+n.f
+ - 出现，显现
+ - 出场，露面
+
+
 * phrase
 ** hors piste
  - 滑雪
+
+
+** se empresser
+v.pr.
+ - 热心服务，表示热情，献殷勤
+ - 急忙，赶快
+
+** inscrire
+v.t.
+ - 铭刻，题写
+ - 登录，登记，写下
+
+*** s'inscrire
+v.pr.
+ - 报名参加；进行登记
+
+** sagesse
+n.f.
+ - 智慧，才智，睿智
+ - 文静，文气，老实
+
+** plier
+v.t.
+ - 折，折叠
+ - 使弯曲
+
+** muscle
+n.m.
+ - 肌肉
+
+** biceps
+n.m.
+ - 二头肌
+
+** épater
+v.t.
+ - 圧扁
+ - 敲断腿
+
+** rang
+m.
+ - 排，行，列，串，队伍
+
+** chiche
+a.
+ - 吝啬的，小气的
+ - 贫乏的，菲薄的
+
+n.
+ - 吝啬的人
+
+** galipette
+n.f
+ - <口> 筋斗，跟头
+
+** sifflet
+n.m.
+ - 哨子，汽笛
+
+** roulette
+f.
+ - 小轮
+ - 卷尺
+
+** clown
+n.m
+ - <英> 小丑
+ - <转> 滑稽可笑的人
+
+** baisser
+v.t.
+ - 放下，降下
+
+** moche
+a.
+ - 丑的，难看的
+ - 质量差的，次的，差劲的
+ - 坏的，恶劣的
+
+** laid
+a.
+ - 难看的，丑的，丑陋的
+ - <转>丑恶的，恶劣的，令人厌恶的
+ - 天气阴沉的，坏的
+
+n.
+ - 难看的人
+ - 品质恶劣的人
+
+n.m
+ - 丑，丑陋，难看
 
 * révision
 ** embêtant
