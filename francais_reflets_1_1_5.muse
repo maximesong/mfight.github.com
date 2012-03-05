@@ -273,7 +273,13 @@ v.t.
 ** droit
 n.m.
  - 法律
+ - 权利
 
+*** avoir le droit de faire
+ - 有权利做某事
+
+*** avoir droit à qch.
+ - 有...权利
 
 ** efficase
 adj.

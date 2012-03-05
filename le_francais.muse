@@ -12,3 +12,4 @@
 * 第二册
  - [[le_francais_2_1][leçon 1]]
  - [[le_francais_2_2][leçon 2]]
+ - [[le_francais_2_3][leçon 3]]

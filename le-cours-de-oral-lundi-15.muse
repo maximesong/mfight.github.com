@@ -118,6 +118,7 @@ n.m
  - 旅行大客车
  - 铁路车厢
 
+#a_la_fois
 ** à la fois
 loc.adv.
  - 同时
