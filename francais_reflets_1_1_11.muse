@@ -29,6 +29,7 @@ n.f.
 ** facteur
 n.m.
  - 因素，要素
+ - 邮递员
 
 ** logement
 m.

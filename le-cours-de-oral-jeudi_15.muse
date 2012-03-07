@@ -29,6 +29,7 @@ n.m
 f.
  - 广场
  - 座位
+ - 职位
 
 ** grille-pain
 n.m.inv

@@ -117,6 +117,7 @@ n.m.
 n.f.
  - 壁炉，烟囱
 
+#poubelle
 * poubelle
 n.f.
  - 家用垃圾箱
